@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MyStandard.sty
+%% Masterarbeit WS 15/16 Version.
+%% First inserted: 15/12/04
+%% Last updated (maybe): 15/12/04
+%% Thomas Bissinger
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ProvidesPackage{MyStandard}[2013/07/04 v1.0 My standard Styles]
+
+\usepackage{amsmath, amsthm, amssymb,xfrac,mathtools}
+
+%\usepackage{mathtools}
+\newcommand{\enmat}[1]{\ensuremath{#1}}
+
+\newcommand\R{\mathbb{R}}
+\newcommand\N{\mathbb{N}}
+
+% \newcommand{\defeq}{\vcentcolon=}
+% \newcommand{\eqdef}{=\vcentcolon}
+% 
+% \newcommand{\eqd}{\eqdef}
+% \newcommand{\deq}{\defeq}
+
+\newcommand\sus{\subset}
+\newcommand\suseq{\subseteq}
+\newcommand\sups{\supset}
+\newcommand\supseq{\supseteq}
+\newcommand\ti{\times}
+\newcommand\bo[1]{\enmat{\mathbf{#1}}}
+\newcommand\bsy[1]{\enmat{\boldsymbol{#1}}}
+\newcommand\cd{\cdot}
+\newcommand\bs{\backslash}
+\newcommand\cou{\texttt}
+\newcommand\te{\text}
+\newcommand\h{\hat}
+
+\newcommand\ph{\phantom}
+
+% \newcommand\bf{\textbf}
+
+\newcommand\mk[1]{{\centering{\textbf{#1}} \\}}
+
+
+%\newcommand\X{\bo X}
+%\newcommand\x{\bo x}
+%\newcommand\y{\bo y}
+%\newcommand\A{\bo A}
+%\newcommand\U{\bo U}
+%\newcommand\C{\bo C}
+%\newcommand\T{\bo T}
+%\newcommand\V{\bo V}
+%\newcommand\G{\bo G}
+%\newcommand\B{\bo B}
+%\newcommand\Q{\bo Q}
+
+\newcommand\K{\mathcal{K}}
+\newcommand\Hil{\mathcal{H}}
+\newcommand\Cal{\mathcal}
+\newcommand\F{\mathcal{F}}
+
+
+\newcommand{\spsc}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\sbsc}[1]{\ensuremath{_{\textrm{#1}}}}
+\newcommand{\ep}[1]{\emph{#1}}
+\newcommand\mbb[1]{\enmat{\mathbb{#1}}}
+
+
+\newcommand\eye{\bo {Id}}
+
+\newcommand\lt{\left}
+\newcommand\rt{\right}
+\newcommand\lr[1]{\lt{#1}\rt}
+\newcommand\brc[1]{\lt\{{#1}\rt\}}
+\newcommand\rb[1]{\lt({#1}\rt)} %round brackets
+\newcommand\ed[1]{\lt[{#1}\rt]} % edgy brackets
+\newcommand\lara[1]{\lan{#1}\ran} % left right angle
+\newcommand\rar{\enmat{\rightarrow}}
+\newcommand\rrar{\enmat{\longrightarrow}}
+\newcommand\Rar{\enmat{\Rightarrow}}
+\newcommand\Rrar{\enmat{\Longrightarrow}}
+
+\newcommand{\ub}{\underbrace} % Underbrace
+\newcommand{\str}{\stackrel} % Underbrace
+
+\newcommand\lan{\langle}
+\newcommand\ran{\rangle}
+\newcommand\abs[1]{\lt|{#1}\rt|}
+\newcommand\norm[1]{\lt\|{#1}\rt\|}
+\newcommand\inpr[1]{\lt\langle {#1} \rt\rangle}
+\newcommand\spa[1]{\text{span} \lt\{{#1} \rt\}}
+\newcommand\st[1]{\lt\{{#1} \rt\}}
+\newcommand\deri[2]{\frac {\del{#1}} {\del{#2}}}
+\newcommand\deriex[3]{\frac {\del^{#3}{#1}} {\del{#2}^{#3}}}
+\newcommand\sderi[2]{{\del{#1}} / {\del{#2}}}
+\newcommand\delti[2]{\enmat{\frac {\dl{#1}} {\dl{#2}}}}
+\newcommand\sdelti[2]{\enmat{{\dl{#1}} / {\dl{#2}}}}
+\newcommand\derifix[3]{\lt. \frac {\del{#1}} {\del{#2}} \rt|_{#3}}
+\newcommand\dd[2]{\frac {\df{#1}} {\df{#2}}}
+\newcommand\mc{\multicolumn}
+\newcommand\fix[1]{\lt.\rt|_{#1}}
+
+\newcommand\eig{\enmat\te{eig}}
+\newcommand\steig[1]{\enmat\te{eig}\st{#1}}
+
+\newcommand\rh{\enmat{\varrho}}
+\newcommand\vp{\enmat{\varphi}}
+\newcommand\al{\enmat{\alpha}}
+\newcommand\be{\enmat{\beta}}
+\newcommand\dl{\enmat{\delta}}
+\newcommand\Dl{\enmat{\Delta}}
+\newcommand\e{\enmat{\epsilon}}
+\newcommand\om{\enmat{\omega}}
+\newcommand\Om{\enmat{\Omega}}
+\newcommand\la{\enmat{\lambda}}
+\newcommand\La{\enmat{\Lambda}}
+\newcommand\ga{\enmat{\gamma}}
+\newcommand\Ga{\enmat{\Gamma}}
+\newcommand\si{\enmat{\sigma}}
+\newcommand\Si{\enmat{\Sigma}}
+\newcommand\ka{\enmat{\kappa}}
+
+\renewcommand{\Ang}{\mathring{A}}
+\newcommand*\Lap{\mathop{}\!\mathbin\bigtriangleup} %Laplace
+\newcommand*\DAl{\mathop{}\!\mathbin\Box} %D'Alembert
+\newcommand\tra{^{\te T}} %transpose
+\newcommand\iv{^{-1}} %invert
+
+
+\newcommand\del{\partial}
+\newcommand\nb{\nabla}
+\newcommand\df{\mathrm{d}}
+
+\newcommand\etal{\ep{et al.}}
+\newcommand\corto{\mathrel{\widehat{=}}}
+
+\newcommand{\mand}{\te{\ \ \ and\ \ \ }} % Math and
+\newcommand{\mor}{\te{\ \ \ or\ \ \ }} % Math or
+
+
+
+% \newtheoremstyle{standard}{10 pt}{10 pt}{\hangindent=0.25in\itshape}{}{\normalfont\bfseries}{}{\newline}{}
+% \theoremstyle{standard}
+% \newtheorem{theo}{Theorem}[section]
+% \newtheorem{lem}[theo]{Lemma}
+% \newtheorem{res}[theo]{Result}
+% \newtheorem{defi}[theo]{Definition}
+% \newtheorem{exm}[theo]{Example}
+% \newtheorem{cor}[theo]{Corollary}

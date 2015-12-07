@@ -1,0 +1,340 @@
+\documentclass[8.5pt,twoside,twocolumn]{article}
+%% CHECK: Remove all ``CHECK'' comments by solving their problems
+\usepackage[utf8]{inputenc}
+\usepackage{MyChem}
+\usepackage{MyStandard}
+\usepackage{courier}
+\usepackage{booktabs}
+%%\usepackage{tabto}
+%% \usepackage{tabu}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{patterns,calc,decorations.pathmorphing}
+
+\makeatletter
+\newcommand{\subalign}[1]{%
+  \vcenter{%
+    \Let@ \restore@math@cr \default@tag
+    \baselineskip\fontdimen10 \scriptfont\tw@
+    \advance\baselineskip\fontdimen12 \scriptfont\tw@
+    \lineskip\thr@@\fontdimen8 \scriptfont\thr@@
+    \lineskiplimit\lineskip
+    \ialign{\hfil$\m@th\scriptstyle##$&$\m@th\scriptstyle{}##$\crcr
+      #1\crcr
+    }%
+  }
+}
+\makeatother
+
+\newcommand\snakedeko{{snake, segment length=1.5mm, amplitude=.5mm}}
+
+\newcommand\eint{\enmat{E^{int}}}
+\newcommand\eads{\enmat{E^{ads}}}
+\newcommand\ezp{\enmat{E^{ZPE}}}
+
+\renewcommand\H{\enmat{\bo H}}
+
+\newcommand\di{\te{d}}
+\newcommand\dr{\di\r}
+\newcommand\drr{\di\r\ }
+\renewcommand\ij{_{ij}}
+\newcommand\rms{\te{RMS}}
+\newcommand\apd{\te{APD}}
+\renewcommand\K{{\enmat{~\te{K}}}}
+\renewcommand\r{\bo r}
+\newcommand\ri{\enmat{\r_i}}
+\newcommand\rip{\enmat{\r_{i'}}}
+\newcommand\inon{\enmat{\int\di(1)}}
+
+\newcommand\id{\hskip.2cm}
+\newcommand\pab{\enmat{\phi_{AB}}}
+
+
+
+\newtheoremstyle{standard}{10 pt}{10 pt}{\hangindent=0.25in\itshape}{}{\normalfont\bfseries}{}{\newline}{}
+\theoremstyle{standard}
+\newtheorem{theo}{Theorem}
+\newtheorem{lem}[theo]{Lemma}
+\newtheorem{res}[theo]{Result}
+\newtheorem{defi}[theo]{Definition}
+\newtheorem{exm}[theo]{Example}
+\newtheorem{cor}[theo]{Corollary}
+
+%% FROM http://tex.stackexchange.com/questions/159139/what-is-required-to-use-background-layer-as-specified-in-tikz-manual
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}  
+
+%% GRAPH COMMANDS
+\newcommand\fp[2]{\draw {#1} node[circle,minimum size=0.2cm,draw,fill=black]
+({#2}) {};} %field point
+ \newcommand\lp[2]{\draw {#1} node[circle,minimum size=0.2cm,draw,fill=white]
+({#2}) {};} % labelled point
+\newcommand\flp[2]{\draw {#1} node[circle,minimum
+size=0.2cm,draw,dashed,fill=white] ({#2}) {};} %free labelled point
+\newcommand\connect[1]{
+\begin{pgfonlayer}{background}
+ \foreach \x/\y in {#1} {\draw (\x.center) -- (\y.center);}
+\end{pgfonlayer}
+}
+
+\newcommand{\itemEq}[1]{%
+        \begingroup%
+        \setlength{\abovedisplayskip}{0pt}%
+        \setlength{\belowdisplayskip}{0pt}%
+        \parbox[c]{\linewidth}{\begin{flalign}#1&&\end{flalign}}%
+        \endgroup}
+
+
+\parindent0pt
+
+\linespread{1.5}
+\title{Surface Adsorption on Interstellar Ice $I_h$}
+\linespread{1}
+% \subtitle{Universit�t Stuttgart, Prop�deutikum zur Bachelorarbeit}
+\author{T. Bissinger}
+
+\begin{document}
+
+
+\begin{titlepage}
+
+\begin{center}
+
+% Oberer Teil der Titelseite:
+
+ 
+
+% Title
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\HRule \\[0.4cm]
+
+{ \huge \bfseries Surface Adsorption on Interstellar Ice $I_h$}
+
+
+\HRule \\[2cm]
+
+{\LARGE Thomas Bissinger}\\[4cm]
+
+\vfill 
+
+\includegraphics[width=7cm]{./Figures/unistuttgart.jpg}\\[2cm]   
+
+{\Large Master Thesis supervised by \\[.7cm]
+Prof. Dr. rer. nat. J. Kästner \\[.4cm]
+M. Sc. Jan Meisner}\\[.4cm]
+
+
+{ \Large  Institute for Theoretical Chemistry, Universität Stuttgart, December 2015}
+
+
+% Author and supervisor
+
+% Unterer Teil der Seite
+
+\end{center}
+
+
+\end{titlepage}
+\newpage
+\newpage
+\clearpage
+
+
+
+% \tableofcontents
+% \newpage
+\twocolumn[
+	\maketitle
+  \begin{@twocolumnfalse}
+    \maketitle
+    \begin{abstract}
+      This abstract explains what happens. Benchmark, adsorption, maybe something about the interstellar playground.
+\\
+\\
+    \end{abstract}
+  \end{@twocolumnfalse}
+]
+\section{Introduction}
+\label{Sec:Intro}
+Interstellar chemistry is the key ingredient to understanding the molecular abundancies in our universe. While
+the formation of atoms takes place in stars \cite{AtomsInStars}, their further reaction and therefore the composition
+of molecular compunds in space largely happens in interstellar clouds. With modern telescopes it is possible to
+measure the molecular abundancies in the interstellar medium (ISM) to a high degree of accuracy. It became
+evident that the reaction rates governing the formation of molecules can not properly be explained by gas phase
+chemistry alone. A prominent theory to mend this discrepancy is to consider the contribution of surface reaction
+on interstellar dust grains. The dust has been measured \cite{DustMeasure}, so the question is not so much if the
+reaction happens but rather to quantify its effect.
+
+At temperatures as low as in cold interstellar clouds (between 10 and 100 $K$), the grains are covered in ices,
+most prominently $\hto $ and $\co$. In the case of water, one faces \ep{amorphous solid water} (ASW), but
+at very low temperatures one may find a state close to the crystalline $I_h$ state of frozen water.
+
+Various works have already considered surface reactions.
+
+(Here we will cite some experimentalists).
+
+The research described above typically chose a model to describe the processes taking place in the experiment and
+adjusted simulation data -- including parameters like the diffusion coefficient -- to fit the experimental data.
+That would mean: if surface reaction processes are the key to filling the gap between observed and predicted
+reaction rates, the input parameters might be good approximations to the actual coefficients. This is a legit
+approach since one can not easily think of other processes than surface and gas phase reactions to lead to
+molecular formation.
+
+%% CHECK: Andere Parameter als Diffusionskoeffizient?
+However, there is not yet a proper \ep{ab initio} theoretical calculation of surface diffusion. This means that
+evaluating the parameters found in simulation is a very difficult task -- there is neither a recommended value nor 
+are there any error bars to such a value. This work tries to make a first step toward the accurate simulation of surface
+adsorption, diffusion and reaction of small molecules on interstellar ices. Its aim is to establish a model
+of crystalline $I_h$ water in which simulations can be carried out. The main mathematical tool for describing the 
+chemistry of this surface is a subdomain treated by \ep{density functional theory} (DFT) within a bigger domain
+where the interaction is modelled by \ep{molecular mechanics} (MM). The two domains are coupled by a QM/MM
+coupling scheme.
+
+We will describe the theory underlying the model in the next section. Section \ref{Sec:Bench} then describes the
+benchmarking we performed on smaller test systems to determine the best functionals and basis sets to use for 
+the actual system. After that, we give our results for adsorption energies in Section \ref{Sec:Ads} and finally 
+there will be concluding remarks and an outlook on possible further application for our findings in Section 
+\ref{Sec:Con}.
+
+\section{Theoretical Background}
+\label{Sec:Theo}
+This section focuses on the theoretical framework of the ice surface model. We introduce the main chemical
+nomenclature in Section \ref{Sec:Theo:Interaction} and then proceed to the mathematical ideas behind
+DFT in Section \ref{Sec:Theo:QMMet}. After that, Section \ref{Sec:Theo:QMMM} will explain how we describe
+the MM interaction of the system and how QM and MM are coupled by the QM/MM procedure.
+
+\newcommand\X{\enmat{\te X}}
+\newcommand\Y{\enmat{\te Y}}
+\newcommand\XY{{\enmat{\X - \Y}}}
+\renewcommand\S{\enmat{\te S}}
+\newcommand\sX{\enmat{\te {s-X}}}
+\newcommand\A{\enmat{\te A}}
+\subsection{Different Types of Energy}
+\label{Sec:Theo:Interaction}
+We will consider the \ep{interaction energy} between two molecular species X and Y. We call
+the system of both molecules $\XY$. We also consider the \ep{adsorption energy} of a molecule X on
+the ice surface S. We call this system $\sX$. If not declared elsewise, all appearing energies are
+electronic ground state energies. We wil describe the interaction energy first.
+
+Consider a system of two molecules X and Y. We can calculate the energy of the isolated molecule X to
+be $E_{\te X}$ and the energy of the isolated molecule Y to be $E_{\te Y}$. We can also calculate the 
+energy of the full system $\XY$, which will in general depend on the distance and the orientation
+of the two molecules, to be $E_{\XY}$. Then, the interaction energy between the two molecules
+is the energy given by
+\begin{equation}
+ \eint_{\XY} := E_{\XY} - E_\X - E_\Y.
+ \label{Theo:InteractionEnergy}
+\end{equation}
+We did not include spatial dependency of $E_{\XY}$ into the above definition. A map
+\mbox{$(R_\XY, \Om_\X, \Om_\Y) \mapsto \eint_\XY$} with the center of mass separation
+$R_\XY$ and the molecular orientation $\Om_\X$ and $\Om_\Y$ is called the \ep{potential energy surface} (PES)
+of the intermolecular interaction. It may also contain internal deformations of the molecule.
+
+However, one does often speak of the interaction energy of two molecules without further specification
+of a point on the PES. This is usually a reference to the minimum geometry
+of $\XY$, that is the global minimum of $E_{\XY}$ and therefore $\eint_\XY$. If the interaction between $\X$ and $\Y$
+were purely repulsive, that is $\eint_{\XY} > 0$ for all geometries, the global minimum would
+not be well-defined since it requires inifinite separation of $\X$ and $\Y$ in an arbitrary direction.
+However, the algorithms we use will converge to a local minimum around the initial geometry we
+specify, by which we will then classify the strength of the repulsion. Even for attractive potentials,
+that is potentials where $\eint_\XY < 0$ for some geometries, we are not able to determine whether 
+the potential energy minimum we find is the global minimum or within what error its energy is
+to the global minimum.
+
+The adsorption energy is mostly similar. There, we have the energy of the isolated species
+$E_\X$ and the energy minimum of the surface $E_{\S}$. If we denote the system of the surface 
+with the adsorbed molecule $X$ by $\sX$ and its energy minimum by $E_\sX$, we define
+the adsorption energy to be
+\begin{equation}
+ \eads_{\sX}:= E_{\sX} - E_\X - E_\S.
+ \label{Theo:AdsorptionEnergy}
+\end{equation}
+Again, we did not include the dependency of $E_\sX$ and $E_\S$ on the respective geometries. We
+even specified that we will consider the individual geometry of minimum energy here. This is quite sensible
+because the surface geometry of the system $\sX$ \mbox{(surface + molecule)} may be different from the
+system $\S$ of the surface alone when comparing energy minima. For a fixed value of $E_\S$, 
+we could again consider a PES of the type \mbox{$(\bo r_i)_i \mapsto \eads_\sX$}, where the
+vector $\r_i$ is the coordinate of the $i$-th atom in $\sX$, $1 \le i \le N$ for some $N$. The different energy minima of 
+this map to $\eads_\sX$ are called \ep{binding geometries}, and the position of the
+center of mass of the molecule $\X$ in a binding geometry is called a \ep{binding site}.
+Exploring binding sites and the strength of the binding $\eads_\sX$ can be useful
+to simulation.
+
+The superscripts on $\eint$ and $\eads$ may be ignored if it is sufficiently clear which energy 
+is meant.
+
+We also want to introduce a third type of energy, the \ep{zero-point (vibrational) energy}.
+We describe it for some general system $\A$ that may contain any arrangement of atoms.
+For all calculations we do, we will work with fixed values for the atomic coordinates
+$\r_i$, $1 \le i \le N$ for some $N \in \N$. That description can only be accurate if
+the atoms were classical particles. However, if we want to allow for them to be
+quantum objects, we need to include uncertainty into their position. This is usually
+done by including the zero-point vibrational energy of the atoms. It is computed from the
+\ep{Hessian} matrix $\H$ of the system,
+\begin{equation}
+ \H(\r_1,\ldots,\r_N) := \rb{\deri {^2 E} {\r_i \del \r_j} (\r_1,...,\r_N) }_{1\le i,j \le N}
+ \label{Theo:Hessian}
+\end{equation}
+by
+%% CHECK: Is this correct?
+\begin{equation}
+ \ezp=E + \frac 1 2 \te {tr} \ed{\H} = E + \Dl \ezp,
+ \label{Theo:EZP}
+\end{equation}
+where $\te {tr} \ed{\H}$ is the \ep{trace} of the matrix $\H$, that is the sum of the eigenvalues
+of $\H$. In the harmonic approximation, which should be accurate for the vibrational ground 
+state, the eigenvalues of $\H$ are 
+%% CHECK: proportional or identical?
+proportional
+to the eigenfrequencies of the system. We call the term $\Dl \ezp$ the \ep{zero-point (vibratinal energy)
+correction}.
+
+We will always use the superscript in $\ezp$ if we want to denote energies that are corrected 
+with $\Dl \ezp$ in \eqref{Theo:EZP}.
+
+\subsection{Methods of Quantum Chemistry}
+\label{Sec:Theo:QMMet}
+
+We already saw a few different energy expressions so far. The accurate calculation of these 
+is naturally vital to anything we want to do in this work. We now want to focus on the methods
+of quantum chemistry which will be used to describe the quantum mechanical part of our system.
+
+\subsection{Molecular Mechanics and QM/MM}
+\label{Sec:Theo:QMMM}
+
+\newpage
+%\subsection{The Fletcher Surface}
+%\label{Sec:Theo:Fletcher}
+
+\section{Benchmarking}
+\label{Sec:Bench}
+
+\section{Adsorption on the Ice Surface}
+\label{Sec:Ads}
+
+\subsection{The Surface Model}
+\label{Sec:Ads:Model}
+
+\subsection{Results}
+\label{Sec:Ads:Results}
+
+\section{Conclusion}
+\label{Sec:Con}
+
+\section*{Acknowledgment}
+I want to thank Professor J. Kaestner for his support and Mr. Jan Meisner for
+his introduction to the topic and his company along the way.
+
+
+%\clearpage
+% \bibliographystyle{apalikenotitle}
+%\bibliographystyle{ieeetr}
+% \begin{thebibliography}
+    %\bibliography{BibForsch2}
+
+\end{document}
+

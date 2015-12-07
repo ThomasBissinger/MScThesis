@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MyChem.sty
+%% Used for Master Thesis.
+%% 15/12/07
+%%
+%% Thomas Bissinger
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ProvidesPackage{MyChem}[2013/10/16 v2.0 My chemical style ammendments]
+
+% \documentclass[8.5pt,twoside,twocolumn]{article}
+\oddsidemargin -1.2cm
+\evensidemargin -1.2cm
+\textwidth 18cm
+\headheight 1.0in
+\topmargin -3.5cm
+\textheight 22cm
+
+\usepackage[super,sort&compress,comma]{natbib}
+%\usepackage{mhchem}
+% \usepackage{multicol}
+\usepackage{times,mathptm}
+%\usepackage{sectsty}
+\usepackage{balance}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage[format=plain,justification=raggedright,singlelinecheck=false,
+font=small,labelfont=bf,labelsep=space] {caption}
+\usepackage{fancyhdr}
+% \usepackage{fancy}
+
+\newcommand\Ha{\hat{H}}
+\newcommand{\rv}{\bo r}
+\newcommand{\Ang}{\mathring{A}}
+\newcommand{\dgr}{^\circ}
+\newcommand{\kb}{k_B}
+
+% \newcommand{\hf}{{\sc HF}}
+% \newcommand{\mpt}{{\sc MP2}}
+% \newcommand{\mptf}{\sc MP2-F12}
+% \newcommand{\scsmp}{\sc SCS-MP2}
+% \newcommand{\scsmpf}{\sc SCS-MP2-F12}
+% \newcommand{\ccsd}{\sc CCSD}
+% \newcommand{\ccsdf}{\sc CCSD-F12}
+% \newcommand{\ccsdt}{\sc CCSD(T)}
+% \newcommand{\ccsdtf}{\sc CCSD(T)-F12}
+\newcommand{\hf}{HF}
+\newcommand{\mpt}{MP2}
+\newcommand{\mptf}{MP2-F12}
+\newcommand{\scsmp}{SCS-MP2}
+\newcommand{\scsmpf}{SCS-MP2-F12}
+\newcommand{\ccsd}{CCSD}
+\newcommand{\ccsdf}{CCSD-F12}
+\newcommand{\ccsdt}{CCSD(T)}
+\newcommand{\ccsdtf}{CCSD(T)-F12}
+
+\newcommand\ai{\emph{ab initio}}
+
+\newcommand{\Moller}{M\o{}ller}
+
+
+\newcommand\bra[1]{\lt\langle{#1}\rt|}
+\newcommand\ket[1]{\lt|{#1}\rt\rangle}
+\newcommand\bkt[1]{\lt\langle{#1}\rt\rangle}
+\newcommand\bk[1]{\langle{#1}\rangle}
+
+
+\newcommand\hto{\enmat{\te H _2 \te O}}
+\newcommand\co{\enmat{\te C \te O}}
