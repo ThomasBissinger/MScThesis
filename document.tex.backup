@@ -31,7 +31,9 @@
 
 \newcommand\eint{\enmat{E^{int}}}
 \newcommand\eads{\enmat{E^{ads}}}
-\newcommand\eads{\enmat{E^{ZPE}}}
+\newcommand\ezp{\enmat{E^{ZPE}}}
+
+\renewcommand\Hil{\enmat{\mathcal H_a}}
 
 \renewcommand\H{\enmat{\bo H}}
 
@@ -45,7 +47,7 @@
 \renewcommand\r{\bo r}
 \newcommand\ri{\enmat{\r_i}}
 \newcommand\rip{\enmat{\r_{i'}}}
-\newcommand\inon{\enmat{\int\di(1)}}
+\newcommand\indr{\enmat{\int\di \r}}
 
 \newcommand\id{\hskip.2cm}
 \newcommand\pab{\enmat{\phi_{AB}}}
@@ -120,8 +122,8 @@ size=0.2cm,draw,dashed,fill=white] ({#2}) {};} %free labelled point
 {\LARGE Thomas Bissinger}\\[4cm]
 
 \vfill 
-
-\includegraphics[width=7cm]{./Figures/unistuttgart.jpg}\\[2cm]   
+%% CHECK: Stuttgart Figure
+[width=7cm]{./Figures/unistuttgart.jpg}\\[2cm]   
 
 {\Large Master Thesis supervised by \\[.7cm]
 Prof. Dr. rer. nat. J. Kästner \\[.4cm]
@@ -204,7 +206,8 @@ there will be concluding remarks and an outlook on possible further application 
 \label{Sec:Theo}
 This section focuses on the theoretical framework of the ice surface model. We introduce the main chemical
 nomenclature in Section \ref{Sec:Theo:Interaction} and then proceed to the mathematical ideas behind
-DFT and QM/MM in Section \ref{Sec:Theo:QMMet}.
+DFT in Section \ref{Sec:Theo:QMMet}. After that, Section \ref{Sec:Theo:QMMM} will explain how we describe
+the MM interaction of the system and how QM and MM are coupled by the QM/MM procedure.
 
 \newcommand\X{\enmat{\te X}}
 \newcommand\Y{\enmat{\te Y}}
@@ -281,7 +284,7 @@ done by including the zero-point vibrational energy of the atoms. It is computed
 by
 %% CHECK: Is this correct?
 \begin{equation}
- \ezp=\frac 1 2 \te {tr} \ed{\H},
+ \ezp=E + \frac 1 2 \te {tr} \ed{\H} = E + \Dl \ezp,
  \label{Theo:EZP}
 \end{equation}
 where $\te {tr} \ed{\H}$ is the \ep{trace} of the matrix $\H$, that is the sum of the eigenvalues
@@ -289,10 +292,139 @@ of $\H$. In the harmonic approximation, which should be accurate for the vibrati
 state, the eigenvalues of $\H$ are 
 %% CHECK: proportional or identical?
 proportional
-to the eigenfrequencies of the system.
+to the eigenfrequencies of the system. We call the term $\Dl \ezp$ the \ep{zero-point (vibratinal energy)
+correction}.
+
+We will always use the superscript in $\ezp$ if we want to denote energies that are corrected 
+with $\Dl \ezp$ in \eqref{Theo:EZP}.
 
 \subsection{Methods of Quantum Chemistry}
 \label{Sec:Theo:QMMet}
+
+We already saw a few different energy expressions so far. The accurate calculation of these 
+is naturally vital to anything we want to do in this work. We now want to focus on the methods
+of quantum chemistry which will be used to describe the quantum mechanical part of our system.
+
+For a system with a time-independent potential $V$, one usually looks for solution of the 
+\ep{time-independent Schrödinger equation}
+\begin{equation}
+ \Ha \keP{} = E \keP{}.
+ \label{Theo:Schroedinger}
+\end{equation}
+This equation holds for all non-relativistic quantum mechanical particles. Within the \ep{Born-Oppenheimer}
+approximation, one can separate the dynamics of the atomic cores from the dynamics of the electrons. We will treat
+the cores in a more or less classical way, therefore we will for now focus on solving the Schrödinger 
+equation for $N < \infty$ electrons, that is the Hamiltonian of our system is
+\begin{equation}
+ \Ha = -\sum_{i=1}^N \frac{\hbar^2}{2m_e} \nabla_i^2 + \frac {e^2} {4 \pi \e_0} \sum_{1\le i < j \le N} \frac 1 {\abs{\r_i - \r_j}} + V(\r^N).
+ \label{Theo:Hamiltonian}
+\end{equation}
+$\r_i$ is the space coordinate of electron $i$ and $\nabla_i^2$ is the \ep{Laplace operator} applied to the three coordinates contained in $\r_i$. 
+The electrons move in an external potential $V$ given by the core geometry and movement, where $\r^N$ is the vector containing
+all electron coordinates. We will have for $K < \infty$ atomic cores 
+\begin{equation}
+\begin{aligned}
+V(\r^N)=&-\sum_{A=1}^K \frac{\hbar^2}{2m_A} \nabla_A^2 + \frac {e^2} {4 \pi \e_0} \sum_{A=1}^K \sum_{B=1}^K \frac {Z_A Z_B} {\abs{\bo R_A - \bo R_B}} \\
+   &- \frac {e^2} {4 \pi \e_0} \sum_{A=1}^K \sum_{i=1}^N \frac {Z_A} {\abs{\bo R_A - \r_i}}. 
+\end{aligned}
+\label{Theo:CorePotential}
+\end{equation}
+Here, $Z_A$ is the atomic number of atom $A$ and $\bo R_A$ is the coordinate of it with corresponding $\nabla_A^2$. We
+can separate $V$ into a core-core (cc) and an core-electron (ce) potential
+\begin{equation}
+ V(\r^N)=V_{cc}+V_{ce}(\r^N)
+\label{Theo:SeparatePotential}
+\end{equation}
+with
+\begin{equation}
+ V_{ce}(\r^N)=\sum_{i=1}^N \tilde V(\r_i) = - \frac {e^2} {4 \pi \e_0} \sum_{A=1}^K \sum_{i=1}^N \frac {Z_A} {\abs{\bo R_A - \r_i}}.
+ \label{Theo:CoreElectronPotential}
+\end{equation}
+
+
+
+There will be more than one solution to \eqref{Theo:Schroedinger}, so one can construct the set of all solutions $\st{\keP{_i} | i \in \N_0}$
+with corresponding energy eigenvalues $E_i$. $\st{\keP{_i}}$ always is the complete basis of
+some $\mathbb C$-vector space $\Hil$, where the subscript $a$ denotes antisymmetry according 
+to the \ep{Pauli principle}
+\begin{equation}
+\begin{aligned}
+ &\bkt{\x_1,\ldots,\x_l,\ldots,\x_k,\ldots,\x_N | \Psi_i } \\
+ &=\ph - \Psi_i(\x_1,\ldots,\x_l,\ldots,\x_k,\ldots,\x_N) \\
+ &= - \Psi_i(\x_1,\ldots,\x_k,\ldots,\x_l,\ldots,\x_N),
+\end{aligned}
+\label{Theo:Pauli}
+\end{equation}
+where we used $\x_i=(\r_i,s_i)$ for orbital coordinates $\r_i$ and the spin coordinate $s_i$.
+
+ If $\Hil \suseq \mathcal {L}^2$, which is usually the case,
+the set of solutions can be chosen orthonormal $\bkt{\Psi_i | \Psi_j} = \dl_{ij}$.
+The set of solutions is usually not finite and the set of eigenvalues (energies) $E_i$ of $\Ha$
+is not necessarily bounded from above. But there is always a minimum energy, denoted by $E_0$, 
+which we call the \ep{(electronic) ground state energy}. The corresponding eigenvector 
+$\keP{_0}$ is the \ep{(electronic) ground state}. They can both be obtained by the
+variational ansatz
+\begin{equation}
+\begin{aligned}
+ E{_0}&= \min_{\keP{}} \st{ \brP{} \Ha \keP{}}, \\
+ \keP{_0}&= \argmin_{\keP{}} \st{ \brP{} \Ha \keP{}}.
+\end{aligned}
+\label{Theo:Variation}
+\end{equation}
+Note that while $E_0$ is unique, there may be multiple possibilities for $\keP{_0}$, although
+we will not consider that case.
+
+Now, equation \eqref{Theo:Schroedinger} has a variety of equivalent counterparts. One of them
+is the key to the approach of DFT. When multiplying \eqref{Theo:Schroedinger} by the bra $\brP{}$,
+one can interpret the resulting energy as a (non-linear) functional of the wavefunction by
+\begin{equation}
+ E : \Hil \rar \R, \qquad E\ed{\keP{}}=\brP{} \Ha \keP{},
+ \label{Theo:WaveFunctional}
+\end{equation}
+which would mean that the ground state energy can be found by minimizing the functional
+$E\ed{\keP{}}$ according to \eqref{Theo:Variation}. But so far, the minimization
+of said functional only differs in semantics from the task of minimizing the energy expectation value.
+
+A truly new task arises from considering the \ep{electron density} $\rho$ instead of the wave function
+$\Psi$. The two approaches are related, since the ground state electron density is given by
+\begin{equation}
+ \rho(\x_1,...,\x_N)=\abs{\Psi_0(\x_1,...,\x_N)}^2,
+ \label{Theo:NElectronDensity}
+\end{equation}
+This $N$-electron density describes the probability of finding the system in a state within 
+a small volume of $\di \x_1 \cdots \di \x_N$ around $(\x_1,\ldots,\x_N)$. 
+The $N$-electron density can be reduced to the one-electron density by
+\begin{equation}
+ \rho(\r_1,s_1)=\int\di\x_2 \cdots \int\di \x_N \abs{\Psi_0(\x_1,...,\x_N)}^2,
+ %\rho(\r_1)=\int\di s_1\int\di\x_2 \cdots \int\di \x_N \abs{\Psi_0(\x_1,...,\x_N)}^2,
+ \label{Theo:1ElectronDensity}
+\end{equation}
+where the integrals run over %the spin of the first particle and
+the full spin-orbit space for all particles but the first.
+
+For a system of $N$ electrons, Hohenberg and Kohn \cite{HohenbergKohn} were able to show that the ground state
+one-electron density uniquely determines the Hamiltonian except for the addition of a constant,
+and that conversely there is a functional of the density that has its minimal value at the one-electron
+ground state density, and for which the minimum value is the ground state energy. Therefore, the task
+of solving the Schrödinger equation \eqref{Theo:Schroedinger} is reduced to the task of finding
+the minimum of this density functional.
+
+The problem here is that not much is known about the nature of this density functional. The
+popular ansatz by Kohn and Sham \cite{KohnSham} is 
+% CHECK: Role of V_{cc}
+\begin{equation}
+\begin{aligned}
+ E\ed{\rho}=&V_{cc}+\indr\ \tilde V(\r) \rho(\r) + \frac {e^2}{2}\indr\indr' \frac {\rho(\r)\rho(\r')}{\abs{\r-\r'}}\\
+ &+T_s\ed{\rho}+E_{xc}\ed{\rho}
+\end{aligned}
+\end{equation}
+
+
+
+
+
+\subsection{Molecular Mechanics and QM/MM}
+\label{Sec:Theo:QMMM}
 
 \newpage
 %\subsection{The Fletcher Surface}
