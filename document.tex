@@ -18,7 +18,8 @@
 \usepackage{pgfplots}
 \usepackage{rotating}
 \usepackage{verbatim}
-\usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes}
+\usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
+\tikzexternalize[shell escape=-enable-write18]
 
 \makeatletter
 \newcommand{\subalign}[1]{%
@@ -635,6 +636,8 @@ system we are about to study.
 \newcommand\qbe{\enmat{q_{\be}}}
 
 %% CHECK: According with the rest, should we use O white, H red?
+\tikzsetexternalprefix{TikzPics/Theo/}
+\tikzsetnextfilename{FigTheoTIP3Geo} 
 \newcommand\Odraw[1]{\shadedraw[shading=radial,outer color=red!90,inner color=red!30,draw=black] {(#1)} circle(.5cm);}
 \newcommand\Hdraw[1]{\shadedraw[shading=radial,outer color=blue!90,inner color=blue!30,draw=black] {(#1)} circle(.4cm);}
 \newcommand\anghoh{\enmat{\theta(\te{HOH})}}
@@ -759,7 +762,9 @@ for a given wave function \cite{Brorsen2014AnalyticalGradientDFT}.
 %% CHECK: Pre-reactive complex?
 \newcommand\ebased[2]{exp(-(\x-#1)^2/#2)} 
 \begin{figure}[tc]
-%\includegraphics{ 
+%\includegraphics{
+\tikzsetexternalprefix{TikzPics/Theo/}
+\tikzsetnextfilename{Fig.Theo.PES} 
 \begin{equation*}
 \begin{tikzpicture}
   \draw[->] (-3.7,0) -- (5,0) node[right] {$\xi$};
@@ -864,6 +869,8 @@ interaction.
 
 \subsection{$\htoh$ Interaction}
 
+\tikzsetexternalprefix{TikzPics/Benchmark/}
+\tikzsetnextfilename{Fig.Bench.H2O+H.NoD3}
 \pgfplotsset{xtick style={draw=none}}
 
 \begin{figure}[h]
@@ -904,10 +911,10 @@ interaction.
 \caption{The $\htoh$ benchmark results for different basis sets without dispersion correction.
 Energies are plotted as differences to the reference energy from $\ccsdtf/\vtz$ calculations,
 see \eqref{Bench:RefEnergy}.}
-\label{Fig:Bench:H2O+H:1}
+\label{Fig:Bench:H2O+H:NoD3}
 \end{figure}
 
-First information about $\htoh$ interaction can be found in Figure \ref{Fig:Bench:H2O+H:1}, where
+First information about $\htoh$ interaction can be found in Figure \ref{Fig:Bench:H2O+H:NoD3}, where
 we compared functionals (without dispersion correction) in different basis sets. We compared
 energy values of the form
 \newcommand\ecc{\enmat{\eint_{\te {CC}}}}
@@ -918,7 +925,7 @@ energy values of the form
 $\eint\dft$ stands for the interaction energy of the system computed with a certain
 DFT functional and basis set, and $\ecc$ is the interaction energy with $\ccsdtf/\vtz$.
 For $\htoh$, we found $\ecc=-0.455 \te{ kJ/mol}$, so we have an only
-weakly bonded system. Figure \ref{Fig:Bench:H2O+H:1} does not contain our results
+weakly bonded system. Figure \ref{Fig:Bench:H2O+H:NoD3} does not contain our results
 for the def2-SVP basis set since they are much worse than all other results --
 up to 20 $\kmo$ and usually more than 5 $\kmo$. Only the $\bhlyp$, $\pbez$ and
 $\pw$ functional had errors between 2 and 5 $\kmo$. However,
@@ -926,8 +933,8 @@ the additional of diffuse functions effects quite a remarkable improvement to th
 def2-SVP results, such that def2-SVPD calculations are well comparable to higher
 results obtained with bigger basis sets. Another more general result is that the inclusion
 of the D3 dispersion correction is not beneficial to the interaction
-energy values of $\htoh$, which can be seen by comparing Figure \ref{Fig:Bench:H2O+H:1}
-to Figure \ref{Fig:Bench:H2O+H:2}. The contribution of dispersion in $\htoh$
+energy values of $\htoh$, which can be seen by comparing Figure \ref{Fig:Bench:H2O+H:NoD3}
+to Figure \ref{Fig:Bench:H2O+H:D3}. The contribution of dispersion in $\htoh$
 is therefore overestimated by the dispersion correction.
 
 Concerning basis sets, it is also
@@ -941,6 +948,8 @@ at the ``better'' functionals in this case, one could therefore consider
 the def2-TZVP and def2-TZVPD basis sets as good compromises between
 accuracy and computational cost among the selection presented. 
 
+\tikzsetexternalprefix{TikzPics/Benchmark/}
+\tikzsetnextfilename{Fig.Bench.H2O+H.D3}
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
@@ -977,7 +986,7 @@ accuracy and computational cost among the selection presented.
 \caption{The $\htoh$ benchmark results for different basis sets including dispersion correction.
 Energies are plotted as differences to the reference energy from $\ccsdtf/\vtz$ calculations,
 see \eqref{Bench:RefEnergy}.}
-\label{Fig:Bench:H2O+H:2}
+\label{Fig:Bench:H2O+H:D3}
 \end{figure}
 
 Let us now look at the different functionals.  The $\bns$ and
@@ -992,11 +1001,73 @@ without the dispersion correction.
 The $\tpss$ and $\tpssh$ functionals should not be used to describe this interaction,
 while $\btlyp$ and $\blyp$ can be considered quite good -- not as good as $\bns$,
 $\pw$ or $\pbez$ but much better than $\tpss$ and $\tpssh$ -- while they become
-worse with additional dispersion.  
+worse with additional dispersion.
+
+So from the $\htoh$ data, one can already conclude that the $\tpss$ and $\tpssh$
+functionals should not be expected to yield good energy values for hydrogen adsorption,
+which may however still occur due to error cancellation. Furthermore, the def2-SVP basis
+set is not fit to describe $\htoh$ interaction. Since they are sufficiently accurate
+while not too expensive, we will especially evaluate the def2-TZVP basis set family
+for $\htohto$ interaction.
 %% CHECK: Table mit Computation times?
 %% CHECK: RMSD table?
 
+\subsection{$\htohto$ Interaction}
 
+\tikzsetexternalprefix{TikzPics/Benchmark/}
+\tikzsetnextfilename{Fig.Bench.H2O+H2O.TZVPCompare}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    height=8cm,
+    width=.5*\textwidth,
+    ybar,
+    xmin=.5,
+    xmax=10.5,
+    ybar=0pt,
+    axis x line*=bottom,
+    enlarge x limits=0.015,
+    enlarge y limits=0.15,
+    legend pos=north east,
+    legend style={legend columns=2},
+    ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
+    xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpss,\tpssh,\pw},
+    xtick=data,
+    grid=minor,
+    xticklabel style={rotate=90},
+    bar width = .008*\textwidth,
+    minor xtick={1.5,...,9.5},
+    yticklabel pos=left,
+    grid style={dotted,gray},
+    ymajorgrids=true,
+    ]
+\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.2911688300) (2,1.8945608000) (3,-3.3056620300) (4,-1.3177384500) (5,-1.2830293400) (6,-4.9496451100) (7,-3.7824003200) (8,-2.2352456800) (9,-2.0561340700) (10,-2.4866635600) };
+\addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-5.3662069400) (2,-3.1298060400) (3,-5.7434387800) (4,-5.0291977600) (5,-4.7869166200) (6,-6.8055060400) (7,-5.7431237200) (8,-4.8009367900) (9,-4.5759839500) (10,-3.8439420400) };
+\addplot[red!20!black,fill=red!80!white] coordinates {(1,1.6138948500) (2,5.9163017000) (3,.0413778800) (4,3.1551158600) (5,2.9033304100) (6,-.6073831700) (7,-.1202479000) (8,1.6705531400) (9,1.6996436800) (10,1.2347726500) };
+\addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.4527941700) (2,.9033820400) (3,-2.3888899400) (4,-.5200065300) (5,-.7710043300) (6,-2.4600935000) (7,-2.0844369600) (8,-.8217289900) (9,-.8236718600) (10,-.1117937900) };
+\legend{def2-TZVP,def2-TZVP+D3,def2-TZVPD,def2-TZVPD+D3}
+\end{axis}
+\end{tikzpicture}
+\caption{The $\htohto$ benchmark results for the def2-TZVP and def2-TZVPD basis sets.
+The dashed results include dispersion corrections. Energies are plotted as differences
+to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
+\label{Fig:Bench:H2O+H2O:TZVPCompare}
+\end{figure}
+
+Again, we compare energies to the reference energy as in \eqref{Bench:RefEnergy}. The
+reference energy for the $\htohto$ dimer is at \mbox{$\ecc=-20.982\ \kmo$}.
+In Figure \ref{Fig:Bench:H2O+H2O:TZVPCompare}, we take a look at the differences between
+dispersion corrected and not dispersion corrected results in the def2-TZVP and def2-TZVPD
+basis sets. It becomes immediately apparent that the results here differ stronger from
+the reference energy than in the $\htoh$ case. For the functionals without dispersion
+correction, this may well be due to the more important role of dispersion for this interaction. 
+But inclusion of the dispersion correction does not resolve the issue for most cases,
+it often happens that dispersion yields bonds that are much too attractive. This
+is most striking for the def2-TZVP basis set, which generally predicts too attractive
+interaction for all functionals but $\bns$.
+
+ 
 \newpage
 
 \section{Adsorption on the Ice Surface}
