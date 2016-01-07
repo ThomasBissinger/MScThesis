@@ -9,6 +9,7 @@
 %% \usepackage{tabu}
 \usepackage{longtable}
 \usepackage{enumerate}
+\usepackage[symbol]{footmisc}
 
 \usepackage[justification=justified,singlelinecheck=false,
  aboveskip=0em,belowskip=0em]{caption}
@@ -16,6 +17,7 @@
 
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usetikzlibrary{pgfplots.groupplots}
 \usepackage{rotating}
 \usepackage{verbatim}
 \usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
@@ -42,10 +44,13 @@
 \newcommand\eads{\enmat{E^{\te{ads}}}}
 \newcommand\ezp{\enmat{E^{\te{ZPE}}}}
 \newcommand\dft{\enmat{_{\te{DFT}}}}
+\newcommand\cc{\enmat{_{\te{CC}}}}
 
 \renewcommand\Hil{\enmat{\mathcal H_a}}
 
 \renewcommand\H{\enmat{\bo H}}
+%% Straaange
+\renewcommand{\Ang}{\mathring{\te{A}}}
 
 \newcommand\di{\te{d}}
 \newcommand\dr{\di\r}
@@ -250,8 +255,8 @@ $R_\XY$ and the molecular orientation $\Om_\X$ and $\Om_\Y$ is called the \ep{po
 of the intermolecular interaction. It may also contain internal deformations of the molecule.
 
 However, one does often speak of the interaction energy of two molecules without further specification
-of a point on the PES. This is usually a reference to the minimum geometry
-of $\XY$, that is the global minimum of $E_{\XY}$ and therefore $\eint_\XY$. If the interaction between $\X$ and $\Y$
+of a point on the PES. This is usually a reference to the optimum geometry
+of $\XY$, that is the global minimum of the PES $E_{\XY}$ and therefore $\eint_\XY$. If the interaction between $\X$ and $\Y$
 were purely repulsive, that is $\eint_{\XY} > 0$ for all geometries, the global minimum would
 not be well-defined since it requires inifinite separation of $\X$ and $\Y$ in an arbitrary direction.
 However, the algorithms we use will converge to a local minimum around the initial geometry we
@@ -453,7 +458,7 @@ with the \ep{effective potential}
 \label{Theo:Veff}
 \end{equation}
 The latter term is often expressed by the \ep{exchange correlation potential}
-\newcommand\vxc{V_{xc}}
+\newcommand\vxc{V_{\te{xc}}}
 \begin{equation}
 \vxc=\delti{\exc\er}{\rho(\r)}.
 \label{Theo:Vxc}
@@ -503,7 +508,7 @@ We chose functionals from the GGA, Hybrid and Meta-GGA class.\newline
 \textbf{GGA}: \bp, \blyp, {\pbe} and \bns\cite{GrimmeB97-D2006}.\newline
 \textbf{Hybrid}: \btlyp, {\bhlyp} and \pbez. \newline
 \textbf{Meta-GGA}: \tpss, {\tpssh} and \pw. \newline
-The functionals {\bns} and \pw (with additional dispersion correction, see below) and the
+The functionals {\bns} and $\pw$ (with additional dispersion correction, see below) and the
 {\pbez} functional were among the most accurate functionals in a study by Anacker and Friedrich
 \cite{Anacker2014} on water-water interaction. They also included the meta-GGA functional \mos. While
 {\mos} is indeed an accurate and fast functional, in our tests it had the strange deficiency of
@@ -512,12 +517,13 @@ as small as $\hto + \te H$. The calculations still converged for geometries clos
 equilibrium (energy minimum) geometry, but for even slightly longer separations of H and $\hto$
 lead to oscillations in the SCF convergence. This problem seemed to be mostly independent
 of the choice of basis set and the implementation of $\mos$ (the problem occured both
-in TURBOMOLE and NWCHEM calculations), and it could not be helped by standard approaches
+in TURBOMOLE\cite{TURBOMOLE} and NWCHEM\cite{NWCHEM} calculations), and it could not be helped by standard approaches
 to facilitate convergence. For that reason, $\mos$ is not included
 in our further considerations despite it being among the most accurate functionals.
 
 \subsubsection{Basis Sets}
 \label{Sec:Theo:Basis}
+
 Now, the ansatz \eqref{Theo:RhoByPhi} is not yet fit for computational application since the
 functions $\phi_i$ may pertain to the infinite-dimensional Hilbert space $\mathcal L^2(\R^3)$.
 As usual, we have to restrain the approximation to a finite subspace $\st{\chi_\mu\ |\ 1 \le \mu \le M} = X \sus \mathcal L^2(\R^3)$.
@@ -543,13 +549,14 @@ efficiency does however compensate the increase in the number of basis functions
 % \end{equation}
 
 %% CHECK: More citations!
+%% CHECK: http://www.gaussian.com/g_tech/g_ur/m_basis_sets.htm
 Basically, a larger basis set increases computational accuracy while also demanding more
 computational resources, which means that some compromise between these two has to
 be found. This is also done by benchmarking. In our benchmark, we used the
 def2-SVP, def2-TZVP and def2-QZVP basis sets \cite{def2Basis}. We also used the
 def2-SVPD, def2-TZVPD and def2-QZVPD basis sets with additional diffuse functions,
-the def2-TZVPP basis set with additional primary functions and finally the 
-def2-TZVPPD basis set with both additional primary and diffuse functions.
+the def2-TZVPP basis set with additional polarization functions and finally the 
+def2-TZVPPD basis set with both additional polarization and diffuse functions.
 
 Also, due to the truncation of the basis set (that is the operation in the finite subspace $X$),
 the \ep{basis set superposition error} BSSE arises. That is the basis set of molecule Y plays a
@@ -563,12 +570,13 @@ For more than two interacting molecules, this \ep{counterpoise correction} (CP) 
 more complicated, see for example Anacker and Friedrich \cite{Anacker2014}.
 
 %% CHECK: Wahr? Nachrechnen?
-We will
-not include a CP correction in our calculations. The reason is that we will mainly
+We will not include a CP correction in our calculations. The reason is that we will mainly
 work with def2-TZVP and def2-TZVPD, so basis sets large enough to ignore the 
 BSSE. However, the comparison between def2-TZVP and for example def2-SVP results
 is then somewhat unfair since the def2-SVP basis set without the CP correction
-may be significantly less accurate than def2-SVP with CP correction.   
+may be significantly less accurate than def2-SVP with CP correction. In the next
+section's benchmark, we will compare results for different methods to CP corrected reference 
+energies, so the BSSE is at least indirectly accounted for.
 
 
 \subsubsection{Dispersion Corrections}
@@ -825,12 +833,13 @@ All molecular visualizations are created with VMD \cite{HUMP96}.
 %\label{Sec:Theo:Fletcher}
 
 \section{Benchmarking}
-\newcommand\htohto{\enmat{\hto-\hto}}
-\newcommand\htoh{\enmat{\hto-\te H}}
+\newcommand\htohto{\mbox{\enmat{\hto-\hto}}}
+\newcommand\htoo{\mbox{\enmat{\hto-\hspace{.2pt} ^3\te{O}}}}
+\newcommand\htoh{\mbox{\enmat{\hto-\te H}}}
 \label{Sec:Bench}
 
 In the previous section, we did introduce the basic notions of the theoretical structure underlying our
-computations. We did already mention that DFT functionals and basis sets are of great importance
+computations. We did already mention that the choice of DFT functionals and basis sets is of great importance
 to the accuracy of our calculations. Unfortunately, not much can be said a priori about
 which functional combined with which basis set should be used to describe a certain system.
 There are recommendations as some functionals were fitted to best represent a certain
@@ -843,10 +852,23 @@ have reason to hope that at least the \pbez, $\pw\dt$ and $\bns\dt$ functionals 
 accurate to describe water-water interaction, as they are recommended by Anacker and Friedrichs \cite{Anacker2014}.
 We did also already name the basis sets we want to compare alongside the functionals in Section \ref{Sec:Theo:Basis}.
 
-We used two different benchmarks, namely the interactions energies of an $\htohto$ and an $\htoh$ system.
-The reference calculations were in both cases performed MOLPRO \cite{MOLPRO_brief} calculations
+We used three different benchmarks, namely the interaction energies of an $\htoh$, an $\htohto$ and an $\htoo$ system.
+The reference calculations were in all cases performed with the MOLPRO \cite{MOLPRO_brief} package
 at the $\ccsdtf$ \cite{CCSDTF12} level of theory with the $\vtz$\cite{VTZ} basis set, for
-which we found energy minima. 
+which we found energy minima \footnote{In the $\htoo$ case, a first minimum was calculated at the
+$\mrcif/\vtz$ \cite{MRCIF12} level of theory, where it was found that the wavefunction can be well
+described by a single-reference method. From there, the $\ccsdtf$ minimization was carried out.}.
+For $\htoo$, the $\ccsdtf$ calculations were preceded by \ep{multi-reference}\cite{Multiref} calculation
+at the $\mrcif/\vtz$ level of theory to find an optimum geometry, which turned out to be
+suitable for single-reference treatment.
+
+At each optimum geometry, an additional calculation was carried out to find a CP
+corrected energy. For $\htoh$ and $\htohto$, this calculations was also at the $\ccsdtf/\vtz$ level
+of theory, while for the $\htoo$ interaction again an $\mrcif/\vtz$ calculation with
+Davidson correction\cite{DavidsonCorrection} was
+required due to the necessity of a multireference treatment of the case where the
+$^3\te O$ radical is set as a dummy atom. In all cases, the $\vtz$ basis set is 
+large enough to require only small CP corrections of $0.05 - 0.18 \ \kmo$. 
 %We used these minima as initial geometries for two different
 %types of reference calculations:
 %% CHECK: Sollte man Benchmark i. überhaupt erwähnen? Meine Schlussfolgerung: Nein.
@@ -857,9 +879,20 @@ which we found energy minima.
 %    geometry and energy corresponding to the DFT method.
 %\end{enumerate}
 
-We performed the same calculations at the DFT level of theory with different basis sets. The results can be compared
-to the coupled-cluster data with respect geometry and energy deviations. We will discuss these for the cases $\htohto$ and $\htoh$
-separately.
+We performed energy minimizations at the DFT level of theory with different basis sets. The initial
+geometry was always the reference geometry provided by the $\ccsdtf$ calculation. The results can be compared
+to the coupled-cluster data with respect to optimum geometry and energy deviations. We will discuss
+these for the three test systems separately.
+
+The deviation of optimum geometry \mbox{$\bo R^M\dft=(\r^1\dft,\ldots,\r^M\dft)$} from the reference optimum geometry 
+\mbox{$\bo R^M\cc=(\r^1\cc,\ldots,\r^M\cc)$} can be quantified by the \ep{root mean square deviation} (RMSD). It
+is given by
+\newcommand{\DRMSD}{\Dl_{\te{RMSD}}}
+\begin{equation}
+\Dl_{\te{RMSD}}(\bo R^M\dft;\bo R^M\cc)=\sqrt{\frac 1 M \sum_{k=1}^M \abs{\r^k\dft-\r^k\cc}^2}.
+\label{Bench:RMSD}
+\end{equation}
+We will give $\DRMSD$ in $\Ang$.   
 
 %% CHECK: Source?
 Note that, obviously, the coupled cluster results are approximations just as the DFT results, however
@@ -872,7 +905,6 @@ interaction.
 \tikzsetexternalprefix{TikzPics/Benchmark/}
 \tikzsetnextfilename{Fig.Bench.H2O+H.NoD3}
 \pgfplotsset{xtick style={draw=none}}
-
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
@@ -881,15 +913,15 @@ interaction.
     width=.5*\textwidth,
     ybar,
     xmin=.5,
-    xmax=10.5,
+    xmax=9.5,
+    ymin=-.7,
     ybar=0pt,
     axis x line*=bottom,
     enlarge x limits=0.015,
     enlarge y limits=0.15,
-    legend pos=south west,
-    legend style={legend columns=2},
+    legend style={legend pos=south west,font=\small,legend columns=1},
     ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
-    xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpss,\tpssh,\pw},
+    xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpssh,\pw},
     xtick=data,
     grid=minor,
     xticklabel style={rotate=90},
@@ -899,10 +931,15 @@ interaction.
     grid style={dotted,gray},
     ymajorgrids=true,
     ]
-\addplot[green!20!black,fill=green!80!white] coordinates {(1,-1.3372721700) (2,.4102606300) (3,-.7425176550) (4,-1.8385326300) (5,-2.6576361200) (6,-1.8459102850) (7,-.8015651500) (8,-7.2262161600) (9,-5.3374052050) (10,-.2959201050) };
-\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.4004150050) (2,.4550516600) (3,-.0939141350) (4,-.8160841650) (5,-3.0162006550) (6,-.5095570400) (7,-.0395662850) (8,-8.7172901200) (9,-6.5151519950) (10,-.1592628300) };
-\addplot[red!20!black,fill=red!80!white] coordinates {(1,.1896136100) (2,.4029354850) (3,.2102500400) (4,.3640780850) (5,-2.1326673950) (6,-.8015388950) (7,-.1888522150) (8,-7.3249349600) (9,-5.3460956100) (10,.0254673500) };
-\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-.1378124950) (2,.4396399750) (3,.0877967200) (4,-.2670658600) (5,-2.6442460700) (6,-.6816060550) (7,.0698645550) (8,-8.0693954850) (9,-5.9672889100) (10,-.0466813900) };
+\addplot[green!20!black,fill=green!80!white] coordinates {(1,-.17957936646) (2,.36521188354) (3,-.07314159646) (4,-.13145395146) (5,-.02562004646) (6,-.61493977646) (7,-.15329811146) (8,.02935792354) (9,-.32041118646) };
+\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.09364675146) (2,.38435177854) (3,-.01343772646) (4,-.05111365146) (5,.03597418354) (6,-.44399347146) (7,-.07471689646) (8,.01756942854) (9,-.20565058146) };
+\addplot[red!20!black,fill=red!80!white] coordinates {(1,.19741617854) (2,.35121796854) (3,.18210951354) (4,.39813565354) (5,.23267664354) (6,-.19932312646) (7,.09974757854) (8,.23782262354) (9,.03978115854) };
+\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,.06989564354) (2,.35788673854) (3,.11838862854) (4,.18512883854) (5,.12862807854) (6,-.28819630146) (7,.04897040854) (8,.12219560354) (9,-.03386411646) };
+
+%\addplot[green!20!black,fill=green!80!white] coordinates {(1,-1.38867462646) (2,.35885817354) (3,-.79392011146) (4,-1.88993508646) (5,-2.70903857646) (6,-1.89731274146) (7,-.85296760646) (8,-7.27761861646) (9,-5.38880766146) (10,-.34732256146) };
+%\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.45181746146) (2,.40364920354) (3,-.14531659146) (4,-.86748662146) (5,-3.06760311146) (6,-.56095949646) (7,-.09096874146) (8,-8.76869257646) (9,-6.56655445146) (10,-.21066528646) };
+%\addplot[red!20!black,fill=red!80!white] coordinates {(1,.13821115354) (2,.35153302854) (3,.15884758354) (4,.31267562854) (5,-2.18406985146) (6,-.85294135146) (7,-.24025467146) (8,-7.37633741646) (9,-5.39749806646) (10,-.02593510646) };
+%\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-.18921495146) (2,.38823751854) (3,.03639426354) (4,-.31846831646) (5,-2.69564852646) (6,-.73300851146) (7,.01846209854) (8,-8.12079794146) (9,-6.01869136646) (10,-.09808384646) };
 \legend{def2-SVPD,def2-TZVP,def2-TZVPD,def2-QZVP}
 \end{axis}
 \end{tikzpicture}
@@ -914,39 +951,41 @@ see \eqref{Bench:RefEnergy}.}
 \label{Fig:Bench:H2O+H:NoD3}
 \end{figure}
 
-First information about $\htoh$ interaction can be found in Figure \ref{Fig:Bench:H2O+H:NoD3}, where
-we compared functionals (without dispersion correction) in different basis sets. We compared
+First information about $\htoh$ interaction can be found in Figure \ref{Fig:Bench:H2O+H:NoD3}
+and Figure \ref{Fig:Bench:H2O+H:D3}, where
+we compared functionals (with and without dispersion correction, respectively) in different basis sets. We compared
 energy values of the form
 \newcommand\ecc{\enmat{\eint_{\te {CC}}}}
 \begin{equation}
 \Dl\eint=\eint\dft-\ecc.
 \label{Bench:RefEnergy}
 \end{equation}
-$\eint\dft$ stands for the interaction energy of the system computed with a certain
-DFT functional and basis set, and $\ecc$ is the interaction energy with $\ccsdtf/\vtz$.
-For $\htoh$, we found $\ecc=-0.455 \te{ kJ/mol}$, so we have an only
-weakly bonded system. Figure \ref{Fig:Bench:H2O+H:NoD3} does not contain our results
-for the def2-SVP basis set since they are much worse than all other results --
-up to 20 $\kmo$ and usually more than 5 $\kmo$. Only the $\bhlyp$, $\pbez$ and
-$\pw$ functional had errors between 2 and 5 $\kmo$. However,
-the additional of diffuse functions effects quite a remarkable improvement to the
-def2-SVP results, such that def2-SVPD calculations are well comparable to higher
-results obtained with bigger basis sets. Another more general result is that the inclusion
-of the D3 dispersion correction is not beneficial to the interaction
-energy values of $\htoh$, which can be seen by comparing Figure \ref{Fig:Bench:H2O+H:NoD3}
-to Figure \ref{Fig:Bench:H2O+H:D3}. The contribution of dispersion in $\htoh$
-is therefore overestimated by the dispersion correction.
+$\eint\dft$ stands for the interaction energy \eqref{Theo:InteractionEnergy} of the system computed with a certain
+DFT functional and basis set, and $\ecc$ is the CP corrected interaction energy with $\ccsdtf/\vtz$.
+For $\htoh$, we found \mbox{$\ecc=-0.403\ \kmo$}, so we have an only
+weakly bonded system. The CP correction contributes $+0.052\ \kmo$ to
+the energy.
 
-Concerning basis sets, it is also
+Before discussing different functionals and the dispersion corrections, we can have a look
+at the differences between the four basis sets used.Figure \ref{Fig:Bench:H2O+H:NoD3} does not contain our results
+for the def2-SVP basis set since they are much worse than all other results --
+up to $-20\ \kmo$ and usually more than $-5\ \kmo$ of deviation. Only the $\bhlyp$, $\pbez$ and
+$\pw$ functional had errors between $-2$ and $-5$ $\kmo$ with def2-SVP. However,
+the addition of diffuse functions effects quite a remarkable improvement to the
+def2-SVP results, such that def2-SVPD calculations are well comparable to 
+results obtained by basis sets of more than double-$\zeta$ order.
+
+It is also
 noteworthy that def2-QZVP does not seem to offer a clear advantage over the
 other three basis sets in both figures. With additional dispersion,
-it tends to yield similar accuracy as def2-TZVP, while being inferior
+it tends to yield similar accuracy as def2-TZVP, while usually being inferior
 to def2-TZVPD for most functionals. Still, without dispersion correction,
-it is as good as def2-TZVPD or slightly better, while it takes approximately
-1.5 times as long to complete a single SCF iteration. From a first glance
+its accuracy is between def2-TZVP and def2-TZVPD and only rarely better
+than both. def2-QZVP takes approximately 1.5 times as long to complete a single
+SCF iteration as def2-TZVPD. From a first glance
 at the ``better'' functionals in this case, one could therefore consider
 the def2-TZVP and def2-TZVPD basis sets as good compromises between
-accuracy and computational cost among the selection presented. 
+accuracy and computational cost. 
 
 \tikzsetexternalprefix{TikzPics/Benchmark/}
 \tikzsetnextfilename{Fig.Bench.H2O+H.D3}
@@ -958,15 +997,14 @@ accuracy and computational cost among the selection presented.
     width=.5*\textwidth,
     ybar,
     xmin=.5,
-    xmax=10.5,
+    xmax=9.5,
     ybar=0pt,
     axis x line*=bottom,
     enlarge x limits=0.015,
     enlarge y limits=0.15,
-    legend pos=south west,
-    legend style={legend columns=2},
+    legend style={legend pos=south west,font=\small,legend columns=1},
     ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
-    xticklabels={\btlyp-D3,\bns-D3,\bhlyp-D3,\blyp-D3,\bp-D3,\pbe-D3,\pbez-D3,\tpss-D3,\tpssh-D3,\pw-D3},
+    xticklabels={\btlyp\dt,\bns\dt,\bhlyp\dt,\blyp\dt,\bp\dt,\pbe\dt,\pbez\dt,\tpssh\dt,\pw\dt},
     xtick=data,
     grid=minor,
     xticklabel style={rotate=90},
@@ -976,10 +1014,15 @@ accuracy and computational cost among the selection presented.
     grid style={dotted,gray},
     ymajorgrids=true,
     ]
-\addplot[green!20!black,fill=green!80!white] coordinates {(1,-1.9265919000) (2,.3747901250) (3,-1.1717343950) (4,-3.5689471700) (5,-3.8726650100) (6,-2.6704748150) (7,-1.6286239050) (8,-9.0398327950) (9,-7.2252184700) (10,-.6478683800) };
-\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.7286033850) (2,.3730572950) (3,-1.3828771050) (4,-4.3534203150) (5,-6.0301696350) (6,-1.4111799950) (7,-.8765494300) (8,-10.4059067000) (9,-8.2939545000) (10,-.5181686800) };
-\addplot[red!20!black,fill=red!80!white] coordinates {(1,-1.4858754700) (2,.3724796850) (3,-1.0818897850) (4,-3.1681383400) (5,-5.2421520650) (6,-1.6039442050) (7,-.9737191850) (8,-9.0033120900) (9,-7.1565879000) (10,-.2545159700) };
-\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-2.4036189950) (2,.4046945700) (3,-1.2088327100) (4,-3.7478224850) (5,-5.6954708950) (6,-1.3377972700) (7,-.9505097650) (8,-9.7233292100) (9,-7.7258225550) (10,-.3410524500) };
+ \addplot[green!20!black,fill=green!80!white] coordinates {(1,-2.39332220146) (2,.33675146354) (3,-.76816395646) (4,-2.85861331146) (5,-5.18753683146) (6,-1.37496951646) (7,-.86554375146) (8,-.85577689146) (9,-.66041343646) };
+\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.17766363146) (2,.32630197354) (3,-1.22998940646) (4,-4.40490153646) (5,-6.08159834646) (6,-1.20436452646) (7,-.78775018646) (8,-.86803797646) (9,-.54581036146) };
+\addplot[red!20!black,fill=red!80!white] coordinates {(1,-2.12935443146) (2,.32170734854) (3,-.51228272646) (4,-3.21961956146) (5,-5.29358077646) (6,-.95937912146) (7,-.61265559146) (8,-.64757474146) (9,-.29990603146) };
+\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-1.96625837146) (2,.35990837354) (3,-.57660747646) (4,-3.79917243146) (5,-5.74679458646) (6,-1.04856735646) (7,-.66372156646) (8,-.76354307646) (9,-.37368258146) };
+
+%\addplot[green!20!black,fill=green!80!white] coordinates {(1,-1.97799435646) (2,.32338766854) (3,-1.22313685146) (4,-3.62034962646) (5,-3.92406746646) (6,-2.72187727146) (7,-1.68002636146) (8,-9.09123525146) (9,-7.27662092646) (10,-.69927083646) };
+%\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.78000584146) (2,.32165483854) (3,-1.43427956146) (4,-4.40482277146) (5,-6.08157209146) (6,-1.46258245146) (7,-.92795188646) (8,-10.45730915646) (9,-8.34535695646) (10,-.56957113646) };
+%\addplot[red!20!black,fill=red!80!white] coordinates {(1,-1.53727792646) (2,.32107722854) (3,-1.13329224146) (4,-3.21954079646) (5,-5.29355452146) (6,-1.65534666146) (7,-1.02512164146) (8,-9.05471454646) (9,-7.20799035646) (10,-.30591842646) };
+%\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-2.45502145146) (2,.35329211354) (3,-1.26023516646) (4,-3.79922494146) (5,-5.74687335146) (6,-1.38919972646) (7,-1.00191222146) (8,-9.77473166646) (9,-7.77722501146) (10,-.39245490646) };
 \legend{def2-SVPD,def2-TZVP,def2-TZVPD,def2-QZVP}
 \end{axis}
 \end{tikzpicture}
@@ -989,30 +1032,83 @@ see \eqref{Bench:RefEnergy}.}
 \label{Fig:Bench:H2O+H:D3}
 \end{figure}
 
-Let us now look at the different functionals.  The $\bns$ and
-$\pw$ functionals yield good approximations to $\ecc$ with and without
-dispersion corrections. The results do not vary strongly with basis set size,
-however they are slightly more accurate for the def2-TZVPD basis set, which
-is computationally much faster than the def2-QZVP basis set (which takes roughly
-1.5 times the computation time of the smaller basis set). The $\bhlyp$ functional
-yields good results as well, although $\bhlyp\dt$ is significantly less accurate.
-The $\pbez$ functional behaves similarly, and describes the system very accurate only
-without the dispersion correction.
-The $\tpss$ and $\tpssh$ functionals should not be used to describe this interaction,
-while $\btlyp$ and $\blyp$ can be considered quite good -- not as good as $\bns$,
-$\pw$ or $\pbez$ but much better than $\tpss$ and $\tpssh$ -- while they become
-worse with additional dispersion.
+The first general result on functionals is that the inclusion
+of the D3 dispersion correction is not beneficial to the interaction
+energy values of $\htoh$, which can be seen by comparing Figure \ref{Fig:Bench:H2O+H:NoD3}
+to Figure \ref{Fig:Bench:H2O+H:D3}. Indeed, while most functionals without
+dispersion corrections have errors of between $-0.2$ and $0.2\ \kmo$ for at
+least one basis set, the D3 corrected versions deviate stronger than $-5\ \kmo$.
+The contribution of dispersion in $\htoh$ is therefore strongly overestimated by the
+D3 correction. The best results for dispersion corrected functionals are obtained
+by $\pw\dt/\tzvpd$ with a deviation of $-0.300\ \kmo$.
 
-So from the $\htoh$ data, one can already conclude that the $\tpss$ and $\tpssh$
-functionals should not be expected to yield good energy values for hydrogen adsorption,
-which may however still occur due to error cancellation. Furthermore, the def2-SVP basis
-set is not fit to describe $\htoh$ interaction. Since they are sufficiently accurate
-while not too expensive, we will especially evaluate the def2-TZVP basis set family
-for $\htohto$ interaction.
+We will therefore mainly focus on the data in Figure \ref{Fig:Bench:H2O+H:NoD3}. 
+The results here tend to be very accurate.
+%% CHECK: Accuracy ccsd(t)?
+In fact, the deviations are within the error bonds of a $\ccsdtf$ calculation,
+so it is hard to favor a functional of the given choice. Still, at least two
+functionals need special remarks, but rather for their deficiencies. The first one
+are the $\tpss$ and $\tpss\dt$ functionals. They predict much too attractive energies
+for this benchmark, beyond $-7\ \kmo$ and $-9\ \kmo$, respectively. 
+%% CHECK: Vergleich, ob das jedesmal etwa derselbe Abstand ist (basis- und dispersionsabhängig).
+They predict
+a wrong optimum geometry, where the H radical is at a distance of around $2.20\ \Ang$
+from the O atom in the water molecule, which is much less than the reference
+value of $3.34\ \Ang$.
+
+The opposite problem happens for $\bns$ and $\bns\dt$ optimizations. Here, the attraction is
+considered close to being repulsive, with interaction energy values around
+\mbox{$\eint_{\bns}\approx -0.03\ \kmo$}. While the resulting deviation of around
+$0.37\ \kmo$ does not look too dramatic in Figures \ref{Fig:Bench:H2O+H:NoD3} and
+\ref{Fig:Bench:H2O+H:D3}, it is a qualitative mistake. The separation between
+radical H and water O is around $5.80\ \Ang$, which is close to describing two isolated
+systems.
+
+Comparing RMSD data of different functionals yields similar results as the energy comparison.
+Functionals without the D3 correction
+predict very accurate geometries with $\DRMSD < 0.01\ \Ang$ for all but $\tpss$ and $\bns$.
+Despite worse energy results, many D3 corrected versions still find accurate optimum geometries.
+Exclusions are $\btlyp\dt$, $\blyp\dt$, $\bp\dt$, which do find optima similar to the already mentioned
+$\tpss$ optimum, with the H radical too close to the water O. The $\bhlyp$ functional
+generally yields good geometries, only for the $\tzvp$ basis set it also predicts the H
+radical too close to the water O.
+
+Concerning the change of optimum geometry with respect to the choice of basis set, most
+basis sets lead to the same optimum geometry for nearly all functionals. Only the
+$\svp$ basis set and the $\tzvpp$ basis set often lead to wrong, i.e. too
+attractive, geometries. 
+
+% Let us now look at the different functionals. The $\bns$ functional
+% seems to offer a very good approximation to $\ecc$  with and without dispersion
+% correction. This is unfortunately not due to the functional's accuracy but instead
+% it appears that the functional
+% considers the $\htoh$ interaction to be repulsive in the region where most functionals
+% find an energy minimum, so it finds a less attractive optimum geometry at
+% a much larger distance between the water oxygen and the hydrogen atom.
+% A more satisfactory result is produced with the $\pw$ functional. The energies 
+% are very accurate both for $\pw$ and $\pw\dt$ and they do not vary strongly with basis set size.
+% They are most accurate for the def2-TZVPD basis set with a deviation
+% of only $\Dl\eint=-0.025 \kmo$ (no D3 correction) and $\Dl\eint=-0.255 \kmo$ (D3 corrected).
+% %The def2-TZVPD basis set is computationally much
+% %faster than the def2-QZVP basis set (which takes roughly 1.5 times
+% %the computation time of the smaller basis set). 
+% For basis sets
+% larger than def2-SVPD the $\btlyp$, $\bhlyp$ and $\pbez$ functionals yield very good
+% results as well, although the dispersion corrected version are significantly less accurate.
+% The $\tpss$ and $\tpssh$ functionals should not be used to describe this interaction,
+% while $\btlyp$ and $\blyp$ can be considered quite good -- not as good as
+% $\pw$, $\bhlyp$ or $\pbez$ but much better than $\tpss$ and $\tpssh$ -- while they become
+% worse with additional dispersion.
+% 
+% So from the $\htoh$ data, one can already conclude that the $\tpss$ and $\tpssh$
+% functionals should not be expected to yield good energy values for hydrogen adsorption,
+% which may however still occur due to error cancellation. The $\bns$ functional
+% is probably also not fit to describe such a system accurately. Furthermore, the def2-SVP basis
+% set is not fit to describe $\htoh$ interaction. Since they are sufficiently accurate
+% while not too expensive, we will especially evaluate the def2-TZVP basis set family
+% for $\htohto$ interaction.
 %% CHECK: Table mit Computation times?
 %% CHECK: RMSD table?
-
-\subsection{$\htohto$ Interaction}
 
 \tikzsetexternalprefix{TikzPics/Benchmark/}
 \tikzsetnextfilename{Fig.Bench.H2O+H2O.TZVPCompare}
@@ -1029,8 +1125,7 @@ for $\htohto$ interaction.
     axis x line*=bottom,
     enlarge x limits=0.015,
     enlarge y limits=0.15,
-    legend pos=north east,
-    legend style={legend columns=2},
+    legend style={legend pos=north east,font=\small,legend columns=2},
     ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
     xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpss,\tpssh,\pw},
     xtick=data,
@@ -1042,33 +1137,382 @@ for $\htohto$ interaction.
     grid style={dotted,gray},
     ymajorgrids=true,
     ]
-\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.2911688300) (2,1.8945608000) (3,-3.3056620300) (4,-1.3177384500) (5,-1.2830293400) (6,-4.9496451100) (7,-3.7824003200) (8,-2.2352456800) (9,-2.0561340700) (10,-2.4866635600) };
-\addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-5.3662069400) (2,-3.1298060400) (3,-5.7434387800) (4,-5.0291977600) (5,-4.7869166200) (6,-6.8055060400) (7,-5.7431237200) (8,-4.8009367900) (9,-4.5759839500) (10,-3.8439420400) };
-\addplot[red!20!black,fill=red!80!white] coordinates {(1,1.6138948500) (2,5.9163017000) (3,.0413778800) (4,3.1551158600) (5,2.9033304100) (6,-.6073831700) (7,-.1202479000) (8,1.6705531400) (9,1.6996436800) (10,1.2347726500) };
-\addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.4527941700) (2,.9033820400) (3,-2.3888899400) (4,-.5200065300) (5,-.7710043300) (6,-2.4600935000) (7,-2.0844369600) (8,-.8217289900) (9,-.8236718600) (10,-.1117937900) };
-\legend{def2-TZVP,def2-TZVP+D3,def2-TZVPD,def2-TZVPD+D3}
+\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.4712713930) (2,1.8105515370) (3,-3.4503203430) (4,-1.5251462130) (5,-1.4308382530) (6,-5.0817010230) (7,-3.9391359330) (8,-2.3940816930) (9,-2.2228465830) (10,-2.6678163230) };
+\addplot[red!20!black,fill=red!80!white] coordinates {(1,1.4702867370) (2,5.7188708370) (3,-.1324234830) (4,3.0175463970) (5,2.6200456970) (6,-.7830223830) (7,-.2683193630) (8,1.5256322770) (9,1.5457961170) (10,1.0097740370) };
+\addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-5.5127031030) (2,-3.4044266030) (3,-5.8857341430) (4,-5.2560342230) (5,-4.9150342830) (6,-6.9246970030) (7,-5.8901449830) (8,-4.9479580530) (9,-4.7306191630) (10,-4.0300832530) };
+\addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.5693596330) (2,.6348001270) (3,-2.5674172030) (4,-.7562947930) (5,-.8699789430) (6,-2.5687824630) (7,-2.2220064230) (8,-.9511594030) (9,-.9633417230) (10,-.3517577530) };
+%\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.2911688300) (2,1.8945608000) (3,-3.3056620300) (4,-1.3177384500) (5,-1.2830293400) (6,-4.9496451100) (7,-3.7824003200) (8,-2.2352456800) (9,-2.0561340700) (10,-2.4866635600) };
+%\addplot[red!20!black,fill=red!80!white] coordinates {(1,1.6138948500) (2,5.9163017000) (3,.0413778800) (4,3.1551158600) (5,2.9033304100) (6,-.6073831700) (7,-.1202479000) (8,1.6705531400) (9,1.6996436800) (10,1.2347726500) };
+%\addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-5.3662069400) (2,-3.1298060400) (3,-5.7434387800) (4,-5.0291977600) (5,-4.7869166200) (6,-6.8055060400) (7,-5.7431237200) (8,-4.8009367900) (9,-4.5759839500) (10,-3.8439420400) };
+%\addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.4527941700) (2,.9033820400) (3,-2.3888899400) (4,-.5200065300) (5,-.7710043300) (6,-2.4600935000) (7,-2.0844369600) (8,-.8217289900) (9,-.8236718600) (10,-.1117937900) };
+\legend{def2-TZVP,def2-TZVPD,def2-TZVP+D3,def2-TZVPD+D3}
 \end{axis}
 \end{tikzpicture}
 \caption{The $\htohto$ benchmark results for the def2-TZVP and def2-TZVPD basis sets.
-The dashed results include dispersion corrections. Energies are plotted as differences
+The results with dashed bars include dispersion corrections. Energies are plotted as differences
 to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
 \label{Fig:Bench:H2O+H2O:TZVPCompare}
 \end{figure}
 
+\subsection{$\htohto$ Interaction}
+
 Again, we compare energies to the reference energy as in \eqref{Bench:RefEnergy}. The
-reference energy for the $\htohto$ dimer is at \mbox{$\ecc=-20.982\ \kmo$}.
+reference energy for the $\htohto$ dimer is at \mbox{$\ecc=-20.804\ \kmo$}, where
+the CP correction contributes $+0.177\ \kmo$.
 In Figure \ref{Fig:Bench:H2O+H2O:TZVPCompare}, we take a look at the differences between
 dispersion corrected and not dispersion corrected results in the def2-TZVP and def2-TZVPD
-basis sets. It becomes immediately apparent that the results here differ stronger from
-the reference energy than in the $\htoh$ case. For the functionals without dispersion
-correction, this may well be due to the more important role of dispersion for this interaction. 
-But inclusion of the dispersion correction does not resolve the issue for most cases,
-it often happens that dispersion yields bonds that are much too attractive. This
-is most striking for the def2-TZVP basis set, which generally predicts too attractive
-interaction for all functionals but $\bns$.
+basis sets. The stronger attraction between the two $\hto$ molecules does prevent
+errors as for the $\bns$ functional in the previous section, so all functionals
+expect attractive interaction. Inclusion of the D3 dispersion correction does again
+predict stronger attraction, while the additional diffuse functions of the
+def2-TZVPD basis set weaken the attraction. These effects can combine to
+yield good results, for example for $\bns\dt$ or $\pw\dt$.
+%the high accuracy of $\pw\dt$ with the def2-TZVPD basis set. 
 
- 
-\newpage
+%Dispersion corrections , this may well be due to the more important role of dispersion for this interaction. 
+The inaccuracy of some functionals may be due to the bad treatment of
+dispersion in DFT. But inclusion of the D3 correction does not resolve the issue for cases
+where the interaction is already too attractive. This
+is most striking for the def2-TZVP basis set, which predicts too attractive
+interaction for all functionals but $\bns$. Generally, every functional has its
+most accurate results -- either in the standard or the dispersion corrected version --
+at the def2-TZVPD basis set. This was also very accurate for $\htoh$ interaction,
+so this benchmark confirms it as a good choice of basis set. Excellent
+results at the $\tzvpd$ level are obtained by $\bhlyp$, $\pbez$ and $\pw\dt$,
+but they are all not too accurate in the $\tzvp$ basis set.  
+
+
+% Another
+% result that reappears is the good accuracy of the $\bhlyp$ and $\pbez$ functional
+% without dispersion correction in the def2-TZVPD basis set, however both are
+% not too accurate with def2-TZVP. Another very good functional is 
+% the already mentioned $\pw\dt$, which is also only strikingly good with
+% def2-TZVPD. 
+
+\tikzsetexternalprefix{TikzPics/Benchmark/}
+\tikzsetnextfilename{Fig.Bench.H2O+H2O.BasisCompare}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    height=8cm,
+    width=.5*\textwidth,
+    ybar,
+    xmin=.5,
+    xmax=3.5,
+    ybar=0pt,
+    ymax=2.5,
+    axis x line*=bottom,
+    enlarge x limits=0.015,
+    enlarge y limits=0.15,
+    %legend pos=south east,
+    legend style={legend pos=north east,font=\small,legend columns=3},
+    ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
+    xticklabels={\bhlyp,\pbez,\pw\dt},
+    xtick=data,
+    grid=minor,
+    %xticklabel style={rotate=90},
+    bar width = .010*\textwidth,
+    minor xtick={1.5,2.5},
+    minor ytick={-4,...,2},
+    yticklabel pos=left,
+    grid style={dotted,gray},
+    ymajorgrids=true,
+    ]
+
+
+\addplot[green!20!black,fill=green!80!white] coordinates {(1,-1.9936404330) (2,-2.2264697730) (3,-2.3673015930) };
+\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-3.4503203430) (2,-3.9391359330) (3,-4.0300832530) };
+\addplot[brown!20!black,fill=brown!80!white] coordinates {(1,-1.9095719230) (2,-2.4086269630) (3,-2.5282447430) };
+\addplot[red!20!black,fill=red!80!white] coordinates {(1,-.1324234830) (2,-.2683193630) (3,-.3517577530) };
+\addplot[orange!20!black,fill=orange!80!white] coordinates {(1,.2438106670) (2,.1062344670) (3,.0347158470) };
+\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-.5243581230) (2,-.9162402530) (3,-.9979458130) };
+\addplot[purple!20!black,fill=purple!80!white] coordinates {(1,.2676502070) (2,.1384230970) (3,.0622835970) };
+\legend{def2-SVPD,def2-TZVP,def2-TZVPD,def2-TZVPP,def2-TZVPPD,def2-QZVP,def2-QZVPD}
+
+\end{axis}
+\end{tikzpicture}
+\caption{The $\htohto$ benchmark results for $\bhlyp$, $\pbez$ and $\pw\dt$ and all
+basis sets used in the study (excluding \mbox{def2-SVP}). Energies are plotted as differences
+to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
+\label{Fig:Bench:H2O+H2O:BasisCompare}
+\end{figure}
+
+We use these three most promising functionals to investigate the difference
+between basis sets in Figure \ref{Fig:Bench:H2O+H2O:BasisCompare}. Only the def2-SVP basis set is not
+considered, since it yields errors of between $-12\ \kmo$ and $-15\ \kmo$ for all three
+functionals. The figure shows that while increasing the $\zeta$-order of the basis set
+does indeed improve the results, inclusion of additional diffuse functions seems to
+be even more beneficial. The basis set def2-SVPD is more accurate than def2-TZVP and
+def2-TZVPD is more accurate than def2-QZVP.
+%% CHECK! Does that make sense? Citation?
+This may well be due to reduction of the BSSE, which depends on the ability
+of basis sets to describe electrons far from the core.
+The inclusion of polarization functions as in def2-TZVPP does
+also affect the results positively, however not to the extent of additional
+diffuse functions. The def2-TZVPPD basis set is again an improvement
+to the def2-TZVPP basis set, it is also stronger than the def2-TZVPD
+basis set. Indeed, for all three functionals the def2-TZVPPD and
+def2-QZVPD results are strikingly close to one another, which could
+be an indication that the basis set truncation error is low and that
+the intrinsic quality of the methods is reached. In that case, the
+three methods of Figure \ref{Fig:Bench:H2O+H2O:BasisCompare} are all
+capable of yielding excellent approximations to our coupled-cluster data,
+and the results at the def2-TZVPD basis set are already close to the
+methods' intrinstic error.  
+
+%% CHECK: Sollte das hier kommen? Sollen wir nicht später darauf zurückkommen oder es früher
+% erwähnen?
+The results so far speak in favor of the def2-TZVPD basis set. Due 
+to the size of the quantum mechanical part of the QM/MM system we will later consider,
+it is computationally too expensive to use for the whole
+QM part. We will therefore use a hybrid system with the more important atoms described by the def2-TZVPD
+basis set and the less important ones by the def2-TZVP basis set. We will describe this
+further subdivision of the QM domain in more detail in Section \ref{Sec:Ads:Model}.
+We should therefore determine functionals that are both good for def2-TZVP and def2-TZVPD,
+while their accuracy for def2-TZVPD is more important since the adsorption site will
+be closer to the def2-TZVPD atoms. Figure \ref{Fig:Bench:H2O+H2O:TZVPCompare} shows
+that good compromises between the two basis sets
+are given by $\btlyp$, $\tpss$, $\tpssh$ and $\pw$, which all give mediocre results in
+both basis sets. $\bhlyp$, $\pbez$ and $\pw\dt$ are highly accurate for def2-TZVPD but not very good
+with def2-TZVP. $\bns\dt$ is somewhat between those functionals, being less accurate for 
+def2-TZVPD but still better for def2-TZVP. All other functionals are
+not accurate enough for def2-TZVP or def2-TZVPD.
+
+For $\htohto$, the RMSD values are entirely unproblematic for any basis set beyond
+$\svp$. The worst RMSD is reached by $\bns\dt/\tzvpd$, it is of \mbox{$0.076\ \Ang$},
+which is just a slight displacement of H atoms. Especially $\btlyp$ and $\pw$ both
+with and without dispersion corrections predict RMSDs of less than $0.008\ \Ang$
+to the reference geometry, $\bhlyp$ is rougly at $0.010\ \Ang$ and the
+rest is between $0.02$ and $0.05\ \Ang$. Therefore, $\htohto$ interaction geometries
+are well described by any functional in a basis set bigger than $\svp$.
+
+% With these hybrid basis set considerations, we can therefore nominate seven functionals
+% that may describe water-water interaction in our context sufficiently accurate. If we exclude
+% those that have proven very inaccurate for $\htoh$ interaction in these basis sets, we are
+% left with only five, $\btlyp$, $\bhlyp$, $\pbez$, $\tpssh$ and $\pw\dt$. We might be able
+% to narrow this selection down by considering the third benchmark. 
+
+\subsection{$\htoo$ Interaction}
+
+It already became clear at the beginning of this section that $\htoo$ interaction is
+more tricky for post-HF methods because some geometries in the optimization process
+are not well described by a single Slater determinant. At the optimum geometry,
+a single-reference approach is fortunately possible, so our results for this
+benchmark have the full credibility of the $\ccsdtf$ method. Only the CP
+correction is taken from an $\mrcif$ calculation, but it is as small as
+\mbox{$0.097\ \kmo$} and therefore unlikely to deteriorate our results.
+The CP corrected interaction energy is \mbox{$\ecc=-6.715\ \kmo$}.
+
+% \pgfplotsset{
+% % override style for non-boxed plots
+%     % which is the case for both sub-plots
+%     every non boxed x axis/.style={} 
+% }
+% \tikzsetexternalprefix{TikzPics/Benchmark/}
+% \tikzsetnextfilename{Fig.Bench.H2O+O.TZVPCompare}
+% \begin{figure}[h]
+% \centering
+%  \begin{tikzpicture}
+% \begin{groupplot}[
+%     group style={
+%         group name=my fancy plots,
+%         group size=1 by 2,
+%         xticklabels at=edge bottom,
+%         vertical sep=0pt
+%     },
+%     height=8cm,
+%     width=.5*\textwidth,
+% %     ybar,
+% %     xmin=.5,
+% %     xmax=10.5,
+% %     %ymax=9.5,
+% %     ybar=0pt,
+% %     axis x line*=bottom,
+% %     enlarge x limits=0.015,
+% %     enlarge y limits=0.15,
+% %     legend pos=north west,
+% %     legend style={legend columns=2},
+% %     ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
+% %     xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpss,\tpssh,\pw},
+% %     xtick=data,
+% %     grid=minor,
+% %     xticklabel style={rotate=90},
+% %     bar width = .008*\textwidth,
+% %     minor xtick={1.5,...,9.5},
+% %     yticklabel pos=left,
+% %     grid style={dotted,gray},
+% %     ymajorgrids=true,
+%     ]
+% \nextgroupplot[ymax=-12,
+%                %ytick={60,80},
+%                % 
+%                axis y discontinuity=parallel,
+%                height=3.5cm]
+% \nextgroupplot[ymin=-5,ymax=9.5,
+% axis x line=bottom,
+% ]
+% \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.1081968550) (2,-9.0107947650) (3,-.2511553300) (4,-17.9176722400) (5,-15.0656966100) (6,-20.1429410200) (7,-.9848250500) (8,-.8730050050) (9,-.0743016500) (10,-.5862478950) };
+% \addplot[red!20!black,fill=red!80!white] coordinates {(1,.4817004850) (2,1.1639366600) (3,.0664251500) (4,-4.9605409350) (5,-2.9669987850) (6,-16.2942468250) (7,-.5893722400) (8,-.1660366200) (9,.5068527750) (10,-.0768746400) };
+% \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-2.0464984850) (2,-15.1573265600) (3,-1.8328878050) (4,-21.1657045450) (5,-17.8578633500) (6,-21.2442857600) (7,-2.1535663750) (8,-2.4432115350) (9,-1.6152863650) (10,-1.5014446850) };
+% \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.4555772000) (2,-2.2273166700) (3,-1.5145721850) (4,-17.4665588300) (5,-15.0122414300) (6,-17.6048439150) (7,-1.6649345700) (8,-1.6973069850) (9,-1.0344207450) (10,-.9915725850) };
+% % \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-3.2642316400) (2,-8.9154103500) (3,-.1969912650) (4,-17.8199248750) (5,-14.9692619950) (6,-20.0472940550) (7,-.1117675350) (8,-9.5628061400) (9,-2.8443879350) (10,3.2840804200) };
+% % \addplot[red!20!black,fill=red!80!white] coordinates {(1,-1.2195447500) (2,-5.8266408750) (3,.0822569150) (4,-13.8070844200) (5,-11.7862370700) (6,-16.1985998600) (7,-.5081655250) (8,-6.8218629050) (9,-.8746065600) (10,-.3388207750) };
+% % \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-6.3561779700) (2,-15.0561660450) (3,-1.7440671400) (4,-21.0742583800) (5,-17.7669422850) (6,-21.1475885950) (7,-2.1064911600) (8,-11.6848927700) (9,-5.1798489500) (10,2.6702910300) };
+% % \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-4.1516243850) (2,-11.6611845050) (3,-1.4672344200) (4,-17.3701242150) (5,-14.9173821150) (6,-17.5065714500) (7,-1.6485777050) (8,-9.0171222200) (9,-3.1405180800) (10,-1.6287026700) };
+% \legend{def2-TZVP,def2-TZVPD,def2-TZVP+D3,def2-TZVPD+D3}
+% \end{groupplot}
+% \end{tikzpicture}
+% \caption{The $\htoo$ benchmark results for the def2-TZVP and def2-TZVPD basis sets.
+% The results with dashed bars include dispersion corrections. Energies are plotted as differences
+% to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
+% \label{Fig:Bench:H2O+O:TZVPCompare}
+% \end{figure}
+% \tikzsetexternalprefix{TikzPics/Benchmark/}
+% \tikzsetnextfilename{Fig.Bench.H2O+O.TZVPCompare}
+% \begin{figure}[h]
+% \centering
+%  \begin{tikzpicture}
+% 
+% \begin{axis}[
+%     height=8cm,
+%     width=.5*\textwidth,
+%     ybar,
+%     xmin=.5,
+%     xmax=10.5,
+%     ymin=-3.5,
+%     ybar=0pt,
+%     axis x line*=bottom,
+%     enlarge x limits=0.015,
+%     enlarge y limits=0.15,
+%     legend pos=north west,
+%     legend style={legend columns=2},
+%     ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
+%     xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpss,\tpssh,\pw},
+%     xtick=data,
+%     grid=minor,
+%     xticklabel style={rotate=90},
+%     bar width = .008*\textwidth,
+%     minor xtick={1.5,...,9.5},
+%     yticklabel pos=left,
+%     grid style={dotted,gray},
+%     ymajorgrids=true,
+%     ]
+% \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.1081968550) (2,-9.0107947650) (3,-.2511553300) (4,-17.9176722400) (5,-15.0656966100) (6,-20.1429410200) (7,-.9848250500) (8,-.8730050050) (9,-.0743016500) (10,-.5862478950) };
+% \addplot[red!20!black,fill=red!80!white] coordinates {(1,.4817004850) (2,1.1639366600) (3,.0664251500) (4,-4.9605409350) (5,-2.9669987850) (6,-16.2942468250) (7,-.5893722400) (8,-.1660366200) (9,.5068527750) (10,-.0768746400) };
+% \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-2.0464984850) (2,-15.1573265600) (3,-1.8328878050) (4,-21.1657045450) (5,-17.8578633500) (6,-21.2442857600) (7,-2.1535663750) (8,-2.4432115350) (9,-1.6152863650) (10,-1.5014446850) };
+% \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.4555772000) (2,-2.2273166700) (3,-1.5145721850) (4,-17.4665588300) (5,-15.0122414300) (6,-17.6048439150) (7,-1.6649345700) (8,-1.6973069850) (9,-1.0344207450) (10,-.9915725850) };
+% % \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-3.2642316400) (2,-8.9154103500) (3,-.1969912650) (4,-17.8199248750) (5,-14.9692619950) (6,-20.0472940550) (7,-.1117675350) (8,-9.5628061400) (9,-2.8443879350) (10,3.2840804200) };
+% % \addplot[red!20!black,fill=red!80!white] coordinates {(1,-1.2195447500) (2,-5.8266408750) (3,.0822569150) (4,-13.8070844200) (5,-11.7862370700) (6,-16.1985998600) (7,-.5081655250) (8,-6.8218629050) (9,-.8746065600) (10,-.3388207750) };
+% % \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-6.3561779700) (2,-15.0561660450) (3,-1.7440671400) (4,-21.0742583800) (5,-17.7669422850) (6,-21.1475885950) (7,-2.1064911600) (8,-11.6848927700) (9,-5.1798489500) (10,2.6702910300) };
+% % \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-4.1516243850) (2,-11.6611845050) (3,-1.4672344200) (4,-17.3701242150) (5,-14.9173821150) (6,-17.5065714500) (7,-1.6485777050) (8,-9.0171222200) (9,-3.1405180800) (10,-1.6287026700) };
+% \legend{def2-TZVP,def2-TZVPD,def2-TZVP+D3,def2-TZVPD+D3}
+% \end{axis}
+% \end{tikzpicture}
+% \caption{The $\htoo$ benchmark results for the def2-TZVP and def2-TZVPD basis sets.
+% The results with dashed bars include dispersion corrections. Energies are plotted as differences
+% to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
+% \label{Fig:Bench:H2O+O:TZVPCompare}
+% \end{figure}
+
+\tikzsetexternalprefix{TikzPics/Benchmark/}
+\tikzsetnextfilename{Fig.Bench.H2O+O.FuncCompare}
+\begin{figure}[h]
+\centering
+ \begin{tikzpicture}
+
+\begin{axis}[
+    height=8cm,
+    width=.5*\textwidth,
+    ybar,
+    xmin=.5,
+    xmax=6.5,
+    ybar=0pt,
+    axis x line*=bottom,
+    enlarge x limits=0.015,
+    enlarge y limits=0.15,
+    legend style={legend pos=south west,font=\small,legend columns=2},
+    ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
+    xticklabels={\btlyp,\bhlyp,\pbez,\tpssh,\pw,\pw\dt},
+    xtick=data,
+    grid=minor,
+    xticklabel style={rotate=90},
+    bar width = .008*\textwidth,
+    minor xtick={1.5,...,5.5},
+    yticklabel pos=left,
+    grid style={dotted,gray},
+    ymajorgrids=true,
+    ]
+\addplot[green!20!black,fill=green!80!white] coordinates {(1,-.3260083350) (2,-.8335962500) (3,-1.4244387700) (4,-.4892356700) (5,-1.0877183950) (6,-2.0006572550) };
+\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.1081968550) (2,-.2511553300) (3,-.9848250500) (4,-.0743016500) (5,-.5862478950) (6,-1.5014446850) };
+\addplot[red!20!black,fill=red!80!white] coordinates {(1,.4817004850) (2,.0664251500) (3,-.5893722400) (4,.5068527750) (5,-.0768746400) (6,-.9915725850) };
+\addplot[orange!20!black,fill=orange!80!white] coordinates {(1,.5734354550) (2,.1101397250) (3,-.4387210500) (4,.5473904950) (5,-.0140726800) (6,-.9310548100) };
+\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,.4925700550) (2,.1261815300) (3,-.4793375350) (4,.3330971850) (5,-.0581285700) (6,-.9751894650) };
+\addplot[purple!20!black,fill=purple!80!white] coordinates {(1,.7346674100) (2,.2591105950) (3,-.3162939850) (4,.5508824100) (5,.1289383050) (6,-.7880963350) };
+\legend{def2-SVPD,def2-TZVP,def2-TZVPD,def2-TZVPPD,def2-QZVP,def2-QZVPD}
+\end{axis}
+\end{tikzpicture}
+\caption{The $\htoo$ benchmark results for the def2-TZVP and def2-TZVPD basis sets.
+The results with dashed bars include dispersion corrections. Energies are plotted as differences
+to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
+\label{Fig:Bench:H2O+O:FuncCompare}
+\end{figure}
+
+In the last two test systems, six functionals show a good overall performance.
+Figure \ref{Fig:Bench:H2O+O:FuncCompare} depicts the energy data of the $\htoo$ benchmark
+for these functionals. In contrast to the previous two systems, the $\svpd$
+basis set tends to yield the worst results. It always gives the most attractive
+energy. More reliable results seem to require triple-$\zeta$ basis sets. And
+again, bigger basis sets than $\tzvpd$ are not necessarily more accurate. For
+$\btlyp$, $\bhlyp$ and $\tpssh$, the reference value is somewhere between
+$\tzvp$ and $\tzvpd$.
+
+While this was not so clear in the previous benchmarks, here the $\pw$
+functional is superior to the $\pw\dt$ alternative. For basis sets
+bigger than $\tzvp$, $\pw$ is a strikingly accurate functional in this benchmark.
+However, the most accurate seems to be $\bhlyp$, with good results even for
+the $\tzvp$ basis set.
+
+Of the functionals used in Figure \ref{Fig:Bench:H2O+O:FuncCompare}, none
+has an RMSD greater than $0.01\ \Ang$. They do therefore all yield good
+approximations to the optimum geometry. This does not apply to all functionals
+in this benchmark, many of those excluded here have RMSD values greater
+than $0.5\ \Ang$. 
+
+\subsection{Conclusions}
+
+We have already decided on the $\tzvp$|$\tzvpd$ hybrid basis. Both basis sets
+have proven to be able to yield good results, especially the $\tzvpd$ basis
+is in many cases among the most accurate. Since the adsorption process 
+can easily be restricted to by close to only atoms described by $\tzvpd$,
+a functional's results for the $\tzvpd$ basis set have to be the most important
+ones, while results in the $\tzvp$ basis should still be reasonable but not
+necessarily too accurate.
+
+Under these conditions, we find that $\pbez$, $\bhlyp$ and $\pw\dt$ are excellent
+functionals for describing our system. Of these, especially $\bhlyp$ seems
+to have a great accuracy for both $\htoh$ and $\htoo$. $\pbez$ is also
+quite accurate in both cases. For $\pw\dt$, the interaction with oxygen
+may become problematic. $\pw$ is even better for both $\htoh$ and $\htoo$,
+but it is considerably worse for water-water interaction, therefore the $\pw\dt$
+functional seems preferable in a highly water-dominated system, especially
+since the (reference) water-water interaction energy is of $-20.804\ \kmo$.
+
+%% CHECK: Anacker und Friedrich schlagen die Funktionale gar nicht wirklich vor, verwenden sie nur.
+%   in einem anderen paper schlagen sie m11 vor.
+The functionals $\btlyp$ and $\tpssh$ are also good options for functionals,
+despite not being recommended by Anacker and Friedrich\cite{Anacker2014}.
+They are however slightly inferior to $\bhlyp$ and $\pbez$.
+
+For everything that follows, we will therefore mostly use results obtained
+with $\bhlyp$, $\pbez$, $\pw\dt$, $\btlyp$ or $\tpssh$. Especially on
+adsorption under interstellar condition, there is not much experimental
+data available, therefore our only indication of good results may be
+agreement between the different functionals that seemed to yield credible results
+by the standards of this benchmark. 
+  
+%% CHECK: Interaction geometries?
+
 
 \section{Adsorption on the Ice Surface}
 \label{Sec:Ads}
@@ -1078,6 +1522,8 @@ interaction for all functionals but $\bns$.
 
 \subsection{Results}
 \label{Sec:Ads:Results}
+
+\newpage
 
 \section{Conclusion}
 \label{Sec:Con}
@@ -1091,46 +1537,6 @@ his introduction to the topic and his company along the way.
 % \bibliographystyle{apalikenotitle}
 \bibliographystyle{ieeetr}
 % \begin{thebibliography}
-\bibliography{MasterBib}
-
+%\bibliography{MasterBib}
+\bibliography{ShortTitles,MasterBib}{}
 \end{document}
-
-%\begin{figure*}[t]
-%\centering
-%\begin{tikzpicture}
-%\begin{axis}[
-%height=8cm,
-%width=15cm,
-%    ybar,
-%    xmin=.5,
-%    xmax=10.5,
-%%    axis y line*=left,
-%    axis x line*=bottom,
-%    enlarge y limits=0.15,
-%    legend style={at={(0.5,-0.15)},
-%      anchor=north,legend columns=-1},
-%    ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
-%    xticklabels={b3lyp,b97-d,bhlyp,blyp,bp86,pbe0,pbe96,tpss,tpssh,pw6b95},
-%    xtick=data,
-%%    extra x ticks={1.5,...,9.5},
-%  %  extra x ticks labels={\empty},
-%    grid=minor,
-%    %xticklabel interval boundaries,
-%    %x tick label style={rotate=45,achor=east}
-%    %nodes near coords,
-%    %every node near coord/.append style={rotate=90, anchor=west},
-%    bar width = 6pt,
-%    minor xtick={1.5,...,9.5},
-%    yticklabel pos=left,
-%grid style={dotted,gray},
-%    ymajorgrids=true,
-%%    minor x tick num=1,
-%    ]
-%\addplot[brown!20!black,fill=brown!80!white] coordinates {(1,-5.9330523900) (2,7.2492943050) (3,-3.1331666800) (4,-9.8480667150) (5,-11.0948116450) (6,-2.1139475800) (7,-5.1825532150) (8,-18.4540356350) (9,-15.1383704500) (10,-2.7420196900) };
-%\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-1.3372721700) (2,.4102606300) (3,-.7425176550) (4,-1.8385326300) (5,-2.6576361200) (6,-.8015651500) (7,-1.8459102850) (8,-7.2262161600) (9,-5.3374052050) (10,-.2959201050) };
-%\addplot[green!20!black,fill=green!80!white] coordinates {(1,-.4004150050) (2,.4550516600) (3,-.0939141350) (4,-.8160841650) (5,-3.0162006550) (6,-.0395662850) (7,-.5095570400) (8,-8.7172901200) (9,-6.5151519950) (10,-.1592628300) };
-%\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,.1896136100) (2,.4029354850) (3,.2102500400) (4,.3640780850) (5,-2.1326673950) (6,-.1888522150) (7,-.8015388950) (8,-7.3249349600) (9,-5.3460956100) (10,.0254673500) };
-%\legend{def2-SVP,def2-SVPD,def2-TZVP,def2-TZVPD}
-%\end{axis}
-%\end{tikzpicture}
-%\end{figure*}
