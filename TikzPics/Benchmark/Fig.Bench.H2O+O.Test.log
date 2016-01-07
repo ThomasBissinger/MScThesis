@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  6 JAN 2016 22:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  5 JAN 2016 00:08
 entering extended mode
 **\def\tikzexternalrealjob{document}\input{document}
 (C:\Users\Thomas\workspace\MScThesis\document.tex ("C:\Program Files\MiKTeX 2.9
@@ -1256,27 +1256,27 @@ No auxiliary output files.
 LaTeX Warning: Unused global option(s):
     [8.5pt].
 
-No file TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 115.
+No file TikzPics/Benchmark/Fig.Bench.H2O+O.Test.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 112.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 115.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 112.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -1300,7 +1300,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 115.
+(lastpage)             ! on input line 112.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
@@ -1313,131 +1313,112 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 115.
+ on input line 112.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 13
-2.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 12
+9.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.fd"
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 13
-2.
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 12
+9.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 13
-2.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 12
+9.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 13
-2.
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 12
+9.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
-LaTeX Font Info:    Try loading font information for U+msa on input line 132.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
+LaTeX Font Info:    Try loading font information for U+msa on input line 129.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 132.
+LaTeX Font Info:    Try loading font information for U+msb on input line 129.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 186.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 186.
 
-Underfull \hbox (badness 10000) in paragraph at lines 623--625
+Underfull \hbox (badness 10000) in paragraph at lines 620--622
 []\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (128.88924pt too wide) detected at line 673
+Overfull \hbox (128.88924pt too wide) detected at line 670
 \OT1/ptmcm/m/n/10 [[]]
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 675.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 672.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (128.88924pt too wide) detected at line 788
+Overfull \hbox (128.88924pt too wide) detected at line 785
 \OT1/ptmcm/m/n/10 [[]]
  []
 
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 857.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 854.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 859.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 856.
 
-Underfull \hbox (badness 3547) in paragraph at lines 859--859
+Underfull \hbox (badness 3343) in paragraph at lines 856--856
 [][]\OT1/ptm/m/n/8 In the $[]$ case, a first min-i-mum was cal-cu-lated at the
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 864--880
+Underfull \hbox (badness 7012) in paragraph at lines 861--876
 []\OT1/ptm/m/n/10 At each op-ti-mum ge-om-e-try, an ad-di-tional cal-cu-la-tion
 
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 864--880
+Underfull \hbox (badness 3148) in paragraph at lines 861--876
 \OT1/ptm/m/n/10 was car-ried out to find a CP cor-rected en-ergy. For
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 864--880
+Underfull \hbox (badness 2351) in paragraph at lines 861--876
 []\OML/ptmcm/m/it/10 =[]\OT1/ptmcm/m/n/10 12$ \OT1/ptm/m/n/10 level of the-ory,
  while for the
- []
-
-[8
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 3942) in paragraph at lines 961--967
-$\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
-[] of the sys-
- []
-
-
-Underfull \hbox (badness 3849) in paragraph at lines 961--967
-\OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-
- []
-
-
-Underfull \hbox (badness 1655) in paragraph at lines 961--967
-\OT1/ptm/m/n/10 sis set, and $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 is the CP
- cor-rected in-ter-ac-tion en-ergy
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -1445,41 +1426,61 @@ isable this.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-No file TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.bbl.
 
-Package lastpage Warning: Rerun to get the references right on input line 1338.
+Underfull \hbox (badness 3942) in paragraph at lines 947--964
+$\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
+[] of the sys-
+ []
+
+
+Underfull \hbox (badness 3849) in paragraph at lines 947--964
+\OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 947--964
+\OT1/ptm/m/n/10 sis set, and $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 is the CP
+ cor-rected in-ter-ac-tion en-ergy
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+[10
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+No file TikzPics/Benchmark/Fig.Bench.H2O+O.Test.bbl.
+
+Package lastpage Warning: Rerun to get the references right on input line 1286.
 
 
 
 Package lastpage Warning: The lastpage package was not allowed to write to an
 (lastpage)                .aux file. This package does not work without access
 (lastpage)                to an .aux file.
-(lastpage)                 on input line 1338.
+(lastpage)                 on input line 1286.
 
  ) 
 Here is how much of TeX's memory you used:
- 31177 strings out of 493921
- 733249 string characters out of 3147280
- 872583 words of memory out of 3000000
- 33890 multiletter control sequences out of 15000+200000
- 51284 words of font info for 124 fonts, out of 3000000 for 9000
+ 31184 strings out of 493921
+ 733497 string characters out of 3147280
+ 871581 words of memory out of 3000000
+ 33897 multiletter control sequences out of 15000+200000
+ 50206 words of font info for 123 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,21n,100p,764b,2355s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,21n,100p,764b,2353s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
-/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.pdf (1 page, 38014 by
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
+rw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on TikzPics/Benchmark/Fig.Bench.H2O+O.Test.pdf (1 page, 30672 by
 tes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
+ 27 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
