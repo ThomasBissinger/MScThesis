@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  7 JAN 2016 02:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  7 JAN 2016 14:31
 entering extended mode
 **\def\tikzexternalrealjob{document}\input{document}
 (C:\Users\Thomas\workspace\MScThesis\document.tex ("C:\Program Files\MiKTeX 2.9
@@ -817,6 +817,8 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
 Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+Package: gensymb 2003/07/02 v1.0 (WaS)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty" ("C:\Prog
 ram Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty" ("C:\Program Files\MiKTe
 X 2.9\tex\latex\pgf\utilities\pgfrcs.sty" ("C:\Program Files\MiKTeX 2.9\tex\gen
@@ -1263,26 +1265,26 @@ LaTeX Warning: Unused global option(s):
     [8.5pt].
 
 No file TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 116.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 119.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 116.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 119.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -1306,7 +1308,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 116.
+(lastpage)             ! on input line 119.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
@@ -1314,115 +1316,126 @@ Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\symgns@font=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 119.
+Package gensymb Info: Math companion symbols declared on input line 119.
+LaTeX Info: Redefining \degree on input line 119.
+LaTeX Info: Redefining \celsius on input line 119.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 119.
+LaTeX Info: Redefining \ohm on input line 119.
+Package gensymb Info: Using \textohm for \ohm on input line 119.
+Package gensymb Info: Using \textmu for \micro on input line 119.
 ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 116.
+ on input line 119.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
 LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 13
-3.
+6.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.fd"
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 13
-3.
+6.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 13
-3.
+6.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    Try loading font information for OMX+psycm on input line 13
-3.
+6.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
-LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
+LaTeX Font Info:    Try loading font information for U+msa on input line 136.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+LaTeX Font Info:    Try loading font information for U+msb on input line 136.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 136.
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--178
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--178
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 193.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 193.
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--626
+Underfull \hbox (badness 10000) in paragraph at lines 627--629
 []\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (128.88924pt too wide) detected at line 674
+Overfull \hbox (128.88924pt too wide) detected at line 677
 \OT1/ptmcm/m/n/10 [[]]
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 676.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 679.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (128.88924pt too wide) detected at line 789
+Overfull \hbox (128.88924pt too wide) detected at line 792
 \OT1/ptmcm/m/n/10 [[]]
  []
 
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 858.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 860.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 863.
 
-Underfull \hbox (badness 3547) in paragraph at lines 860--860
+Underfull \hbox (badness 3547) in paragraph at lines 863--863
 [][]\OT1/ptm/m/n/8 In the $[]$ case, a first min-i-mum was cal-cu-lated at the
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 865--881
+Underfull \hbox (badness 7012) in paragraph at lines 868--884
 []\OT1/ptm/m/n/10 At each op-ti-mum ge-om-e-try, an ad-di-tional cal-cu-la-tion
 
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 865--881
+Underfull \hbox (badness 3148) in paragraph at lines 868--884
 \OT1/ptm/m/n/10 was car-ried out to find a CP cor-rected en-ergy. For
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 865--881
+Underfull \hbox (badness 2351) in paragraph at lines 868--884
 []\OML/ptmcm/m/it/10 =[]\OT1/ptmcm/m/n/10 12$ \OT1/ptm/m/n/10 level of the-ory,
  while for the
  []
@@ -1430,18 +1443,18 @@ Underfull \hbox (badness 2351) in paragraph at lines 865--881
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Underfull \hbox (badness 3942) in paragraph at lines 962--968
+Underfull \hbox (badness 3942) in paragraph at lines 973--979
 $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
 [] of the sys-
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 962--968
+Underfull \hbox (badness 3849) in paragraph at lines 973--979
 \OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 962--968
+Underfull \hbox (badness 1655) in paragraph at lines 973--979
 \OT1/ptm/m/n/10 sis set, and $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 is the CP
  cor-rected in-ter-ac-tion en-ergy
  []
@@ -1449,55 +1462,53 @@ Underfull \hbox (badness 1655) in paragraph at lines 962--968
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 2582) in paragraph at lines 1070--1077
+\OT1/ptm/m/n/10 op-ti-mi-sa-tions. Here, the at-trac-tion is con-sid-ered close
 
-
-Underfull \hbox (badness 2469) in paragraph at lines 1059--1066
-\OT1/ptm/m/n/10 op-ti-miza-tions. Here, the at-trac-tion is con-sid-ered close
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 1059--1066
+Underfull \hbox (badness 1097) in paragraph at lines 1070--1077
 \OT1/ptm/m/n/10 to be-ing re-pul-sive, with in-ter-ac-tion en-ergy val-ues arou
 nd
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1059--1066
+Underfull \hbox (badness 1231) in paragraph at lines 1070--1077
 []\OT1/ptm/m/n/10 . While the re-sult-ing de-vi-a-tion of
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [9
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+The command '\includegraphics [width=.48\textwidth ]{./img/FletcherAboveGlossyN
+oCueing.png}' has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 No file TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.bbl.
 
-Package lastpage Warning: Rerun to get the references right on input line 1515.
+Package lastpage Warning: Rerun to get the references right on input line 1717.
 
 
 
 Package lastpage Warning: The lastpage package was not allowed to write to an
 (lastpage)                .aux file. This package does not work without access
 (lastpage)                to an .aux file.
-(lastpage)                 on input line 1515.
+(lastpage)                 on input line 1717.
 
  ) 
 Here is how much of TeX's memory you used:
- 31347 strings out of 493921
- 739916 string characters out of 3147280
- 872732 words of memory out of 3000000
- 34057 multiletter control sequences out of 15000+200000
- 51284 words of font info for 124 fonts, out of 3000000 for 9000
+ 31406 strings out of 493921
+ 740694 string characters out of 3147280
+ 873976 words of memory out of 3000000
+ 34112 multiletter control sequences out of 15000+200000
+ 54110 words of font info for 133 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,21n,100p,779b,2357s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
@@ -1506,7 +1517,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
 rw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.
 pfb>
 Output written on TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.pdf (1 page
-, 29796 bytes).
+, 29789 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  17 DEC 2015 01:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  7 JAN 2016 17:39
 entering extended mode
 **\def\tikzexternalrealjob{document}\input{document}
 (C:\Users\Thomas\workspace\MScThesis\document.tex ("C:\Program Files\MiKTeX 2.9
@@ -804,13 +804,28 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks29
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks30
+\footnotemargin=\dimen182
+\c@pp@next@reset=\count146
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+Package: gensymb 2003/07/02 v1.0 (WaS)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty" ("C:\Prog
 ram Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty" ("C:\Program Files\MiKTe
 X 2.9\tex\latex\pgf\utilities\pgfrcs.sty" ("C:\Program Files\MiKTeX 2.9\tex\gen
 eric\pgf\utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks30
-\pgfutil@tempdima=\dimen182
-\pgfutil@tempdimb=\dimen183
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen183
+\pgfutil@tempdimb=\dimen184
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.te
 x")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
@@ -826,30 +841,30 @@ m Files\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty" ("C:\Program Files\MiK
 TeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
 Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks31
-\pgfkeys@temptoks=\toks32
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.te
 x"
-\pgfkeys@tmptoks=\toks33
+\pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen184
-\pgf@y=\dimen185
-\pgf@xa=\dimen186
-\pgf@ya=\dimen187
-\pgf@xb=\dimen188
-\pgf@yb=\dimen189
-\pgf@xc=\dimen190
-\pgf@yc=\dimen191
+\pgf@x=\dimen185
+\pgf@y=\dimen186
+\pgf@xa=\dimen187
+\pgf@ya=\dimen188
+\pgf@xb=\dimen189
+\pgf@yb=\dimen190
+\pgf@xc=\dimen191
+\pgf@yc=\dimen192
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count146
-\c@pgf@countb=\count147
-\c@pgf@countc=\count148
-\c@pgf@countd=\count149
-\t@pgf@toka=\toks34
-\t@pgf@tokb=\toks35
-\t@pgf@tokc=\toks36
+\c@pgf@counta=\count147
+\c@pgf@countb=\count148
+\c@pgf@countc=\count149
+\c@pgf@countd=\count150
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -863,8 +878,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
 ex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count150
-\pgfsyssoftpath@bigbuffer@items=\count151
+\pgfsyssoftpath@smallbuffer@items=\count151
+\pgfsyssoftpath@bigbuffer@items=\count152
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
 ex"
@@ -890,12 +905,12 @@ Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 am Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex" ("C:\Program Fil
 es\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex") ("C:\Program Files\Mi
 KTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen192
-\pgfmath@count=\count152
+\pgfmath@dimen=\dimen193
+\pgfmath@count=\count153
 \pgfmath@box=\box50
-\pgfmath@toks=\toks37
-\pgfmath@stack@operand=\toks38
-\pgfmath@stack@operation=\toks39
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex"
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.
@@ -915,56 +930,56 @@ ex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarit
 hmetics.code.tex"))) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
 float.code.tex"
-\c@pgfmathroundto@lastzeros=\count153
+\c@pgfmathroundto@lastzeros=\count154
 )) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.
 tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen193
-\pgf@picmaxx=\dimen194
-\pgf@picminy=\dimen195
-\pgf@picmaxy=\dimen196
-\pgf@pathminx=\dimen197
-\pgf@pathmaxx=\dimen198
-\pgf@pathminy=\dimen199
-\pgf@pathmaxy=\dimen200
-\pgf@xx=\dimen201
+\pgf@picminx=\dimen194
+\pgf@picmaxx=\dimen195
+\pgf@picminy=\dimen196
+\pgf@picmaxy=\dimen197
+\pgf@pathminx=\dimen198
+\pgf@pathmaxx=\dimen199
+\pgf@pathminy=\dimen200
+\pgf@pathmaxy=\dimen201
 Normal \dimen register pool exhausted, switching to extended pool.
-\pgf@xy=\dimen256
-\pgf@yx=\dimen257
-\pgf@yy=\dimen258
-\pgf@zx=\dimen259
-\pgf@zy=\dimen260
+\pgf@xx=\dimen256
+\pgf@xy=\dimen257
+\pgf@yx=\dimen258
+\pgf@yy=\dimen259
+\pgf@zx=\dimen260
+\pgf@zy=\dimen261
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
 ode.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen261
-\pgf@path@lasty=\dimen262
+\pgf@path@lastx=\dimen262
+\pgf@path@lasty=\dimen263
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
 tex"
 File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
-\pgf@shorten@end@additional=\dimen263
-\pgf@shorten@start@additional=\dimen264
+\pgf@shorten@end@additional=\dimen264
+\pgf@shorten@start@additional=\dimen265
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.t
 ex"
 File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
 \pgfpic=\box51
 \pgf@hbox=\box52
 \pgf@layerbox@main=\box53
-\pgf@picture@serial@count=\count154
+\pgf@picture@serial@count=\count155
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
 de.tex"
 File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
-\pgflinewidth=\dimen265
+\pgflinewidth=\dimen266
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
 .code.tex"
 File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
-\pgf@pt@x=\dimen266
-\pgf@pt@y=\dimen267
-\pgf@pt@temp=\dimen268
+\pgf@pt@x=\dimen267
+\pgf@pt@y=\dimen268
+\pgf@pt@temp=\dimen269
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.te
 x"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -979,12 +994,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.t
 ex"
 File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
-\pgfarrowsep=\dimen269
+\pgfarrowsep=\dimen270
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.te
 x"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen270
-\pgf@sys@shading@range@num=\count155
+\pgf@max=\dimen271
+\pgf@sys@shading@range@num=\count156
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
 x"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1014,8 +1029,8 @@ File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
 sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen271
-\pgf@nodesepend=\dimen272
+\pgf@nodesepstart=\dimen272
+\pgf@nodesepend=\dimen273
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
 sty"
@@ -1028,10 +1043,10 @@ pgf\math\pgfmath.code.tex")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\util
 ities\pgffor.code.tex"
 Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
-\pgffor@iter=\dimen273
-\pgffor@skip=\dimen274
-\pgffor@stack=\toks40
-\pgffor@toks=\toks41
+\pgffor@iter=\dimen274
+\pgffor@skip=\dimen275
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
 )) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.t
 ex"
 Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
@@ -1039,30 +1054,30 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
 code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count156
-\pgfplotmarksize=\dimen275
+\pgf@plot@mark@count=\count157
+\pgfplotmarksize=\dimen276
 )
-\tikz@lastx=\dimen276
-\tikz@lasty=\dimen277
-\tikz@lastxsaved=\dimen278
-\tikz@lastysaved=\dimen279
-\tikzleveldistance=\dimen280
-\tikzsiblingdistance=\dimen281
+\tikz@lastx=\dimen277
+\tikz@lasty=\dimen278
+\tikz@lastxsaved=\dimen279
+\tikz@lastysaved=\dimen280
+\tikzleveldistance=\dimen281
+\tikzsiblingdistance=\dimen282
 \tikz@figbox=\box56
 \tikz@figbox@bg=\box57
 \tikz@tempbox=\box58
 \tikz@tempbox@bg=\box59
-\tikztreelevel=\count157
-\tikznumberofchildren=\count158
-\tikznumberofcurrentchild=\count159
-\tikz@fig@count=\count160
+\tikztreelevel=\count158
+\tikznumberofchildren=\count159
+\tikznumberofcurrentchild=\count160
+\tikz@fig@count=\count161
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count161
-\pgfmatrixcurrentcolumn=\count162
-\pgf@matrix@numberofcolumns=\count163
+\pgfmatrixcurrentrow=\count162
+\pgfmatrixcurrentcolumn=\count163
+\pgf@matrix@numberofcolumns=\count164
 )
-\tikz@expandcount=\count164
+\tikz@expandcount=\count165
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarytopaths.code.tex"
@@ -1072,12 +1087,12 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 Package: pgfplots 2015/05/02 v1.12.1 Data Visualization (1.12.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.code.tex" ("C:\Prog
 ram Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscore.code.tex"
-\t@pgfplots@toka=\toks42
-\t@pgfplots@tokb=\toks43
-\t@pgfplots@tokc=\toks44
-\pgfplots@tmpa=\dimen282
-\c@pgfplots@coordindex=\count165
-\c@pgfplots@scanlineindex=\count166
+\t@pgfplots@toka=\toks43
+\t@pgfplots@tokb=\toks44
+\t@pgfplots@tokc=\toks45
+\pgfplots@tmpa=\dimen283
+\c@pgfplots@coordindex=\count166
+\c@pgfplots@scanlineindex=\count167
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.
 tex"))
@@ -1092,7 +1107,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 fsupp_pgflibraryfpu.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
 fsupp_pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count167
+\c@pgfmathroundto@lastzeros=\count168
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
 fsupp_trig_format.code.tex")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplot
@@ -1103,14 +1118,14 @@ ructure.code.tex")
 ructureext.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsarray.
 code.tex"
-\c@pgfplotsarray@tmp=\count168
+\c@pgfplotsarray@tmp=\count169
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsmatrix
 .code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstableshared
 .code.tex"
-\c@pgfplotstable@counta=\count169
-\t@pgfplotstable@a=\toks45
+\c@pgfplotstable@counta=\count170
+\t@pgfplotstable@a=\toks46
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsdeque.
 code.tex") ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbina
@@ -1121,7 +1136,7 @@ e.tex"))
 tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplots.surf
 shading.code.tex"
-\c@pgfplotslibrarysurf@no=\count170
+\c@pgfplotslibrarysurf@no=\count171
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfs
 hading.pgfsys-pdftex.def")))
@@ -1145,14 +1160,14 @@ x")
 librarydecorations.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code
 .tex"
-\pgfdecoratedcompleteddistance=\dimen283
-\pgfdecoratedremainingdistance=\dimen284
-\pgfdecoratedinputsegmentcompleteddistance=\dimen285
-\pgfdecoratedinputsegmentremainingdistance=\dimen286
-\pgf@decorate@distancetomove=\dimen287
-\pgf@decorate@repeatstate=\count171
-\pgfdecorationsegmentamplitude=\dimen288
-\pgfdecorationsegmentlength=\dimen289
+\pgfdecoratedcompleteddistance=\dimen284
+\pgfdecoratedremainingdistance=\dimen285
+\pgfdecoratedinputsegmentcompleteddistance=\dimen286
+\pgfdecoratedinputsegmentremainingdistance=\dimen287
+\pgf@decorate@distancetomove=\dimen288
+\pgf@decorate@repeatstate=\count172
+\pgfdecorationsegmentamplitude=\dimen289
+\pgfdecorationsegmentlength=\dimen290
 )
 \tikz@lib@dec@box=\box60
 )
@@ -1164,13 +1179,13 @@ ecorations.pathmorphing.code.tex"))
 librarydecorations.pathreplacing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
-\pgfplots@numplots=\count172
-\pgfplots@xmin@reg=\dimen290
-\pgfplots@xmax@reg=\dimen291
-\pgfplots@ymin@reg=\dimen292
-\pgfplots@ymax@reg=\dimen293
-\pgfplots@zmin@reg=\dimen294
-\pgfplots@zmax@reg=\dimen295
+\pgfplots@numplots=\count173
+\pgfplots@xmin@reg=\dimen291
+\pgfplots@xmax@reg=\dimen292
+\pgfplots@ymin@reg=\dimen293
+\pgfplots@ymax@reg=\dimen294
+\pgfplots@zmin@reg=\dimen295
+\pgfplots@zmax@reg=\dimen296
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryplotmarks.code.tex"
@@ -1179,20 +1194,30 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmarks.cod
 e.tex"
 File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
-))) ("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.gro
+upplots.code.tex"
+\pgfplots@group@current@plot=\count174
+\pgfplots@group@current@row=\count175
+\pgfplots@group@current@column=\count176
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count173
+\c@r@tfl@t=\count177
 \rotFPtop=\skip75
 \rotFPbot=\skip76
 \rot@float@box=\box61
-\rot@mess@toks=\toks46
+\rot@mess@toks=\toks47
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks47
-\verbatim@line=\toks48
+\every@verbatim=\toks48
+\verbatim@line=\toks49
 \verbatim@in@stream=\read2
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
@@ -1203,10 +1228,6 @@ File: tikzlibrarypatterns.code.tex 2008/01/15 v3.0.0 (rcs-revision 1.2)
 .tex"
 File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.0 (rcs-revision 1.13)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-librarycalc.code.tex"
-File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
-)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryangles.code.tex"
 File: tikzlibraryangles.code.tex 2013/08/28 v3.0.0 (rcs-revision 1.1)
@@ -1234,7 +1255,7 @@ externalshared.code.tex"))
 No auxiliary output files.
 
 \w@pgfexternal@auxout=\write4
-\c@theo=\count174
+\c@theo=\count178
 \pgf@layerbox@background=\box62
 \pgf@layerboxsaved@background=\box63
 \pgf@layerbox@foreground=\box64
@@ -1244,42 +1265,42 @@ LaTeX Warning: Unused global option(s):
     [8.5pt].
 
 No file TikzPics/Theo/FigTheoTIP3Geo.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 121.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 111.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 121.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count175
-\scratchdimen=\dimen296
+\scratchcounter=\count179
+\scratchdimen=\dimen297
 \scratchbox=\box66
-\nofMPsegments=\count176
-\nofMParguments=\count177
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count178
-\MPscratchDim=\dimen297
-\MPnumerator=\count179
-\makeMPintoPDFobject=\count180
-\everyMPtoPDFconversion=\toks50
+\nofMPsegments=\count180
+\nofMParguments=\count181
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count182
+\MPscratchDim=\dimen298
+\MPnumerator=\count183
+\makeMPintoPDFobject=\count184
+\everyMPtoPDFconversion=\toks51
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
@@ -1287,7 +1308,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 111.
+(lastpage)             ! on input line 121.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
@@ -1295,121 +1316,212 @@ Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\symgns@font=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 121.
+Package gensymb Info: Math companion symbols declared on input line 121.
+LaTeX Info: Redefining \degree on input line 121.
+LaTeX Info: Redefining \celsius on input line 121.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 121.
+LaTeX Info: Redefining \ohm on input line 121.
+Package gensymb Info: Using \textohm for \ohm on input line 121.
+Package gensymb Info: Using \textmu for \micro on input line 121.
 ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 111.
+ on input line 121.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 12
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 13
 8.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.fd"
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 12
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 13
 8.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 12
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 13
 8.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 12
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 13
 8.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
-LaTeX Font Info:    Try loading font information for U+msa on input line 128.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
+LaTeX Font Info:    Try loading font information for U+msa on input line 138.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 128.
+LaTeX Font Info:    Try loading font information for U+msb on input line 138.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 173.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 173.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 173.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 173.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 138.
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 183.
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 195.
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--618
+Underfull \hbox (badness 10000) in paragraph at lines 629--631
 []\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
  []
 
 [6
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (78.49168pt too wide) detected at line 666
+Overfull \hbox (78.49168pt too wide) detected at line 679
 []\OML/ptmcm/m/it/10 tikzexternal \OT1/ptmcm/m/n/10 : \OML/ptmcm/m/it/10 pictur
 ehasbeenexternalized:Thistextisrequiredtoavoidemptyfloats:
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 668.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 681.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (128.88924pt too wide) detected at line 781
+Overfull \hbox (128.88924pt too wide) detected at line 794
 \OT1/ptmcm/m/n/10 [[]]
+ []
+
+
+Underfull \vbox (badness 6542) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 870.
+
+Underfull \hbox (badness 3547) in paragraph at lines 870--870
+[][]\OT1/ptm/m/n/8 In the $[]$ case, a first min-i-mum was cal-cu-lated at the
+ []
+
+
+Underfull \hbox (badness 7012) in paragraph at lines 875--891
+[]\OT1/ptm/m/n/10 At each op-ti-mum ge-om-e-try, an ad-di-tional cal-cu-la-tion
+
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 875--891
+\OT1/ptm/m/n/10 was car-ried out to find a CP cor-rected en-ergy. For
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 875--891
+[]\OML/ptmcm/m/it/10 =[]\OT1/ptmcm/m/n/10 12$ \OT1/ptm/m/n/10 level of the-ory,
+ while for the
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 3942) in paragraph at lines 980--986
+$\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
+[] of the sys-
+ []
+
+
+Underfull \hbox (badness 3849) in paragraph at lines 980--986
+\OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 980--986
+\OT1/ptm/m/n/10 sis set, and $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 is the CP
+ cor-rected in-ter-ac-tion en-ergy
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 2582) in paragraph at lines 1077--1084
+\OT1/ptm/m/n/10 op-ti-mi-sa-tions. Here, the at-trac-tion is con-sid-ered close
+
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 1077--1084
+\OT1/ptm/m/n/10 to be-ing re-pul-sive, with in-ter-ac-tion en-ergy val-ues arou
+nd
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1077--1084
+[]\OT1/ptm/m/n/10 . While the re-sult-ing de-vi-a-tion of
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+The command '\includegraphics [width=.48\textwidth ]{./img/FletcherAboveGlossyN
+oCueing.png}' has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 No file TikzPics/Theo/FigTheoTIP3Geo.bbl.
 
-Package lastpage Warning: Rerun to get the references right on input line 1044.
+Package lastpage Warning: Rerun to get the references right on input line 1872.
 
 
 
 Package lastpage Warning: The lastpage package was not allowed to write to an
 (lastpage)                .aux file. This package does not work without access
 (lastpage)                to an .aux file.
-(lastpage)                 on input line 1044.
+(lastpage)                 on input line 1872.
 
  ) 
 Here is how much of TeX's memory you used:
- 30557 strings out of 493921
- 716589 string characters out of 3147280
- 869875 words of memory out of 3000000
- 33280 multiletter control sequences out of 15000+200000
- 45162 words of font info for 111 fonts, out of 3000000 for 9000
+ 30933 strings out of 493921
+ 726164 string characters out of 3147280
+ 873000 words of memory out of 3000000
+ 33642 multiletter control sequences out of 15000+200000
+ 51098 words of font info for 130 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,13n,77p,764b,1108s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,14n,77p,1765b,1110s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
-b>
-Output written on TikzPics/Theo/FigTheoTIP3Geo.pdf (1 page, 22967 bytes).
+w/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on TikzPics/Theo/FigTheoTIP3Geo.pdf (1 page, 22636 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
