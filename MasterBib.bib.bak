@@ -187,7 +187,7 @@
   volume = {16},
   pages = {3493},
   number = {8},
-  __markedentry = {[Thomas:]},
+  __markedentry = {[Thomas:6]},
   doi = {10.1039/c3cp54328e},
   issn = {1463-9084},
   owner = {Thomas},
@@ -240,6 +240,7 @@
   pages = {50},
   number = {1},
   month = {May},
+  __markedentry = {[Thomas:]},
   doi = {10.1088/0004-637x/788/1/50},
   issn = {1538-4357},
   owner = {Thomas},
@@ -330,24 +331,6 @@
   publisher = {AIP Publishing},
   timestamp = {2015.12.15},
   url = {http://dx.doi.org/10.1063/1.1808117}
-}
-
-@ARTICLE{CabreraSanfelix2003,
-  author = {Sanfelix, P Cabrera and Holloway, S and Kolasinski, KW and Darling,
-	GR},
-  title = {The structure of water on the (0001) surface of graphite},
-  journal = {Surface Science},
-  year = {2003},
-  volume = {532-535},
-  pages = {166--172},
-  month = {Jun},
-  __markedentry = {[Thomas:6]},
-  doi = {10.1016/s0039-6028(03)00161-4},
-  issn = {0039-6028},
-  owner = {Thomas},
-  publisher = {Elsevier BV},
-  timestamp = {2016.01.10},
-  url = {http://dx.doi.org/10.1016/S0039-6028(03)00161-4}
 }
 
 @ARTICLE{Warshel1976QMMM,

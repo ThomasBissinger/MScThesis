@@ -1,6 +1,8 @@
 \documentclass[8.5pt,twoside,twocolumn]{article}
 %% CHECK: Remove all ``CHECK'' comments by solving their problems
 %% CHECK: Du machst viele therefores.
+%% CHECK: Energy data in the Benchmark Energy and Geometry Database
+%         http://www.begdb.com/index.php?action=home
 \usepackage[utf8]{inputenc}
 \usepackage{MyChem}
 \usepackage{MyStandard}
@@ -14,7 +16,8 @@
 \usepackage[symbol]{footmisc}
 \usepackage{gensymb} % enables degree sign
 \usepackage{tabularx}
-\usepackage{multirow} 
+\usepackage{multirow}
+  
 
 %% CHECK: WARNING! Overrides double subscript/superscript error
 %\catcode`\^ = 13 \def^#1{\sp{#1}{}}
@@ -31,6 +34,8 @@
 \usepackage{verbatim}
 \usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
 \tikzexternalize[shell escape=-enable-write18]
+
+\usepackage{tablefootnote}
 
 \makeatletter
 \newcommand{\subalign}[1]{%
@@ -50,6 +55,13 @@
 \newcommand\snakedeko{{snake, segment length=1.5mm, amplitude=.5mm}}
 \newcommand\zpe{\enmat{\te{ZPE}}}
 
+\newcommand\ering{\enmat{E^{\te{ring}}}}
+\newcommand\eall{\enmat{E^{\te{all}}}}
+
+\newcommand\zpering{\enmat{\zpe/\te{ring}}}
+\newcommand\zpeall{\enmat{\zpe/\te{all}}}
+
+
 \newcommand\eint{\enmat{E^{\te{int}}}}
 \newcommand\eads{\enmat{E^{\te{ads}}}}
 \newcommand\ere{\enmat{E^{\te{react}}}}
@@ -59,6 +71,8 @@
 \newcommand\sur{\enmat{\te{s-}}}
 \newcommand\gas{\enmat{_\te{(g)}}}
 
+\newcommand\tgas{\enmat{_{2\te{(g)}}}}
+\newcommand\defskip{\hskip-10pt}
 \newcommand\dlfind{\enmat{\te{DL-FIND}}}
 
 \renewcommand\Hil{\enmat{\mathcal H_a}}
@@ -78,6 +92,15 @@
 \newcommand\ri{\enmat{\r_i}}
 \newcommand\rip{\enmat{\r_{i'}}}
 \newcommand\indr{\enmat{\int\di \r}}
+\newcommand\singo{\enmat{{^1\te{O}}}}
+\newcommand\tripo{\enmat{{^3\te{O}}}}
+\newcommand\singot{\enmat{{^1\ot}}}
+\newcommand\tripot{\enmat{{^3\ot}}}
+
+\newcommand{\fakefna}{\enmat{^a}}
+\newcommand{\fakefnb}{\enmat{^b}}
+\newcommand{\fakefnc}{\enmat{^c}}
+\newcommand{\fakefnd}{\enmat{^d}}
 
 \newcommand\kmo{\enmat{\te {kJ/mol}}}
 \newcommand\id{\hskip.2cm}
@@ -1565,29 +1588,234 @@ by the standards of this benchmark.
   
 %% CHECK: Interaction geometries?
 %% CHECK: Formation energy?
-
-\section{Gas Phase Reactions}
+\section{The Gas Phase}
 \label{Sec:Gas}
 
-To evaluate the choice of functional of the previous section
-and to introduce some of the properties of the molecular species we
-will later use for adsorption, this section is meant to
-give gas phase reaction data. A gas phase reaction is a simpler
-version of the surface reaction we introduced in the
-theoretical section, the scheme being
+Before we progress to the ice surface, we can use this section
+to get to know some key properties of the molecules we want to
+study as adsorbents on the ice surface. The gas phase systems
+we wish to study are small enough to be admissible for $\ccsdtf$
+calculations. Therefore, the results presented in this section can
+be used to further evaluate the functionals we considered most
+reliable in the previous benchmark.
+
+\subsection{Pure Molecule Energy Data}
+\label{Sec:Gas:Energy}
+Bare energy values for different functionals can not be compared
+properly. Instead, we need to compare energy differences to
+a reference value. We do only study molecules with O and H atoms
+in them, so for a mlecular species X with $M_{\te{H}}$ H atoms and 
+$M_{\te O}$ O atoms, we define a sort of non-literal atomisation energy by
+\begin{equation}
+E^0_\X=E_\X - \frac {M_{\te H}} 2 E_{\htw} - \frac{M_{\te O}} 2 E_{\tripot}.
+\label{Gas:FormationEnergy} 
+\end{equation}
+$\tripot$ is the triplet oxygen. The spin multiplicity of a molecule will
+only be given if the choice is not obvious. This is the case only for the
+pure oxygen species in. All other species have singlet or dublet spin. 
+
+The value is of no physical importance, but if two functionals
+agree well, they should obviously agree well with respect to $E^0$.
+We include $\zpe$ corrections into $E^0$. For each functional, 
+the correction is calculated at the corresponding optimum geometry
+for the functional without dispersion correction. Note that this means
+%% CHECK: Stimmt das überhaupt? Müsste aus Stetigkeitsgründen nicht auch
+%  die ZPE PES minimal sein, da ja die zweite Ableitung auch null ist?
+%  --> Nein, denn die zweite Ableitung der ZPE-Korrektur ist wohl nicht null.
+that we only have the $\zpe$ corrected value of the energy
+minimum of the not $\zpe$ corrected PES.
+
+An energy adjusted by \eqref{Gas:FormationEnergy} has two problems. For
+once, we can not say how accurately the energies for $\htw$ and $\tripot$
+themselves are predicted. This leads to the second problem that inaccurate
+data for these will make the results for the entire functional seem inaccurate.
+But to have a first comparison of the functionals, we have to accept
+these problems. 
+
+\begin{table*}[htb]
+  \centering
+  \caption{Energies for DFT functionals, according to \eqref{Gas:FormationEnergy}.
+  All energies in $\kmo$.}
+    \begin{tabular}{l|rrrrr|r}
+       & & & & & & \\[-10pt]
+         & \btlyp & \bhlyp & \pbez & \tpssh & \pw  & \ccsdtf \\[2pt]
+    \hline \hline
+       & & & & & & \\[-10pt]
+    $\te{H}$ & 217.04 & 213.17 & 204.96 & 222.13 & 212.72 & 216.45 \\
+    $\hto$ & -215.65 & -224.54 & -222.74 & -197.51 & -220.11 & -238.28 \\
+    $\htot$ & -98.26 & -97.16 & -104.82 & -85.65 & -101.84 & -129.08 \\
+    $\ho$ & 42.89 & 16.85 & 43.01 & 51.30 & 46.06 & 36.49 \\
+    $\hot$ & 21.75 & 19.85 & 19.16 & 25.28 & 21.96 & 14.75 \\
+    $^1\te{O}$ & 519.48 & 482.52 & 543.69 & 538.46 & 521.61 & 451.63 \\
+    $^3\te{O}$ & 252.00 & 204.88 & 254.89 & 246.85 & 253.28 & 245.13 \\
+    $^1\ot$ & 162.16 & 177.97 & 171.07 & 163.27 & 160.38 & 120.91 \\[2pt]
+%      \hline \hline
+%       & & & & & & & & &  \\[-10pt]
+%       \multicolumn{3}{r|}{\multirow{4}{*}{$\ezp_{\dft} - \ezp_{\ccsdtf}$}} &
+%        MAD   & 21.29 & 42.22 & 27.54 & 24.98 & 20.70 &  \\
+%       & & & MIN   & -59.67 & -48.67 & -83.35 & -84.18 & -60.91 & \\
+%       & & & MAX   & 23.22 & 71.20 & 31.34 & 27.22 & 23.76 & \\
+%       & & & MEAN  & -5.47 & 26.87 & -7.79 & -8.44 & -6.91 &  \\[2pt]
+%      %\hline
+    \end{tabular}%
+  \label{Gas:Energies}%
+\end{table*}%
+
+Note that the formerly considered $\pw\dt$ functional is not included
+in Table \ref{Gas:Energies}, since
+the dispersion correction only affects intermolecular interaction.
+Our calculations however treated isolated molecules. 
+
+As we can see in Table \ref{Gas:Energies}, the approximative power
+of the DFT functionals varies strongly among the molecular species.
+Especially the case of $\singo$ and $\singot$ seems to be problematic, but
+the agreement is also not very good for $\htot$. The $\pbez$ functional
+is off by $92.06~\kmo$ for the case of $\singo$, followed
+by a disagreement of $86.84~\kmo$ for $\tpssh$ and disagreements
+of $69.96$ and $67.86~\kmo$ for $\pw$ and $\btlyp$, respectively.
+The best agreement is achieved by $\bhlyp$ with $30.90~\kmo$ of
+difference. However, the $\bhlyp$ functional predicts 
+$E^0$ very badly for $\singot$, with an error of $40.26~\kmo$,
+while the other functionals differ by less than $10~\kmo$.
+Generally, all functionals predict too high values for $E^0$.
+Since the values are not too far off for $\htw$ while showing
+considerable problems with molecules composed solely of xygen,
+this could be an indication that the energetic description of $\tripot$
+is challenging to DFT functionals in general. Then again, the rather good
+agreement to the reference data for all functionals but $\bhlyp$ in the case
+of $\tripo$ does not support this claim if we do not expect
+a cancellation of error.
+
+Further comparison shows that for most molecules, the functionals
+closest to the $\ccsdtf$ energies are $\btlyp$ and $\pw$, which
+also yield similar results. This mainly means that they provide
+energy values that are not as high as those of other functionals. 
+
+\subsection{Reactions}
+\label{Sec:Gas:Reaction}
+A gas phase reaction is a simpler version of the surface reaction
+we introduced in the theoretical section, the scheme being
 \begin{equation}
 \X\gas + \Y\gas \chemar \te Z\gas,
 \label{Gas:Scheme}
 \end{equation}
-much similar to \eqref{Theo:ReactionScheme}.
+much similar to \eqref{Theo:ReactionScheme}. We drop the
+$(g)$ subscript.
 
 We calculated DFT energies in the $\tzvpd$ basis set with
 the $\btlyp$, $\bhlyp$, $\pbez$, $\tpssh$, $\pw$ and $\pw\dt$
 functionals. We did also calculate $\ccsdtf/\vtz$ energy data.
 All results were supplemented by a $\zpe$ correction at the
-optimum geometry obtained by $\dlfind$. Not that this means
-that we only have the $\zpe$ corrected value of the energy
-minimum of the not $\zpe$ corrected PES.
+optimum geometry obtained by $\dlfind$. 
+
+\newcolumntype{D}{>{\raggedleft\arraybackslash}p{1.4cm}}
+% Table generated by Excel2LaTeX from sheet 'Tabelle2'
+\begin{table*}[htb]
+  \centering
+  \caption{Reaction energies for DFT functionals. $E^{\zpe}$ and $E$ are data with and without
+  $\zpe$ correction, respectively. We also give the value of the $\zpe$ correction $\Dl E^{\zpe}$.
+  All energies in $\kmo$.}
+    \begin{tabular}{lll|lDDDDD|r}
+      & & & & & & & & & \\[-10pt]
+        & & &     & \btlyp & \bhlyp & \pbez & \tpssh & \pw  & \ccsdtf \\[2pt]
+    \hline \hline
+      & & & & & & & & & \\[-10pt]
+    $\ho\gas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\hto\gas$ & $E^{\zpe}$ & -475.58 & -454.56 & -470.70 & -470.94 & -478.89 & -491.23 \\
+      & & & $E$   & -509.17 & -489.42 & -504.76 & -504.53 & -512.99 & -525.29 \\
+      & & & $\Dl{E}^{\zpe}$ & 33.58 & 34.87 & 34.05 & 33.59 & 34.09 & 34.06 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\hto\gas$&\defskip$+^1\te{O}\gas$&\defskip$\chemar\hto\tgas$ & $E^{\zpe}$ & -402.09 & -355.15 & -425.77 & -426.60 & -403.33 & -342.42 \\
+    & &    & $E$   & -415.75 & -370.59 & -440.19 & -439.92 & -417.56 & -355.80 \\
+    & &    & $\Dl{E}^{\zpe}$ & 13.66 & 15.44 & 14.41 & 13.31 & 14.23 & 13.38 \\
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\ho\gas$&\defskip$+\ \ho\gas$&\defskip$\chemar\hto\tgas$ & $E^{\zpe}$ & -184.03 & -130.86 & -190.84 & -188.24 & -193.96 & -202.06 \\
+      & & & $E$   & -209.22 & -158.07 & -216.83 & -213.19 & -219.86 & -227.13 \\
+      & & & $\Dl{E}^{\zpe}$ & 25.19 & 27.21 & 25.99 & 24.94 & 25.90 & 25.07 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\te{HO}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\hto\tgas$ & $E^{\zpe}$ & -337.05 & -330.18 & -328.94 & -333.06 & -336.51 & -360.28 \\
+      & & & $E$   & -369.45 & -364.20 & -362.04 & -365.28 & -369.52 & -392.71 \\
+      & & & $\Dl{E}^{\zpe}$ & 32.40 & 34.02 & 33.11 & 32.22 & 33.01 & 32.44 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\ho\gas$&\defskip$+\ ^3\te{O}\gas$&\defskip$\chemar\te{HO}\tgas$ & $E^{\zpe}$ & -273.14 & -201.88 & -278.73 & -272.87 & -277.38 & -266.88 \\
+      & & & $E$   & -287.98 & -218.17 & -294.10 & -287.56 & -292.69 & -281.88 \\
+      & & & $\Dl{E}^{\zpe}$ & 14.84 & 16.29 & 15.36 & 14.69 & 15.31 & 15.00 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $^1\te{O}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\te{HO}\tgas$ & $E^{\zpe}$ & -357.45 & -371.28 & -356.87 & -360.12 & -351.14 & -322.61 \\
+      & & & $E$   & -384.60 & -399.86 & -384.50 & -387.18 & -378.72 & -350.98 \\
+      & & & $\Dl{E}^{\zpe}$ & 27.14 & 28.58 & 27.63 & 27.06 & 27.58 & 28.36 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $^3\te{O}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\te{HO}\tgas$ & $E^{\zpe}$ & -195.30 & -193.32 & -185.80 & -196.85 & -190.76 & -201.70 \\
+      & & & $E$   & -222.37 & -221.89 & -213.34 & -223.80 & -218.26 & -229.48 \\
+      & & & $\Dl{E}^{\zpe}$ & 27.07 & 28.57 & 27.54 & 26.95 & 27.51 & 27.78 \\[2pt]
+     \hline \hline
+      & & & & & & & & &  \\[-10pt]
+      \multicolumn{3}{r|}{\multirow{4}{*}{$\ezp_{\dft} - \ezp_{\ccsdtf}$}} &
+       MAD   & 21.29 & 42.22 & 27.54 & 24.98 & 20.70 &  \\
+      & & & MIN   & -59.67 & -48.67 & -83.35 & -84.18 & -60.91 & \\
+      & & & MAX   & 23.22 & 71.20 & 31.34 & 27.22 & 23.76 & \\
+      & & & MEAN  & -5.47 & 26.87 & -7.79 & -8.44 & -6.91 &  \\[2pt]
+     %\hline
+    \end{tabular}%
+  \label{Gas:Reactions}%
+\end{table*}%
+
+The sudied reactions are
+%% boxes for the species
+\newcommand\ronebox[1]{\makebox[.8cm][l]{\enmat{#1}}}
+\newcommand\rtwobox[1]{\makebox[.7cm][l]{\ \enmat{#1}}}
+\newcommand\prodbox[1]{\makebox[1.55cm][l]{\enmat{#1}}}
+\begin{subequations}
+\begin{align}
+   \label{Gas:HO+H->H2O}
+   \ronebox{\ho}+\rtwobox{\te{H}}\prodbox{\chemar\hto,} \\ 
+   \label{Gas:H2O+O->H2O2}
+   \ronebox{\hto}+\rtwobox{^1\te{O}}\prodbox{\chemar\htot,} \\
+   \label{Gas:HO+HO->H2O2}
+   \ronebox{\ho}+\rtwobox{\ho}\prodbox{\chemar\htot,} \\
+   \label{Gas:HO2+H->H2O2}
+   \ronebox{\hot}+\rtwobox{\te{H}}\prodbox{\chemar\htot,} \\
+   \label{Gas:HO+O->HO2}
+   \ronebox{\ho}+\rtwobox{^3\te{O}}\prodbox{\chemar\hot,} \\
+   \label{Gas:1O2+H->HO2}
+   \ronebox{^1\ot}+\rtwobox{\te{H}}\prodbox{\chemar\hot,} \\
+   \label{Gas:3O2+H->HO2}
+   \ronebox{^3\ot}+\rtwobox{\te{H}}\prodbox{\chemar\hot.}
+\end{align}
+\end{subequations}
+
+Table \ref{Gas:Reactions} contains all the relevant information on
+reaction energies. We give $\zpe$ corrected data and the energy
+values without $\zpe$ correction as well as the value of the correction
+itself. Alongside the DFT results, we also give the $\ccsdtf/\vtz$ results.
+
+To get estimates of the overall performance of the functionals,
+we give the \ep{mean absolute deviation} (MAD) and minimum (MIN)
+and maximum (MAX) deviations as well as the overall mean deviation
+from the $\ccsdtf$ data for $E^{\zpe}$. From this data, it is already
+clear that no functional can be considered highly accurate for
+reaction energies. The most accurate ones by MAD are $\pw$
+and $\btlyp$, with values of $20.70$ and $21.29~\kmo$, respectively,
+but even these have deviations of up to $-60.91$ and $-59.67~\kmo$,
+respectively.
+
+The $\bhlyp$ functional shows an intersting behaviour. It usually
+predicts more endothermic reactions than the other functionals.
+This leads to a decrease in agreement with the reference energy.
+Only for the case of reaction \eqref{Gas:H2O+O->H2O2}, this is beneficial
+
+
+%% CHECK: HERE WE ARE!
+The results of Table \ref{Gas:Energies} already  
+
+While the agreement between $\ccsdtf$ and the DFT functionals is never
+better than a difference of $5~\kmo$, there are cases where the agreement
+is particularly bad. 
 
 
 \section{Adsorption and Reactions on the Ice Surface}
@@ -1639,7 +1867,7 @@ to one of the two O atoms taking part in the bond. This can lead to a multitude
 of possible arrangements. Fletcher's approach is to draw parallel
 lines into the lattice to group the molecules in rows. Molecules in the
 same row have the same orientation. In Figure \ref{Fig:Ads:Fletcher}, these
-rows are defined by vertical lines.
+rows can be defined by vertical lines.
 
 This ordering comes from first considering only the surface molecules. These
 have a broken hydrogen bond outward, which may or may not have a hydrogen
@@ -1793,16 +2021,9 @@ this as an implication that the interaction between the two region works
 well and that neither one of them is outbalanced by too strong energy
 gradients in the other one. 
 
+\subsection{ZPE Corrections}
+\label{Sec:Ads:ZPE}
 
-
-
-%% CHECK: Formation energies gegeneinander plotten? Eigentlich nicht sinnvoll,
-%   da die QM Geometrien ja nicht unabhängig von den MM Geometrien sind.
-
-\subsection{Adsorption}
-\label{Sec:Ads:Adsorption}
-\newcommand\zpering{\enmat{\zpe/\te{ring}}}
-\newcommand\zpeall{\enmat{\zpe/\te{all}}}
 Now we have established a model that should be able to describe at least O, 
 H and $\hto$ adsorption to some satisfaction. We can compute optimum geometries
 and their energies for different adsorbates and gain the adsorption energy
@@ -1830,234 +2051,408 @@ upshot is obvious: With $M$ being the number of atoms in the adsorbent, these $1
 need $54+3M$ displacements (plus one initial geometry). This is much less than the
 original $324+3M$ displacements for $108+M$ atoms.
 
+We will call this selective correction the $\zpering$ correction in contrast to
+the $\zpeall$ correction for all QM atoms. 
+
+We can compare the two corrections in the next section.
+
+
+%% CHECK: Formation energies gegeneinander plotten? Eigentlich nicht sinnvoll,
+%   da die QM Geometrien ja nicht unabhängig von den MM Geometrien sind.
+
+\subsection{Adsorption}
+\label{Sec:Ads:Adsorption}
+
+If we assume the $\zpeall$ correction 
+to be accurate, we can evaluate the $\zpering$ correction when comparing
+results for the $\btlyp$ functional in Table \ref{Tab:Ads:AdsB3lyp}. Of
+the molecules relevant in Section \ref{Sec:Gas}, we examine adsorption
+%% CHECK: Conformation wirklich richtig? Chemisorption richtig? Unterschiede
+%   zu Physisorption behandeln?
+energies for all species but $^1\te O$, since is chemisorbed by the surface
+to form some conformation of $\htot$.
+
 %% CHECK: Vllt lieber die Corrections als die Energiewerte?
 \renewcommand\eads[1]{E_{\sur\te X}^{\te{ads}{#1}}}
-\begin{table}[t]
-  \caption{Adsorption energies for the $\btlyp$ functional in $\kmo$. The calculation
-  of the all-molecules ZPE correction for $^2\hot$ was cancelled by the JUSTUS cluster.}
+\begin{table}[htb]
+  \caption{Different choices for the ZPE correction. For a reference, the corresponding 
+  adsorption energies are given for the $\btlyp$ functional. All energies in $\kmo$.}
   \centering
-\begin{tabular}{l | r|r|r|}
-& & & \\[-10pt]
-    & \ph{$^{\zpeall}$}$\eads{}$ & $\eads{,\zpering}$ & $\eads{,\zpeall}$ \\[2pt]
+    \begin{tabular}{l|rrrr}
+       & & & & \\[-10pt]
+     & $E_{\btlyp}$   & $\Dl\eall_{\btlyp}$ & $\Dl\ering_{\btlyp}$ & $\Dl\ering_{\pbez}$ \\[2pt]
     \hline
-       & & & \\[-10pt]
-    $\sur\te H$ & -1.69 & 1.62  & 3.43 \\
-    $\sur\te H_2$ & -2.65 & 4.19  & 5.91 \\
-    $\sur\hto$ & -48.00 & -33.14 & -32.06 \\
-    $\sur\htot$ & -41.76 & -31.62 & -32.39 \\
-    $\sur\te{HO}$ & -44.98 & -32.85 & -31.39 \\
-    $\sur\te{HO}_2$ & -65.48 & -53.79 & *** \\
-    $\sur^3\te O$ & -16.15 & -12.77 & -13.38 \\
-    $\sur^1\te O_2$ & -8.42 & -4.50 & -5.76 \\
-    $\sur^3\te O_2$ & -2.48 & 1.49  & 0.83 \\[2pt]
+       & & & & \\[-10pt]
+    $\sur\te{H}$ & -1.71 & 5.03  & 3.28  & 2.84 \\
+    $\sur\htw$ & -2.65 & 8.42  & 6.80  & 6.81 \\
+    $\sur\hto$ & -48.01 & 15.98 & 14.84 & 14.45 \\
+    $\sur\htot$ & -41.76 & 9.28  & 10.09 & 9.51 \\
+    $\sur\ho$ & -44.99 & 13.60 & 12.11 & 12.05 \\
+    $\sur\hot$ & -65.48 & 13.17 & 11.66 & 11.59 \\
+    $\sur^3\te{O}$ & -16.17 & 2.69  & 3.35  & 3.04 \\
+    $\sur^1\ot$ & -8.41 & 2.46  & 3.86  & 4.96 \\
+    $\sur^3\ot$ & -2.62 & 3.06  & 3.90  & 3.86 \\[2pt]
     \hline
-    \end{tabular}
+    \end{tabular}%
+% \begin{tabular}{l | r|r|r|}
+% & & & \\[-10pt]
+%     & \ph{$^{\zpeall}$}$\eads{}$ & $\eads{,\zpering}$ & $\eads{,\zpeall}$ \\[2pt]
+%     \hline
+%        & & & \\[-10pt]
+%     $\sur\te H$ & -1.69 & 1.62  & 3.43 \\
+%     $\sur\te H_2$ & -2.65 & 4.19  & 5.91 \\
+%     $\sur\hto$ & -48.00 & -33.14 & -32.06 \\
+%     $\sur\htot$ & -41.76 & -31.62 & -32.39 \\
+%     $\sur\te{HO}$ & -44.98 & -32.85 & -31.39 \\
+%     $\sur\te{HO}_2$ & -65.48 & -53.79 & *** \\
+%     $\sur^3\te O$ & -16.15 & -12.77 & -13.38 \\
+%     $\sur^1\te O_2$ & -8.42 & -4.50 & -5.76 \\
+%     $\sur^3\te O_2$ & -2.48 & 1.49  & 0.83 \\[2pt]
+%     \hline
+%     \end{tabular}
   \label{Tab:Ads:AdsB3lyp}%
 \end{table}%
 
-
-We will call this selective correction the $\zpering$ correction in contrast to
-the $\zpeall$ correction for all QM atoms. If we assume the $\zpeall$ correction 
-to be accurate, we can evaluate the $\zpering$ correction when comparing
-results for the $\btlyp$ functional in Table \ref{Tab:Ads:AdsB3lyp}. For here
-and everything that follows, the spin multiplicity of an adsorbent will only
-be given if the choice is not rather obvious. Only for the pure oxygen species,
-this seems to be the case. We give only $^3\te O$ since $^1\te O$ does react with the surface
-%% CHECK: Conformation wirklich richtig?
-immediately and form some conformation of $\htot$.
-
 %% CHECK: Wird das noch was?
-Also note that the $\hot$ calculation did not finish within the six days
-of computation on the JUSTUS cluster for the $\zpeall$ correction. It did
-only finish 307 of 333 displacements.  
+%Also note that the $\hot$ calculation did not finish within the six days
+%of computation on the JUSTUS cluster for the $\zpeall$ correction. It did
+%only finish 307 of 333 displacements.  
 
-Before discussing the $\zpe$ correction in general, we want to discuss
-the differences between $\zpeall$ and $\zpering$. The resulting energies
+Before discussing adsorption data, we want to discuss the relevance of the
+$\zpe$ correction and the differences between $\zpeall$ and $\zpering$
+as well as the differences between the $\zpering$ correction for $\btlyp$ and
+$\pbez$, which we hope to represent the general variability of the
+$\zpe$ correction for different functionals.
+
+In general, the value of the corrective term does vary from
+adsorbent to adsorbent. All three corrections lie roughly between $2$
+and $16~\kmo$. That makes them -- if there is no cancellation
+of error of some other sort -- necessary for the correct description
+of adsorption processes, since the uncorrected adsorption energies
+themselves lie between $-1.71$ and $-65.48~\kmo$. The value of the 
+ZPE correction is also typically greater than the variation of
+the uncorrected adsorption energy of different functionals, as we
+can see in Table \ref{Tab:Ads:AdsForFuncs}.
+
+The $\zpeall$ and $\zpering$ energies
 do not deviate strongly in absolute value, all of them less than $2~\kmo$
-and all but $\sur$H and $\sur$HO by less than $1.5~\kmo$. All corrections $\Dl E^\zpe$ are
-positive, and in most cases the deviation is of less than 25\% between
-the two. Only for $\sur$H and $\sur^1\ot$ the deviations are greater than 35\%.
+and all but $\sur$H and $\sur$HO by less than $1.5~\kmo$. All corrections are
+positive.
+% and in most cases the deviation is of less than 25\% between
+%the two. Only for $\sur$H and $\sur^1\ot$ the deviations are greater than 35\%.
 It seems safe to say that the $\zpering$ correction may not be extremely
 close to the $\zpeall$ correction, but it shows the same qualitative
 behaviour. And since there is no knowing whether or not $\zpeall$ is
 accurate either, it seems alright to use the correction of the smaller
 system while accepting error bars of $\pm 2~\kmo$.
 
+Comparing the corrective terms for $\btlyp$ and $\pbez$, we generally find
+good agreement. With the exception of $\sur^1\ot$, the energies
+differ by less than $0.6~\kmo$.
+%The case of $\sur^1\ot$ is also
+%interesting because it is the only case where the $\pbez$ correction
+%predicts a greater value than the $\btlyp$ correction.
+Given the uncertainty between $\zpering$ and $\zpeall$, the differences
+between the  $\pbez$ correction and the $\btlyp$ correction are negligible.
+It seems reasonable to generalize what we already discovered for the gas
+phase result of Section \ref{Sec:Gas}: the ZPE correction does
+not change greatly between different functionals. We will therefore
+use the $\zpeall$ correction for the $\btlyp$ functional for all
+following data.
+
 Talking about the differences between $\zpe$ corrected adsorption energies
-and those without correction, there are the interesting cases of 
+and those without correction, there are the surface-molecule interesting cases of 
 \sur H, $\sur\htw$ and $\sur^3\ot$. In all three cases, the uncorrected
-$\eads{}$ predicts attractive interaction, while the corrected $\eads{,\zpeall}$
-and $\eads{,\zpering}$ both predict repulsive interaction. That means that
-the binding site found by the uncorrected DFT method is probably not binding at all.
+$E$ predicts attractive interaction, while the corrected $\eall$
+and $\ering$ both predict repulsive interaction. That means that
+the binding site found by the uncorrected DFT method is probably not the
+desired optimum.
 In such a case, it would of
 course be interesting whether there is an optimum geometry for the ZPE
 corrected functional that is still attractive. One should assume so,
-since it would seem unphysical if the surface and the hydrogen atom
-or molecule would repel one another. The problem here may be more the
+since it would seem unphysical if the surface and one of the
+molecules would repel one another. The problem here may be more the
 $\btlyp$ functional than the $\zpe$ correction alone. Due to the computational
-cost of a single ZPE correction, such a further evaluation will however be very
-difficult to achieve.
+cost of a single ZPE correction, an optimization on a more sophisticated 
+PES will be very difficult to achieve.
 
-Concerning the absolute value of the correction, it does vary from
-adsorbent to adsorbent. Both corrections lie roughly between $2$
-and $16~\kmo$. That makes them -- if there is no cancellation
-of error of some other sort -- very important for the description
-of adsorption processes.
+% We can further evaluate the significance of the ZPE correction by comparing
+% it to the variation in (uncorrected) adsorption energy among 
+% the different functionals.
 
-We can further evaluate the significance of the ZPE correction by comparing
-it to the variation in (uncorrected) adsorption energy among 
-the different functionals.
-
-%% CHECK: b3lyp muss ja evtl nicht nochmal ausgegraben werden. Dafür
+\newcommand\tableskip{\hskip 60pt}
+\newcommand\leftattable{\raggedright\hskip 53pt}
+\newcommand\righttable{\raggedleft}
+\newcommand\righttablestop{\hskip-53pt}
+%% CHECK: b3lyp muss ja evtl nicht nochmal a	usgegraben werden. Dafür
 % vllt pw6b95.
-%% CHECK: Experiment? 
+%% CHECK: More Experiments?
+%% CHECK: Deviation from average value? 
 % Table generated by Excel2LaTeX from sheet 'Tabelle1'
-\begin{table}[t]
+\begin{table*}[ht]
   \centering
-  \caption{Comparison of adsorption energies $\eads{}$ for different density
-  functionals. $\pws$ is shorthand for $\pw$. Energies are given in $\kmo$.}
+  \caption{Comparison of adsorption energies for different density functionals. All
+  energies are given with $\zpeall$ correction for $\btlyp$. $\pws$ is shorthand
+  for $\pw$. 
+  %Note that the experimental values are desorption energies, therefore
+  %of opposite sign.
+  Energies in $\kmo$.}
     %\begin{tabular}{l|L{2cm}L{2cm}L{2cm}L{2cm}L{2cm}}
-    \begin{tabular}{l|rrrrr}
-          & \btlyp & \bhlyp & \pbez & \tpssh & \pws\dt \\[2pt]
+    \begin{tabular}{l|rrrrrr|r}
+    & & & & & & & \\[-10pt]
+          & \btlyp & \bhlyp & \pbez & \tpssh & \pws & \pws\dt & experimental, $E_\te{des}$\\[2pt]
     \hline
-       & & & \\[-10pt]
-    $\sur\te{H}$ & -1.71 & -1.26 & -1.65 & -10.08 & -3.75 \\
-    \sur\htw & -2.65 & -3.31 & -4.85 & -3.88 & -5.95 \\
-    \sur\hto & -48.01 & -51.05 & -52.88 & -46.90 & -57.14 \\
-    \sur\htot & -41.76 & -45.27 & -46.93 & -40.32 & -53.62 \\
-    \sur\ho & -44.99 & -46.48 & -49.29 & -44.71 & -53.26 \\
-    \sur\hot & -65.48 & -62.28 & -70.15 & -67.27 & -70.97 \\
-    $\sur^3\te{O}$ & -16.17 & -7.85 & -13.94 & -15.91 & -20.82 \\
-    $\sur^1\ot$ & -8.41 & -9.97 & -13.90 & -11.90 & -14.99 \\
-    $\sur^3\ot$ & -2.62 & -3.71 & -4.58 & -3.58 & 3.98 \\[2pt]
+       & & & & & & & \\[-10pt]
+    $\sur\te{H}$ & 3.32  & 3.77  & 3.37  & -5.05 & 3.29  & 1.27 & \\
+    $\sur\htw$ & 5.77  & 5.11  & 3.57  & 4.55  & 4.65  & 2.47 & \\
+    $\sur\hto$ & -32.03 & -35.07 & -36.90 & -30.92 & -33.51 & -41.17 & -$48.00\pm0.50$\fakefna\\
+    $\sur\htot$ & -32.47 & -35.99 & -37.64 & -31.04 & -34.85 & -44.33 & \\
+    $\sur\ho$ & -31.39 & -32.88 & -35.69 & -31.10 & -32.78 & -39.66 & -$13.77$ to -$39.58$\fakefnb\\
+    $\sur\hot$ & -52.30 & -49.10 & -56.97 & -54.10 & -51.08 & -57.80 & \\%  $13.80\pm0.50$\fakefnb,\\
+    %% CHECK: This value is only for the bare silicate
+    %& & & & & & & $15.38\pm0.75$\fakefnb \\
+    $\sur^3\te{O}$ & -13.48 & -5.16 & -11.25 & -13.22 & -12.85 & -18.13 & -14.67\fakefnc\\
+    $\sur^1\ot$ & -5.95 & -7.51 & -11.44 & -9.44 & -7.44 & -12.53 & -7.52\fakefnc,-$13.80\pm0.50$\fakefnd\\
+    $\sur^3\ot$ & 0.45  & -0.65 & -1.52 & -0.52 & 26.68 & 7.04 & \\[2pt]
     \hline
-    \end{tabular}%
+ %   & & & & & & & \\[-10pt]
+    \end{tabular}
+    \\
+    \tableskip\makebox[12.0cm][r]{
+    \fakefna\footnotesize Adsorption on Au grain covered in crystalline water. For other grain materials between $42.15$ and $49.79~\kmo$. Fraser $\etal~$ 2001\cite{Fraser2001}}\\
+    %% CHECK: Überhaupt relevant, wenn nicht auf asw oder crystalline?
+    \tableskip\makebox[12.0cm][r]{
+    \fakefnb\footnotesize Adsorption on an amorphous silicate. He, Vidali 2014 \cite{HeVidali2014}}\\
+    %% CHECK: Paper anschauen, LESEN
+    \tableskip\makebox[12.0cm][r]{
+    \fakefnc\footnotesize Adsorption on an amorphous silicate. He, Jing, Vidali 2014 \cite{HeJingVidali2014}}\\
+    \tableskip\makebox[12.0cm][r]{
+    \fakefnd\footnotesize Adsorption on porous amorphous water ice. He $\etal~$ 2015 \cite{He2015}}
+    %\makebox[10cm]{\ragggedleft Text}\\
+    %\leftattable Text\\
+    %\righttable\righttablestop Text
+    %\raggedleft\fakefna\footnotesize Value for an Au grain. Value for other substrates between $42.15$ and $49.79~\kmo$.
   \label{Tab:Ads:AdsForFuncs}%
-\end{table}%
+\end{table*}%
 
-Table \ref{Tab:Ads:AdsForFuncs} contains all the values necessary. If we compare
-this data directly to the $\zpe$ corrections, we should bear in mind that the
-$\zpe$ corrections given so far are only values for the $\btlyp$ functional. It
-is however well possible that the corresponding corrections of other functionals
-are of similar magnitude, given that for many adsorbents, the adsorption energy
-does not vary too strongly between the functionals. Still, the difference
-between most attractive and most repulsive functional is often greater than
-either $\zpe$ correction. As long as there is no evidence that one
-of the functionals is more accurate than the others, the error
-from the uncertain choice of functional is of the same dimension as the error
-introduced by neglect of the $\zpe$ correction. Nonetheless, the $\zpe$
-correction should be included in calculations since it seems to introduce
-additional repulsion into the system. Especially if it does really expose
-bad choices of optimum geometry, i.e. binding sites, as for the case
-of $\sur^3\ot$ for $\btlyp$.
+Let us now turn to Table \ref{Tab:Ads:AdsForFuncs}, where ZPE corrected adsorption
+energies are given. Where there is experimental data available, it is given
+in the last column. So far, not many studies exist on measuring 
+adsorption under interstellar conditions. We therefore also included some data
+for $\ho$, $^3\te O$ and $^1\ot$ adsorption on bare amorphous silicates, which were gathered in order to
+gain a better understanding of water ice formation on bare silicates \cite{HeVidali2014,HeJingVidali2014}.
+Other data include $\hto$ adsorption on an Au surface covered in crystalline water
+ice\cite{Fraser2001} and $^1\ot$ adsorption on porous amorphous water ice \cite{He2015}.
+%% CHECK: Wie sinnvoll ist das?
+Although the experiments on bare silicates do not quite resemble our system,
+we consider the data they provide to give good guidance since they are at least
+influenced by adsorption on the freshly formed water ice surfaces on the probes.  
+ 
+% If we compare this data directly to the $\zpe$ corrections, we should bear in mind that the
+% $\zpe$ corrections given so far are only values for the $\btlyp$ functional. It
+% is however well possible that the corresponding corrections of other functionals
+% are of similar magnitude, given that for many adsorbents, the adsorption energy
+% does not vary too strongly between the functionals. Still, the difference
+% between most attractive and most repulsive functional is often greater than
+% either $\zpe$ correction. As long as there is no evidence that one
+% of the functionals is more accurate than the others, the error
+% from the uncertain choice of functional is of the same dimension as the error
+% introduced by neglect of the $\zpe$ correction. Nonetheless, the $\zpe$
+% correction should be included in calculations since it seems to introduce
+% additional repulsion into the system. Especially if it does really expose
+% bad choices of optimum geometry, i.e. binding sites, as for the case
+% of $\sur^3\ot$ for $\btlyp$.
 
 %% CHECK: Sehr schwammig hier.
-We can also compare the functionals with one another. Again, there is no knowing
-what results are accurate. But if a single functional does not agree well with
-the rest of them, as is the case for $\pw\dt$, one could argue that it may
-at least be a little more off than the others. Also, the result
-of repulsive $\sur^3\ot$ interaction is odd, especially since $\pw\dt$ 
-expected too attractive interaction for the $\htoo$ benchmark.
+Where there is no experimental data available, we can only compare the
+functionals to one another. For both $\sur\te H$ and $\sur\htw$, the
+problem of repulsive interaction due to ZPE correction seems to affect
+most functionals. $\tpssh$ disagrees with the others by still maintaining
+a negative sign for $\sur$H, but for $\sur\htw$, all functionals agree.
+This is at least an indication that the physisorption of H and $\htw$ are
+very fragile and that rather oxygen and hydrogenated oxygen species
+have longer residence times than hydrogen. $^3\ot$, which was also
+critical in our discussion of the ZPE correction, is not the unanimously
+considered repulsive. The $\pw$ method predicts strong repulsion,
+which is to some extent supported by $\pw\dt$, but the rest of the functionals
+seems to still predict a weak attraction or in the $\btlyp$ case a very
+weak repulsion.
 
-Concerning the other four functionals, one cannot make out many patterns
-in their behavior. They agree within $\pm2.5~\kmo$ of an average value
-for half of the adsorbents, but they do not coincide well for $\sur$H, $\sur\hot$,
-$\sur^3$O and $\sur^1\ot$, either because of a single functional strongly
-disagreeing or because of all functionals predicting energies in a broader
-area. There is no thoroughly satisfactory conclusion to this. One can
-at least argue qualitatively that the results should be physically
-sensible and that the scatter of possible values could be used as an error
-bound for the actual data.
+While each functional does have its ``slips'' for some adsorbents, the first four functionals of
+Table \ref{Tab:Ads:AdsForFuncs} seem to be in good accord. 
+For many cases, one of the two $\pw$ functionals is furthest from an average
+value of all six functionals. This is especially true for O and $\ot$.
+Since it is either $\pw$ or $\pw\dt$, this could be an indication
+that neither the $\pw$ nor the D3 dispersion correction are universally
+reliable for the study at hand. Of course, some of these possibly erroneous
+results could stem from $\dlfind$ getting stuck in the wrong minima. 
+
+Comparing the results to experimental findings, the agreement is more qualitative
+than quantitative. As already mentioned, the systems described by experiment
+differ from the idealized system we study. Most noteworthy is that the data for $\sur\hto$
+is far off while the experiment yielding the results should be the one closest
+to our model. The agreement would be better if we neglected $\Dl\eall=15.98$,
+with extremely good results for $\btlyp$ (cf. Table \ref{Tab:Ads:AdsB3lyp}).
+It is even the case that the experimental values mostly lie somewhere between
+the $\zpe$ corrected energy value and the uncorrected one for many functionals.
+But this should not question the reliability of the ZPE correction, since it
+represents a physical necessity and is here carried out close to the best precision
+available.
+%% CHECK: Das nötig?
+We should rather question sources of error like the system's strongly
+idealized geometry, which is not only du to the QM description but also to
+the water geometry of the MM description, which would make it difficult to
+allow for systems with distorted bond angles as described by Cabrera Sanfelix $\etal~$ 
+\cite{CabreraSanfelix2003} for the case of adsorption of a water dimer on graphite.
+We will come back to possible improvements to the model in the final section.
+
+On the other hand, the broad agreement between $\btlyp$, $\bhlyp$, $\pbez$
+and $\tpssh$ allows for the assumption that the energies calculated for the
+model at hand may be accurate to within a few $\kmo$. Due to their rather bad
+performance for O species, the $\pw$ functionals have lost some credibility.
+
+
+% Again, there is no knowing 
+% what results are accurate. But if a single functional does not agree well with
+% the rest of them, as is the case for $\pw\dt$, one could argue that it may
+% at least be a little more off than the others. Also, the result
+% of repulsive $\sur^3\ot$ interaction is odd, especially since $\pw\dt$ 
+% expected too attractive interaction for the $\htoo$ benchmark.
+
+% Concerning the other four functionals, one cannot make out many patterns
+% in their behavior. They agree within $\pm2.5~\kmo$ of an average value
+% for half of the adsorbents, but they do not coincide well for $\sur$H, $\sur\hot$,
+% $\sur^3$O and $\sur^1\ot$, either because of a single functional strongly
+% disagreeing or because of all functionals predicting energies in a broader
+% area. There is no thoroughly satisfactory conclusion to this. One can
+% at least argue qualitatively that the results should be physically
+% sensible and that the scatter of possible values could be used as an error
+% bound for the actual data.
 
 \subsection{Reactions}
 \label{Sec:Ads:Reactions}
 
-With the adsorption energy data and corresponding gas phase energies at the
-$\tzvpd$ level, we can calculate reaction energies. A selection of these
-is given in Table \ref{Tab:Ads:React}, again with the $\btlyp$ functional.
- 
-The reaction energies are computed according to \eqref{Theo:ReactionEnergySurface}
-and the reactions on the left are given in a scheme like \eqref{Theo:ReactionScheme}.
-On the right, we have the comparison to reactions without the surface.  
-
-% Table generated by Excel2LaTeX from sheet 'Reaction energies'
-%\newcommand\Colfix{R{3cm}}
-\newcolumntype{D}{>{\raggedleft\arraybackslash}p{1.8cm}}
-\newcommand\defskip{\hskip-10pt}
-\newcommand\tgas{\enmat{_{2\te{(g)}}}}
+%% CHECK: Durchschnittswert in nem Bild präsentieren? Durchschnittswert wirklich clever?
+\newcommand\btlyps{\enmat{\te{B3}}}
+\newcommand\pbezs{\enmat{\te{PBE0}}}
+\newcommand\avg{\enmat{E_{\te {avg}}}}
+% Table generated by Excel2LaTeX from sheet 'Tabelle1'
 \begin{table*}[htb]
   \centering
-  \caption{Reaction energies on the surface and in the gas phase. $\zpe$ corrected energies use the $\zpering$ correction for
-  the adsorbed molecules. The two different kinds of surface and gas phase reaction can be seen in the outer columns. The
-  energies are computed in the $\btlyp$ functional.}
-    \begin{tabular}{lll|DD||DD|lll}
-    %\hline
+  \caption{Surface reaction energies with Eley-Rideal type reactions. All energies are $\zpe$ corrected with $\Dl E^{\zpeall}_\btlyp$.
+  $\pws$ is short for $\pw$. The last column contains average values. The deviations of these are listed in the last four rows for each
+  functional.}
+    \begin{tabular}{lll|rrrrrr|r}
+    & &    & \btlyp & \bhlyp & \pbez & \tpssh & \pws   & \pws\dt &  \multicolumn{1}{r}{$\avg$}  \\[2pt]
+    %& &    & \btlyp & \bhlyp & \pbez & \tpssh & \pws   & \pws\dt &  $\Dl \eall_{\btlyps}$ & $\ering_{\btlyps}$ & $\Dl \ering_{\pbez}$ \\[2pt]
+    \hline 
     & & & & & & & &\\[-10pt]
-    \multicolumn{3}{l|}{} & \multicolumn{2}{c||}{Surface reaction energy} & \multicolumn{2}{c|}{Gas phase reaction energy} &\multicolumn{3}{l}{}\\[2pt]
-    \cline{4-7}
-    & & & & & & & &\\[-10pt]
-    \multicolumn{3}{l|}{Surface reaction} & $E$ & $\ezp$ & $E$ & $\ezp$ & \multicolumn{3}{l}{Gas phase reaction}\\[2pt]
-    \hline
-    & & & & & & & &\\[-10pt]
-    $\sur\ho$&\defskip$+\te H\gas$ &\defskip$\chemar  \sur\hto$ & -512.17 & -475.86 & -509.16 & -475.57 & $\ho\gas$&\defskip$+\te H\gas$ &\defskip$\chemar  \hto\gas$ \\
-    $\sur\hto$&\defskip$+^1\te O\gas$ &\defskip$\chemar \sur\htot$ & -1137.74 & -1128.81 & -1143.98 & -1130.33 & $\hto\gas$&\defskip$+^1\te O\gas$ &\defskip$\chemar \hto\tgas$\\
-    $\sur\ho$&\defskip$+\ho\gas$ &\defskip$\chemar \sur\htot$ & -205.99 & -182.80 & -209.22 & -184.03 & $\ho\gas$&\defskip$+\ho\gas$ &\defskip$\chemar \hto\tgas$\\
-    $\sur\hot$&\defskip$+\te H\gas$ &\defskip$\chemar  \sur\htot$ & -345.72 & -314.89 & -369.44 & -337.05 & $\te {HO}\tgas$&\defskip$+\te H\gas$ &\defskip$\chemar  \hto\tgas$\\
-    $\sur\ho$&\defskip$+^3\te O\gas$ &\defskip$\chemar  \sur\hot$ & -308.46 & -294.05 & -287.97 & -273.12 & $\ho\gas$&\defskip$+^3\te O\gas$ &\defskip$\chemar  \te {HO}\tgas$\\
-    $\sur^3\te O$&\defskip$+\ho\gas$ &\defskip$\chemar  \sur\hot$ & -337.30 & -314.13 & -287.97 & -273.12 & $^3\te O\gas$&\defskip$+\ho\gas$ &\defskip$\chemar  \te {HO}\tgas$\\
-    $\sur^1\ot$&\defskip$+\te H\gas$ &\defskip$\chemar  \sur\hot$ & -441.66 & -406.73 & -384.59 & -357.44 & $^1\te O\tgas$&\defskip$+\te H\gas$ &\defskip$\chemar  \te {HO}\tgas$ \\
-    $\sur^3\ot$&\defskip$+\te H\gas$ &\defskip$\chemar  \sur\hot$ & -285.37 & -250.56 & -222.36 & -195.29 & $^3\te O\tgas$&\defskip$+\te H\gas$ &\defskip$\chemar  \te {HO}\tgas$\\[2pt]
-    \hline
+        $\sur\ho$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hto$ & -476.22 & -458.03 & -472.39 & -470.76 & -480.13 & -480.92 & -473.07 \\
+    $\sur\hto$&\defskip$+^1\te{O}\gas$&\defskip$\chemar\sur\htot$ & -402.54 & -357.85 & -427.27 & -426.38 & -405.24 & -407.50 & -404.46 \\
+    $\sur\ho$&\defskip$+\ho\gas$&\defskip$\chemar\sur\htot$ & -185.12 & -137.04 & -194.02 & -187.84 & -197.12 & -200.16 & -183.55 \\
+    $\sur\hot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\htot$ & -317.22 & -318.69 & -310.31 & -309.82 & -320.89 & -323.99 & -316.82 \\
+    $\sur\ho$&\defskip$+^3\te{O}\gas$&\defskip$\chemar\sur\hot$ & -294.05 & -219.54 & -300.54 & -295.71 & -296.15 & -296.10 & -283.68 \\
+    $\sur^3\te{O}$&\defskip$+\ho\gas$&\defskip$\chemar\sur\hot$ & -311.96 & -248.31 & -325.41 & -313.50 & -316.45 & -318.00 & -305.61 \\
+    $\sur^1\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & -403.80 & -414.31 & -402.88 & -404.70 & -395.22 & -396.95 & -402.98 \\
+    $\sur^3\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & -248.05 & -243.27 & -241.72 & -250.31 & -268.95 & -256.14 & -251.41 \\[2pt]
+    
+%     $\sur\ho$&\defskip$+~\te{H}\gas$&\defskip$\chemar\sur\hto$ & -476.22 & -458.03 & -472.39 & -470.76 & -480.13 & -480.92 & 35.96 & 36.32 & 36.45 \\
+%     $\sur\hto$&\defskip$+~^1\te{O}\gas$&\defskip$\chemar\sur\htot$ & -402.54 & -357.85 & -427.27 & -426.38 & -405.24 & -407.50 & 6.96  & 8.90  & 9.48 \\
+%     $\sur\ho$&\defskip$+~\ho\gas$&\defskip$\chemar\sur\htot$ & -185.12 & -137.04 & -194.02 & -187.84 & -197.12 & -200.16 & 20.87\fakefna & 23.17\fakefna & 23.87\fakefna \\
+%     $\sur\hot$&\defskip$+~\te{H}\gas$&\defskip$\chemar\sur\htot$ & -317.22 & -318.69 & -310.31 & -309.82 & -320.89 & -323.99 & 28.51 & 30.83 & 31.02 \\
+%     $\sur\ho$&\defskip$+~^3\te{O}\gas$&\defskip$\chemar\sur\hot$ & -294.05 & -219.54 & -300.54 & -295.71 & -296.15 & -296.10 & 14.42 & 14.40 & 14.91 \\
+%     $\sur^3\te{O}$&\defskip$+~\ho\gas$&\defskip$\chemar\sur\hot$ & -311.96 & -248.31 & -325.41 & -313.50 & -316.45 & -318.00 & 25.32\fakefna & 23.16\fakefna & 24.34\fakefna \\
+%     $\sur^1\ot$&\defskip$+~\te{H}\gas$&\defskip$\chemar\sur\hot$ & -403.80 & -414.31 & -402.88 & -404.70 & -395.22 & -396.95 & 37.86 & 34.94 & 34.26 \\
+%     $\sur^3\ot$&\defskip$+~\te{H}\gas$&\defskip$\chemar\sur\hot$ & -248.05 & -243.27 & -241.72 & -250.31 & -268.95 & -256.14 & 37.18 & 34.83 & 35.27 \\[2pt]
+    \hline \hline
+\multicolumn{2}{r|}{\multirow{4}{*}{$E_{\dft} - \avg$}} &
+       MAD   &     3.49  & 31.37 & 10.86 & 7.28  & 9.26  & 8.78  & \\
+ \multicolumn{2}{r|}{} & MIN   & -10.37 & -11.33 & -22.81 & -21.91 & -17.54 & -16.61  & \\
+ \multicolumn{2}{r|}{} & MAX   & 3.36  & 64.14 & 9.68  & 7.01  & 7.76  & 6.03  & \\
+ \multicolumn{2}{r|}{} & MEAN  & -2.17 & 28.07 & -6.62 & -4.68 & -7.32 & -7.27  &  \\[2pt]
+    %\\[-10pt]
     \end{tabular}%
+    %\\
+    %\raggedleft\fakefna\footnotesize Correction value for $\btlyp$ calculation. Others differ in $\ho\gas$ $\zpe$ correction within $1.5~\kmo$.
   \label{Tab:Ads:React}%
 \end{table*}%
 
-% $\sur\hto+^1\te O\gas$ &\defskip$\rightarrow \sur\htot$ & -1137.74 & -1128.81 & -1143.98 & -1130.33 & $\hto\gas+^1\te O\gas$ &\defskip$\rightarrow \hto\tgas$\\
-%     $\sur\ho+\ho\gas$ &\defskip$\rightarrow \sur\htot$ & -205.99 & -182.80 & -209.22 & -184.03 & $\ho\gas+\ho\gas$ &\defskip$\rightarrow \hto\tgas$\\
-%     $\sur\ho+\te H\gas$ &\defskip$\rightarrow  \sur\hto$ & -512.17 & -475.86 & -509.16 & -475.57 & $\ho\gas+\te H\gas$ &\defskip$\rightarrow  \hto\gas$ \\
-%     $\sur\ho+^3\te O\gas$ &\defskip$\rightarrow  \sur\hot$ & -308.46 & -294.05 & -287.97 & -273.12 & $\ho\gas+^3\te O\gas$ &\defskip$\rightarrow  \te {HO}\tgas$\\
-%     $\sur^3\te O+\ho\gas$ &\defskip$\rightarrow  \sur\hot$ & -337.30 & -314.13 & -287.97 & -273.12 & $^3\te O\gas+\ho\gas$ &\defskip$\rightarrow  \te {HO}\tgas$\\
-%     $\sur\hot+\te H\gas$ &\defskip$\rightarrow  \sur\htot$ & -345.72 & -314.89 & -369.44 & -337.05 & $\te {HO}\tgas+\te H\gas$ &\defskip$\rightarrow  \hto\tgas$\\
-%     $\sur^1\ot+\te H\gas$ &\defskip$\rightarrow  \sur\hot$ & -441.66 & -406.73 & -384.59 & -357.44 & $^1\te O\tgas+\te H\gas$ &\defskip$\rightarrow  \te {HO}\tgas$ \\
-%     $\sur^3\ot+\te H\gas$ &\defskip$\rightarrow  \sur\hot$ & -285.37 & -250.56 & -222.36 & -195.29 & $^3\te O\tgas+\te H\gas$ &\defskip$\rightarrow  \te {HO}\tgas$\\[2pt]
-%     
-% \begin{table*}[h]
-%   \centering
-%   \caption{Add caption}
-%     \begin{tabular}{ll|DD|DD}
-%     %\hline
-%     \multicolumn{2}{l|}{} & \multicolumn{2}{c|}{Surface Reaction} & \multicolumn{2}{c}{Gas phase reaction} \\
-%     \multicolumn{2}{l|}{Reaction} & $E$ & $\ezp$ & $E$ & $\ezp$ \\[2pt]
-%     \hline
-%     & & & & \\[-10pt]
-%     \multirow{8}{*}{
-%     \begin{align*}
-%     \sur\hto+^1\te O\gas &\rightarrow \sur\htot
-%     \sur\ho+\ho\gas &\rightarrow \sur\htot
-%     \sur\ho+\te H\gas &\rightarrow  \sur\hto
-%     \sur\ho+^3\te O\gas &\rightarrow  \sur\hot
-%     \sur^3\te O+\ho\gas &\rightarrow  \sur\hot
-%     \sur\hot+\te H\gas &\rightarrow  \sur\htot
-%     \sur^1\ot+\te H\gas &\rightarrow  \sur\hot
-%     \sur^3\ot+\te H\gas &\rightarrow  \sur\hot
-%     \end{align*}
-%     }
-%      & -1137.74 & -1128.81 & -1143.98 & -1130.33 \\
-%     & -205.99 & -182.80 & -209.22 & -184.03 \\
-%     & -512.17 & -475.86 & -509.16 & -475.57 \\
-%     & -308.46 & -294.05 & -287.97 & -273.12 \\
-%     & -337.30 & -314.13 & -287.97 & -273.12 \\
-%     & -345.72 & -314.89 & -369.44 & -337.05 \\
-%     & -441.66 & -406.73 & -384.59 & -357.44 \\
-%     & -285.37 & -250.56 & -222.36 & -195.29 \\[2pt]
-%     \hline
-%     \end{tabular}%
-%   \label{tab:addlabel}%
-% \end{table*}%
+
+With the adsorption energy data and corresponding gas phase energies at the
+$\tzvpd$ level, we can calculate reaction energies. We will only
+consider reactions of the Eley-Rideal mechanism in which a molecule
+from the surrounding gas approaches an adsorbed molecule to form
+a new molecular species, as described in Section \ref{Sec:Theo:Interaction}.
+The product will for our study always be a single adsorbed molecule. With our data,
+one could also investigate cases where two product molecules remain
+of which none, one or both remain adsorbed on the surface.
+
+A selection of energies for Eley-Rideal reactions is given in Table \ref{Tab:Ads:React}.
+They are surface-mediated versions of the reactions discussed in Section \ref{Sec:Gas}.
+All reaction energies are computed according to \eqref{Theo:ReactionEnergySurface}
+and the reactions on the left are given in a scheme like \eqref{Theo:ReactionScheme}.
+
+We use the minimum energy values of each method plus the $\zpeall$ correction 
+with the $\btlyp$ functional. Note that we have an ambiguity in the choice
+of $\zpe$ corrections for the reactions with $\ho\gas$. This is the only
+case where the gaseous reactant does have a non-vanishing $\zpe$ correction.
+This means that we can either use the corrective term demanded by the
+individual functional or always the one demanded by $\btlyp$. We chose to use
+%% CHECK: richtige Wahl?
+the $\btlyp$ correction for the $\ho\gas$ molecules, too, which makes the whole
+ZPE correction more consistent. This choice may be challenged, however it 
+changes the energy of the two reactions at hand by never more than $1.05~\kmo$,
+and this big change appears for $\bhlyp$, which is generally not in good
+agreement with the rest of the reaction energies.
+
+Recalling the strong deviations between DFT and $\ccsdtf$ gas phase
+reaction energies, we must admit that we can not know which of
+the reaction eneriges in table \ref{Tab:Ads:React} is close to the truth.
+Therefore, we will give an average value for each reaction. There is no
+reason to hope that the process of averaging should help to find
+an accurate value for the reaction energy, especially since the
+$\dft$ gas phase reaction energies were often incongruent with the $\ccsdtf$ data.
+%% CHECK: Langer Satz, unsinnig.
+The sample of reactions is also too small to claim that a functional
+that is close to the average in most cases should be close to the average
+value of DFT energies for all surface reactions composed of these molecular
+species.
+
+But to offer recommendations for reaction energies which may be of further
+use to simulations, it seems reasonable to provide a value that is somewhat
+democratically chosen from all the functionals. And since no functional
+was particularly close to the reference data in Section \ref{Sec:Gas}, 
+the choice of taking a simple mean value comes naturally.
+
+We can calculate the MAD from the average values, which is minimal for the $\btlyp$ functional.
+With a maximum absolute deviation of $10.37~\kmo$, $\btlyp$ can be seen as not too strongly
+``oscillating''.
+
+% The $\bhlyp$ functional predicts many reactions to be stronger endothermic than the
+% other functionals. The reaction energies of four reactions are considered to
+% be around $50~\kmo$ greater than the closest prediction by another functional.
+% This was already the case for the gas phase, and there $\ccsdtf$ supported
+% some of the energies predicted by $\bhlyp$. Since the 
+
+% To give an impression of the relevance of the $\zpe$ correction to
+% the data, different versions are given in the last three columns of
+% Table \ref{Tab:Ads:React}. We use the shorter $\Dl \ering$ for $\Dl E^{\zpering}$ and
+% analogously for the $\zpeall$ correction. The comparison between $\ering_\btlyp$ and
+% $\ering_\pbez$ agrees with the observation for the gas phase reactions
+% in Section \ref{Sec:Gas} that the $\zpe$ correction does not vary strongly
+% among functionals. The disagreement is mostly of $0.5~\kmo$ or less and always
+% below $1.2~\kmo$, where the value is higher for the two reactions that
+% include $\ho\gas$, which brings a third ZPE correction into the equations.
+% %% CHECK: Soll das erwähnt werden? Muss das so umständlich geschrieben werden?
+% The agreement increases if $\Dl \ezp_\pbez$ is used for $\ho\gas$ instead
+% of $\Dl \ezp_\btlyp$ when using the $\Dl \ering_\pbez$ correction. In that
+% case, the maximum deviation is of only $0.76~\kmo$. But this may
+% only be coincidence.
+% 
+% The differences between $\eall_\btlyp$ and $\ering_\btlyp$ 
+% shows stronger disagreement, with a maximum deviation of $2.9~\kmo$.
 
 
-
-\newpage
 
 \section{Possible Application}
 \subsection{Binding Sites}
@@ -2068,6 +2463,7 @@ On the right, we have the comparison to reactions without the surface.
 \label{Sec:Adv:IRC}
 %% CHECK: Theory entry
 
+\newpage
 
 \section{Conclusion}
 \label{Sec:Con}
