@@ -1,0 +1,62 @@
+\documentclass[crop,tikz]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+%\usepackage{tikz-3dplot}
+
+\begin{document}
+\tdplotsetmaincoords{60}{110}
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+
+\pgfmathsetmacro{\radius}{1}
+\pgfmathsetmacro{\frozenradius}{2}
+
+\pgfmathsetmacro{\thetavec}{0}
+\pgfmathsetmacro{\phivec}{0}
+%% Input
+% 1: Color
+% 2: Whiteness
+% 3: Opacity
+% 4: Radius
+% 5: Excentricity 1
+% 6: Excentricity 2
+\newcommand\semisphere[6]{\shade[ball color=#1!#2!white,opacity=#3] (#4cm,0) arc (0:180:#4cm and #5cm) arc (-180:0:#4cm and #6cm);}
+
+\newcommand\topsemisphere[2]{\semisphere{#1}{100}{1}{#2}{.5*#2}{.5*#2};
+\draw (0,0) ellipse (#2cm and .5*#2cm);}
+
+\newcommand\quicksemisphere[3]{\semisphere{#1}{100}{#3}{#2}{.5*#2}{#2}
+\topsemisphere{#1}{#2}}
+
+%start tikz picture, and use the tdplot_main_coords style to implement the display 
+%coordinate transformation provided by 3dplot
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+%draw the main coordinate system axes
+%\draw[thick,->] (0,0,0) -- (-1,0,0) node[anchor=south]{$z$};
+%\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$x$};
+%\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=north]{$y$};
+
+\tdplotsetthetaplanecoords{\phivec}
+
+%draw some dashed arcs, demonstrating direct arc drawing
+%\draw[dashed,tdplot_rotated_coords] (\radius,0,0) arc (0:90:\radius);
+
+%\draw[dashed] (\radius,0,0) arc (0:360:\radius);
+%\semisphere{gray}{120}{.2}{1}{.5}{1}
+\begin{scope}
+%\topsemisphere{gray}{1}
+\quicksemisphere{gray}{1}{1}
+
+%\draw (2,0) ellipse (1 and 1);
+
+\quicksemisphere{brown}{.75}{.6}
+\quicksemisphere{blue}{.43}{.2}
+
+%\semisphere{red}{220}{.8}{.16}{.08}{.08}
+
+\topsemisphere{red}{.17}
+\end{scope}
+\end{tikzpicture}
+\end{document}
