@@ -34,8 +34,9 @@
 \usepackage{verbatim}
 \usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
 \tikzexternalize[shell escape=-enable-write18]
+\usepackage{tikz-3dplot}
 
-\usepackage{tablefootnote}
+%\usepackage{tablefootnote}
 
 \makeatletter
 \newcommand{\subalign}[1]{%
@@ -711,7 +712,7 @@ system we are about to study.
 \newcommand\Odraw[1]{\shadedraw[shading=radial,outer color=red!90,inner color=red!30,draw=black] {(#1)} circle(.5cm);}
 \newcommand\Hdraw[1]{\shadedraw[shading=radial,outer color=blue!90,inner color=blue!30,draw=black] {(#1)} circle(.4cm);}
 \newcommand\anghoh{\enmat{\theta(\te{HOH})}}
-\begin{figure}[tc]
+\begin{figure}[ht]
 %\includegraphics{ 
 \begin{equation*}
 \begin{tikzpicture}
@@ -831,7 +832,7 @@ for a given wave function \cite{Brorsen2014AnalyticalGradientDFT}.
 
 %% CHECK: Pre-reactive complex?
 \newcommand\ebased[2]{exp(-(\x-#1)^2/#2)} 
-\begin{figure}[tc]
+\begin{figure}[ht]
 %\includegraphics{
 \tikzsetexternalprefix{TikzPics/Theo/}
 \tikzsetnextfilename{Fig.Theo.PES} 
@@ -1605,17 +1606,20 @@ Bare energy values for different functionals can not be compared
 properly. Instead, we need to compare energy differences to
 a reference value. We do only study molecules with O and H atoms
 in them, so for a mlecular species X with $M_{\te{H}}$ H atoms and 
-$M_{\te O}$ O atoms, we define a sort of non-literal atomisation energy by
+$M_{\te O}$ O atoms, we define a standard energy of formation
+by
 \begin{equation}
 E^0_\X=E_\X - \frac {M_{\te H}} 2 E_{\htw} - \frac{M_{\te O}} 2 E_{\tripot}.
 \label{Gas:FormationEnergy} 
 \end{equation}
 $\tripot$ is the triplet oxygen. The spin multiplicity of a molecule will
-only be given if the choice is not obvious. This is the case only for the
-pure oxygen species in. All other species have singlet or dublet spin. 
+only be given if the choice is not obvious. This is the case for the
+pure oxygen species $\singo$, $\tripo$, $\singot$ and $\tripot$. All other
+species have singlet or dublet spin.
 
-The value is of no physical importance, but if two functionals
-agree well, they should obviously agree well with respect to $E^0$.
+The value is of only minor physical importance, but if two electron
+strutcture methods agree well, they should obviously agree well with respect to
+$E^0$.
 We include $\zpe$ corrections into $E^0$. For each functional, 
 the correction is calculated at the corresponding optimum geometry
 for the functional without dispersion correction. Note that this means
@@ -1623,14 +1627,16 @@ for the functional without dispersion correction. Note that this means
 %  die ZPE PES minimal sein, da ja die zweite Ableitung auch null ist?
 %  --> Nein, denn die zweite Ableitung der ZPE-Korrektur ist wohl nicht null.
 that we only have the $\zpe$ corrected value of the energy
-minimum of the not $\zpe$ corrected PES.
+minimum of the not $\zpe$ corrected PES. But evaluating the ZPE
+corrected PES is computationally expensive and will get exceedingly expensive
+when the system size enlarges to the water surface later on.
 
 An energy adjusted by \eqref{Gas:FormationEnergy} has two problems. For
 once, we can not say how accurately the energies for $\htw$ and $\tripot$
 themselves are predicted. This leads to the second problem that inaccurate
-data for these will make the results for the entire functional seem inaccurate.
-But to have a first comparison of the functionals, we have to accept
-these problems. 
+data for these will possibly make the entire set of results for a functional
+seem less inaccurate instead of only a few data points. We have to bear this in
+mind for the comparison. 
 
 \begin{table*}[htb]
   \centering
@@ -1642,8 +1648,8 @@ these problems.
     \hline \hline
        & & & & & & \\[-10pt]
     $\te{H}$ & 217.04 & 213.17 & 204.96 & 222.13 & 212.72 & 216.45 \\
-    $\hto$ & -215.65 & -224.54 & -222.74 & -197.51 & -220.11 & -238.28 \\
-    $\htot$ & -98.26 & -97.16 & -104.82 & -85.65 & -101.84 & -129.08 \\
+    $\hto$ & $-$215.65 & $-$224.54 & $-$222.74 & $-$197.51 & $-$220.11 & $-$238.28 \\
+    $\htot$ & $-$98.26 & $-$97.16 & $-$104.82 & $-$85.65 & $-$101.84 & $-$129.08 \\
     $\ho$ & 42.89 & 16.85 & 43.01 & 51.30 & 46.06 & 36.49 \\
     $\hot$ & 21.75 & 19.85 & 19.16 & 25.28 & 21.96 & 14.75 \\
     $^1\te{O}$ & 519.48 & 482.52 & 543.69 & 538.46 & 521.61 & 451.63 \\
@@ -1651,22 +1657,23 @@ these problems.
     $^1\ot$ & 162.16 & 177.97 & 171.07 & 163.27 & 160.38 & 120.91 \\[2pt]
 %      \hline \hline
 %       & & & & & & & & &  \\[-10pt]
-%       \multicolumn{3}{r|}{\multirow{4}{*}{$\ezp_{\dft} - \ezp_{\ccsdtf}$}} &
+%       \multicolumn{3}{r|}{\multirow{4}{*}{$\ezp_{\dft} $-$ \ezp_{\ccsdtf}$}} &
 %        MAD   & 21.29 & 42.22 & 27.54 & 24.98 & 20.70 &  \\
-%       & & & MIN   & -59.67 & -48.67 & -83.35 & -84.18 & -60.91 & \\
+%       & & & MIN   & $-$59.67 & $-$48.67 & $-$83.35 & $-$84.18 & $-$60.91 & \\
 %       & & & MAX   & 23.22 & 71.20 & 31.34 & 27.22 & 23.76 & \\
-%       & & & MEAN  & -5.47 & 26.87 & -7.79 & -8.44 & -6.91 &  \\[2pt]
+%       & & & MEAN  & $-$5.47 & 26.87 & $-$7.79 & $-$8.44 & $-$6.91 &  \\[2pt]
 %      %\hline
     \end{tabular}%
-  \label{Gas:Energies}%
+  \label{Tab:Gas:Energies}%
 \end{table*}%
 
-Note that the formerly considered $\pw\dt$ functional is not included
-in Table \ref{Gas:Energies}, since
-the dispersion correction only affects intermolecular interaction.
-Our calculations however treated isolated molecules. 
+Table \ref{Tab:Gas:Energies} includes data for all functionals we decided upon
+in the benchmark section. Note that the formerly considered $\pw\dt$ functional
+is not included, since the dispersion correction only affects intermolecular
+interaction. Our calculations however treated isolated molecules, for which
+$\pw$ covers the results of both functionals.
 
-As we can see in Table \ref{Gas:Energies}, the approximative power
+As we can see in Table \ref{Tab:Gas:Energies}, the approximative power
 of the DFT functionals varies strongly among the molecular species.
 Especially the case of $\singo$ and $\singot$ seems to be problematic, but
 the agreement is also not very good for $\htot$. The $\pbez$ functional
@@ -1676,15 +1683,18 @@ of $69.96$ and $67.86~\kmo$ for $\pw$ and $\btlyp$, respectively.
 The best agreement is achieved by $\bhlyp$ with $30.90~\kmo$ of
 difference. However, the $\bhlyp$ functional predicts 
 $E^0$ very badly for $\singot$, with an error of $40.26~\kmo$,
-while the other functionals differ by less than $10~\kmo$.
-Generally, all functionals predict too high values for $E^0$.
+while the other functionals differ by less than $10~\kmo$, and it is also
+the only functional to differ by more than $50\%$ from the reference energy
+of $\ho$. Generally, all functionals predict too high values for $E^0$
+and show strong deviations from the reference calculation for at least one
+molecular species.
 Since the values are not too far off for $\htw$ while showing
-considerable problems with molecules composed solely of xygen,
+considerable problems with molecules composed solely of oxygen,
 this could be an indication that the energetic description of $\tripot$
 is challenging to DFT functionals in general. Then again, the rather good
 agreement to the reference data for all functionals but $\bhlyp$ in the case
 of $\tripo$ does not support this claim if we do not expect
-a cancellation of error.
+a cancellation of error. 
 
 Further comparison shows that for most molecules, the functionals
 closest to the $\ccsdtf$ energies are $\btlyp$ and $\pw$, which
@@ -1700,7 +1710,7 @@ we introduced in the theoretical section, the scheme being
 \label{Gas:Scheme}
 \end{equation}
 much similar to \eqref{Theo:ReactionScheme}. We drop the
-$(g)$ subscript.
+$(\te g)$ subscript.
 
 We calculated DFT energies in the $\tzvpd$ basis set with
 the $\btlyp$, $\bhlyp$, $\pbez$, $\tpssh$, $\pw$ and $\pw\dt$
@@ -1708,61 +1718,73 @@ functionals. We did also calculate $\ccsdtf/\vtz$ energy data.
 All results were supplemented by a $\zpe$ correction at the
 optimum geometry obtained by $\dlfind$. 
 
+%% CHECK: MAD angleichen!
 \newcolumntype{D}{>{\raggedleft\arraybackslash}p{1.4cm}}
 % Table generated by Excel2LaTeX from sheet 'Tabelle2'
 \begin{table*}[htb]
   \centering
   \caption{Reaction energies for DFT functionals. $E^{\zpe}$ and $E$ are data with and without
   $\zpe$ correction, respectively. We also give the value of the $\zpe$ correction $\Dl E^{\zpe}$.
+  The closest energy to $\ccsdtf$ is highlighted in boldface.
   All energies in $\kmo$.}
     \begin{tabular}{lll|lDDDDD|r}
       & & & & & & & & & \\[-10pt]
         & & &     & \btlyp & \bhlyp & \pbez & \tpssh & \pw  & \ccsdtf \\[2pt]
     \hline \hline
       & & & & & & & & & \\[-10pt]
-    $\ho\gas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\hto\gas$ & $E^{\zpe}$ & -475.58 & -454.56 & -470.70 & -470.94 & -478.89 & -491.23 \\
-      & & & $E$   & -509.17 & -489.42 & -504.76 & -504.53 & -512.99 & -525.29 \\
+    $\ho$&\defskip$+\ \te{H}$&\defskip$\chemar\hto$ & $E^{\zpe}$ & $-475.58$ &
+    $-454.56$ & $-470.70$ & $-470.94$ & $\bo{-478.89}$ & $-491.23$ \\
+      & & & $E$   & $-509.17$ & $-489.42$ & $-504.76$ & $-504.53$ & $-512.99$ &
+      $-525.29$
+      \\
       & & & $\Dl{E}^{\zpe}$ & 33.58 & 34.87 & 34.05 & 33.59 & 34.09 & 34.06 \\[2pt]
     \hline
        & & & & & & & & &  \\[-10pt]
-    $\hto\gas$&\defskip$+^1\te{O}\gas$&\defskip$\chemar\hto\tgas$ & $E^{\zpe}$ & -402.09 & -355.15 & -425.77 & -426.60 & -403.33 & -342.42 \\
-    & &    & $E$   & -415.75 & -370.59 & -440.19 & -439.92 & -417.56 & -355.80 \\
+    $\hto$&\defskip$+\singo$&\defskip$\chemar\htot$ & $E^{\zpe}$ & $-$402.09 &
+    $\bo{-355.15}$ & $-$425.77 & $-$426.60 & $-$403.33 & $-$342.42 \\
+    & &    & $E$   & $-415.75$ & $-$370.59 & $-$440.19 & $-$439.92 & $-$417.56 & $-$355.80
+    \\
     & &    & $\Dl{E}^{\zpe}$ & 13.66 & 15.44 & 14.41 & 13.31 & 14.23 & 13.38 \\
     \hline
        & & & & & & & & &  \\[-10pt]
-    $\ho\gas$&\defskip$+\ \ho\gas$&\defskip$\chemar\hto\tgas$ & $E^{\zpe}$ & -184.03 & -130.86 & -190.84 & -188.24 & -193.96 & -202.06 \\
-      & & & $E$   & -209.22 & -158.07 & -216.83 & -213.19 & -219.86 & -227.13 \\
+    $\ho$&\defskip$+\ \ho$&\defskip$\chemar\htot$ & $E^{\zpe}$ & $-$184.03 &
+    $-$130.86 & $-$190.84 & $-$188.24 & $\bo{-193.96}$ & $-202.06$ \\
+      & & & $E$   & $-$209.22 & $-$158.07 & $-$216.83 & $-$213.19 & $-$219.86 & $-$227.13 \\
       & & & $\Dl{E}^{\zpe}$ & 25.19 & 27.21 & 25.99 & 24.94 & 25.90 & 25.07 \\[2pt]
     \hline
        & & & & & & & & &  \\[-10pt]
-    $\te{HO}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\hto\tgas$ & $E^{\zpe}$ & -337.05 & -330.18 & -328.94 & -333.06 & -336.51 & -360.28 \\
-      & & & $E$   & -369.45 & -364.20 & -362.04 & -365.28 & -369.52 & -392.71 \\
+    $\hot$&\defskip$+\ \te{H}$&\defskip$\chemar\htot$ &
+    $E^{\zpe}$ & $\bo{-337.05}$ & $-$330.18 & $-$328.94 & $-$333.06 & $-$336.51
+    & $-$360.28 \\
+      & & & $E$   & $-$369.45 & $-$364.20 & $-$362.04 & $-$365.28 & $-$369.52 & $-$392.71 \\
       & & & $\Dl{E}^{\zpe}$ & 32.40 & 34.02 & 33.11 & 32.22 & 33.01 & 32.44 \\[2pt]
     \hline
        & & & & & & & & &  \\[-10pt]
-    $\ho\gas$&\defskip$+\ ^3\te{O}\gas$&\defskip$\chemar\te{HO}\tgas$ & $E^{\zpe}$ & -273.14 & -201.88 & -278.73 & -272.87 & -277.38 & -266.88 \\
-      & & & $E$   & -287.98 & -218.17 & -294.10 & -287.56 & -292.69 & -281.88 \\
+    $\ho$&\defskip$+\ \tripo$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$273.14 &
+    $-$201.88 & $-$278.73 & $\bo{-272.87}$ & $-$277.38 & $-$266.88 \\
+      & & & $E$   & $-$287.98 & $-$218.17 & $-$294.10 & $-$287.56 & $-$292.69 & $-$281.88 \\
       & & & $\Dl{E}^{\zpe}$ & 14.84 & 16.29 & 15.36 & 14.69 & 15.31 & 15.00 \\[2pt]
     \hline
        & & & & & & & & &  \\[-10pt]
-    $^1\te{O}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\te{HO}\tgas$ & $E^{\zpe}$ & -357.45 & -371.28 & -356.87 & -360.12 & -351.14 & -322.61 \\
-      & & & $E$   & -384.60 & -399.86 & -384.50 & -387.18 & -378.72 & -350.98 \\
-      & & & $\Dl{E}^{\zpe}$ & 27.14 & 28.58 & 27.63 & 27.06 & 27.58 & 28.36 \\[2pt]
-    \hline
-       & & & & & & & & &  \\[-10pt]
-    $^3\te{O}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\te{HO}\tgas$ & $E^{\zpe}$ & -195.30 & -193.32 & -185.80 & -196.85 & -190.76 & -201.70 \\
-      & & & $E$   & -222.37 & -221.89 & -213.34 & -223.80 & -218.26 & -229.48 \\
+%     $^1\te{O}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$357.45 & $-$371.28 & $-$356.87 & $-$360.12 & $-$351.14 & $-$322.61 \\
+%       & & & $E$   & $-$384.60 & $-$399.86 & $-$384.50 & $-$387.18 & $-$378.72 & $-$350.98 \\
+%       & & & $\Dl{E}^{\zpe}$ & 27.14 & 28.58 & 27.63 & 27.06 & 27.58 & 28.36 \\[2pt]
+%     \hline
+%        & & & & & & & & &  \\[-10pt]
+    $\tripot$&\defskip$+\ \te{H}$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$195.30 &
+    $-$193.32 & $-$185.80 & $-\bo{196.85}$ & $-$190.76 & $-$201.70 \\
+      & & & $E$   & $-$222.37 & $-$221.89 & $-$213.34 & $-$223.80 & $-$218.26 & $-$229.48 \\
       & & & $\Dl{E}^{\zpe}$ & 27.07 & 28.57 & 27.54 & 26.95 & 27.51 & 27.78 \\[2pt]
      \hline \hline
       & & & & & & & & &  \\[-10pt]
       \multicolumn{3}{r|}{\multirow{4}{*}{$\ezp_{\dft} - \ezp_{\ccsdtf}$}} &
        MAD   & 21.29 & 42.22 & 27.54 & 24.98 & 20.70 &  \\
-      & & & MIN   & -59.67 & -48.67 & -83.35 & -84.18 & -60.91 & \\
+      & & & MIN   & $-$59.67 & $-$48.67 & $-$83.35 & $-$84.18 & $-$60.91 & \\
       & & & MAX   & 23.22 & 71.20 & 31.34 & 27.22 & 23.76 & \\
-      & & & MEAN  & -5.47 & 26.87 & -7.79 & -8.44 & -6.91 &  \\[2pt]
+      & & & MEAN  & $-$5.47 & 26.87 & $-$7.79 & $-$8.44 & $-$6.91 &  \\[2pt]
      %\hline
     \end{tabular}%
-  \label{Gas:Reactions}%
+  \label{Tab:Gas:Reactions}%
 \end{table*}%
 
 The sudied reactions are
@@ -1782,14 +1804,23 @@ The sudied reactions are
    \ronebox{\hot}+\rtwobox{\te{H}}\prodbox{\chemar\htot,} \\
    \label{Gas:HO+O->HO2}
    \ronebox{\ho}+\rtwobox{^3\te{O}}\prodbox{\chemar\hot,} \\
-   \label{Gas:1O2+H->HO2}
-   \ronebox{^1\ot}+\rtwobox{\te{H}}\prodbox{\chemar\hot,} \\
+%    \label{Gas:1O2+H->HO2}
+%    \ronebox{^1\ot}+\rtwobox{\te{H}}\prodbox{\chemar\hot,} \\
    \label{Gas:3O2+H->HO2}
    \ronebox{^3\ot}+\rtwobox{\te{H}}\prodbox{\chemar\hot.}
 \end{align}
+\label{Gas:Reactions}
 \end{subequations}
 
-Table \ref{Gas:Reactions} contains all the relevant information on
+The $\singo$ in \eqref{Gas:H2O+O->H2O2} is in an excited state
+compared to the ground state $\tripo$, with a excitation energy difference
+of $206.50~\kmo$ according to the most precise result in Table
+\ref{Tab:Gas:Energies}. The reaction with the radical $\ho$ to the more stable
+$\hto$ will therefore be barrierless. All the other reactions are cases of
+radical recombination, which means that they can be predicted to be barrierless
+as well. For the same reasons, all reactions are also strongly exothermic.
+
+Table \ref{Tab:Gas:Reactions} contains all the relevant information on
 reaction energies. We give $\zpe$ corrected data and the energy
 values without $\zpe$ correction as well as the value of the correction
 itself. Alongside the DFT results, we also give the $\ccsdtf/\vtz$ results.
@@ -1800,6 +1831,7 @@ and maximum (MAX) deviations as well as the overall mean deviation
 from the $\ccsdtf$ data for $E^{\zpe}$. From this data, it is already
 clear that no functional can be considered highly accurate for
 reaction energies. The most accurate ones by MAD are $\pw$
+%% CHECK: Noch wahr ohne die eine kritische Reaktion?
 and $\btlyp$, with values of $20.70$ and $21.29~\kmo$, respectively,
 but even these have deviations of up to $-60.91$ and $-59.67~\kmo$,
 respectively.
@@ -1807,15 +1839,35 @@ respectively.
 The $\bhlyp$ functional shows an intersting behaviour. It usually
 predicts more endothermic reactions than the other functionals.
 This leads to a decrease in agreement with the reference energy.
-Only for the case of reaction \eqref{Gas:H2O+O->H2O2}, this is beneficial
-
+Only for the case of reaction \eqref{Gas:H2O+O->H2O2}, this is beneficial. This
+reaction does involve the $\singo$ atom, for which $\bhlyp$ described the
+formation energy most accurately. The opposite is the case for reaction
+\eqref{Gas:HO+HO->H2O2}, where the agreement between $\bhlyp$ and the reference
+data is much worse than the one of the other functionals. And again, for the
+formation energy $\bhlyp$ was not as accurate as the other functionals for
+$\ho$. It seems to be the case that if Table \ref{Tab:Gas:Energies} implies
+that a functional describes a molecular species well or badly, a reaction
+energy containing this molecular species will also be accurate or inaccurate.
+This can be seen as an indication that the descprition of the accuracy of the
+functionals for the different molecular species in Table \ref{Tab:Gas:Energies}
+is not too strongly contaminated by the functional's respective errors in the
+description of $\htw$ and $\tripot$.
 
 %% CHECK: HERE WE ARE!
-The results of Table \ref{Gas:Energies} already  
+The agreement between $\ccsdtf$ and DFT functionals is never better than a
+difference of $5~\kmo$. Still, for most cases we can find at least one
+functional within $10~\kmo$ of errror. When we later analyse these reactions on
+a surface, we can hope that a functional that provided good results in the
+gas phase will have a tendency to provide good results on the surface. However,
+there is no certainty, therefore this ``most accurate functional by tendency'' is
+only the best guess we can make. 
 
-While the agreement between $\ccsdtf$ and the DFT functionals is never
-better than a difference of $5~\kmo$, there are cases where the agreement
-is particularly bad. 
+While the results here do not clearly identify functionals for which the
+agreement between $\ccsdtf$ reaction energies and the functional's reaction
+energies should be particulraly good, they do show that it is in
+principle possible to describe the reactions \eqref{Gas:Reactions} by DFT.
+But we have no way to predict how the accuracy of these calculations is changed
+by the interplay of reaction and surface interaction.
 
 
 \section{Adsorption and Reactions on the Ice Surface}
@@ -1826,14 +1878,17 @@ This section is all concerned with molecular adsorption on ice surfaces
 and the reaction processes of adsorbed species. We will first give an
 account of what kind of surface model we use and how well the ideal
 crystalline description is maintained by the QM/MM description of
-the surface. Then, we will give adsorption energies for different
-functionals and molecular species. We only consider neutral molecules.
+the surface. Within QM/MM, the computation of the $\zpe$ correction 
+will have to be discussed. Then, we will give $\zpe$ corrected adsorption
+energies for different functionals and molecular species. We only consider
+neutral molecules.
 After that, based on the adsorption data, reaction energies are given
 and compared among functionals as well as to gas-phase reaction
-energies and experimental data. Finally, to show an outlook on
-possible further application of this model, a transition state for
-$\hoht$ on the surface will be given alongside a corresponding IRC
-calculation.
+energies and experimental data.
+% Finally, to show an outlook on
+% possible further application of this model, a transition state for
+% $\hoht$ on the surface will be given alongside a corresponding IRC
+% calculation.
 
 \subsection{The Surface Model}
 \label{Sec:Ads:Model}
@@ -1860,9 +1915,9 @@ The O atoms are not all in the same plane.}
 \end{figure}
 
 It is given in Figure \ref{Fig:Ads:Fletcher}. Starting from a layer of
-hexagonally arranged O atoms (which are not arranged on a plane but on
-two alterating heights), one can connect each O atom to its four nearest
-neighbors. On these designated hydrogen bonds, H atoms can be placed close
+hexagonally arranged O atoms (which are not arranged on a plane but 
+alteratingly above and below the plane), one can connect each O atom to its
+four nearest neighbors. On these designated hydrogen bonds, H atoms can be placed close
 to one of the two O atoms taking part in the bond. This can lead to a multitude
 of possible arrangements. Fletcher's approach is to draw parallel
 lines into the lattice to group the molecules in rows. Molecules in the
@@ -1875,10 +1930,84 @@ atom on it. When grouping those broken bonds with hydrogen atoms and those
 without hydrogen atoms in alternating rows, the structure described above is
 extended to the full system.
 
+Such a crystalline surface must be considered as an idealisation. For once,
+since we are interested in an ice surface on a grain, the interaction between
+the water molecules and the grain at the grain surface will surely lead to
+changes in the surface, probably both in O position as well as in H orientation.
+Research in that respect was presented by Cabrera Sanfelix
+\etal\cite{CabreraSanfelix2003} on a graphite surface, where a water dimer
+adsorbed on the surface has different bond angles than the gaseous water dimer.
+Therefore, an undisturbed crystalline surface will only be reasonable if the
+water ice is several monolayers thick, which is only the case in the cold
+interstellar medium. A second idealization is that the crystalline structure of
+water ice can only be true to the perfect hexagonal structure if a layer like in
+Figure \ref{Fig:Ads:Fletcher} is wihtin the crystal, i. e. there are more such
+layers above and below. Then, there is a balance of force. If the layers
+above are removed to describe a surface layer, the forces from inside the crystal will
+surely deform an ideal surface layer. We will see this effect in Section
+\ref{Sec:Ads:Optima}.
 
 \subsubsection{The QM/MM Region}
+\label{Sec:Ads:QM/MM}
 %% CHECK: Pics?
 %% CHECK: what is prismatic surface? Thing in Fletcher?
+\tikzsetexternalprefix{TikzPics/Adsorption/}
+\tikzsetnextfilename{Fig.Ads.QMMM}
+
+\begin{figure}[bh]
+\centering
+\newcommand\semisphere[6]{\shade[ball color=#1!#2!white,opacity=#3] (#4cm,0) arc (0:180:#4cm and #5cm) arc (-180:0:#4cm and #6cm);}
+\newcommand\topsemisphere[2]{\semisphere{#1}{120}{.5}{#2}{.5*#2}{.5*#2}}
+\newcommand\quicksemisphere[2]{\semisphere{#1}{120}{.4}{#2}{.5*#2}{#2}
+\topsemisphere{#1}{#2}}
+
+%start tikz picture, and use the tdplot_main_coords style to implement the display 
+%coordinate transformation provided by 3dplot
+\begin{tikzpicture}
+%draw the main coordinate system axes
+%\draw[thick,->] (0,0,0) -- (-1,0,0) node[anchor=south]{$z$};
+%\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$x$};
+%\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=north]{$y$};
+
+\tdplotsetthetaplanecoords{\phivec}
+
+%draw some dashed arcs, demonstrating direct arc drawing
+%\draw[dashed,tdplot_rotated_coords] (\radius,0,0) arc (0:90:\radius);
+
+%\draw[dashed] (\radius,0,0) arc (0:360:\radius);
+%\semisphere{gray}{120}{.2}{1}{.5}{1}
+
+%\topsemisphere{gray}{1}
+\quicksemisphere{gray}{1}
+
+\quicksemisphere{brown}{.75}
+\quicksemisphere{blue}{.43}
+
+\semisphere{red}{220}{.8}{.16}{.08}{.08}
+
+\topsemisphere{red}{.17}
+
+%\semisphere{gray}{120}{.5}{1}{.5}{.5}
+
+%\semisphere{brown}{120}{.2}{.75}{.375}{.75}
+%\semisphere{brown}{120}{.5}{.75}{.375}{.375}
+
+%\semisphere{red}{120}{.2}{.4}{.2}{.4}
+%\semisphere{red}{120}{.5}{.4}{.2}{.2}
+%\shade[ball color=red!80!white,opacity=0.2] (-.5cm,0) arc (0:180:.5cm and
+% 2.5mm) arc (-180:0:.5cm and .5cm); \shade[ball color=red!90!white,opacity=0.2] (-.5cm,0) arc (0:180:.5cm and 2.5mm) arc (-180:0:.5cm and .25cm);
+%\draw[dashed] (\frozenradius,0,0) arc (0:360:\frozenradius);
+%\shade[ball color=gray!80!white,opacity=0.3] (0cm,0) arc (0:180:1cm and 5mm) arc (-180:0:1cm and 1cm);
+%\shade[ball color=gray!80!white,opacity=0.3] (2cm,0) arc (0:180:2cm and 10mm) arc (-180:0:2cm and 2cm);
+%shade[ball color=gray!90!white,opacity=0.3] (2cm,0) arc (-180:0:2cm and 2cm);
+% (-z x y)
+%\draw (0, 1, 0) node [circle, fill=blue, inner sep=.02cm] () {};
+%\draw (0, 0, 1) node [circle, fill=green, inner sep=.02cm] () {};
+%\draw (-1, 0, 0) node [circle, fill=red, inner sep=.02cm] () {};
+\end{tikzpicture}
+
+\end{figure}
+
 Of a fully-ordered water $I_h$ crystal with a Fletcher surface, we take
 a semispherical cut of radius $25~\Ang$ centered on the center of a hexagonal
 ring of water molecules. We choose a normal basal surface as in
@@ -1929,6 +2058,7 @@ the orientation of the water dipole, that is the vector $\r_{\te O - \te H1}+\r_
 stays the same for each molecule.
 
 \subsection{First Geometry Optimisations}
+\label{Sec:Ads:Optima}
 
 To verify the agreement between the theoretically assumed Fletcher surface and the
 methods we want to use on it, we calculated RMSD values \eqref{Bench:RMSD} between
@@ -2083,15 +2213,15 @@ to form some conformation of $\htot$.
      & $E_{\btlyp}$   & $\Dl\eall_{\btlyp}$ & $\Dl\ering_{\btlyp}$ & $\Dl\ering_{\pbez}$ \\[2pt]
     \hline
        & & & & \\[-10pt]
-    $\sur\te{H}$ & -1.71 & 5.03  & 3.28  & 2.84 \\
-    $\sur\htw$ & -2.65 & 8.42  & 6.80  & 6.81 \\
-    $\sur\hto$ & -48.01 & 15.98 & 14.84 & 14.45 \\
-    $\sur\htot$ & -41.76 & 9.28  & 10.09 & 9.51 \\
-    $\sur\ho$ & -44.99 & 13.60 & 12.11 & 12.05 \\
-    $\sur\hot$ & -65.48 & 13.17 & 11.66 & 11.59 \\
-    $\sur^3\te{O}$ & -16.17 & 2.69  & 3.35  & 3.04 \\
-    $\sur^1\ot$ & -8.41 & 2.46  & 3.86  & 4.96 \\
-    $\sur^3\ot$ & -2.62 & 3.06  & 3.90  & 3.86 \\[2pt]
+    $\sur\te{H}$ & $-$1.71 & 5.03  & 3.28  & 2.84 \\
+    $\sur\htw$ & $-$2.65 & 8.42  & 6.80  & 6.81 \\
+    $\sur\hto$ & $-$48.01 & 15.98 & 14.84 & 14.45 \\
+    $\sur\htot$ & $-$41.76 & 9.28  & 10.09 & 9.51 \\
+    $\sur\ho$ & $-$44.99 & 13.60 & 12.11 & 12.05 \\
+    $\sur\hot$ & $-$65.48 & 13.17 & 11.66 & 11.59 \\
+    $\sur\tripo$ & $-$16.17 & 2.69  & 3.35  & 3.04 \\
+    $\sur\singot$ & $-$8.41 & 2.46  & 3.86  & 4.96 \\
+    $\sur\tripot$ & $-$2.62 & 3.06  & 3.90  & 3.86 \\[2pt]
     \hline
     \end{tabular}%
 % \begin{tabular}{l | r|r|r|}
@@ -2205,15 +2335,17 @@ PES will be very difficult to achieve.
        & & & & & & & \\[-10pt]
     $\sur\te{H}$ & 3.32  & 3.77  & 3.37  & -5.05 & 3.29  & 1.27 & \\
     $\sur\htw$ & 5.77  & 5.11  & 3.57  & 4.55  & 4.65  & 2.47 & \\
-    $\sur\hto$ & -32.03 & -35.07 & -36.90 & -30.92 & -33.51 & -41.17 & -$48.00\pm0.50$\fakefna\\
-    $\sur\htot$ & -32.47 & -35.99 & -37.64 & -31.04 & -34.85 & -44.33 & \\
-    $\sur\ho$ & -31.39 & -32.88 & -35.69 & -31.10 & -32.78 & -39.66 & -$13.77$ to -$39.58$\fakefnb\\
-    $\sur\hot$ & -52.30 & -49.10 & -56.97 & -54.10 & -51.08 & -57.80 & \\%  $13.80\pm0.50$\fakefnb,\\
+    $\sur\hto$ & $-$32.03 & $-$35.07 & $-$36.90 & $-$30.92 & $-$33.51 & $-$41.17 & $-$$48.00\pm0.50$\fakefna\\
+    $\sur\htot$ & $-$32.47 & $-$35.99 & $-$37.64 & $-$31.04 & $-$34.85 & $-$44.33 & \\
+    $\sur\ho$ & $-$31.39 & $-$32.88 & $-$35.69 & $-$31.10 & $-$32.78 & $-$39.66 & $-$$13.77$ to $-$$39.58$\fakefnb\\
+    $\sur\hot$ & $-$52.30 & $-$49.10 & $-$56.97 & $-$54.10 & $-$51.08 & $-$57.80 & \\%  $13.80\pm0.50$\fakefnb,\\
     %% CHECK: This value is only for the bare silicate
     %& & & & & & & $15.38\pm0.75$\fakefnb \\
-    $\sur^3\te{O}$ & -13.48 & -5.16 & -11.25 & -13.22 & -12.85 & -18.13 & -14.67\fakefnc\\
-    $\sur^1\ot$ & -5.95 & -7.51 & -11.44 & -9.44 & -7.44 & -12.53 & -7.52\fakefnc,-$13.80\pm0.50$\fakefnd\\
-    $\sur^3\ot$ & 0.45  & -0.65 & -1.52 & -0.52 & 26.68 & 7.04 & \\[2pt]
+    $\sur\tripo$ & $-$13.48 & $-$5.16 & $-$11.25 & $-$13.22 & $-$12.85 & $-$18.13 &
+    $-$14.67\fakefnc\\
+    $\sur\singot$ & $-$5.95 & $-$7.51 & $-$11.44 & $-$9.44 & $-$7.44 & $-$12.53 &
+    $-$7.52\fakefnc,$-13.80\pm0.50$\fakefnd\\
+    $\sur\tripot$ & 0.45  & $-$0.65 & $-$1.52 & $-$0.52 & 26.68 & 7.04 & \\[2pt]
     \hline
  %   & & & & & & & \\[-10pt]
     \end{tabular}
@@ -2340,21 +2472,41 @@ performance for O species, the $\pw$ functionals have lost some credibility.
 \begin{table*}[htb]
   \centering
   \caption{Surface reaction energies with Eley-Rideal type reactions. All energies are $\zpe$ corrected with $\Dl E^{\zpeall}_\btlyp$.
-  $\pws$ is short for $\pw$. The last column contains average values. The deviations of these are listed in the last four rows for each
-  functional.}
+  $\pws$ is short for $\pw$. The functionals most accurate for the gas phase
+  reactions are highlighted by boldface again (cf. Table
+  \ref{Tab:Gas:Reactions}). The last column contains average values.
+  The deviations of these are listed in the last four rows for each functional.}
     \begin{tabular}{lll|rrrrrr|r}
-    & &    & \btlyp & \bhlyp & \pbez & \tpssh & \pws   & \pws\dt &  \multicolumn{1}{r}{$\avg$}  \\[2pt]
+        & & & & & & & &\\[-10pt]
+        & &    & \btlyp & \bhlyp & \pbez & \tpssh & \pws
+    & \pws\dt &  \multicolumn{1}{r}{$\avg$}  \\[2pt]
     %& &    & \btlyp & \bhlyp & \pbez & \tpssh & \pws   & \pws\dt &  $\Dl \eall_{\btlyps}$ & $\ering_{\btlyps}$ & $\Dl \ering_{\pbez}$ \\[2pt]
     \hline 
     & & & & & & & &\\[-10pt]
-        $\sur\ho$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hto$ & -476.22 & -458.03 & -472.39 & -470.76 & -480.13 & -480.92 & -473.07 \\
-    $\sur\hto$&\defskip$+^1\te{O}\gas$&\defskip$\chemar\sur\htot$ & -402.54 & -357.85 & -427.27 & -426.38 & -405.24 & -407.50 & -404.46 \\
-    $\sur\ho$&\defskip$+\ho\gas$&\defskip$\chemar\sur\htot$ & -185.12 & -137.04 & -194.02 & -187.84 & -197.12 & -200.16 & -183.55 \\
-    $\sur\hot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\htot$ & -317.22 & -318.69 & -310.31 & -309.82 & -320.89 & -323.99 & -316.82 \\
-    $\sur\ho$&\defskip$+^3\te{O}\gas$&\defskip$\chemar\sur\hot$ & -294.05 & -219.54 & -300.54 & -295.71 & -296.15 & -296.10 & -283.68 \\
-    $\sur^3\te{O}$&\defskip$+\ho\gas$&\defskip$\chemar\sur\hot$ & -311.96 & -248.31 & -325.41 & -313.50 & -316.45 & -318.00 & -305.61 \\
-    $\sur^1\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & -403.80 & -414.31 & -402.88 & -404.70 & -395.22 & -396.95 & -402.98 \\
-    $\sur^3\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & -248.05 & -243.27 & -241.72 & -250.31 & -268.95 & -256.14 & -251.41 \\[2pt]
+        $\sur\ho$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hto$ & $-$476.22 &
+        $-$458.03 & $-$472.39 & $-$470.76 & $\bo{-480.13}$ & $\bo{-480.92}$ &
+        $-$473.07
+        \\
+    $\sur\hto$&\defskip$+^1\te{O}\gas$&\defskip$\chemar\sur\htot$ & $-$402.54 &
+    $\bo{-357.85}$ & $-$427.27 & $-$426.38 & $-$405.24 & $-$407.50 & $-$404.46
+    \\
+    $\sur\ho$&\defskip$+\ho\gas$&\defskip$\chemar\sur\htot$ & $-$185.12 &
+    $-$137.04 & $-$194.02 & $-$187.84 & $\bo{-197.12}$ & $\bo{-200.16}$ &
+    $-$183.55
+    \\
+    $\sur\hot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\htot$ & $\bo{-317.22}$
+    & $-$318.69 & $-$310.31 & $-$309.82 & $-$320.89 & $-$323.99 & $-$316.82 \\
+    $\sur\ho$&\defskip$+^3\te{O}\gas$&\defskip$\chemar\sur\hot$ & $-$294.05 &
+    $-$219.54 & $-$300.54 & $\bo{-295.71}$ & $-$296.15 & $-$296.10 & $-$283.68
+    \\
+    $\sur^3\te{O}$&\defskip$+\ho\gas$&\defskip$\chemar\sur\hot$ & $-$311.96 &
+    $-$248.31 & $-$325.41 & $\bo{-313.50}$ & $-$316.45 & $-$318.00 & $-$305.61
+    \\
+%    $\sur^1\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & $-$403.80 &
+    % $-$414.31 & $-$402.88 & $-$404.70 & $-$395.22 & $-$396.95 & $-$402.98 \\
+    $\sur^3\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & $-$248.05 &
+    $-$243.27 & $-$241.72 & $\bo{-250.31}$ & $-$268.95 & $-$256.14 & $-$251.41
+    \\[2pt]
     
 %     $\sur\ho$&\defskip$+~\te{H}\gas$&\defskip$\chemar\sur\hto$ & -476.22 & -458.03 & -472.39 & -470.76 & -480.13 & -480.92 & 35.96 & 36.32 & 36.45 \\
 %     $\sur\hto$&\defskip$+~^1\te{O}\gas$&\defskip$\chemar\sur\htot$ & -402.54 & -357.85 & -427.27 & -426.38 & -405.24 & -407.50 & 6.96  & 8.90  & 9.48 \\
@@ -2367,9 +2519,9 @@ performance for O species, the $\pw$ functionals have lost some credibility.
     \hline \hline
 \multicolumn{2}{r|}{\multirow{4}{*}{$E_{\dft} - \avg$}} &
        MAD   &     3.49  & 31.37 & 10.86 & 7.28  & 9.26  & 8.78  & \\
- \multicolumn{2}{r|}{} & MIN   & -10.37 & -11.33 & -22.81 & -21.91 & -17.54 & -16.61  & \\
+ \multicolumn{2}{r|}{} & MIN   & $-$10.37 & $-$11.33 & $-$22.81 & $-$21.91 & $-$17.54 & $-$16.61  & \\
  \multicolumn{2}{r|}{} & MAX   & 3.36  & 64.14 & 9.68  & 7.01  & 7.76  & 6.03  & \\
- \multicolumn{2}{r|}{} & MEAN  & -2.17 & 28.07 & -6.62 & -4.68 & -7.32 & -7.27  &  \\[2pt]
+ \multicolumn{2}{r|}{} & MEAN  & $-$2.17 & 28.07 & $-$6.62 & $-$4.68 & $-$7.32 & $-$7.27  &  \\[2pt]
     %\\[-10pt]
     \end{tabular}%
     %\\
@@ -2426,7 +2578,7 @@ the choice of taking a simple mean value comes naturally.
 
 We can calculate the MAD from the average values, which is minimal for the $\btlyp$ functional.
 With a maximum absolute deviation of $10.37~\kmo$, $\btlyp$ can be seen as not too strongly
-``oscillating''.
+varying.
 
 % The $\bhlyp$ functional predicts many reactions to be stronger endothermic than the
 % other functionals. The reaction energies of four reactions are considered to
