@@ -25,38 +25,30 @@
 \newcommand\semisphere[6]{\shade[ball color=#1!#2!white,opacity=#3] (#4cm,0) arc (0:180:#4cm and #5cm) arc (-180:0:#4cm and #6cm);}
 
 \newcommand\topsemisphere[2]{\semisphere{#1}{100}{1}{#2}{.5*#2}{.5*#2};
-\draw (0,0) ellipse (#2cm and .5*#2cm);}
+\draw[line width=.2pt,color=#1] (0,0) ellipse (#2cm and .5*#2cm);
+\foreach \x in {#2,-#2} {
+\draw[dashed,color=#1,line width=.25pt,opacity=1] (\x,0) -- (\x,2);}
+\filldraw[color=#1, fill opacity=.2, line width=.25pt] (0,2) circle (#2cm);}
 
 \newcommand\quicksemisphere[3]{\semisphere{#1}{100}{#3}{#2}{.5*#2}{#2}
+\draw[color=#1,line width=.2pt] ([shift=(-180:#2cm)]0,0) arc (-180:0:#2cm);
 \topsemisphere{#1}{#2}}
 
-%start tikz picture, and use the tdplot_main_coords style to implement the display 
-%coordinate transformation provided by 3dplot
-\begin{tikzpicture}[scale=5,tdplot_main_coords]
-%draw the main coordinate system axes
-%\draw[thick,->] (0,0,0) -- (-1,0,0) node[anchor=south]{$z$};
-%\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$x$};
-%\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=north]{$y$};
-
-\tdplotsetthetaplanecoords{\phivec}
-
-%draw some dashed arcs, demonstrating direct arc drawing
-%\draw[dashed,tdplot_rotated_coords] (\radius,0,0) arc (0:90:\radius);
-
-%\draw[dashed] (\radius,0,0) arc (0:360:\radius);
-%\semisphere{gray}{120}{.2}{1}{.5}{1}
+\begin{tikzpicture}
 \begin{scope}
+\node [inner sep=0pt] (Surf) at (0,2) {\includegraphics[width=2.3cm]{./TopLayerFromAbove.png}};
+%\includegraphics[width=2cm]{./TopLayerFromAbove.png}
 %\topsemisphere{gray}{1}
-\quicksemisphere{gray}{1}{1}
+\quicksemisphere{gray}{1.05}{1}
 
 %\draw (2,0) ellipse (1 and 1);
 
-\quicksemisphere{brown}{.75}{.6}
-\quicksemisphere{blue}{.43}{.2}
+\quicksemisphere{brown}{.61}{.6}
+\quicksemisphere{blue}{.32}{.2}
 
 %\semisphere{red}{220}{.8}{.16}{.08}{.08}
 
-\topsemisphere{red}{.17}
+\topsemisphere{red}{.16}
 \end{scope}
 \end{tikzpicture}
 \end{document}
