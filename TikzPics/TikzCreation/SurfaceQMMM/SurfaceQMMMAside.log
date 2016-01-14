@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  12 JAN 2016 21:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  12 JAN 2016 23:55
 entering extended mode
 **C:/Users/Thomas/workspace/MScThesis/TikzPics/TikzCreation/SurfaceQMMM/Surface
-QMMM.tex
+QMMMAside.tex
 
 (C:/Users/Thomas/workspace/MScThesis/TikzPics/TikzCreation/SurfaceQMMM/SurfaceQ
-MMM.tex
+MMMAside.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -393,7 +393,7 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
 \arrowsize=\dimen151
 )))
 (C:\Users\Thomas\workspace\MScThesis\TikzPics\TikzCreation\SurfaceQMMM\SurfaceQ
-MMM.aux)
+MMMAside.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -424,8 +424,8 @@ LaTeX Font Info:    ... okay on input line 7.
 File: ./TopLayerFromAbove.png Graphic file (type png)
 
 <use ./TopLayerFromAbove.png>
-Package pdftex.def Info: ./TopLayerFromAbove.png used on input line 39.
-(pdftex.def)             Requested size: 65.44142pt x 66.4764pt.
+Package pdftex.def Info: ./TopLayerFromAbove.png used on input line 41.
+(pdftex.def)             Requested size: 50.39812pt x 51.21504pt.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -435,17 +435,17 @@ Missing character: There is no ; in font nullfont!
  <C:/Users/Thomas/workspace/MScThesis/TikzPics/TikzCreation/SurfaceQMMM/TopLaye
 rFromAbove.png>]
 (C:\Users\Thomas\workspace\MScThesis\TikzPics\TikzCreation\SurfaceQMMM\SurfaceQ
-MMM.aux) ) 
+MMMAside.aux) ) 
 Here is how much of TeX's memory you used:
- 12307 strings out of 493921
- 253499 string characters out of 3147280
- 277529 words of memory out of 3000000
- 15405 multiletter control sequences out of 15000+200000
+ 12336 strings out of 493921
+ 254095 string characters out of 3147280
+ 276529 words of memory out of 3000000
+ 15434 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,7n,58p,484b,669s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,7n,58p,489b,671s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on SurfaceQMMM.pdf (1 page, 226883 bytes).
+Output written on SurfaceQMMMAside.pdf (1 page, 226950 bytes).
 PDF statistics:
  18 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,0 +1,54 @@
+\documentclass[crop,tikz]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+%\usepackage{tikz-3dplot}
+
+\begin{document}
+\tdplotsetmaincoords{60}{110}
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+
+\pgfmathsetmacro{\radius}{1}
+\pgfmathsetmacro{\frozenradius}{2}
+
+\pgfmathsetmacro{\thetavec}{0}
+\pgfmathsetmacro{\phivec}{0}
+%% Input
+% 1: Color
+% 2: Whiteness
+% 3: Opacity
+% 4: Radius
+% 5: Excentricity 1
+% 6: Excentricity 2
+\newcommand\semisphere[6]{\shade[ball color=#1!#2!white,opacity=#3] (#4cm,0) arc (0:180:#4cm and #5cm) arc (-180:0:#4cm and #6cm);}
+
+\newcommand\topsemisphere[2]{\semisphere{#1}{100}{1}{#2}{.5*#2}{.5*#2};
+\draw[line width=.2pt,color=#1] (0,0) ellipse (#2cm and .5*#2cm);
+\foreach \x in {#2,-#2} {
+\draw[dashed,color=#1,line width=.25pt,opacity=1] (\x,0) -- (\x,2);}
+\filldraw[color=#1, fill opacity=.2, line width=.25pt] (0,2) circle (#2cm);}
+
+\newcommand\quicksemisphere[3]{\semisphere{#1}{100}{#3}{#2}{.5*#2}{#2}
+\draw[color=#1,line width=.2pt] ([shift=(-180:#2cm)]0,0) arc (-180:0:#2cm);
+\topsemisphere{#1}{#2}}
+
+\begin{tikzpicture}
+\begin{scope}
+\node [inner sep=0pt] (Surf) at (0,2) {\includegraphics[width=2.3cm]{./TopLayerFromAbove.png}};
+%\includegraphics[width=2cm]{./TopLayerFromAbove.png}
+%\topsemisphere{gray}{1}
+\quicksemisphere{gray}{1.05}{1}
+
+%\draw (2,0) ellipse (1 and 1);
+
+\quicksemisphere{brown}{.61}{.6}
+\quicksemisphere{blue}{.32}{.4}
+
+%\semisphere{red}{220}{.8}{.16}{.08}{.08}
+
+\topsemisphere{red}{.16}
+\end{scope}
+\end{tikzpicture}
+\end{document}
