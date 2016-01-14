@@ -95,9 +95,11 @@ dist
 \begin{axis}[
     ybar,
     ymin=0,
-   cycle list name=color list
+%    colormap/jet,
+%   cycle list name=color list
 ]
-\addplot [fill=red] +[
+\addplot +[
+    colormap/jet,
     hist={
         bins=30,
         data min=-8.7,

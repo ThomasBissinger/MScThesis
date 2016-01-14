@@ -273,9 +273,10 @@ of the potential energy surface.
 
 \newcommand\X{\enmat{\te X}}
 \newcommand\Y{\enmat{\te Y}}
-\newcommand\XY{{\enmat{\X - \Y}}}
+\newcommand\Z{\enmat{\te Z}}
+\newcommand\XY{{\enmat{{\X - \Y}}}}
 \renewcommand\S{\enmat{\te S}}
-\newcommand\sX{\enmat{\sur\te{X}}}
+\newcommand\sX{\enmat{{\sur\te{X}}}}
 \newcommand\A{\enmat{\te A}}
 \subsection{Different Types of Energy}
 \label{Sec:Theo:Interaction}
@@ -311,10 +312,10 @@ to the global minimum.
 
 The adsorption energy is mostly similar. There, we have the energy of the isolated species
 $E_\X$ and the energy minimum of the surface $E_{\S}$. If we denote the system of the surface 
-with the adsorbed molecule $X$ by $\sX$ and its energy minimum by $E_\sX$, we define
+with the adsorbed molecule $X$ by $\sX$ and its energy minimum by $E_{\sX}$, we define
 the adsorption energy to be
 \begin{equation}
- \eads_{\sX}:= E_{\sX} - E_\X - E_\S.
+ \eads_{\X}:= E_{\sX} - E_\X - E_\S.
  \label{Theo:AdsorptionEnergy}
 \end{equation}
 Again, we did not include the dependency of $E_\sX$ and $E_\S$ on the respective geometries. We
@@ -323,33 +324,75 @@ because the surface geometry of the system $\sX$ \mbox{(surface + molecule)} may
 system $\S$ of the surface alone when comparing energy minima. For a fixed value of $E_\S$, 
 we could again consider a PES of the type \mbox{$(\bo r_i)_i \mapsto \eads_\sX$}, where the
 vector $\r_i$ is the coordinate of the $i$-th atom in $\sX$, $1 \le i \le N$ for some $N$. The different energy minima of 
-this map to $\eads_\sX$ are called \ep{binding geometries}, and the position of the
+this map to $\eads_\X$ are called \ep{binding geometries}, and the position of the
 center of mass of the molecule $\X$ in a binding geometry is called a \ep{binding site}.
-Exploring binding sites and the strength of the binding $\eads_\sX$ can be useful
+Exploring binding sites and the strength of the binding $\eads_\X$ can be useful
 to simulation.
 
-It is also possible to calculate \ep{reaction energies} $\ere$ for adsorbed species. We will
-do this for a situation where species X is adsorbed on the surface to $\sur$X. From the
-surrounding gas, a molecule of species Y approaches. The two react to form $\sur$Z. The
-reaction energy consumed or released in this process is
+We will also give reaction energies. In this work, we distinguish two kinds of reactions:
+Gas phase reactions, where isolated molecules come in contact, and Eley-Rideal (ER) \cite{EleyRideal} 
+or surface reactions as described in the introduction. A gas phase reaction is described
+by a scheme 
 \begin{equation}
- \ere:= E_{\sur\te Z} - E_{\sur\X} - E_\Y.
+ \X\gas+\Y\gas \chemar  \Z\gas,
+ \label{Theo:GasReactionScheme}
+\end{equation} 
+where the subscript $(\te g)$ indicates that gas phase. The initially isolated
+reactants $\X\gas$ and $\Y\gas$ combine to form a product $\Z\gas$. Of course,
+there are also reactions possible with more than one product, we will however not
+consider these.
+
+The reaction energy consumed or released in this process is
+\begin{equation}
+ \ere_{\te{gas}}:= E_{\Z\gas} - E_{\X\gas} - E_{\Y\gas}.
+ \label{Theo:ReactionEnergyGas}
+\end{equation}
+Positive $\ere_{\te{gas}}$ means an \ep{endothermic}, negative $\ere_{\te{gas}}$ 
+an \ep{exothermic} reaction. When neglecting quantum tunneling, only barrierless
+exothermic reactions occur in the gas phase since there is no source to provide
+the necessary energy for an endothermic reaction.
+
+It is also possible to calculate \ep{reaction energies} $\ere_{\te{ER}}$ for the ER mechanism. For that,
+species X is adsorbed on the surface to $\sur$X and in equilibrium, that is at optimum
+geometry. From the surrounding gas, a molecule of species Y approaches. The two react
+to form $\sur$Z. This follows the scheme
+\begin{equation}
+ \sur\X+\Y\gas \chemar  \sur\Z,
+ \label{Theo:SurfaceReactionScheme}
+\end{equation} 
+much similar to \eqref{Theo:GasReactionScheme}.
+
+The $\ere_{\te{ER}}$ reaction energy is
+\begin{equation}
+ \ere_{\te{ER}}:= E_{\sur\Z} - E_{\sur\X} - E_{\Y\gas}.
  \label{Theo:ReactionEnergySurface}
 \end{equation}
-Positive $\ere$ means an \ep{endothermic}, negative $\ere$ an \ep{exothermic} reaction. Especially
-exothermic reactions are interesting, since in that case the surface has to absorb the 
+Especially exothermic reactions are interesting, since in that case the surface has to absorb the 
 energy difference between reactants and product. If this is possible, the product $\sur$Z
-stays intact, otherwise it will react further. The reaction can be schematically
-described by
+stays intact, otherwise it will react further.
+
+ER reactions, adsorption energies and gas phase reactions can be related. We can see
+that when starting from \eqref{Theo:ReactionEnergySurface} and inserting
+\eqref{Theo:AdsorptionEnergy}, which yields
 \begin{equation}
- \sur\X+\Y\gas \chemar  \sur\te Z,
- \label{Theo:ReactionScheme}
-\end{equation} 
-where the subscripted Y$\gas$ is the gas-phase Y. 
+ \begin{aligned}
+   \ere_{\te{ER}}:=& E_{\sur\Z} - E_{\sur\X} - E_{\Y\gas}\\
+   =& \eads_{\Z}+E_\S + E_{\Z\gas} - \rb{\eads_{\X} +E_\S + E_{\X\gas}} - E_{\Y\gas}\\
+   =& \eads_{\Z}-\eads_{\X} + E_{\Z\gas} - E_{\X\gas} - E_{\Y\gas}\\
+   =& \eads_{\Z}-\eads_{\X} + \ere_{\te{gas}}.
+ \end{aligned}
+ \label{Theo:GasAndERReaction}
+\end{equation}
+This result is important. It means that gas phase reaction energies and adsorption energies can be
+calculated separately to yield ER reaction energies. The two components require very
+different system sizes -- small gas phase molecules and large surface+molecule systems. But
+equation \eqref{Theo:GasAndERReaction} allows us to independently choose methods adequate
+to the requirements of these two separate calculations. We will use this result when
+discussing ER reaction energies. 
 
 %% CHECK: Sollte das gemacht werden? Sonst Kommentar streichen und im Text die Energien belassen.
-The superscripts on $\eint$, $\eads$ and $\ere$ may be ignored if it is sufficiently clear which energy 
-is meant.
+The superscripts and subscripts on $\eint$, $\eads$ and $\ere$ may be ignored if it is sufficiently
+clear which energy is meant.
 
 We also want to introduce a third type of energy, the \ep{zero-point (vibrational) energy}.
 We describe it for some general system $\A$ that may contain any arrangement of atoms.
@@ -495,7 +538,7 @@ of solving the Schrödinger equation \eqref{Theo:Schroedinger} is reduced to the
 the minimum of this density functional.
 
 The problem here is that not much is known about the nature of this density functional. The
-popular ansatz by Kohn and Sham \cite{KohnSham} is called Kohn-Sham (KS) DFT, and the energy
+popular ansatz by Kohn and Sham \cite{KohnSham} is called Kohn-Sham (KS-)DFT, and the energy
 expression is given by
 % CHECK: Role of \vcc
 \newcommand\er{\ed{\rho}}
@@ -551,14 +594,14 @@ There are numerous techniques like damping and orbital shifts to support the
 convergence, however there is no mathematical guarantee for it. 
 
 
-\subsubsection{DFT Methods}
+\subsubsection{DFT Functionals}
 \label{Sec:Theo:Functionals}
 %% CHECK: gibt es wirklich genau drei Klassen DFT?
 %%CHECK: http://scitation.aip.org/content/aip/journal/jcp/98/2/10.1063/1.464304
 %%CHECK: Was genau ist metga-GGA?
 Over the years, many different expressions for $\exc$ were proposed and used, each
 defining a separate density functional with different advantages and disadvantages. There
-are three classes of DFT functionals: \ep{local density approximation} (LDA) functionals
+are three main classes of KS-DFT functionals: \ep{local density approximation} (LDA) functionals
 are functionals where $\vxc(\r)$ does only depend on the the value of $\rho(\r)$, which may
 be sensible for slowly varying densities. The more general \ep{generalized gradient approximation}
 (GGA) additionally incorporates dependencies on $\nabla\rho(\r)$ into $\vxc(\r)$. Thirdly,
@@ -1711,14 +1754,8 @@ energy values that are not as high as those of other functionals.
 
 \subsection{Reactions}
 \label{Sec:Gas:Reaction}
-A gas phase reaction is a simpler version of the surface reaction
-we introduced in the theoretical section, the scheme being
-\begin{equation}
-\X\gas + \Y\gas \chemar \te Z\gas,
-\label{Gas:Scheme}
-\end{equation}
-much similar to \eqref{Theo:ReactionScheme}. We drop the
-$(\te g)$ subscript.
+We already described gas phase reaction in Section \ref{Sec:Theo:Interaction} by 
+\eqref{Theo:GasReactionScheme}. For simplicity, we drop the $(\te g)$ subscript.
 
 We calculated DFT energies in the $\tzvpd$ basis set with
 the $\btlyp$, $\bhlyp$, $\pbez$, $\tpssh$, $\pw$ and $\pw\dt$
@@ -1869,9 +1906,12 @@ While the results here do not clearly identify functionals for which the
 agreement between $\ccsdtf$ reaction energies and the functional's reaction
 energies should be particularly good, they do show that it is in
 principle possible to describe the reactions \eqref{Gas:Reactions} by DFT.
-But we have no way to predict how the accuracy of these calculations is changed
-by the interplay of reaction and surface interaction. We will come back to
-that in the discussion of the reaction energies in the next section.
+Still, the results for $\ccsdtf$ must be considered the most accurate
+and the DFT results are mere approximations. The approximation is of
+clearly lesser quality than for interaction energies.
+%  But we have no way to predict how the accuracy of these calculations is changed
+%  by the interplay of reaction and surface interaction. We will come back to
+%  that in the discussion of the reaction energies in the next section.
 
 \section{Adsorption and Reactions on the Ice Surface}
 \label{Sec:Ads}
@@ -1950,6 +1990,13 @@ above are removed to describe a surface layer, the forces from inside the crysta
 surely deform an ideal surface layer. We will see this effect in Section
 \ref{Sec:Ads:Optima}.
 
+Instead of choosing a cuboid subdomain of the Fletcher surface -- which would be more adequate
+to the surface's translational symmetry -- we will consider a hemisphere as depicted in Figure
+\ref{Fig:Ads:QMMM}. We do so because the surface model shall be used in future studies
+to investigate reactions. These depend on energy dissipation processes throughout the
+surface, which will propagate spherically from a reaction site. The symmetry of the model
+is chosen to be adequate to that.
+
 \subsubsection{The QM/MM Region}
 \label{Sec:Ads:QM/MM}
 %% CHECK: Pics?
@@ -1970,15 +2017,15 @@ surely deform an ideal surface layer. We will see this effect in Section
 \caption{The QM/MM decomposition of the Fletcher surface. The picture to the right shows the surface from above,
 the picture to the left is a schematic representation. The gray and the brown area make up the MM region,
 where water molecules are described by the $\tip$ potential. In the gray region, they are frozen. 
-The blue and brown region make up the QM region. Atoms in the blue region are described by the
+The blue and red region make up the QM region. Atoms in the blue region are described by the
 $\tzvp$ basis set. The central ring constituting the red region uses the $\tzvpd$ basis set.}
 \label{Fig:Ads:QMMM}
 \end{figure*}
 
 Of a fully-ordered water $I_h$ crystal with a Fletcher surface, we take
-a semispherical cut of radius $25~\Ang$ centered on the center of a hexagonal
+a hemispherical cut of radius $25~\Ang$ centered on the center of a hexagonal
 ring of water molecules. We choose a normal basal surface as in
-Figure \ref{Fig:Ads:Fletcher}, not a prismatic surface. The semispherical
+Figure \ref{Fig:Ads:Fletcher}, not a prismatic surface. The hemispherical
 cut does not separate $\hto$ molecules internally, instead an $\hto$ molecule
 is fully incorporated in the system if its O atom is within the cutoff
 radius. The full number of QM/MM water molecules in the system is
@@ -2173,7 +2220,7 @@ We can compare the two corrections in the next section.
 
 \subsection{Adsorption}
 \label{Sec:Ads:Adsorption}
-\newcommand\avg{\enmat{E_{\te {avg}}}}
+\newcommand\avg{\enmat{E_{\te {avg}}^{\te{ads}}}}
 %If we assume the $\zpeall$ correction 
 %to be accurate, we can evaluate the $\zpering$ correction when comparing
 %results for the $\btlyp$ functional in Table \ref{Tab:Ads:AdsB3lyp}.
@@ -2186,7 +2233,7 @@ and very exothermic reaction $\hto+\singo\chemar\htot$, as described in
 \eqref{Gas:H2O+O->H2O2}.
 
 %% CHECK: Vllt lieber die Corrections als die Energiewerte?
-\renewcommand\eads[1]{E_{\sur\te X}^{\te{ads}{#1}}}
+%\renewcommand\eads[1]{E_{\sur\te X}^{\te{ads}{#1}}}
 \begin{table}[htb]
   \caption{Different choices for the ZPE correction. For a reference, the corresponding 
   adsorption energies are given for the $\btlyp$ functional. All energies in $\kmo$.}
@@ -2310,27 +2357,33 @@ are only very weakly bound to the surface.
   \centering
   \caption{Comparison of adsorption energies for different density functionals. All
   energies are given with $\zpeall$ correction for $\btlyp$. $\pws$ is shorthand
-  for $\pw$. Energies can be compared to the average $\avg$ (excluding $\pws\dt$)
-  and experimental data. Energies in $\kmo$.}
+  for $\pw$. Energies can be compared to the average $\avg$ and experimental data.
+  MAD, MIN, MAX and MEAN are give with respect to $\avg$.
+  Energies in $\kmo$.}
     %\begin{tabular}{l|L{2cm}L{2cm}L{2cm}L{2cm}L{2cm}}
     \begin{tabular}{l|rrrrrr|r|r}
     & & & & & & & & \\[-10pt]
           & \btlyp & \bhlyp & \pbez & \tpssh & \pws & \pws\dt & $\avg$ &experimental, $E_\te{des}$\\[2pt]
     \hline
        & & & & &  & & & \\[-10pt]
-    $\sur\te{H}$ & 3.32  & 3.77  & 3.37  & -5.05 & 3.29  & 1.27 & 1.74 & \\
-    $\sur\htw$ & 5.77  & 5.11  & 3.57  & 4.55  & 4.65  & 2.47 & 4.73 & \\
-    $\sur\hto$ & $-$32.03 & $-$35.07 & $-$36.90 & $-$30.92 & $-$33.51 & $-$41.17 & $-33.69$ & $-$$48.00\pm0.50$\fakefna\\
-    $\sur\htot$ & $-$32.47 & $-$35.99 & $-$37.64 & $-$31.04 & $-$34.85 & $-$44.33 & $-34.40$ &\\
-    $\sur\ho$ & $-$31.39 & $-$32.88 & $-$35.69 & $-$31.10 & $-$32.78 & $-$39.66 & $-32.77$ & $-$$13.77$ to $-$$39.58$\fakefnb\\
-    $\sur\hot$ & $-$52.30 & $-$49.10 & $-$56.97 & $-$54.10 & $-$51.08 & $-$57.80 & $-52.71$ & \\%  $13.80\pm0.50$\fakefnb,\\
+    $\sur\te{H}$ & 3.32  & 3.77  & 3.37  & -5.05 & 3.29  & 1.27 & 1.66 & \\
+    $\sur\htw$ & 5.77  & 5.11  & 3.57  & 4.55  & 4.65  & 2.47 & 4.35 & \\
+    $\sur\hto$ & $-$32.03 & $-$35.07 & $-$36.90 & $-$30.92 & $-$33.51 & $-$41.17 & $-34.93$ & $-$$48.00\pm0.50$\fakefna\\
+    $\sur\htot$ & $-$32.47 & $-$35.99 & $-$37.64 & $-$31.04 & $-$34.85 & $-$44.33 & $-36.05$ &\\
+    $\sur\ho$ & $-$31.39 & $-$32.88 & $-$35.69 & $-$31.10 & $-$32.78 & $-$39.66 & $-33.92$ & $-$$13.77$ to $-$$39.58$\fakefnb\\
+    $\sur\hot$ & $-$52.30 & $-$49.10 & $-$56.97 & $-$54.10 & $-$51.08 & $-$57.80 & $-53.56$ & \\%  $13.80\pm0.50$\fakefnb,\\
     %% CHECK: This value is only for the bare silicate
     %& & & & & & & $15.38\pm0.75$\fakefnb \\
-    $\sur\tripo$ & $-$13.48 & $-$5.16 & $-$11.25 & $-$13.22 & $-$12.85 & $-$18.13 & $-11.19$ &
+    $\sur\tripo$ & $-$13.48 & $-$5.16 & $-$11.25 & $-$13.22 & $-$12.85 & $-$18.13 & $-12.35$ &
     $-13.80\pm0.50$, $-15.38\pm 0.75$\fakefnc \\
-    $\sur\singot$ & $-$5.95 & $-$7.51 & $-$11.44 & $-$9.44 & $-$7.44 & $-$12.53 & $-8.36$ & \\
+    $\sur\singot$ & $-$5.95 & $-$7.51 & $-$11.44 & $-$9.44 & $-$7.44 & $-$12.53 & $-9.05$ & \\
     $\sur\tripot$ & 0.45  & $-$0.65 & $-$1.52 & $-$0.52 & 26.68 & 7.04 & $-0.56^\dagger$ & $-$7.52\fakefnd\\[2pt]
-    \hline
+    \hline \hline
+    & & & & &   \\[-10pt]
+    MAD   & 2.06  & 1.93  & 1.74  & 2.29  & 4.17  & 4.85   \\
+    MIN   & -1.13 & -0.14 & -3.42 & -6.72 & -0.50 & -8.28  \\
+    MAX   & 3.58  & 7.19  & 1.71  & 5.02  & 27.23 & 7.60   \\
+    MEAN  & 1.81  & 1.88  & -1.12 & 0.40  & 4.06  & -3.16  \\
     \end{tabular}
     \\[5pt]
     \footnotebox{
@@ -2491,6 +2544,7 @@ functionals have lost some credibility.
 %% CHECK: Durchschnittswert in nem Bild präsentieren? Durchschnittswert wirklich clever?
 \newcommand\btlyps{\enmat{\te{B3}}}
 \newcommand\pbezs{\enmat{\te{PBE0}}}
+\newcommand\erehyb{\enmat{\ere_{\te{hybrid}}}}
 % Table generated by Excel2LaTeX from sheet 'Tabelle1'
 \begin{table*}[htb]
   \centering
@@ -2502,42 +2556,50 @@ functionals have lost some credibility.
     \begin{tabular}{lll|rrrrrr|r}
         & & & & & & & &\\[-10pt]
         & &    & \btlyp & \bhlyp & \pbez & \tpssh & \pws
-    & \pws\dt &  \multicolumn{1}{r}{$\avg$}  \\[2pt]
+    & \pws\dt &  \multicolumn{1}{r}{$\erehyb$}  \\[2pt]
     %& &    & \btlyp & \bhlyp & \pbez & \tpssh & \pws   & \pws\dt &  $\Dl \eall_{\btlyps}$ & $\ering_{\btlyps}$ & $\Dl \ering_{\pbez}$ \\[2pt]
     \hline 
     & & & & & & & &\\[-10pt]
         $\sur\ho$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hto$ & $-$476.22 &
         $-$458.03 & $-$472.39 & $-$470.76 & $\bo{-480.13}$ & $\bo{-480.92}$ &
-        $-$473.07
+        $-$492.71
         \\
     $\sur\hto$&\defskip$+^1\te{O}\gas$&\defskip$\chemar\sur\htot$ & $-$402.54 &
-    $\bo{-357.85}$ & $-$427.27 & $-$426.38 & $-$405.24 & $-$407.50 & $-$404.46
+    $\bo{-357.85}$ & $-$427.27 & $-$426.38 & $-$405.24 & $-$407.50 & $-344.17$
     \\
     $\sur\ho$&\defskip$+\ho\gas$&\defskip$\chemar\sur\htot$ & $-$185.12 &
     $-$137.04 & $-$194.02 & $-$187.84 & $\bo{-197.12}$ & $\bo{-200.16}$ &
-    $-$183.55
+    $-205.33$
     \\
     $\sur\hot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\htot$ & $\bo{-317.22}$
-    & $-$318.69 & $-$310.31 & $-$309.82 & $-$320.89 & $-$323.99 & $-$316.82 \\
+    & $-$318.69 & $-$310.31 & $-$309.82 & $-$320.89 & $-$323.99 & $-343.39$ \\
     $\sur\ho$&\defskip$+^3\te{O}\gas$&\defskip$\chemar\sur\hot$ & $-$294.05 &
-    $-$219.54 & $-$300.54 & $\bo{-295.71}$ & $-$296.15 & $-$296.10 & $-$283.68
+    $-$219.54 & $-$300.54 & $\bo{-295.71}$ & $-$296.15 & $-$296.10 & $-287.00$
     \\
     $\sur^3\te{O}$&\defskip$+\ho\gas$&\defskip$\chemar\sur\hot$ & $-$311.96 &
-    $-$248.31 & $-$325.41 & $\bo{-313.50}$ & $-$316.45 & $-$318.00 & $-$305.61
+    $-$248.31 & $-$325.41 & $\bo{-313.50}$ & $-$316.45 & $-$318.00 & $-308.95$
     \\
 %    $\sur^1\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & $-$403.80 &
-    % $-$414.31 & $-$402.88 & $-$404.70 & $-$395.22 & $-$396.95 & $-$402.98 \\
+    % $-$414.31 & $-$402.88 & $-$404.70 & $-$395.22 & $-$396.95 & $-367.42$ \\
     $\sur^3\ot$&\defskip$+\te{H}\gas$&\defskip$\chemar\sur\hot$ & $-$248.05 &
-    $-$243.27 & $-$241.72 & $\bo{-250.31}$ & $-$268.95 & $-$256.14 & $-$251.41
+    $-$243.27 & $-$241.72 & $\bo{-250.31}$ & $-$268.95 & $-$256.14 & $-254.74$
     \\[2pt]
     
     \hline \hline
 \multicolumn{2}{r|}{\multirow{4}{*}{$E_{\dft} - \avg$}} &
-       MAD   &     3.87  & 34.23 & 12.40 & 8.08  & 9.48  & 9.17  & \\
- \multicolumn{2}{r|}{} & MIN   & $-$10.37 & $-$1.87 & $-$22.81 & $-$21.91 & $-$17.54 & $-$16.61  & \\
- \multicolumn{2}{r|}{} & MAX   & 3.36  & 64.14 & 9.68  & 7.01  & $-$0.78 & $-$3.04 & \\
- \multicolumn{2}{r|}{} & MEAN  & $-$2.37 & 33.70 & $-$7.58 & $-$5.10 & $-$9.48 & $-$9.17  &  \\[2pt]
-    %\\[-10pt]
+                            MAD   & 19.71 & 40.13 & 27.26 & 24.70 & 19.32 & 17.04 &  \\
+    \multicolumn{2}{r|}{} &  MIN   & $-$58.37 & $-$13.68 & $-$83.10 & $-$82.21 & $-$61.07 & $-$63.33 &  \\
+    \multicolumn{2}{r|}{} &  MAX   & 26.17 & 68.29 & 33.07 & 33.57 & 22.49 & 19.39 &  \\
+    \multicolumn{2}{r|}{} &  MEAN  & 0.16  & 36.22 & $-$5.06 & $-$2.58 & $-$6.95 & $-$6.65 &  \\[5pt]
+%
+% \multicolumn{2}{r|}{} &    MIN   & $-$58.37 & $-$13.68 & $-$83.10 & $-$82.21 & $-$61.07 & $-$63.33 &  \\
+% \multicolumn{2}{r|}{} &    MAX   & 26.17 & 68.29 & 33.07 & 33.57 & 22.49 & 19.39 &  \\
+% \multicolumn{2}{r|}{} &    MEAN  & 1.05  & 37.11 & $-$4.16 & $-$1.68 & $-$6.06 & $-$5.76 &  \\[2pt]
+%
+% \multicolumn{2}{r|}{} &   MIN   & $-$58.37 & $-$46.72 & $-$83.10 & $-$82.21 & $-$61.07 & $-$63.33 &  \\
+% \multicolumn{2}{r|}{} &   MAX   & 26.17 & 68.29 & 33.07 & 33.57 & 22.49 & 19.39 &  \\
+% \multicolumn{2}{r|}{} &   MEAN  & 1.05  & 26.63 & $-$8.05 & $-$6.11 & $-$8.76 & $-$8.71 &  \\
+        %\\[-10pt]
     \end{tabular}%
     %\\
     %\raggedleft\fakefna\footnotesize Correction value for $\btlyp$ calculation. Others differ in $\ho\gas$ $\zpe$ correction within $1.5~\kmo$.
@@ -2601,56 +2663,184 @@ and this biggest change appears for $\bhlyp$, which is generally not in good
 agreement with the rest of the reaction energies anyway.
 
 Recalling the strong deviations between DFT and $\ccsdtf$ gas phase
-reaction energies, we must admit that we can not know which of
-the DFT reaction eneriges in table \ref{Tab:Ads:React} is close to the truth.
-To still make some qualitative inferences, we chose two approaches. The
-first one is that we highlight the most accurate functional in the
-gas phase for each reaction, cf. Table \ref{Tab:Gas:Reactions}. Since we do not
-know in which cases the D3 correction may be an improvement, we always
-highlight both values for the $\pw$ functional. We already explained that
-there is no evidence for functionals maintaining the accuracy of the gas
-phase results, but at least a functional with strong deficiencies in
-the gas phase is not particularly qualified to a surface reaction either, while
-a more accurate functional in the gas phase has a chance of acceptable results
-for adsorbed molecules. 
+reaction energies, we should not assume any DFT calculation to yield
+ER reaction energies close to the physically correct value. But we know
+that we can decompose an ER reaction energy into a difference between
+adsorption energies and the gas phase reaction energy. We can expect that
+the gas phase reaction is described more accurately by $\ccsdtf$ than by
+any of the DFT functionals. The benchmark in Section \ref{Sec:Bench}, on
+the other hand, gives reason to assume that the adsorption energies, which
+are basically interaction energies between the surface and the adsorbate,
+are described rather accurately by DFT functionals. We do not know which
+functional describes the adsorption best, so we take the average values
+of Table \ref{Tab:Ads:AdsForFuncs}. Our recommendation of reaction
+energy is then the hybrid
 
-The second option for recommendations is an average adsorption energy for each reaction. There is
-also no reason to hope that the process of averaging should help to find
-an accurate value for the reaction energy, especially since the
-$\dft$ gas phase reaction energies were often incongruent with the $\ccsdtf$ data.
+\begin{equation}
+ \erehyb=\Dl\avg + \ere_{\ccsdtf}.
+\end{equation}
+For a reaction $\sur\X+\Y\gas\chemar\sur\Z$, $\Dl\avg$ is
+\begin{equation}
+ \Dl\avg = \avg{_{,\Z}} - \avg{_{,\X}},
+ \label{Ads:DlAds}
+\end{equation}
+with the values of $\avg$ given in Table \ref{Tab:Ads:AdsForFuncs}. 
+
+We do again highlight the functionals that were closest to the $\ccsdtf$
+results for the gas phase by boldface. In the cases where $\pw$ was closest,
+we highlight both $\pw$ and $\pw\dt$. Since the adsorption energy does not vary too 
+strongly between functionals, the functionals usually stay 
+as close to the coupled-cluster results as they did in the gas phase. This
+is clearly visible when comparing the MAD, MIN, MAX and MEAN deviations.
+There are small shifts in approximative power among the functionals,
+the boldface functionals are now not always the best approximations $\erehyb$.
+But this is not really a matter of accuracy, since the change in difference
+to the reference value does only depend on the adsorption energy average $\avg$,
+that is a functional can get closer to $\erehyb$ by over- or underestimating
+its respective $\Dl\eads$ as in \eqref{Ads:DlAds}. This is merely a cancellation
+of error. Therefore, the seemingly increased accuracy particularly in
+$\pw\dt$ results are consequences of the strong deviations from the average
+documented in the previous subsection.
+
+There is therefore nothing new to say about the approximative power of DFT
+functionals to the recommended value. We can only note that it would
+of course also be possible to use a more consistent correction than the simple
+average value, i.e. to decide on a single functional to yield $\Dl\eads$.
+We will not give the values here, but from the results so far we would
+recommend $\btlyp$ to be this functional, since the $\zpe$ correction
+was already determined by $\btlyp$ and since the $\btlyp$ results for
+adsorption energy are closest to the average value when comparing the
+overall MAD in Table \ref{Tab:Ads:AdsForFuncs}. 
+
+% we must admit that we can not know which of
+% the DFT reaction eneriges in table \ref{Tab:Ads:React} is close to the truth.
+% To still make some qualitative inferences, we chose two approaches. The
+% first one is that we highlight the most accurate functional in the
+% gas phase for each reaction, cf. Table \ref{Tab:Gas:Reactions}. Since we do not
+% know in which cases the D3 correction may be an improvement, we always
+% highlight both values for the $\pw$ functional. We already explained that
+% there is no evidence for functionals maintaining the accuracy of the gas
+% phase results, but at least a functional with strong deficiencies in
+% the gas phase is not particularly qualified to a surface reaction either, while
+% a more accurate functional in the gas phase has a chance of acceptable results
+% for adsorbed molecules. 
+% 
+% The second option for recommendations is an average adsorption energy for each reaction. There is
+% also no reason to hope that the process of averaging should help to find
+% an accurate value for the reaction energy, especially since the
+% $\dft$ gas phase reaction energies were often incongruent with the $\ccsdtf$ data.
 %% CHECK: Langer Satz, unsinnig.
 % The sample of reactions is also too small to claim that a functional
 % that is close to the average in most cases should be close to the average
 % value of DFT energies for all surface reactions composed of these molecular
 % species.
 
-But to offer recommendations for reaction energies which may be of further
-use to simulations, it seems reasonable to provide a value that is somewhat
-representative to the data of all functionals. And since there is no
-clear implication which functional may yield energies closest to the actual
-rection energy for each case, the choice of taking a simple mean value comes naturally.
+% But to offer recommendations for reaction energies which may be of further
+% use to simulations, it seems reasonable to provide a value that is somewhat
+% representative to the data of all functionals. And since there is no
+% clear implication which functional may yield energies closest to the actual
+% rection energy for each case, the choice of taking a simple mean value comes naturally.
 
-We can calculate the MAD from the average values, which is minimal for the $\btlyp$ functional.
-With a maximum absolute deviation of $10.37~\kmo$, $\btlyp$ can be seen as not too strongly
-varying.
+% We can calculate the MAD from the average values, which is minimal for the $\btlyp$ functional.
+% With a maximum absolute deviation of $10.37~\kmo$, $\btlyp$ can be seen as not too strongly
+% varying.
 
-Note that neither the average nor the most accurate gas phase functional give recommendations
-of which functional to use for similar reactions. If one follows the gas phase functional
-approach, each new reaction has to be evaluated by a gas phase test before a functional
-for the surface reaction can be chosen. As for the average, the small set of
-reactions can not be representative of the large variety of surface reactions,
-even if one only allowed for molecular species composed of H and O. 
+% Note that neither the average nor the most accurate gas phase functional give recommendations
+% of which functional to use for similar reactions. If one follows the gas phase functional
+% approach, each new reaction has to be evaluated by a gas phase test before a functional
+% for the surface reaction can be chosen. As for the average, the small set of
+% reactions can not be representative of the large variety of surface reactions,
+% even if one only allowed for molecular species composed of H and O. 
 
-After these preliminary comments on functional recommendations, we want to look at the
-specific reactions. The difference between a surface reaction and a gas phase reaction
-for the reactions we study is exactly the difference between the adsorption energy
-of the adsorbed product and the adsorbed educt. Therefore, the similar adsorption
-energies of $\sur\ho$, $\sur\hto$ and $\sur\htot$ cause similar reaction energies
-for the first three reactions in the gas phase as well as on the surface. 
+Since we assume that $\erehyb$ is reasonably accurate, we can now compare
+different reactions. The adsorption energies of $\sur\ho$, $\sur\hto$ and
+$\sur\htot$ differ by less than $2~\kmo$ among one another. Therefore,
+the first three surface reactions must have similar reaction energies
+to their gas phase counterparts. They become more exothermic by between
+$-1.48$ and $-3.58~\kmo$. The only reaction to become more endothermic
+is \eqref{Surf:HO2+H->H2O2}, the difference being $+16.89~\kmo$. This
+is because $\hot$ is very strongly
+bound to the surface. With that, it is also no surprise that those
+reactions that have $\hot$ as a product are much more exothermic, especially
+reaction \eqref{Surf:3O2+H->HO2}, where the reactant is the only
+very weakly bound $\sur\tripot$. This reaction is more exothermic
+by $-53.02~\kmo$. This is also a special case where the bad description
+of $\sur\tripot$ brings $\pw\dt$ close to the $\ccsdtf$ results.
+
+We can also see a big energy difference between the related reactions
+\eqref{Surf:HO+O->HO2} and \eqref{Surf:O+HO->HO2}. \eqref{Surf:HO+O->HO2}
+is $+21.95~\kmo$ more endothermic than \eqref{Surf:O+HO->HO2}. This, too,
+is the difference in adsorption energy between the strongly bound $\ho$
+and the weaker bound $\tripo$.
 
 \section{Possible Application}
+
+The data we offered so far was mainly energy differences. Of course, the
+surface model can be used to derive other data relevant to astrochemistry,
+such as reaction, diffusion or tunneling rates. These could be further used
+as simulation input. We will not go into detail here but give a small
+outlook to what other investigations are possible on the surface. The research
+in this section is not meant to be complete in any way.
+
 \subsection{Binding Sites}
+\newcommand\rmax{\enmat{r_{\te{max}}}}
+\newcommand\rmin{\enmat{r_{\te{min}}}}
 \label{Sec:Adv:Binding}
+
+
+In the previous calculations, we did not investigate how strongly the optimum
+geometry for an adsorption is dependent on an initial geometry and if there
+are other local energy minima that molecules adsorbing to the surface can occupy.
+It is well possible, especially for those molecules that have additional orientational
+degrees of freedom, that our search algorithm did not even find the most attractive
+geometry possible.
+
+In this binding site study, we want to look a little deeper into these problems. For
+simplicity, we choose the $\sur\tripo$ system. $\tripo$ has spherical symmetry, 
+therefore the binding energy does only depend on the position of $\tripo$ in space
+(and the corresponding surface deformation, which we neglect here). 
+The average binding energy for
+all functionals was \mbox{$\avg{^{\te{,ZPE}}}=-12.35~\kmo$}. The $\zpe$ correction was
+\mbox{$\Dl\eall_{\btlyp}=2.69~\kmo$}, which means an uncorrected binding energy
+of \mbox{$\avg=-15.04~\kmo$}.
+
+\begin{figure}[ht]
+%\hskip-2cm
+\includegraphics[width=.24\textwidth]{./img/SiteSnapshotMany.png}
+\includegraphics[width=.24\textwidth]{./img/SiteSnapshotOriginal.png}
+\caption{The initial guesses for binding sites. The left is a visualization of the function
+used, the right is the actual sites used as initial geometry. The molecules
+below are the central ring.}
+\label{Fig:Adv:BindingSitesGuess}
+\end{figure}
+
+We used the $\bhlyp$ functional with a $\zpe$ correction free adsorption energy 
+of $-7.85~\kmo$, which is the weakest bound energy. For this energy,
+there is reason to assume that there could be a more attractive binding site
+somewhere in the central ring. To arrive at different binding sites, we used
+a function to create initial data on the ring. Let the center of mass of the oxygen
+atoms of the central ring be located at the origin $(0,0,0)^{\te T}$ and let $y$ be
+normal to the Fletcher surface. We can transform $(x,z)$ in polar coordinates with
+$x=r \cos \phi$, $z=r \sin\phi$, $0 \leq r \leq \rmax$, $0 \leq \phi<2\pi$. The direction of the
+unit vector $\bo e_x$ (that is $\bo e_r$ for $\phi=0$) and the value of $r_{\te{max}}$ are
+chosen to ensure that there is an oxygen atom at position $(\rmax,y < 0,0)^{\te T}$. In
+Figure \ref{Fig:Adv:BindingSitesGuess}, the vector could be pointing towards the oxygen
+%% CHECK: Kann man auch genauer bestimmen.
+atom in the front. We found $\rmax=2.4~\Ang$.
+
+In this coordinate system, we used the initial position
+\begin{equation}
+ y(r,\phi)=y_0+\rb{\vphantom{\frac 1 2}  A-B\cos\rb{3\phi}} \sin^2\rb{\frac{r}{\rmax}\frac\pi 2 }.
+\end{equation}
+This initial guess is
+just to avoid unphysical starting positions with too far-off or too close $\tripo$
+atoms. To that end, the parameters $y_0$, $A$ and $B$ are included, which we chose to be
+$y_0=1.5~\Ang$, $A=1.5~\Ang$, $B=0.8~\Ang$.
+
+We covered the area $(r,\phi) \in [0,\rmax] \times [0, 2\pi)$ with aequidistantly
+distributed points according to $r_k=\rmin+k(\rmax-\rmin)/(N-1)$ and $\phi_l=2\pi l/(M-1)$,
+$k,l \geq 0$, with $\rmin=0.4~\Ang$ and point numbers $N=5$, $M=15$, leading
+to a total of 75 initial geometries.  
 
 
 \subsection{Transition State and IRC}
