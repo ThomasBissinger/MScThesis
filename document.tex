@@ -2379,7 +2379,7 @@ are only very weakly bound to the surface.
     $\sur\singot$ & $-$5.95 & $-$7.51 & $-$11.44 & $-$9.44 & $-$7.44 & $-$12.53 & $-9.05$ & \\
     $\sur\tripot$ & 0.45  & $-$0.65 & $-$1.52 & $-$0.52 & 26.68 & 7.04 & $-0.56^\dagger$ & $-$7.52\fakefnd\\[2pt]
     \hline \hline
-    & & & & &   \\[-10pt]
+    & & & & & &  \\[-10pt]
     MAD   & 2.06  & 1.93  & 1.74  & 2.29  & 4.17  & 4.85   \\
     MIN   & -1.13 & -0.14 & -3.42 & -6.72 & -0.50 & -8.28  \\
     MAX   & 3.58  & 7.19  & 1.71  & 5.02  & 27.23 & 7.60   \\
@@ -2831,6 +2831,7 @@ atom in the front. We found $\rmax=2.4~\Ang$.
 In this coordinate system, we used the initial position
 \begin{equation}
  y(r,\phi)=y_0+\rb{\vphantom{\frac 1 2}  A-B\cos\rb{3\phi}} \sin^2\rb{\frac{r}{\rmax}\frac\pi 2 }.
+ \label{Adv:InitPos}
 \end{equation}
 This initial guess is
 just to avoid unphysical starting positions with too far-off or too close $\tripo$
@@ -2838,14 +2839,40 @@ atoms. To that end, the parameters $y_0$, $A$ and $B$ are included, which we cho
 $y_0=1.5~\Ang$, $A=1.5~\Ang$, $B=0.8~\Ang$.
 
 We covered the area $(r,\phi) \in [0,\rmax] \times [0, 2\pi)$ with aequidistantly
-distributed points according to $r_k=\rmin+k(\rmax-\rmin)/(N-1)$ and $\phi_l=2\pi l/(M-1)$,
-$k,l \geq 0$, with $\rmin=0.4~\Ang$ and point numbers $N=5$, $M=15$, leading
-to a total of 75 initial geometries.  
+distributed points according to $r_k=\rmin+k(\rmax-\rmin)/(N-1)$ and $\phi_l=2\pi l/M$,
+$0 \leq k < N$ and $0 \leq l < M$, with $\rmin=0.4~\Ang$ and point numbers
+$N=5$, $M=15$, leading to a total of 75 initial geometries. The aequidistant
+distrubtion is chosen to cover as many local minima on the $x-z$ plane as
+possible.
 
+The oxygen atoms are added to the optimum geometry of the bare surface, where
+the central ring is slightly distorted.
+
+\begin{figure}[ht]
+%\hskip-2cm
+\includegraphics[width=.49\textwidth]{./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf}
+\caption{Population of optimum geometry energies. Of the 75 initial guesses
+according to \eqref{Adv:InitPos}, 71 did converge to a minimum. One
+geometry at $E=-5.01~\kmo$ is not included. Energies in $\kmo$.}
+\label{Fig:Adv:BindingSitesEnergies}
+\end{figure}
+
+We then used the $\dlfind$ algorithm to find new energy minima. The resulting
+energies are plotted in Figure \ref{Fig:Adv:BindingSitesEnergies}. One can see
+that most prominently, two adsorption energy values are found. One around 
+$-8.4~\kmo$ and one around $-7.85~\kmo$. In our first study, we only found
+the less attractive geometry. As a worst case, we found an energy value of
+$-5.01~\kmo$. This minimum is probably not very stable, it is only assumed by a
+single computation, all others have energies of at least $-6.70~\kmo$. The
+strongest adsorption of $-8.64~\kmo$ is also reached by only a single
+calculation.
+
+ 
 
 \subsection{Transition State and IRC}
 \label{Sec:Adv:IRC}
 %% CHECK: Theory entry
+
 
 \newpage
 

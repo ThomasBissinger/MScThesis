@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  12 JAN 2016 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  19 JAN 2016 11:53
 entering extended mode
 **./document.tex
 (document.tex
@@ -1387,26 +1387,26 @@ LaTeX Warning: Unused global option(s):
 (document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 159.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 160.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 160.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 159.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 159.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 160.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
@@ -1428,7 +1428,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 159.
+(lastpage)             ! on input line 160.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
@@ -1438,63 +1438,63 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 159.
-Package gensymb Info: Math companion symbols declared on input line 159.
-LaTeX Info: Redefining \degree on input line 159.
-LaTeX Info: Redefining \celsius on input line 159.
+(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 160.
+Package gensymb Info: Math companion symbols declared on input line 160.
+LaTeX Info: Redefining \degree on input line 160.
+LaTeX Info: Redefining \celsius on input line 160.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 159.
-LaTeX Info: Redefining \ohm on input line 159.
-Package gensymb Info: Using \textohm for \ohm on input line 159.
-Package gensymb Info: Using \textmu for \micro on input line 159.
+erthousand on input line 160.
+LaTeX Info: Redefining \ohm on input line 160.
+Package gensymb Info: Using \textohm for \ohm on input line 160.
+Package gensymb Info: Using \textmu for \micro on input line 160.
 
 ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 159.
+ on input line 160.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
 LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 17
-6.
+7.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.fd"
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 17
-6.
+7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 17
-6.
+7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    Try loading font information for OMX+psycm on input line 17
-6.
+7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
-LaTeX Font Info:    Try loading font information for U+msa on input line 176.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+LaTeX Font Info:    Try loading font information for U+msa on input line 177.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 176.
+LaTeX Font Info:    Try loading font information for U+msb on input line 177.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 176.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 177.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
@@ -1504,661 +1504,304 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 {C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--221
+Underfull \hbox (badness 10000) in paragraph at lines 222--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--221
+Underfull \hbox (badness 10000) in paragraph at lines 222--222
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 225.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 226.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 225.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 226.
 
 Package natbib Warning: Citation `AtomsInStars' on page 2 undefined on input li
-ne 225.
+ne 226.
 
 
 Package natbib Warning: Citation `DustMeasure' on page 2 undefined on input lin
-e 230.
+e 231.
 
 [2
 
 
 
 ]
-Underfull \hbox (badness 1721) in paragraph at lines 337--343
+
+Package natbib Warning: Citation `EleyRideal' on page 3 undefined on input line
+ 333.
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 349--354
 []\OT1/ptm/m/n/10 Positive $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 means an \O
 T1/ptm/m/it/10 en-dother-mic\OT1/ptm/m/n/10 , neg-a-tive $\OML/ptmcm/m/it/10 E[
 ]$ \OT1/ptm/m/n/10 an
  []
 
-[3]
+[3] [4]
 
-Package natbib Warning: Citation `HohenbergKohn' on page 4 undefined on input l
-ine 489.
+Package natbib Warning: Citation `HohenbergKohn' on page 5 undefined on input l
+ine 533.
 
 
-Package natbib Warning: Citation `KohnSham' on page 4 undefined on input line 4
-97.
+Package natbib Warning: Citation `KohnSham' on page 5 undefined on input line 5
+41.
 
-[4]
 
 Package natbib Warning: Citation `Becke1993' on page 5 undefined on input line 
-565.
+609.
 
 
-Package natbib Warning: Citation `NWCHEM' on page 5 undefined on input line 583
+Package natbib Warning: Citation `NWCHEM' on page 5 undefined on input line 627
 .
 
 [5]
 
 Package natbib Warning: Citation `def2Basis' on page 6 undefined on input line 
-619.
+663.
 
 
 Package natbib Warning: Citation `Kryachko' on page 6 undefined on input line 6
-51.
+95.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 687--689
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 731--733
 [][]\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
  []
 
 ===== Image 'TikzPics/Theo/FigTheoTIP3Geo' is up-to-date. ======
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 739.
-[6 <./TikzPics/Theo/FigTheoTIP3Geo.pdf>]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 783.
 
-Package natbib Warning: Citation `CHARMM' on page 7 undefined on input line 769
+Package natbib Warning: Citation `CHARMM' on page 7 undefined on input line 813
 .
 
+[7 <./TikzPics/Theo/FigTheoTIP3Geo.pdf>]
 ===== Image 'TikzPics/Theo/Fig.Theo.PES' is up-to-date. ======
 
-Overfull \hbox (8.45982pt too wide) detected at line 852
+Overfull \hbox (8.45982pt too wide) detected at line 895
 []
  []
 
 
-Package natbib Warning: Citation `DimerMethod' on page 7 undefined on input lin
-e 869.
+Package natbib Warning: Citation `DimerMethod' on page 8 undefined on input lin
+e 912.
 
-[7 <./TikzPics/Theo/Fig.Theo.PES.pdf>]
 
 Package natbib Warning: Citation `CCSDTF12' on page 8 undefined on input line 9
-25.
+68.
 
 
-Package natbib Warning: Citation `VTZ' on page 8 undefined on input line 925.
+Package natbib Warning: Citation `VTZ' on page 8 undefined on input line 968.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 928.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 971.
 
-Package natbib Warning: Citation `MRCIF12' on page 8 undefined on input line 92
-8.
+Package natbib Warning: Citation `MRCIF12' on page 8 undefined on input line 97
+1.
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 928--928
+Underfull \hbox (badness 3547) in paragraph at lines 971--971
 [][]\OT1/ptm/m/n/8 In the $[]$ case, a first min-i-mum was cal-cu-lated at the
  []
 
 
 Package natbib Warning: Citation `Multiref' on page 8 undefined on input line 9
-29.
+72.
 
 
 Package natbib Warning: Citation `DavidsonCorrection' on page 8 undefined on in
-put line 936.
+put line 979.
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 933--949
+Underfull \hbox (badness 7012) in paragraph at lines 976--992
 [][]\OT1/ptm/m/n/10 At each op-ti-mum ge-om-e-try, an ad-di-tional cal-cu-la-ti
 on
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 933--949
+Underfull \hbox (badness 3148) in paragraph at lines 976--992
 \OT1/ptm/m/n/10 was car-ried out to find a CP cor-rected en-ergy. For
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 933--949
+Underfull \hbox (badness 2351) in paragraph at lines 976--992
 $[]\OML/ptmcm/m/it/10 =[]\OT1/ptmcm/m/n/10 12$ \OT1/ptm/m/n/10 level of the-ory
 , while for the
  []
 
+[8 <./TikzPics/Theo/Fig.Theo.PES.pdf>]
 ===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3' is up-to-date. ======
-[8]
-Underfull \hbox (badness 2790) in paragraph at lines 1038--1044
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 1081--1087
 $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
 [] of the sys-
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 1038--1044
+Underfull \hbox (badness 3849) in paragraph at lines 1081--1087
 \OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 1038--1044
+Underfull \hbox (badness 1655) in paragraph at lines 1081--1087
 \OT1/ptm/m/n/10 sis set, and $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 is the CP
  cor-rected in-ter-ac-tion en-ergy
  []
 
 ===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.D3' is up-to-date. ======
-[9 <./TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.pdf> <./TikzPics/Benchmark/Fig.Be
-nch.H2O+H.D3.pdf>]
-Underfull \hbox (badness 2582) in paragraph at lines 1135--1142
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.pdf>]
+Underfull \hbox (badness 2582) in paragraph at lines 1178--1185
 \OT1/ptm/m/n/10 op-ti-mi-sa-tions. Here, the at-trac-tion is con-sid-ered close
 
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 1135--1142
+Underfull \hbox (badness 1097) in paragraph at lines 1178--1185
 \OT1/ptm/m/n/10 to be-ing re-pul-sive, with in-ter-ac-tion en-ergy val-ues arou
 nd
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1135--1142
+Underfull \hbox (badness 1231) in paragraph at lines 1178--1185
 []\OT1/ptm/m/n/10 . While the re-sult-ing de-vi-a-tion of
  []
 
 ===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare' is up-to-date. =
 =====
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[10 <./TikzPics/Benchmark/Fig.Bench.H2O+H.D3.pdf> <./TikzPics/Benchmark/Fig.Ben
+ch.H2O+H2O.TZVPCompare.pdf>]
 ===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare' is up-to-date. 
 ======
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare' is up-to-date. ===
+===
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 3000) has occurred while \output is active []
-
- [10 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare.pdf>]
-===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare' is up-to-date. ===
-===
-[11 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.pdf> <./TikzPics/Bench
-mark/Fig.Bench.H2O+O.FuncCompare.pdf>] [12]
-Underfull \hbox (badness 3579) in paragraph at lines 1715--1720
+[11 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.pdf>] [12 <./TikzPics/
+Benchmark/Fig.Bench.H2O+O.FuncCompare.pdf>]
+Underfull \hbox (badness 3579) in paragraph at lines 1760--1765
 [][]\OT1/ptm/m/n/10 We cal-cu-lated DFT en-er-gies in the $[]$ ba-sis
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 1715--1720
+Underfull \hbox (badness 1735) in paragraph at lines 1760--1765
 \OT1/ptm/m/n/10 set with the $[]$, $[]$, $[]$, $[]$, $[]$
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 1715--1720
+Underfull \hbox (badness 5050) in paragraph at lines 1760--1765
 \OT1/ptm/m/n/10 and $[][]$ func-tion-als. We did also cal-cu-late
  []
 
-
-Underfull \vbox (badness 1389) has occurred while \output is active []
-
- [13]
-<./img/FletcherAboveGlossyNoCueing.png, id=175, 1124.2pt x 1142.2675pt>
+[13] <./img/FletcherAboveGlossyNoCueing.png, id=175, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAboveGlossyNoCueing.png Graphic file (type png)
 
 <use ./img/FletcherAboveGlossyNoCueing.png>
 Package pdftex.def Info: ./img/FletcherAboveGlossyNoCueing.png used on input li
-ne 1910.
+ne 1953.
 (pdftex.def)             Requested size: 245.8296pt x 249.76582pt.
  [14]
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Adsorption/Fig.Ads.QMMM" "\def\tikzexternal
-realjob{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
-
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ads
-orption/Fig.Ads.QMMM" "\def\tikzexternalrealjob{document}\input{document}")...d
-isabled (restricted).
-
-\openout3 = `document.auxlock'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Adsorption/Fig.Ads.QMMM" "\def\tikzexternalrea
-ljob{document}\input{document}"' did NOT result in a usable output file 'TikzPi
-cs/Adsorption/Fig.Ads.QMMM' (expected one of .pdf:.jpg:.jpeg:.png:). Please ver
-ify that you have enabled system calls. For pdflatex, this is 'pdflatex -shell-
-escape'. Sometimes it is also named 'write 18' or something like that. Or maybe
- the command simply failed? Error messages can be found in 'TikzPics/Adsorption
-/Fig.Ads.QMMM.log'. If you continue now, I'll try to typeset the picture.
+<TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=179, 114.92537pt x 
+51.21533pt>
+File: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf Graphic file (type
+ pdf)
+ <use TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>
+Package pdftex.def Info: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf
+ used on input line 2010.
+(pdftex.def)             Requested size: 512.1496pt x 228.33336pt.
 
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2007 \end{tikzpicture}
-                        
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
+[15]
 
-! Undefined control sequence.
-<argument> 270 + \phivec 
-                         
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Reference `Sec:Ads:Surface' on page 16 undefined on input line 2
+111.
 
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \raarot 
-                   *\raaeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rabrot 
-                   *\rbaeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \racrot 
-                   *\rcaeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \raarot 
-                   *\rabeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rabrot 
-                   *\rbbeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \racrot 
-                   *\rcbeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \raarot 
-                   *\raceul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rabrot 
-                   *\rbceul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \racrot 
-                   *\rcceul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbarot 
-                   *\raaeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbbrot 
-                   *\rbaeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbcrot 
-                   *\rcaeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbarot 
-                   *\rabeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbbrot 
-                   *\rbbeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbcrot 
-                   *\rcbeul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbarot 
-                   *\raceul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbbrot 
-                   *\rbceul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> \rbcrot 
-                   *\rcceul 
-l.2007 \end{tikzpicture}
-                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.2007 \end{tikzpicture}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[15 <./img/FletcherAboveGlossyNoCueing.png>]
+[16 <./img/FletcherAboveGlossyNoCueing.png>]
 ===== Image 'TikzPics/Adsorption/Fig.Ads.QMMMConvergence' is up-to-date. ======
 
 
-Overfull \hbox (2.8308pt too wide) in paragraph at lines 2113--2136
+Overfull \hbox (2.8308pt too wide) in paragraph at lines 2136--2159
  [][][] 
  []
 
-[16 <./TikzPics/Adsorption/Fig.Ads.QMMMConvergence.pdf>]
-Underfull \hbox (badness 1132) in paragraph at lines 2293--2308
-[][]\OT1/ptm/m/n/10 Talking about the dif-fer-ences be-tween $[]$ cor-rected ad
--
- []
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 2560--2572
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>]
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [18 <./TikzPics/Adsorption/Fig.Ads.QMMMConvergence.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Underfull \hbox (badness 10000) in paragraph at lines 2665--2678
 [][]\OT1/ptm/m/n/10 Recalling the strong de-vi-a-tions be-tween DFT and
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 2560--2572
-\OT1/ptm/m/n/10 en-er-gies were of-ten in-con-gru-ent with the $[]$
+Underfull \hbox (badness 2903) in paragraph at lines 2665--2678
+$[]$ \OT1/ptm/m/n/10 gas phase re-ac-tion en-er-gies, we should
  []
 
-[19] (document.bbl
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
+[20]
+Underfull \hbox (badness 1303) in paragraph at lines 2791--2797
+[]\OT1/ptm/m/n/10 In the pre-vi-ous cal-cu-la-tions, we did not in-ves-ti-gate 
+how
+ []
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+[21] <./img/SiteSnapshotMany.png, id=226, 1124.2pt x 1142.2675pt>
+File: ./img/SiteSnapshotMany.png Graphic file (type png)
+
+<use ./img/SiteSnapshotMany.png>
+Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 2809.
+(pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
+
+<./img/SiteSnapshotOriginal.png, id=227, 1124.2pt x 1142.2675pt>
+File: ./img/SiteSnapshotOriginal.png Graphic file (type png)
+
+<use ./img/SiteSnapshotOriginal.png>
+Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 2810
+.
+(pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
+
+<./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pd
+f, id=228, 237.97708pt x 198.2336pt>
+File: ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
+on.pdf Graphic file (type pdf)
+
+<use ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributio
+n.pdf>
+Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
+ingEnergyDistribution.pdf used on input line 2853.
+(pdftex.def)             Requested size: 250.95612pt x 209.04976pt.
+ [22 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png> <./TikzPics/
+TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
+(document.bbl
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 1668) in paragraph at lines 19--22
@@ -2176,39 +1819,43 @@ Underfull \hbox (badness 5787) in paragraph at lines 70--71
 [][]\OT1/ptm/m/n/10 ``Chemshell, a com-pu-ta-tional chem-istry shell, see
  []
 
-[20])
+[23])
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[21
+[24
 
-] (document.aux) ) 
+] (document.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 33874 strings out of 493634
- 790372 string characters out of 3141310
- 926418 words of memory out of 3000000
- 36635 multiletter control sequences out of 15000+200000
+ 33784 strings out of 493634
+ 788559 string characters out of 3141310
+ 931418 words of memory out of 3000000
+ 36544 multiletter control sequences out of 15000+200000
  89836 words of font info for 187 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,16n,77p,10382b,689s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
-r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex
-9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
-zapfchan/uzcmi8a.pfb>
-Output written on document.pdf (21 pages, 510701 bytes).
+ 55i,16n,77p,10382b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
+utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a
+.pfb>
+Output written on document.pdf (24 pages, 2071799 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
+ 282 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

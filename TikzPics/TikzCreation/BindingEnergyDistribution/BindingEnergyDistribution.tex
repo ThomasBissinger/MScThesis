@@ -95,17 +95,113 @@ dist
 \begin{axis}[
     ybar,
     ymin=0,
+    xmin=-9,
+    xmax=-6.6,
+    ylabel={number of results with energy $E$},
+    xlabel={O adsorption energy $E$ / kJ/mol},
+    bar shift=3pt,
+    bar width=10pt,
+    xtick={-9,-8.5,...,-5},
 %    colormap/jet,
 %   cycle list name=color list
 ]
-\addplot +[
-    colormap/jet,
-    hist={
-        bins=30,
-        data min=-8.7,
-        data max=-6.5,
-    }   
-] table [y index=0] {energy.csv};
+%% HISTOGRAM 30
+\addplot[red!20!black,fill=red!46.17!blue] coordinates {(-8.72413793103448275864,1)};
+\addplot[red!20!black,fill=red!72.26!blue] coordinates {(-8.58620689655172413796,6)};
+\addplot[red!20!black,fill=red!100!blue] coordinates {(-8.44827586206896551728,22)};
+\addplot[red!20!black,fill=red!79.97!blue] coordinates {(-8.31034482758620689660,9)};
+\addplot[red!20!black,fill=red!65.29!blue] coordinates {(-8.17241379310344827592,4)};
+\addplot[red!20!black,fill=red!97.64!blue] coordinates {(-7.89655172413793103456,20)};
+\addplot[red!20!black,fill=red!54.91!blue] coordinates {(-7.75862068965517241388,2)};
+\addplot[red!20!black,fill=red!46.17!blue] coordinates {(-7.62068965517241379320,1)};
+\addplot[red!20!black,fill=red!46.17!blue] coordinates {(-7.20689655172413793116,1)};
+\addplot[red!20!black,fill=red!46.17!blue] coordinates {(-6.93103448275862068980,1)};
+\addplot[red!20!black,fill=red!60.76!blue] coordinates {(-6.79310344827586206912,3)};
+\addplot[red!20!black,fill=red!46.17!blue] coordinates {(-5.13793103448275862096,1)};
+
+%HISTOGRAM90
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-8.68539325842696629216,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-8.55056179775280898880,1)};
+%\addplot[red!20!black,fill=red!14.28!blue] coordinates {(-8.50561797752808988768,2)};
+%\addplot[red!20!black,fill=red!100.0!blue] coordinates {(-8.46067415730337078656,14)};
+%\addplot[red!20!black,fill=red!78.57!blue] coordinates {(-8.41573033707865168544,11)};
+%\addplot[red!20!black,fill=red!14.28!blue] coordinates {(-8.32584269662921348320,2)};
+%\addplot[red!20!black,fill=red!35.71!blue] coordinates {(-8.28089887640449438208,5)};
+%\addplot[red!20!black,fill=red!14.28!blue] coordinates {(-8.23595505617977528096,2)};
+%\addplot[red!20!black,fill=red!14.28!blue] coordinates {(-8.19101123595505617984,2)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-8.10112359550561797760,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-8.05617977528089887648,1)};
+%\addplot[red!20!black,fill=red!92.85!blue] coordinates {(-7.87640449438202247200,13)};
+%\addplot[red!20!black,fill=red!28.57!blue] coordinates {(-7.83146067415730337088,4)};
+%\addplot[red!20!black,fill=red!28.57!blue] coordinates {(-7.78651685393258426976,4)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-7.69662921348314606752,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-7.60674157303370786528,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-7.15730337078651685408,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-6.93258426966292134848,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-6.79775280898876404512,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-6.75280898876404494400,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-6.70786516853932584288,1)};
+%\addplot[red!20!black,fill=red!7.142!blue] coordinates {(-5.04494382022471910144,1)};
+
+%% HISTOGRAM 60
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-8.66101694915254237290,1)};
+%\addplot[red!20!black,fill=red!18.18!blue] coordinates {(-8.52542372881355932206,4)};
+%\addplot[red!20!black,fill=red!100.0!blue] coordinates {(-8.45762711864406779664,22)};
+%\addplot[red!20!black,fill=red!9.090!blue] coordinates {(-8.38983050847457627122,2)};
+%\addplot[red!20!black,fill=red!18.18!blue] coordinates {(-8.32203389830508474580,4)};
+%\addplot[red!20!black,fill=red!22.72!blue] coordinates {(-8.25423728813559322038,5)};
+%\addplot[red!20!black,fill=red!9.090!blue] coordinates {(-8.18644067796610169496,2)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-8.11864406779661016954,1)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-8.05084745762711864412,1)};
+%\addplot[red!20!black,fill=red!54.54!blue] coordinates {(-7.91525423728813559328,12)};
+%\addplot[red!20!black,fill=red!27.27!blue] coordinates {(-7.84745762711864406786,6)};
+%\addplot[red!20!black,fill=red!13.63!blue] coordinates {(-7.77966101694915254244,3)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-7.71186440677966101702,1)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-7.64406779661016949160,1)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-7.16949152542372881366,1)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-6.96610169491525423740,1)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-6.83050847457627118656,1)};
+%\addplot[red!20!black,fill=red!9.090!blue] coordinates {(-6.76271186440677966114,2)};
+%\addplot[red!20!black,fill=red!4.545!blue] coordinates {(-5.06779661016949152564,1)};
+
+%\addplot[black,fill=black] coordinates {(-8.44827586206896551728,22)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-9.00000000000000000000, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-8.86206896551724137932, 0)};
+%\addplot[red!20!black,fill=red!4.54545454545454545400!white] coordinates {(-8.72413793103448275864, 1)};
+%\addplot[red!20!black,fill=red!27.27272727272727272700!white] coordinates {(-8.58620689655172413796, 6)};
+%\addplot[red!20!black,fill=red!40.90909090909090909000!white] coordinates {(-8.31034482758620689660, 9)};
+%\addplot[red!20!black,fill=red!18.18181818181818181800!white] coordinates {(-8.17241379310344827592, 4)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-8.03448275862068965524, 0)};
+%\addplot[red!20!black,fill=red!90.90909090909090909000!white] coordinates {(-7.89655172413793103456, 20)};
+%\addplot[red!20!black,fill=red!9.09090909090909090900!white] coordinates {(-7.75862068965517241388, 2)};
+%\addplot[red!20!black,fill=red!4.54545454545454545400!white] coordinates {(-7.62068965517241379320, 1)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-7.48275862068965517252, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-7.34482758620689655184, 0)};
+%\addplot[red!20!black,fill=red!4.54545454545454545400!white] coordinates {(-7.20689655172413793116, 1)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-7.06896551724137931048, 0)};
+%\addplot[red!20!black,fill=red!4.54545454545454545400!white] coordinates {(-6.93103448275862068980, 1)};
+%\addplot[red!20!black,fill=red!13.63636363636363636300!white] coordinates {(-6.79310344827586206912, 3)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-6.65517241379310344844, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-6.51724137931034482776, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-6.37931034482758620708, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-6.24137931034482758640, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-6.10344827586206896572, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-5.96551724137931034504, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-5.82758620689655172436, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-5.68965517241379310368, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-5.55172413793103448300, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-5.41379310344827586232, 0)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-5.27586206896551724164, 0)};
+%\addplot[red!20!black,fill=red!4.54545454545454545400!white] coordinates {(-5.13793103448275862096, 1)};
+%\addplot[red!20!black,fill=red!0!white] coordinates {(-5.00000000000000000028, 0)};
+%\addplot +[
+%    colormap/jet,
+%    hist={
+%        bins=30,
+%        data min=-8.7,
+%        data max=-6.5,
+%    }   
+%] table [y index=0] {energy.csv};
 \end{axis}
 \end{tikzpicture}
 \end{document}
