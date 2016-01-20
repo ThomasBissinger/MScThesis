@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  19 JAN 2016 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  20 JAN 2016 15:57
 entering extended mode
 **./document.tex
 (document.tex
@@ -1540,10 +1540,10 @@ e 231.
 ]
 
 Package natbib Warning: Citation `EleyRideal' on page 3 undefined on input line
- 333.
+ 337.
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 349--354
+Underfull \hbox (badness 1721) in paragraph at lines 353--358
 []\OT1/ptm/m/n/10 Positive $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 means an \O
 T1/ptm/m/it/10 en-dother-mic\OT1/ptm/m/n/10 , neg-a-tive $\OML/ptmcm/m/it/10 E[
 ]$ \OT1/ptm/m/n/10 an
@@ -1552,91 +1552,91 @@ T1/ptm/m/it/10 en-dother-mic\OT1/ptm/m/n/10 , neg-a-tive $\OML/ptmcm/m/it/10 E[
 [3] [4]
 
 Package natbib Warning: Citation `HohenbergKohn' on page 5 undefined on input l
-ine 533.
+ine 537.
 
 
 Package natbib Warning: Citation `KohnSham' on page 5 undefined on input line 5
-41.
+45.
 
 
 Package natbib Warning: Citation `Becke1993' on page 5 undefined on input line 
-609.
+613.
 
 
-Package natbib Warning: Citation `NWCHEM' on page 5 undefined on input line 627
+Package natbib Warning: Citation `NWCHEM' on page 5 undefined on input line 631
 .
 
 [5]
 
 Package natbib Warning: Citation `def2Basis' on page 6 undefined on input line 
-663.
+667.
 
 
 Package natbib Warning: Citation `Kryachko' on page 6 undefined on input line 6
-95.
+99.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 731--733
+Underfull \hbox (badness 10000) in paragraph at lines 735--737
 [][]\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
  []
 
 ===== Image 'TikzPics/Theo/FigTheoTIP3Geo' is up-to-date. ======
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 783.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 787.
 
-Package natbib Warning: Citation `CHARMM' on page 7 undefined on input line 813
+Package natbib Warning: Citation `CHARMM' on page 7 undefined on input line 817
 .
 
 [7 <./TikzPics/Theo/FigTheoTIP3Geo.pdf>]
 ===== Image 'TikzPics/Theo/Fig.Theo.PES' is up-to-date. ======
 
-Overfull \hbox (8.45982pt too wide) detected at line 895
+Overfull \hbox (8.45982pt too wide) detected at line 899
 []
  []
 
 
 Package natbib Warning: Citation `DimerMethod' on page 8 undefined on input lin
-e 912.
+e 916.
 
 
 Package natbib Warning: Citation `CCSDTF12' on page 8 undefined on input line 9
-68.
+72.
 
 
-Package natbib Warning: Citation `VTZ' on page 8 undefined on input line 968.
+Package natbib Warning: Citation `VTZ' on page 8 undefined on input line 972.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 971.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 975.
 
 Package natbib Warning: Citation `MRCIF12' on page 8 undefined on input line 97
-1.
+5.
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 971--971
+Underfull \hbox (badness 3547) in paragraph at lines 975--975
 [][]\OT1/ptm/m/n/8 In the $[]$ case, a first min-i-mum was cal-cu-lated at the
  []
 
 
 Package natbib Warning: Citation `Multiref' on page 8 undefined on input line 9
-72.
+76.
 
 
 Package natbib Warning: Citation `DavidsonCorrection' on page 8 undefined on in
-put line 979.
+put line 983.
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 976--992
+Underfull \hbox (badness 7012) in paragraph at lines 980--996
 [][]\OT1/ptm/m/n/10 At each op-ti-mum ge-om-e-try, an ad-di-tional cal-cu-la-ti
 on
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 976--992
+Underfull \hbox (badness 3148) in paragraph at lines 980--996
 \OT1/ptm/m/n/10 was car-ried out to find a CP cor-rected en-ergy. For
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 976--992
+Underfull \hbox (badness 2351) in paragraph at lines 980--996
 $[]\OML/ptmcm/m/it/10 =[]\OT1/ptmcm/m/n/10 12$ \OT1/ptm/m/n/10 level of the-ory
 , while for the
  []
@@ -1647,18 +1647,18 @@ $[]\OML/ptmcm/m/it/10 =[]\OT1/ptmcm/m/n/10 12$ \OT1/ptm/m/n/10 level of the-ory
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 1081--1087
+Underfull \hbox (badness 2790) in paragraph at lines 1085--1091
 $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
 [] of the sys-
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 1081--1087
+Underfull \hbox (badness 3849) in paragraph at lines 1085--1091
 \OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 1081--1087
+Underfull \hbox (badness 1655) in paragraph at lines 1085--1091
 \OT1/ptm/m/n/10 sis set, and $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 is the CP
  cor-rected in-ter-ac-tion en-ergy
  []
@@ -1668,19 +1668,19 @@ Underfull \hbox (badness 1655) in paragraph at lines 1081--1087
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9 <./TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.pdf>]
-Underfull \hbox (badness 2582) in paragraph at lines 1178--1185
+Underfull \hbox (badness 2582) in paragraph at lines 1182--1189
 \OT1/ptm/m/n/10 op-ti-mi-sa-tions. Here, the at-trac-tion is con-sid-ered close
 
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 1178--1185
+Underfull \hbox (badness 1097) in paragraph at lines 1182--1189
 \OT1/ptm/m/n/10 to be-ing re-pul-sive, with in-ter-ac-tion en-ergy val-ues arou
 nd
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1178--1185
+Underfull \hbox (badness 1231) in paragraph at lines 1182--1189
 []\OT1/ptm/m/n/10 . While the re-sult-ing de-vi-a-tion of
  []
 
@@ -1697,17 +1697,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.pdf>] [12 <./TikzPics/
 Benchmark/Fig.Bench.H2O+O.FuncCompare.pdf>]
-Underfull \hbox (badness 3579) in paragraph at lines 1760--1765
+Underfull \hbox (badness 3579) in paragraph at lines 1764--1769
 [][]\OT1/ptm/m/n/10 We cal-cu-lated DFT en-er-gies in the $[]$ ba-sis
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 1760--1765
+Underfull \hbox (badness 1735) in paragraph at lines 1764--1769
 \OT1/ptm/m/n/10 set with the $[]$, $[]$, $[]$, $[]$, $[]$
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 1760--1765
+Underfull \hbox (badness 5050) in paragraph at lines 1764--1769
 \OT1/ptm/m/n/10 and $[][]$ func-tion-als. We did also cal-cu-late
  []
 
@@ -1716,7 +1716,7 @@ File: ./img/FletcherAboveGlossyNoCueing.png Graphic file (type png)
 
 <use ./img/FletcherAboveGlossyNoCueing.png>
 Package pdftex.def Info: ./img/FletcherAboveGlossyNoCueing.png used on input li
-ne 1953.
+ne 1957.
 (pdftex.def)             Requested size: 245.8296pt x 249.76582pt.
  [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1728,19 +1728,19 @@ File: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf Graphic file (type
  pdf)
  <use TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf
- used on input line 2010.
+ used on input line 2014.
 (pdftex.def)             Requested size: 512.1496pt x 228.33336pt.
 
 [15]
 
 LaTeX Warning: Reference `Sec:Ads:Surface' on page 16 undefined on input line 2
-111.
+115.
 
 [16 <./img/FletcherAboveGlossyNoCueing.png>]
 ===== Image 'TikzPics/Adsorption/Fig.Ads.QMMMConvergence' is up-to-date. ======
 
 
-Overfull \hbox (2.8308pt too wide) in paragraph at lines 2136--2159
+Overfull \hbox (2.8308pt too wide) in paragraph at lines 2140--2163
  [][][] 
  []
 
@@ -1757,17 +1757,17 @@ Underfull \vbox (badness 1331) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-Underfull \hbox (badness 10000) in paragraph at lines 2665--2678
+Underfull \hbox (badness 10000) in paragraph at lines 2669--2682
 [][]\OT1/ptm/m/n/10 Recalling the strong de-vi-a-tions be-tween DFT and
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 2665--2678
+Underfull \hbox (badness 2903) in paragraph at lines 2669--2682
 $[]$ \OT1/ptm/m/n/10 gas phase re-ac-tion en-er-gies, we should
  []
 
 [20]
-Underfull \hbox (badness 1303) in paragraph at lines 2791--2797
+Underfull \hbox (badness 1303) in paragraph at lines 2795--2801
 []\OT1/ptm/m/n/10 In the pre-vi-ous cal-cu-la-tions, we did not in-ves-ti-gate 
 how
  []
@@ -1776,14 +1776,14 @@ how
 File: ./img/SiteSnapshotMany.png Graphic file (type png)
 
 <use ./img/SiteSnapshotMany.png>
-Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 2809.
+Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 2813.
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
 
 <./img/SiteSnapshotOriginal.png, id=227, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotOriginal.png Graphic file (type png)
 
 <use ./img/SiteSnapshotOriginal.png>
-Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 2810
+Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 2814
 .
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
 
@@ -1795,13 +1795,27 @@ on.pdf Graphic file (type pdf)
 <use ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributio
 n.pdf>
 Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
-ingEnergyDistribution.pdf used on input line 2853.
+ingEnergyDistribution.pdf used on input line 2857.
 (pdftex.def)             Requested size: 250.95612pt x 209.04976pt.
- [22 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png> <./TikzPics/
-TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
-(document.bbl
+ <./img/FletcherAdsorption.png, id=229, 1124.2pt x 1142.2675pt>
+File: ./img/FletcherAdsorption.png Graphic file (type png)
+
+<use ./img/FletcherAdsorption.png>
+Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 2884.
+(pdftex.def)             Requested size: 250.95612pt x 254.97726pt.
+
+
+Package natbib Warning: Citation `ThielensHagen1982' on page 22 undefined on in
+put line 2899.
+
+[22 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png> <./TikzPics/T
+ikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
+Underfull \vbox (badness 6348) has occurred while \output is active []
+
+ [23 <./img/FletcherAdsorption.png>] (document.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 1668) in paragraph at lines 19--22
@@ -1819,13 +1833,13 @@ Underfull \hbox (badness 5787) in paragraph at lines 70--71
 [][]\OT1/ptm/m/n/10 ``Chemshell, a com-pu-ta-tional chem-istry shell, see
  []
 
-[23])
+[24])
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[24
+[25
 
 ] (document.aux)
 
@@ -1833,10 +1847,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 33784 strings out of 493634
- 788559 string characters out of 3141310
+ 33791 strings out of 493634
+ 788745 string characters out of 3141310
  931418 words of memory out of 3000000
- 36544 multiletter control sequences out of 15000+200000
+ 36550 multiletter control sequences out of 15000+200000
  89836 words of font info for 187 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,16n,77p,10382b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1853,9 +1867,9 @@ fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
 utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfchan/uzcmi8a
 .pfb>
-Output written on document.pdf (24 pages, 2071799 bytes).
+Output written on document.pdf (25 pages, 2638296 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
+ 287 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

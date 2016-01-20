@@ -256,11 +256,15 @@ chemistry of this surface is a subdomain treated by \ep{density functional theor
 where the interaction is modelled by \ep{molecular mechanics} (MM). The two domains are coupled by a QM/MM
 coupling scheme.
 
-We will describe the theory underlying the model in the next section. Section \ref{Sec:Bench} then describes the
-benchmarking we performed on smaller test systems to determine the best functionals and basis sets to use for 
-the actual system. After that, we give our results for adsorption energies in Section \ref{Sec:Ads} and finally 
-there will be concluding remarks and an outlook on possible further application for our findings in Section 
-\ref{Sec:Con}.
+We will describe the theory underlying the model in the next section. Section
+\ref{Sec:Bench} then describes the benchmarking we performed on smaller test
+systems to determine the best functionals and basis sets to use to describe
+intermolecular interaction and therefore adsorption. After that, we give
+our results for adsorption energies and surface reaction energies in Section
+\ref{Sec:Ads}. As an outlook to further application, we give an idea of how one
+can analyze binding sites and transition states for adsorabtes. Finally, there
+will be concluding remarks and an outlook on possible further application for
+our findings in Section \ref{Sec:Con}.
 
 \section{Theoretical Background}
 \label{Sec:Theo}
@@ -294,8 +298,8 @@ is the energy given by
  \eint_{\XY} := E_{\XY} - E_\X - E_\Y.
  \label{Theo:InteractionEnergy}
 \end{equation}
-We did not include spatial dependency of $E_{\XY}$ into the above definition. A map
-\mbox{$(R_\XY, \Om_\X, \Om_\Y) \mapsto \eint_\XY$} with the center of mass separation
+We did not include spatial dependence of $E_{\XY}$ into the above definition. A
+map \mbox{$(R_\XY, \Om_\X, \Om_\Y) \mapsto \eint_\XY$} with the center of mass separation
 $R_\XY$ and the molecular orientation $\Om_\X$ and $\Om_\Y$ is called the \ep{potential energy surface} (PES)
 of the intermolecular interaction. It may also contain internal deformations of the molecule.
 
@@ -318,8 +322,8 @@ the adsorption energy to be
  \eads_{\X}:= E_{\sX} - E_\X - E_\S.
  \label{Theo:AdsorptionEnergy}
 \end{equation}
-Again, we did not include the dependency of $E_\sX$ and $E_\S$ on the respective geometries. We
-even specified that we will consider the individual geometry of minimum energy here. This is quite sensible
+Again, we did not include the dependence of $E_\sX$ and $E_\S$ on the respective
+geometries. We even specified that we will consider the individual geometry of minimum energy here. This is quite sensible
 because the surface geometry of the system $\sX$ \mbox{(surface + molecule)} may be different from the
 system $\S$ of the surface alone when comparing energy minima. For a fixed value of $E_\S$, 
 we could again consider a PES of the type \mbox{$(\bo r_i)_i \mapsto \eads_\sX$}, where the
@@ -644,8 +648,8 @@ one could also include basis functions that are not centered around an atom, but
 not consider any such basis sets.
 
 For the atomic orbitals, one often uses \ep{Gaussian type orbitals} (GTO). They resolve the
-angular dependency by usual \ep{spherical harmonics} $Y_{l_\mu,m_\mu}$ and the radial dependence
-by a Gaussian bell curve. The main advantage of bell curves is that one can integrate products
+angular dependence by usual \ep{spherical harmonics} $Y_{l_\mu,m_\mu}$ and the
+radial dependence by a Gaussian bell curve. The main advantage of bell curves is that one can integrate products
 of them by simple rules. A main disadvantage
 is that to get close to the more accurate 1-electron atomic orbitals, the \ep{Slater type orbitals}
 (STO), one must use linear combinations of multiple GTO per STO. In many cases, the computational
@@ -822,7 +826,7 @@ would also be the possibility to include intramolecular degrees of freedom with
 harmonic potentials for bond and angle stretching. This is not the case for $\tip$,
 where all sites are fixed within the molecule, reducing the 9-dimensional coordinate
 \mbox{$\r_i=\r_i\rb{\r_{\te O},\r_{\te H1},\r_{\te H2}}$} to a 6-dimensional one, \mbox{$\r_i=\r_i\rb{\r_{\te O},\Om}$}
-with the orientational dependency described by $\Om\in\R^3$.
+with the orientational dependence described by $\Om\in\R^3$.
 
 The parameters $\ealbe$, $\salbe$ and $\qal, \qbe$ as well as the geometric parameters
 $\r(\te{OH})$ and $\anghoh$ define the $\tip$ potential. They are chosen to reproduce
@@ -1915,7 +1919,7 @@ clearly lesser quality than for interaction energies.
 
 \section{Adsorption and Reactions on the Ice Surface}
 \label{Sec:Ads}
-\newcommand\hoht{\enmat{\te{HO}+\te H_2}}
+%\newcommand\hoht{\enmat{\te{HO}+\te H_2}}
 
 This section is all concerned with molecular adsorption on ice surfaces
 and the reaction processes of adsorbed species. We will first give an
@@ -2775,7 +2779,7 @@ and the weaker bound $\tripo$.
 
 \section{Possible Application}
 
-The data we offered so far was mainly energy differences. Of course, the
+The data we offered so far are mainly energy differences. Of course, the
 surface model can be used to derive other data relevant to astrochemistry,
 such as reaction, diffusion or tunneling rates. These could be further used
 as simulation input. We will not go into detail here but give a small
@@ -2848,7 +2852,7 @@ possible.
 The oxygen atoms are added to the optimum geometry of the bare surface, where
 the central ring is slightly distorted.
 
-\begin{figure}[ht]
+\begin{figure}[th]
 %\hskip-2cm
 \includegraphics[width=.49\textwidth]{./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf}
 \caption{Population of optimum geometry energies. Of the 75 initial guesses
@@ -2865,19 +2869,143 @@ the less attractive geometry. As a worst case, we found an energy value of
 $-5.01~\kmo$. This minimum is probably not very stable, it is only assumed by a
 single computation, all others have energies of at least $-6.70~\kmo$. The
 strongest adsorption of $-8.64~\kmo$ is also reached by only a single
-calculation.
-
+calculation. Therefore, we conclude that there are two strongly attractive (in
+a numerical sense) energy minima to which more than half of the initial
+geometries are drawn.
  
 
-\subsection{Transition State and IRC}
-\label{Sec:Adv:IRC}
+\subsection{Transition State}
+\label{Sec:Adv:Trans}
+\newcommand\hoht{\mbox{\enmat{\ho+\htw}}}
 %% CHECK: Theory entry
 
+\begin{figure}[ht]
+%\hskip-2cm
+\includegraphics[width=.49\textwidth]{./img/FletcherAdsorption.png}
+\caption{$\hoht$ transition state on Fletcher surface. Calculated with $\btlyp$.
+Transparent atoms are in the MM region, red (O) an white (H) atoms in the QM
+region.}
+\label{Fig:Adv:TS}
+\end{figure}
 
-\newpage
+We did already note that transition states are important to reaction kinetics.
+The energy difference between a system at the transition state and a system at
+the optimum geometry yield the activation energy, a key ingedrient to the
+activation energy.
 
-\section{Conclusion}
+%% CHECK: Experimente? Zitate prüfen!
+We studied the system $\hoht$, which is interesting for the reaction
+\mbox{$\hoht\chemar\hto+\te H$}. This reaction is part of the water
+formation scheme proposed by Thielens and Hagen \cite{ThielensHagen1982}.
+
+We did not use any coupled-cluster references in this test but started
+dircetly with DFT calculations. Since it was closest to the average value for
+adsorption energies in the previous section, we used the $\btlyp$ functional.
+We first calculated a gas phase transition state using the dimer method (cf.
+Section \ref{Sec:Theo:Minima}) and the $\tzvpd$ basis set. The transition
+state geometry was placed on the relaxed Fletcher surface obtained with
+$\btlyp$ and the hybrid $\tzvp/\tzvpd$ basis set. Unfortunately, the orientation
+of the $\hoht$ subsystem on the surface is not clear. We assumed that the $\ho$
+radical should be at least as close to the surface as the $\htw$ molecule, since
+its adsorption energy is predicted to be far more attractive. We therefore
+chose an initial geometry where the $\ho$ is placed above the center of the
+central ring, the $\htw$ is slightly above it. To get a better guess for the
+initial geometry, we then performed an optimization with the smaller $\svp$
+basis set, despite it being not too good at describing geometries in the
+benchmarks. Still, the dimer method typically requires more than one energy
+evaluation per iteration cycle, which makes it computationally very expensive
+for the hybrid basis set if the initial geometry is too far from the transition
+state geometry. And indeed, it took $\svp$ 99 iteration cycles with a total of
+405 energy and gradient evaluations to reach the transition state. The
+subsequent optimization with the hybrid basis did, however, also require
+87 iteration cycles with 477 energy and gradient evaluations. The RMSD between
+the initial geometry and the $\svp$ transition state is $0.11~\Ang$
+($0.91~\Ang$ for $\hoht$ alone) and the RMSD between the $\svp$
+transition state and the hybrid basis transition state is $0.08~\Ang$
+($0.22~\Ang$). As a comparison, the RMSD between the optimum geometry
+(that is the energy minimum) and the transition state at the hybrid basis set
+level is $0.06~\Ang$ ($0.90~\Ang$).
+
+We can make some notes on the differences between our initial geometry and the
+two transition states for different basis sets. The first one is that in this
+case, $\svp$ seems to yield geometries that are reasonably close to the hybrid
+basis geometry. Reasonably close does mean that the geometries are not good
+enough to consider the $\svp$ result a good approximation, but they are close
+enough to serve as initial geometries. On the other hand, we can not be sure
+whether the initial guess provided by $\svp$ is necessary at all, since the
+majority of the convergence cycles occur at geometries that are already very
+close to the transition state (when compared by RMSD value). This explains the
+only slight difference in iteration cycles. The approach may still be sensible
+for larger surface reactions. As a third note, the effect of orientation of the
+adsorbate in the initial geometry may be an interesting topic for future
+research.
+
+Figure \ref{Fig:Adv:TS} shows the transition state on the surface. Its geometry
+is similar to the one of the gas phase transition state.
+
+
+\section{Summary and Conclusion}
 \label{Sec:Con}
+We have designed a crystalline water $I_h$ Fletcher surface model for QM/MM
+treatment. With this surface, we can give recommendations on the DFT functionals
+that can be used in the QM part, which we base on an interaction energy
+benchmark. The ZPE correction for the QM part was discussed and we compared
+two different approaches, where we came to the conclusion that the
+computationally less expensive $\zpering$ correction still provides results with
+acceptable accuracy.
+
+The adsorption energies calculated with the different functionals show not too
+high disagreement among one another, however the ZPE corrected values yield
+unphysical results for weakly adsorbed molecular species. We calculated average
+values, which are the best recommendation we can give. The $\btlyp$ functional
+is the functional closest to the average by MAD.
+
+With the adsorption energies, we can calculate surface reaction eneriges of the
+EL type based on gas phase reaction eneriges at the $\ccsdtf/\vtz$ level of
+%% CHECK: ccsdtf accuracy
+theory. With the good results of the interaction energy benchmark and the
+accuracy of $\ccsdtf$ for reaction energies, we can hope that the accuracy of
+the surface reaction energies is good.
+
+In two small investigations without too much scientific rigor, we considered the
+ability of the model to analyse different binding sites for a specific adsorbate
+and the ability to describe transition states. We found two main classes of
+binding sites for the $\tripo$ radical, and we found that the calculation of
+transition states is computationally feasible.
+
+Topics for further research could be the evaluation of orientation dependence
+in both the adsorption of molecules and the calculation of transition states.
+One could also look for a more systematic approach to analyse binding sites,
+which may obtain a PES for some adsorbate.
+
+Also, research in kinetic properties of surface reactions could be a next big
+step. It can be hoped that insight into Langmuir-Hinshelwood type reactions can
+be gained from the surface model, including diffusion rates for adsorbates as
+well as surface reaction rates. One could also evaluate the influence of
+tunneling on surface reactions and surface diffusion.
+
+Since the crystalline surface is a rather strong idealisation, the model could
+be further adjusted to include a grain surface. Such a model can describe
+adsorption processes on ices only a few monolayers thick, thereby describing
+early stages of water ice formation.
+
+Additionally, less ordered surfaces are of interest to contemporary research. An
+investigation of which of the results for the crystalline water $I_h$ surface
+also apply to amorphous solid water and how strongly adsorption energies can
+vary dependent on the surface composition should be interesting. The same goes
+for incorporating impurities into the surface, most importantly CO. Esepcially
+the accuracy of the $\zpering$ correction may greatly vary from surface type to
+surface type, while additionally being not so well-defined for less symmetrical
+surfaces.
+
+In conclusion, the model established here is only a starting point for a
+possibly wide range of theoretical research around the topic of interstellar
+grain mantle composition and reactions. It seems appropriate to further advance
+the application of \ep{ab initio} calculations in this field, which would help
+both experimentalists and theoreticians to a better understanding of what
+exactly is happening in interstellar clouds and possibly a more detailed
+explanation of water formation in the interstellar medium within the next few
+decades.
 
 \section*{Acknowledgment}
 I want to thank Professor J. Kaestner for his support and Mr. Jan Meisner for

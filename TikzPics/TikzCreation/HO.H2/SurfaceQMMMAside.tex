@@ -1,0 +1,72 @@
+\documentclass[crop,tikz]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+%\usepackage{tikz-3dplot}
+\usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
+
+\begin{document}
+\tdplotsetmaincoords{60}{110}
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+
+\pgfmathsetmacro{\radius}{1}
+\pgfmathsetmacro{\frozenradius}{2}
+
+\pgfmathsetmacro{\thetavec}{0}
+\pgfmathsetmacro{\phivec}{0}
+\pgfmathsetmacro{\sitex}{2.1}
+\pgfmathsetmacro{\sitey}{-.3}
+\pgfmathsetmacro{\enlarge}{1.5}
+
+\newcommand\twovals[2]{
+\begin{tabular}{c} #1 \\ (#2) \end{tabular}}
+
+%% DIHEDRAL: 2.58
+\begin{tikzpicture}
+\def\nuPi{3.1459265}
+\def\stretch{2.}
+%\def\nuPi{{3.1459265/360}}
+\begin{scope}
+ \coordinate (O) at (0,0);
+ \coordinate (H1) at ({\stretch*1.00*sin(98.73)},{\stretch*1.00*cos(98.73)});
+ \coordinate (H2) at ({\stretch*0},{\stretch*1.44});
+ \coordinate (H3) at ($(H2)+({\stretch*0.80*sin(14.12)},{\stretch*0.80*cos(14.12)})$);
+% \draw(0,0) node[circle,inner sep=5pt, fill=white] (O) {O};
+% \draw(0,1.44) node[circle,inner sep=5pt] (H2) {H};
+% \draw({1.00*sin(98.73)},{1.00*cos(98.73)}) node[circle,inner sep=5pt] (H1) {H};
+
+ \draw (O.center) -- node[below] {\twovals{1.00 \AA}{1.00 \AA}} (H1.center);
+ \draw[dashed] (O.center) -- node[left] {\twovals{1.44 \AA}{1.44 \AA}} (H2.center);
+ \draw (H2.center) -- node[left] {\begin{tabular}{c} $0.80$ \AA \\ (0.80 \AA) \end{tabular}} (H3.center);
+% \draw (H2.center) -- node[right] {\begin{tabular}{c} This node \\ is \\ valuable \end{tabular}} (H3.center);
+
+ \draw(O) node[circle,inner sep=0pt, fill=white] {O};
+ \draw(H1) node[circle,inner sep=0pt, fill=white] {H};
+ \draw(H2) node[circle,inner sep=0pt, fill=white] {H};
+ \draw(H3) node[circle,inner sep=0pt, fill=white] {H};
+
+\draw pic["\qquad \qquad \begin{tabular}{c} 98.73$^\circ$ \\ (98.73$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+    {angle=H1--O--H2};
+\draw pic["\qquad   \begin{tabular}{c} \\ 5.04$^\circ$ \\ (5.04$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+    {angle=O--H2--H3};
+
+%\shade[left color=gray!90,right color=gray!40]  (0,-2) ellipse (2 and .7);
+%\shade[left color=gray!90,right color=gray!40]  (-2,-1.5) arc(240:300:4);
+
+\shade[left color=gray!90,right color=gray!40]  ({\stretch*-1},{\stretch*-.7}) rectangle ({\stretch*1.5},{\stretch*-1.4});
+
+% \node[circle,inner sep=5pt] at (0,0) {O};
+% \node[circle,inner sep=5pt] at (0,1.44) {H};
+% \node[circle,inner sep=5pt] at ({1.00*cos(98.73*\nuPi/360)},{1.00*sin(98.73*\nuPi/360)}) {H};
+% \node[circle,inner sep=5pt] at ({1.00*sin(98.73)},{1.00*cos(98.73)}) {H};
+% \draw 
+% \shade[ball color=gray!20!white] (0,0) circle(0.45);
+% \shade[ball color=gray!20!white] (0,1) circle(0.45);
+% \shade[ball color=red] (1,0) circle(0.45);
+\end{scope}
+\end{tikzpicture}
+\end{document}
+
+
