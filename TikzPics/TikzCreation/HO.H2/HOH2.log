@@ -1,10 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  20 JAN 2016 23:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.5.4)  21 JAN 2016 00:29
 entering extended mode
-**C:/Users/Thomas/workspace/MScThesis/TikzPics/TikzCreation/HO.H2/SurfaceQMMMAs
-ide.tex
-
-(C:/Users/Thomas/workspace/MScThesis/TikzPics/TikzCreation/HO.H2/SurfaceQMMMAsi
-de.tex
+**C:/Users/Thomas/workspace/MScThesis/TikzPics/TikzCreation/HO.H2/HOH2.tex
+(C:/Users/Thomas/workspace/MScThesis/TikzPics/TikzCreation/HO.H2/HOH2.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -439,8 +436,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 externalshared.code.tex"))
-(C:\Users\Thomas\workspace\MScThesis\TikzPics\TikzCreation\HO.H2\SurfaceQMMMAsi
-de.aux)
+(C:\Users\Thomas\workspace\MScThesis\TikzPics\TikzCreation\HO.H2\HOH2.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -453,7 +449,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
- ABD: EveryShipout initializing macros
+
+ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
@@ -474,25 +471,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 42.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Thomas\workspace\MScThesis\TikzPics\TikzCreation\HO.H2\SurfaceQMMMAsi
-de.aux) ) 
+(C:\Users\Thomas\workspace\MScThesis\TikzPics\TikzCreation\HO.H2\HOH2.aux) ) 
 Here is how much of TeX's memory you used:
- 13454 strings out of 493921
- 289710 string characters out of 3147280
- 313131 words of memory out of 3000000
- 16517 multiletter control sequences out of 15000+200000
+ 13475 strings out of 493921
+ 290035 string characters out of 3147280
+ 313168 words of memory out of 3000000
+ 16538 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,12n,69p,669b,988s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on SurfaceQMMMAside.pdf (1 page, 32359 bytes).
+ 62i,12n,69p,657b,989s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on HOH2.pdf (1 page, 32151 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 23 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

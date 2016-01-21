@@ -1,0 +1,110 @@
+\documentclass[crop,tikz]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+%\usepackage{tikz-3dplot}
+\usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
+
+\begin{document}
+\tdplotsetmaincoords{60}{110}
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+
+\pgfmathsetmacro{\radius}{1}
+\pgfmathsetmacro{\frozenradius}{2}
+
+\pgfmathsetmacro{\thetavec}{0}
+\pgfmathsetmacro{\phivec}{0}
+\pgfmathsetmacro{\sitex}{2.1}
+\pgfmathsetmacro{\sitey}{-.3}
+\pgfmathsetmacro{\enlarge}{1.5}
+
+\newcommand\twovals[2]{
+\begin{tabular}{c} #1 \\ (#2) \end{tabular}}
+
+%% DIHEDRAL: 2.58
+\begin{tikzpicture}
+\def\nuPi{3.1459265}
+\def\stretch{2.}
+%\def\nuPi{{3.1459265/360}}
+\begin{scope}
+ \def\sepx{-7};
+ \def\sepy{0};
+%% OPTIMUM
+%DIHEDRAL: Gas: 33.58°
+
+ \coordinate (OGas) at (\sepx,\sepy);
+ \coordinate (H1Gas) at ({\sepx+\stretch*.98*sin(90.47)},{\sepy+\stretch*.98*cos(90.47)});
+ \coordinate (H2Gas) at ({\sepx+\stretch*0},{\sepy+\stretch*2.43});
+ \coordinate (H3Gas) at ($(H2Gas)+({\stretch*0.75*sin(49.88)},{\stretch*0.75*cos(49.88)})$);
+
+ \draw (OGas.center) -- node[below] {\twovals{0.98 \AA}{0.98 \AA}} (H1Gas.center);
+ \draw[dashed] (OGas.center) -- node[left] {\twovals{2.43 \AA}{2.43 \AA}} (H2Gas.center);
+% \draw (H2Gas.center) -- node[above left] {\twovals{$0.75$ \AA}{0.75 \AA}} (H3Gas.center);
+\fill[pattern=north west lines] (H2Gas.center) -- node[above left]{\twovals{$0.75$ \AA}{0.75 \AA}}  ($(H3Gas.center)+(-.21,0)$) -- ($(H3Gas.center)+(-.1,-.2)$) -- cycle;
+
+%\fill[pattern=north west lines] (H2Gas.center) -- node[above left]{\twovals{33.12$^\circ$}{33.12$^\circ$}}  ($(H3Gas.center)+(-.21,0)$) -- ($(H3Gas.center)+(-.1,-.2)$) -- cycle;
+
+ \draw(OGas) node[circle,inner sep=0pt, fill=white] {O};
+ \draw(H1Gas) node[circle,inner sep=0pt, fill=white] {H};
+ \draw(H2Gas) node[circle,inner sep=0pt, fill=white] {H};
+ \draw(H3Gas) node[circle,inner sep=0pt, fill=white] {H};
+
+\draw pic["\qquad \qquad \begin{tabular}{c} 90.47$^\circ$ \\ (90.47$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+    {angle=H1Gas--OGas--H2Gas};
+\draw pic["\qquad\qquad   \begin{tabular}{c} \\ 130.12$^\circ$ \\ (130.12$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+    {angle=OGas--H2Gas--H3Gas};
+
+\draw ({\sepx-\stretch*1},-1.5) -- ({\sepx+\stretch*1.6},-1.5);
+\fill[pattern=north east lines] ({\sepx-\stretch*1},-1.5) rectangle ({\sepx+\stretch*1.6},-2.5);
+
+
+%% ADSORBED
+%DIHEDRAL: Gas: 1.32°
+% Molecule is rotated with respect to surface
+ \def\rot{13.11}
+ \def\sepx{0};
+ \def\sepy{.5};
+
+ \coordinate (OAds) at (\sepx,\sepy);
+ \coordinate (H1Ads) at ($(OAds)+({\stretch*1.00*sin(\rot+98.73)},{\stretch*1.00*cos(\rot+98.73)})$);
+ \coordinate (H2Ads) at ($(OAds)+({\stretch*1.44*sin(\rot)},{\stretch*1.44*cos(\rot)})$);
+ \coordinate (H3Ads) at ($(H2Ads)+({\stretch*0.80*sin(\rot+14.12)},{\stretch*0.80*cos(\rot+14.12)})$);
+
+ \draw (OAds.center) -- node[below] {\twovals{1.00 \AA}{0.97 \AA}\phantom{dada}} (H1Ads.center);
+ \draw[dashed] (OAds.center) -- node[left] {\twovals{1.44 \AA}{1.45 \AA}} (H2Ads.center);
+% \draw (H2Ads.center) -- node[left] {\begin{tabular}{c} $0.80$ \AA \\ (0.80 \AA) \end{tabular}} (H3Ads.center);
+\fill[pattern={north west lines}] (H2Ads.center) -- node[above left]{\twovals{$0.80$ \AA}{0.80 \AA}}  ($(H3Ads.center)+(-.2,-.15)$) -- ($(H3Ads.center)+(.13,-.3)$) -- cycle;
+
+ \draw(OAds) node[circle,inner sep=0pt, fill=white] {O};
+ \draw(H1Ads) node[circle,inner sep=0pt, fill=white] {H};
+ \draw(H2Ads) node[circle,inner sep=0pt, fill=white] {H};
+ \draw(H3Ads) node[circle,inner sep=0pt, fill=white] {H};
+
+\draw pic["\qquad \qquad \begin{tabular}{c} 98.73$^\circ$ \\ (98.17$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+    {angle=H1Ads--OAds--H2Ads};
+\draw pic["\qquad  \qquad \begin{tabular}{c} \\ 165.88$^\circ$ \\ (161.06$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+    {angle=OAds--H2Ads--H3Ads};
+
+\draw ({-\stretch*1},-1.5) -- ({\stretch*1.6},-1.5);
+\fill[pattern=north east lines] ({-\stretch*1},-1.5) rectangle ({\stretch*1.6},-2.5);
+
+%\shade[left color=gray!90,right color=gray!40]  (0,-2) ellipse (2 and .7);
+%\shade[left color=gray!90,right color=gray!40]  (-2,-1.5) arc(240:300:4);
+
+%\shade[left color=gray!90,right color=gray!40]  ({\stretch*-4.8},{\stretch*-1.2}) rectangle ({\stretch*1.5},{\stretch*-1.8});
+
+% \node[circle,inner sep=5pt] at (0,0) {O};
+% \node[circle,inner sep=5pt] at (0,1.44) {H};
+% \node[circle,inner sep=5pt] at ({1.00*cos(98.73*\nuPi/360)},{1.00*sin(98.73*\nuPi/360)}) {H};
+% \node[circle,inner sep=5pt] at ({1.00*sin(98.73)},{1.00*cos(98.73)}) {H};
+% \draw 
+% \shade[ball color=gray!20!white] (0,0) circle(0.45);
+% \shade[ball color=gray!20!white] (0,1) circle(0.45);
+% \shade[ball color=red] (1,0) circle(0.45);
+\end{scope}
+\end{tikzpicture}
+\end{document}
+
+
