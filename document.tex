@@ -214,7 +214,20 @@ M. Sc. Jan Meisner}\\[.4cm]
   \begin{@twocolumnfalse}
     \maketitle
     \begin{abstract}
-      This abstract explains what happens. Benchmark, adsorption, maybe something about the interstellar playground.
+      Molecule formation in the interstellar medium is thought to be assisted by
+      surface reactions on ice mantles of interstellar dust grains. We present a
+      model for a water $I_h$ Fletcher surface within a QM/MM description. For
+      MM, we use the $\tip$ force field, for the QM region we propose a
+      $\tzvp/\tzvpd$ hybrid basis set and a selection of functionals which are
+      compared to $\ccsdtf/\vtz$ gas phase interaction energies in a benchmark.
+      We give formation and reaction energies for gas phase molecules and adsorption and
+      reaction energies for molecules on the surface. Combining adsorption
+      energies and gas phase reaction energies, it is possible to gain very
+      accurate results for surface reaction energies. We propose the special
+      $\zpering$ correction for the surface which yields similar results to the
+      most accurate $\zpeall$ correction at a fraction of its computational
+      costs. An outlook on binding site analysis and transition state search
+      shows that the model is fit for further application.
 \\
 \\
     \end{abstract}
@@ -222,48 +235,112 @@ M. Sc. Jan Meisner}\\[.4cm]
 ]
 \section{Introduction}
 \label{Sec:Intro}
-Interstellar chemistry is the key ingredient to understanding the molecular abundancies in our universe. While
-the formation of atoms takes place in stars \cite{AtomsInStars}, their further reaction and therefore the composition
-of molecular compunds in space largely happens in interstellar clouds. With modern telescopes it is possible to
-measure the molecular abundancies in the interstellar medium (ISM) to a high degree of accuracy. It became
-evident that the reaction rates governing the formation of molecules can not properly be explained by gas phase
-chemistry alone. A prominent theory to mend this discrepancy is to consider the contribution of surface reaction
-on interstellar dust grains. The dust has been measured \cite{DustMeasure}, so the question is not so much if the
-reaction happens but rather to quantify its effect.
+Interstellar chemistry is the key ingredient to understanding the molecular
+abundancies in our universe. While
+%% CHECK: Vllt kein Zitat?
+the formation of atoms takes place in stars, %\cite{AtomsInStars}
+their further reaction and therefore the formation of larger molecules in
+space largely happens in interstellar clouds. With modern telescopes it is
+possible to measure the molecular abundancies in the interstellar medium (ISM)
+to a high degree of accuracy. It became evident that the reaction rates
+governing the formation of molecules can not properly be explained by gas phase
+chemistry alone.
 
-At temperatures as low as in cold interstellar clouds (between 10 and 100 $K$), the grains are covered in ices,
-most prominently $\hto $ and $\co$. In the case of water, one faces \ep{amorphous solid water} (ASW), but
-at very low temperatures one may find a state close to the crystalline $I_h$ state of frozen water.
+A prominent theory to mend this discrepancy is to consider the
+contribution of surface reaction on interstellar dust grains. Interstellar dust
+was first observed by Trumpler\cite{Trumpler1930}, who attributed interstellar
+extinction to the presence of dust. Following this first observation, many
+investigations confirmed Trumpler's assumption and nowadays the presence of
+dust grains in many regions of the ISM as well as in
+circumstellar disks is considered proven \cite{Draine2003}.
 
-Various works have already considered surface reactions.
+Apart from dust, a wide variety of molecules is observed in the ISM. In
+1976, Merrill \ep{et al.} \cite{Merrill1976} discovered and absorption feature
+which they identified with the $\hto$ stretching vibration. The presence of
+water was controversial at first, but definite proof of the existence of water
+in the ISM was proven at latest by the Interstellar Space Observatory in 2004
+by Gibb \ep{et al.}\cite{Gibb2004}.
 
-(Here we will cite some experimentalists).
+While at high temperatures the water will not freeze on the grains, at
+temperatures as low as in molecular clouds (between 10 and 20
+K\cite{Ferriere2001}), some of the grains are believed to have icy mantles, the
+mantle material is mostly composed of $\hto$ and CO. In the case of water, one
+faces \ep{amorphous solid water} (ASW), but at very low temperatures one may
+find a state close to the crystalline $I_h$ state of frozen water.
 
-The research described above typically chose a model to describe the processes taking place in the experiment and
-adjusted simulation data -- including parameters like the diffusion coefficient -- to fit the experimental data.
-That would mean: if surface reaction processes are the key to filling the gap between observed and predicted
-reaction rates, the input parameters might be good approximations to the actual coefficients. This is a legit
-approach since one can not easily think of other processes than surface and gas phase reactions to lead to
-molecular formation.
+In 1982 Tielens and Hagen \cite{TielensHagen1982} published an influential paper
+proposing a network of water formation reactions by hydrogenation of O, $\ot$
+and O$_3$. The network was refined by later studies
+\cite{RomanzinIoppoloCuppenEtAl2011}. The modern version gives an account of the
+most relevant reactions that lead to water formation. Depending on temperatures,
+densities and radiation, different reactions of the network are assigned
+varying importance dependent on the interstellar region.
 
-%% CHECK: Andere Parameter als Diffusionskoeffizient?
-However, there is not yet a proper \ep{ab initio} theoretical calculation of surface diffusion. This means that
-evaluating the parameters found in simulation is a very difficult task -- there is neither a recommended value nor 
-are there any error bars to such a value. This work tries to make a first step toward the accurate simulation of surface
-adsorption, diffusion and reaction of small molecules on interstellar ices. Its aim is to establish a model
-of crystalline $I_h$ water in which simulations can be carried out. The main mathematical tool for describing the 
-chemistry of this surface is a subdomain treated by \ep{density functional theory} (DFT) within a bigger domain
-where the interaction is modelled by \ep{molecular mechanics} (MM). The two domains are coupled by a QM/MM
-coupling scheme.
+%% CHECK: Langmuir-Hinshelwood!
+
+While experimental research in the field of surface reaction has grown over the
+past years, theoretical data is still sparse. Especially \ep{ab initio}
+calculations have so far been challenging due to the large system size and the
+resulting difficulties to find methods that can still give results with
+acceptable accuracy. Still, there is some noteable research which we want to
+name here.
+
+Ice surface structure was analysed by Cabrera Sanfelix $\etal~$ 
+\cite{CabreraSanfelix2003} in 2003. They analysed the early accretion of water
+on a bare graphite grain using density functional theory (DFT) with PW91
+functional, in which they found that the water is physisorbed on the surface.
+For high coverages of the surface, ice-like layers are formed. A 2005 study by
+Lin $\etal~$ \cite{Lin2005} investigated adsorption of small water clusters
+(not more than six molecules) on a graphite surface with a density functional
+tight-binding method and a dispersion correction. They found that the ring
+structure for a water hexamer is not the most stable structure when physisorbed
+onto the surface.
+
+Other computational approaches to ice adsorption did so far not employ an
+electronic structure theory directly but used simulation models which had
+diffusion coefficients and adsorption energies as input values. There is no
+fully reliable data available for many of these, therefore the simulation
+parameters were tuned, starting from educated guesses of some kind, to fit
+experimental data. While this approach is legit and does indeed not only yield
+good approximations to experimental data but also gives rise to new conclusions,
+it still needs further verification.
+
+Our approach is therefore to create a model for water $I_h$ ice surface
+adsorption from scratch. We want to describe a crystalline water surface with
+enough ice layers to ignore effects of physisorption on the underlying dust
+grain, which is assumed to be large enough to allow for a regular planar ice
+surface. These idealizations will not be met by the majority of ice mantles on
+interstellar dust grains, therefore we will not put too much stress on the
+geometric properties of the surface but rather on computational details. The
+surface will be divided in a quantum mechanical and molecular mechanical region
+coupled via a QM/MM scheme. The MM scheme is described by a classical force
+field while we give a selection of DFT functionals that should yield accurate
+results for adsorption energies and a basis set recommendation.
+% The research described above typically chose a model to describe the processes taking place in the experiment and
+% adjusted simulation data -- including parameters like the diffusion coefficient -- to fit the experimental data.
+% That would mean: if surface reaction processes are the key to filling the gap between observed and predicted
+% reaction rates, the input parameters might be good approximations to the actual coefficients. This is a legit
+% approach since one can not easily think of other processes than surface and gas phase reactions to lead to
+% molecular formation.
+% 
+% %% CHECK: Andere Parameter als Diffusionskoeffizient?
+% However, there is not yet a proper \ep{ab initio} theoretical calculation of surface diffusion. This means that
+% evaluating the parameters found in simulation is a very difficult task -- there is neither a recommended value nor 
+% are there any error bars to such a value. This work tries to make a first step toward the accurate simulation of surface
+% adsorption, diffusion and reaction of small molecules on interstellar ices. Its aim is to establish a model
+% of crystalline $I_h$ water in which simulations can be carried out. The main mathematical tool for describing the 
+% chemistry of this surface is a subdomain treated by \ep{density functional theory} (DFT) within a bigger domain
+% where the interaction is modelled by \ep{molecular mechanics} (MM). The two domains are coupled by a QM/MM
+% coupling scheme.
 
 We will describe the theory underlying the model in the next section. Section
 \ref{Sec:Bench} then describes the benchmarking we performed on smaller test
 systems to determine the best functionals and basis sets to use to describe
 intermolecular interaction and therefore adsorption. After that, we give
 our results for adsorption energies and surface reaction energies in Section
-\ref{Sec:Ads}. As an outlook to further application, we give an idea of how one
-can analyze binding sites and transition states for adsorabtes. Finally, there
-will be concluding remarks and an outlook on possible further application for
+\ref{Sec:Ads}. As a suggestion of further applications, we give an idea of how
+one can analyse binding sites and transition states for adsorabtes. Finally,
+there will be concluding remarks and an outlook on possible further application for
 our findings in Section \ref{Sec:Con}.
 
 \section{Theoretical Background}
@@ -1768,6 +1845,17 @@ All results were supplemented by a $\zpe$ correction at the
 optimum geometry obtained by $\dlfind$. 
 
 %% CHECK: MAD angleichen!
+%% CHECK: Experimentelle Daten. zB:
+% Cuppen http://scitation.aip.org/content/aip/journal/jcp/134/8/10.1063/1.3532087
+%  RomanzinIoppoloCuppenEtAl2011
+%  HO+H   -> H2O   : 5.3 eV= 511.4 kmo
+%  HO2+H  -> H2O2  : 3.8 eV= 366.6 kmo
+%  O2+H   -> HO2   : 2.0 eV= 190 kmo
+% Hiraoka http://iopscience.iop.org/article/10.1086/305572/meta
+%  Reaction performed on N2O Matrix.
+%  HO+H   -> H2O   : -498.73
+
+
 \newcolumntype{D}{>{\raggedleft\arraybackslash}p{1.4cm}}
 % Table generated by Excel2LaTeX from sheet 'Tabelle2'
 \begin{table*}[htb]
@@ -2823,11 +2911,11 @@ of $-7.85~\kmo$, which is the weakest bound energy. For this energy,
 there is reason to assume that there could be a more attractive binding site
 somewhere in the central ring. To arrive at different binding sites, we used
 a function to create initial data on the ring. Let the center of mass of the oxygen
-atoms of the central ring be located at the origin $(0,0,0)^{\te T}$ and let $y$ be
+atoms of the central ring be located at the origin $(0,0,0)^{\intercal}$ and let $y$ be
 normal to the Fletcher surface. We can transform $(x,z)$ in polar coordinates with
 $x=r \cos \phi$, $z=r \sin\phi$, $0 \leq r \leq \rmax$, $0 \leq \phi<2\pi$. The direction of the
 unit vector $\bo e_x$ (that is $\bo e_r$ for $\phi=0$) and the value of $r_{\te{max}}$ are
-chosen to ensure that there is an oxygen atom at position $(\rmax,y < 0,0)^{\te T}$. In
+chosen to ensure that there is an oxygen atom at position $(\rmax,y < 0,0)^{\intercal}$. In
 Figure \ref{Fig:Adv:BindingSitesGuess}, the vector could be pointing towards the oxygen
 %% CHECK: Kann man auch genauer bestimmen.
 atom in the front. We found $\rmax=2.4~\Ang$.
@@ -2865,14 +2953,34 @@ We then used the $\dlfind$ algorithm to find new energy minima. The resulting
 energies are plotted in Figure \ref{Fig:Adv:BindingSitesEnergies}. One can see
 that most prominently, two adsorption energy values are found. One around 
 $-8.4~\kmo$ and one around $-7.85~\kmo$. In our first study, we only found
-the less attractive geometry. As a worst case, we found an energy value of
-$-5.01~\kmo$. This minimum is probably not very stable, it is only assumed by a
-single computation, all others have energies of at least $-6.70~\kmo$. The
-strongest adsorption of $-8.64~\kmo$ is also reached by only a single
-calculation. Therefore, we conclude that there are two strongly attractive (in
-a numerical sense) energy minima to which more than half of the initial
-geometries are drawn.
- 
+the less attractive geometry, which is directly above the center of mass at
+$(0,2,0)^\intercal$, so close to the initial guess there. Other minima are
+usually above lines connecting oxygen atoms. The most attractive geometries
+profit of hydrogen bonds. The worst case, with an energy value of only
+$-5.01~\kmo$, has the adsorbate positioned on a broken H bond. This minimum is
+probably not very stable, it is only assumed by a single computation, all
+others have energies of at least $-6.70~\kmo$. The strongest adsorption of
+$-8.64~\kmo$ is also reached by only a single calculation. Therefore, we
+conclude that there are two strongly attractive (in a numerical sense) energy
+minima to which more than half of the initial geometries are drawn.
+
+We recommend the binding site $(0,2,0)^\intercal$ despite it being not the most
+attractive. The reason for that choice is that all other binding sites are
+located more or less above the central ring. This means that for simulations,
+they are not clearly within one ring or the other.
+
+However, this becomes interesting when we consider hopping of adsorbates. In
+Figure \ref{Fig:Adv:BindingSitesGuess}, the optima with $E<-8~\kmo$ lie to the
+left and right. But then, due to quantum tunneling or temperature-dependent
+vibrations, an O atom located above the central ring can hop into another
+optimum, we may call it a transmission optimum, and continue hopping into other
+rings from there. This mechanism should be favourable for hopping ratios, but
+then there should be a preferred direction of hopping on a Fletcher surface.
+
+This may be interesting to study. However, one has to bear in mind that the
+Fletcher surface is only an idealization in a zero temperature limit. Even at
+temperatures in the cold ISM, the hydrogen atoms must give up their order. To
+what extent this happens could be crucial to further analysis.
 
 
 \subsection{Transition State}
@@ -3037,7 +3145,8 @@ decades.
 
 \section*{Acknowledgment}
 I want to thank Professor J. Kaestner for his support and Mr. Jan Meisner for
-his introduction to the topic and his company along the way.
+his introduction to the topic, his helpful suggestions and his company along the
+way.
 
 
 %\clearpage

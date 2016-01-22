@@ -1,5 +1,43 @@
 \begin{thebibliography}{10}
 
+\bibitem{Trumpler1930}
+R.~J. Trumpler, ``{ABSORPTION OF LIGHT IN THE GALACTIC SYSTEM},'' {\em
+  Publications of the Astronomical Society of the Pacific}, vol.~42, no.~248,
+  pp.~214--227, 1930.
+
+\bibitem{Draine2003}
+B.~Draine, ``{Interstellar Dust Grains},'' {\em Annual Review of Astronomy and
+  Astrophysics}, vol.~41, pp.~241--289, sep 2003.
+
+\bibitem{Merrill1976}
+K.~Merrill, R.~Russell, and B.~Soifer, ``Infrared observations of ices and
+  silicates in molecular clouds,'' {\em The Astrophysical Journal}, vol.~207,
+  pp.~763--769, 1976.
+
+\bibitem{Gibb2004}
+E.~L. Gibb, D.~C.~B. Whittet, A.~C.~A. Boogert, and A.~G. G.~M. Tielens,
+  ``{Interstellar Ice: The Infrared Space Observatory Legacy},'' {\em The
+  Astrophysical Journal Supplement Series}, vol.~151, pp.~35--73, mar 2004.
+
+\bibitem{Ferriere2001}
+K.~M. Ferri{\`{e}}re, ``The interstellar environment of our galaxy,'' {\em
+  Reviews of Modern Physics}, vol.~73, pp.~1031--1066, dec 2001.
+
+\bibitem{TielensHagen1982}
+A.~G. G.~M. Tielens and W.~Hagen, ``{Model Calculations of the Molecular
+  Composition of Interstellar Grain Mantles},'' {\em Astronomy and
+  Astrophysics}, vol.~114, pp.~245--260, 1982.
+
+\bibitem{RomanzinIoppoloCuppenEtAl2011}
+C.~Romanzin, S.~Ioppolo, H.~M. Cuppen, E.~F. van Dishoeck, and H.~Linnartz,
+  ``{Water formation by surface O3 hydrogenation},'' {\em The Journal of
+  Chemical Physics}, vol.~134, no.~8, p.~084504, 2011.
+
+\bibitem{CabreraSanfelix2003}
+P.~Cabrera~Sanfelix, S.~Holloway, K.~Kolasinski, and G.~Darling, ``The
+  structure of water on the (0001) surface of graphite,'' {\em Surface
+  Science}, vol.~532-535, pp.~166--172, Jun 2003.
+
 \bibitem{GrimmeB97-D2006}
 S.~Grimme, ``{Semiempirical GGA-Type Density Functional Constructed with a
   Long-Range Dispersion Correction},'' {\em Journal of Computational
@@ -92,11 +130,6 @@ N.~Fletcher, ``{The freezing of water},'' {\em Science Progress (Oxford)},
 N.~H. Fletcher, ``{Reconstruction of ice crystal surfaces at low
   temperatures},'' {\em Philosophical Magazine Part B}, vol.~66, pp.~109--115,
   Jul 1992.
-
-\bibitem{CabreraSanfelix2003}
-P.~C. Sanfelix, S.~Holloway, K.~Kolasinski, and G.~Darling, ``The structure of
-  water on the (0001) surface of graphite,'' {\em Surface Science},
-  vol.~532-535, pp.~166--172, Jun 2003.
 
 \bibitem{Fraser2001}
 H.~J. Fraser, M.~P. Collings, M.~R. McCoustra, and D.~A. Williams, ``{Thermal
