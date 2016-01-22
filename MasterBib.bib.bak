@@ -69,7 +69,7 @@
 }
 
 @Article{CabreraSanfelix2003,
-  author =    {Sanfelix, P Cabrera and Holloway, S and Kolasinski, KW and Darling, GR},
+  author =    {Cabrera Sanfelix, P and Holloway, S and Kolasinski, KW and Darling, GR},
   title =     {The structure of water on the (0001) surface of graphite},
   journal =   {Surface Science},
   year =      {2003},
@@ -138,18 +138,17 @@
 }
 
 @Article{Ferriere2001,
-  author =        {Katia M. Ferri{\`{e}}re},
-  title =         {The interstellar environment of our galaxy},
-  journal =       {Reviews of Modern Physics},
-  year =          {2001},
-  volume =        {73},
-  number =        {4},
-  pages =         {1031--1066},
-  month =         {dec},
-  __markedentry = {[Thomas:6]},
-  doi =           {10.1103/revmodphys.73.1031},
-  publisher =     {American Physical Society ({APS})},
-  url =           {http://dx.doi.org/10.1103/RevModPhys.73.1031}
+  author =    {Katia M. Ferri{\`{e}}re},
+  title =     {The interstellar environment of our galaxy},
+  journal =   {Reviews of Modern Physics},
+  year =      {2001},
+  volume =    {73},
+  number =    {4},
+  pages =     {1031--1066},
+  month =     {dec},
+  doi =       {10.1103/revmodphys.73.1031},
+  publisher = {American Physical Society ({APS})},
+  url =       {http://dx.doi.org/10.1103/RevModPhys.73.1031}
 }
 
 @ARTICLE{fletcher1966,
@@ -191,18 +190,17 @@
 }
 
 @Article{Gibb2004,
-  author =        {E. L. Gibb and D. C. B. Whittet and A. C. A. Boogert and A. G. G. M. Tielens},
-  title =         {{Interstellar Ice: The Infrared Space Observatory Legacy}},
-  journal =       {The Astrophysical Journal Supplement Series},
-  year =          {2004},
-  volume =        {151},
-  number =        {1},
-  pages =         {35--73},
-  month =         {mar},
-  __markedentry = {[Thomas:]},
-  doi =           {10.1086/381182},
-  publisher =     {{IOP} Publishing},
-  url =           {http://dx.doi.org/10.1086/381182}
+  author =    {E. L. Gibb and D. C. B. Whittet and A. C. A. Boogert and A. G. G. M. Tielens},
+  title =     {{Interstellar Ice: The Infrared Space Observatory Legacy}},
+  journal =   {The Astrophysical Journal Supplement Series},
+  year =      {2004},
+  volume =    {151},
+  number =    {1},
+  pages =     {35--73},
+  month =     {mar},
+  doi =       {10.1086/381182},
+  publisher = {{IOP} Publishing},
+  url =       {http://dx.doi.org/10.1086/381182}
 }
 
 @ARTICLE{GrimmeB97-D2006,
@@ -373,6 +371,15 @@
   url = {http://dx.doi.org/10.1021/jp9028968}
 }
 
+@InCollection{LangmuirHinshelwood,
+  title =         {Langmuir{\textendash}Hinshelwood mechanism},
+  booktitle =     {Gold Book},
+  publisher =     {International Union of Pure and Applied Chemistry ({IUPAC})},
+  __markedentry = {[Thomas:]},
+  doi =           {10.1351/goldbook.l03451},
+  url =           {http://dx.doi.org/10.1351/goldbook.L03451}
+}
+
 @ARTICLE{MacKerell1998CHARMMTIP3,
   author = {MacKerell, A. D. and Bashford, D. and Bellott, M. and Dunbrack, R.
 	L. and Evanseck, J. D. and Field, M. J. and Fischer, S. and Gao,
@@ -491,5 +498,19 @@
   publisher = {Elsevier BV},
   timestamp = {2015.12.15},
   url = {http://dx.doi.org/10.1016/0022-2836(76)90311-9}
+}
+
+@Article{YousafPeterson2008,
+  author =        {Kazim E. Yousaf and Kirk A. Peterson},
+  title =         {Optimized auxiliary basis sets for explicitly correlated methods},
+  journal =       {The Journal of Chemical Physics},
+  year =          {2008},
+  volume =        {129},
+  number =        {18},
+  pages =         {184108},
+  __markedentry = {[Thomas:6]},
+  doi =           {10.1063/1.3009271},
+  publisher =     {{AIP} Publishing},
+  url =           {http://dx.doi.org/10.1063/1.3009271}
 }
 

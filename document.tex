@@ -183,14 +183,15 @@ size=0.2cm,draw,dashed,fill=white] ({#2}) {};} %free labelled point
 
 \vfill 
 %% CHECK: Stuttgart Figure
-[width=7cm]{./Figures/unistuttgart.jpg}\\[2cm]   
+\includegraphics[width=7cm]{./img/unilogo_international.png}\\[2cm]   
 
 {\Large Master Thesis supervised by \\[.7cm]
 Prof. Dr. rer. nat. J. Kästner \\[.4cm]
 M. Sc. Jan Meisner}\\[.4cm]
 
 
-{ \Large  Institute for Theoretical Chemistry, Universität Stuttgart, December 2015}
+{ \Large  Institute for Theoretical Chemistry, Universität Stuttgart, January
+2016}
 
 
 % Author and supervisor
@@ -219,7 +220,7 @@ M. Sc. Jan Meisner}\\[.4cm]
       model for a water $I_h$ Fletcher surface within a QM/MM description. For
       MM, we use the $\tip$ force field, for the QM region we propose a
       $\tzvp/\tzvpd$ hybrid basis set and a selection of functionals which are
-      compared to $\ccsdtf/\vtz$ gas phase interaction energies in a benchmark.
+      compared to $\ccsdtf/\vtz$ in a gas phase interaction energy benchmark.
       We give formation and reaction energies for gas phase molecules and adsorption and
       reaction energies for molecules on the surface. Combining adsorption
       energies and gas phase reaction energies, it is possible to gain very
@@ -242,28 +243,29 @@ the formation of atoms takes place in stars, %\cite{AtomsInStars}
 their further reaction and therefore the formation of larger molecules in
 space largely happens in interstellar clouds. With modern telescopes it is
 possible to measure the molecular abundancies in the interstellar medium (ISM)
-to a high degree of accuracy. It became evident that the reaction rates
-governing the formation of molecules can not properly be explained by gas phase
+%% CHECK: Seit wann?
+to a high degree of accuracy. Over the past few decades, it became evident that
+the reaction rates governing the formation of molecules can not properly be explained by gas phase
 chemistry alone.
 
 A prominent theory to mend this discrepancy is to consider the
-contribution of surface reaction on interstellar dust grains. Interstellar dust
-was first observed by Trumpler\cite{Trumpler1930}, who attributed interstellar
-extinction to the presence of dust. Following this first observation, many
-investigations confirmed Trumpler's assumption and nowadays the presence of
-dust grains in many regions of the ISM as well as in
-circumstellar disks is considered proven \cite{Draine2003}.
+contribution of surface reactions on interstellar dust grains. Interstellar dust
+was first observed by Trumpler\cite{Trumpler1930}, who attributed extinction
+of starlight in the ISM to the presence of dust. Following this first
+observation, many investigations confirmed Trumpler's assumption and nowadays the presence
+of dust grains in many regions of the ISM as well as in circumstellar disks is
+considered proven \cite{Draine2003}.
 
 Apart from dust, a wide variety of molecules is observed in the ISM. In
-1976, Merrill \ep{et al.} \cite{Merrill1976} discovered and absorption feature
+1976, Merrill \ep{et al.} \cite{Merrill1976} discovered an absorption feature
 which they identified with the $\hto$ stretching vibration. The presence of
 water was controversial at first, but definite proof of the existence of water
-in the ISM was proven at latest by the Interstellar Space Observatory in 2004
-by Gibb \ep{et al.}\cite{Gibb2004}.
+in the ISM was given at latest by the Interstellar Space Observatory in 2004
+\cite{Gibb2004}.
 
 While at high temperatures the water will not freeze on the grains, at
 temperatures as low as in molecular clouds (between 10 and 20
-K\cite{Ferriere2001}), some of the grains are believed to have icy mantles, the
+K\cite{Ferriere2001}) some of the grains are believed to have icy mantles. The
 mantle material is mostly composed of $\hto$ and CO. In the case of water, one
 faces \ep{amorphous solid water} (ASW), but at very low temperatures one may
 find a state close to the crystalline $I_h$ state of frozen water.
@@ -277,6 +279,19 @@ densities and radiation, different reactions of the network are assigned
 varying importance dependent on the interstellar region.
 
 %% CHECK: Langmuir-Hinshelwood!
+The surface can serve as a catalyst to reactions. There are two main mechanisms
+in molecular clouds to describe that. The first is the Langmuir-Hinshelwood (LH)
+mechanism. Here, molecules X and Y both adsorb on the surface. They diffuse and
+when they meet, they react to a molecule Z (or two or more molecules Z, Z',
+Z'', \ldots).
+In the Eley-Rideal reaction mechanism, only molecule X is adsorbed. Molecule Y approaches X from the gas
+phase and both react to Z (or more molecules). In any case, if the
+reaction is exothermic, the surface has to absorb the energy difference between
+reactants and product. If this is possible, the product Z stays intact,
+otherwise it will react further. If the reaction is endothermic or has a
+barrier, the energy difference has to be supplied by the surface if it can
+not be supplied by the kinetic energies of the molecules
+(and neglecting quantum tunneling).
 
 While experimental research in the field of surface reaction has grown over the
 past years, theoretical data is still sparse. Especially \ep{ab initio}
@@ -287,9 +302,9 @@ name here.
 
 Ice surface structure was analysed by Cabrera Sanfelix $\etal~$ 
 \cite{CabreraSanfelix2003} in 2003. They analysed the early accretion of water
-on a bare graphite grain using density functional theory (DFT) with PW91
-functional, in which they found that the water is physisorbed on the surface.
-For high coverages of the surface, ice-like layers are formed. A 2005 study by
+on a bare graphite grain using density functional theory (DFT) with the PW91
+functional. They found that the water is physisorbed on the surface and that
+for high coverages of the surface, ice-like layers are formed. A 2005 study by
 Lin $\etal~$ \cite{Lin2005} investigated adsorption of small water clusters
 (not more than six molecules) on a graphite surface with a density functional
 tight-binding method and a dispersion correction. They found that the ring
@@ -303,7 +318,7 @@ fully reliable data available for many of these, therefore the simulation
 parameters were tuned, starting from educated guesses of some kind, to fit
 experimental data. While this approach is legit and does indeed not only yield
 good approximations to experimental data but also gives rise to new conclusions,
-it still needs further verification.
+the resulting parameters still need further verification.
 
 Our approach is therefore to create a model for water $I_h$ ice surface
 adsorption from scratch. We want to describe a crystalline water surface with
@@ -336,21 +351,25 @@ results for adsorption energies and a basis set recommendation.
 We will describe the theory underlying the model in the next section. Section
 \ref{Sec:Bench} then describes the benchmarking we performed on smaller test
 systems to determine the best functionals and basis sets to use to describe
-intermolecular interaction and therefore adsorption. After that, we give
-our results for adsorption energies and surface reaction energies in Section
-\ref{Sec:Ads}. As a suggestion of further applications, we give an idea of how
-one can analyse binding sites and transition states for adsorabtes. Finally,
-there will be concluding remarks and an outlook on possible further application for
-our findings in Section \ref{Sec:Con}.
+intermolecular interaction and therefore adsorption. With this DFT
+framework, we analyse gas phase formation and reaction energies in Section
+\ref{Sec:Gas}. After that, we present the geometry and basic properties of the
+model and give our results for adsorption energies and surface reaction
+energies in Section \ref{Sec:Ads}. As a suggestion of further applications, we
+give an idea of how one can analyse binding sites and transition states for
+adsorabtes in a small section following that. Finally, there will be concluding
+remarks and an outlook on possible further application for our findings in
+Section \ref{Sec:Con}.
 
 \section{Theoretical Background}
 \label{Sec:Theo}
 This section focuses on the theoretical framework of the ice surface model. We introduce the main chemical
-nomenclature in Section \ref{Sec:Theo:Interaction} and then proceed to the mathematical ideas behind
-DFT in Section \ref{Sec:Theo:QMMet}. After that, Section \ref{Sec:Theo:MM} will explain how we describe
-the MM interaction of the system and Section \ref{Sec:Theo:QMMM} explains how QM and MM are coupled
-by the QM/MM procedure. Finally, Section \ref{Sec:Theo:Minima} describes how to find energy minima
-of the potential energy surface.
+nomenclature in Section \ref{Sec:Theo:Interaction} and then proceed to the
+physical and mathematical ideas behind DFT in Section \ref{Sec:Theo:QMMet}.
+After that, Section \ref{Sec:Theo:MM} will explain how we describe the MM
+interaction of the system and Section \ref{Sec:Theo:QMMM} explains how QM and
+MM are coupled by the QM/MM procedure. Finally, Section \ref{Sec:Theo:Minima}
+describes how to find energy minima of the potential energy surface.
 
 \newcommand\X{\enmat{\te X}}
 \newcommand\Y{\enmat{\te Y}}
@@ -363,8 +382,8 @@ of the potential energy surface.
 \label{Sec:Theo:Interaction}
 We will consider the \ep{interaction energy} between two molecular species X and Y. We call
 the system of both molecules $\XY$. We also consider the \ep{adsorption energy} of a molecule X on
-the ice surface S. We call this system $\sX$. If not declared elsewise, all appearing energies are
-electronic ground state energies. We wil describe the interaction energy first.
+the ice surface S. We call this system $\sX$. All energies appearing are
+electronic ground state energies. We describe the interaction energy first.
 
 Consider a system of two molecules X and Y. We can calculate the energy of the isolated molecule X to
 be $E_{\te X}$ and the energy of the isolated molecule Y to be $E_{\te Y}$. We can also calculate the 
@@ -376,50 +395,60 @@ is the energy given by
  \label{Theo:InteractionEnergy}
 \end{equation}
 We did not include spatial dependence of $E_{\XY}$ into the above definition. A
-map \mbox{$(R_\XY, \Om_\X, \Om_\Y) \mapsto \eint_\XY$} with the center of mass separation
-$R_\XY$ and the molecular orientation $\Om_\X$ and $\Om_\Y$ is called the \ep{potential energy surface} (PES)
-of the intermolecular interaction. It may also contain internal deformations of the molecule.
+map \mbox{$(\bo R_\XY, \Om_\X, \Om_\Y) \mapsto \eint_\XY$} with the center of
+mass separation $\bo R_\XY$ and the molecular orientation $\Om_\X$ and $\Om_\Y$
+is called the \ep{potential energy surface} (PES) of the intermolecular interaction. It may also contain internal deformations of
+the molecule. For that case, one can either include the deformations in $E_\X$
+and $E_\Y$ or leave them out, depending on the problem to be analysed.
 
 However, one does often speak of the interaction energy of two molecules without further specification
-of a point on the PES. This is usually a reference to the optimum geometry
-of $\XY$, that is the global minimum of the PES $E_{\XY}$ and therefore $\eint_\XY$. If the interaction between $\X$ and $\Y$
-were purely repulsive, that is $\eint_{\XY} > 0$ for all geometries, the global minimum would
-not be well-defined since it requires inifinite separation of $\X$ and $\Y$ in an arbitrary direction.
-However, the algorithms we use will converge to a local minimum around the initial geometry we
-specify, by which we will then classify the strength of the repulsion. Even for attractive potentials,
-that is potentials where $\eint_\XY < 0$ for some geometries, we are not able to determine whether 
-the potential energy minimum we find is the global minimum or within what error its energy is
-to the global minimum.
+of a point on the PES. This is usually a reference to the \ep{optimum geometry}
+of $\XY$, that is the global minimum of the PES $E_{\XY}$ and therefore
+$\eint_\XY$ . If the interaction between $\X$ and $\Y$ were purely repulsive,
+that is $\eint_{\XY} > 0$ for all geometries, the global minimum would not be
+well-defined since it requires inifinite separation of $\X$ and $\Y$ in an
+arbitrary direction.
+However, the algorithms we use will converge to a local minimum, by which we
+will then classify the strength of the repulsion. But we are not able to
+determine whether the potential energy minimum we find is the global minimum or
+within what error its energy is to the global minimum. One must also keep in
+mind that the optimum geometries to which the system converges depends on the
+initial geometry from which the search algorithm starts.
 
-The adsorption energy is mostly similar. There, we have the energy of the isolated species
-$E_\X$ and the energy minimum of the surface $E_{\S}$. If we denote the system of the surface 
-with the adsorbed molecule $X$ by $\sX$ and its energy minimum by $E_{\sX}$, we define
-the adsorption energy to be
+The adsorption energy is mostly similar to the interaction energy. There, we
+have the energy of the isolated species $E_\X$ and the energy minimum of the
+surface $E_{\S}$. If we denote the system of the surface with the adsorbed
+molecule $X$ by $\sX$ and its energy minimum by $E_{\sX}$, we define the
+adsorption energy to be
 \begin{equation}
  \eads_{\X}:= E_{\sX} - E_\X - E_\S.
  \label{Theo:AdsorptionEnergy}
 \end{equation}
 Again, we did not include the dependence of $E_\sX$ and $E_\S$ on the respective
-geometries. We even specified that we will consider the individual geometry of minimum energy here. This is quite sensible
-because the surface geometry of the system $\sX$ \mbox{(surface + molecule)} may be different from the
-system $\S$ of the surface alone when comparing energy minima. For a fixed value of $E_\S$, 
-we could again consider a PES of the type \mbox{$(\bo r_i)_i \mapsto \eads_\sX$}, where the
-vector $\r_i$ is the coordinate of the $i$-th atom in $\sX$, $1 \le i \le N$ for some $N$. The different energy minima of 
-this map to $\eads_\X$ are called \ep{binding geometries}, and the position of the
-center of mass of the molecule $\X$ in a binding geometry is called a \ep{binding site}.
+geometries. We even specified that we will consider the individual geometry of
+minimum energy here. This makes sense because the surface geometry of the system
+$\sX$ \mbox{(surface + molecule)} may be different from the system $\S$ of the
+surface alone when comparing energy minima. For a fixed value of $E_\S$, we
+could again consider a PES of the type \mbox{$(\bo R_i)_i \mapsto \eads_\X$},
+where the vector $\bo R_i$ is the coordinate of the $i$-th atom in $\sX$, $1 \le
+i \le N$ for some $N$. The different energy minima of this map to $\eads_\X$ are
+called \ep{binding geometries}, and the position and orientation of the
+molecule $\X$ in a binding geometry is called a \ep{binding site}.
 Exploring binding sites and the strength of the binding $\eads_\X$ can be useful
 to simulation.
 
 We will also give reaction energies. In this work, we distinguish two kinds of reactions:
-Gas phase reactions, where isolated molecules come in contact, and Eley-Rideal (ER) \cite{EleyRideal} 
-or surface reactions as described in the introduction. A gas phase reaction is described
-by a scheme 
+Gas phase reactions, in which isolated molecules come in contact, and
+%% CHECK: wird oft ohne Quelle angegeben
+ER type %\cite{EleyRideal}
+surface reactions as described in the
+introduction. A gas phase reaction is described by a scheme 
 \begin{equation}
  \X\gas+\Y\gas \chemar  \Z\gas,
  \label{Theo:GasReactionScheme}
 \end{equation} 
-where the subscript $(\te g)$ indicates that gas phase. The initially isolated
-reactants $\X\gas$ and $\Y\gas$ combine to form a product $\Z\gas$. Of course,
+where the subscript $(\te g)$ indicates gas phase molecules. The initially
+isolated reactants $\X\gas$ and $\Y\gas$ combine to form a product $\Z\gas$. Of course,
 there are also reactions possible with more than one product, we will however not
 consider these.
 
@@ -429,9 +458,10 @@ The reaction energy consumed or released in this process is
  \label{Theo:ReactionEnergyGas}
 \end{equation}
 Positive $\ere_{\te{gas}}$ means an \ep{endothermic}, negative $\ere_{\te{gas}}$ 
-an \ep{exothermic} reaction. When neglecting quantum tunneling, only barrierless
-exothermic reactions occur in the gas phase since there is no source to provide
-the necessary energy for an endothermic reaction.
+an \ep{exothermic} reaction.
+%When neglecting quantum tunneling, only barrierless
+%exothermic reactions occur in the gas phase since there is no source to provide
+%the necessary energy for an endothermic reaction.
 
 It is also possible to calculate \ep{reaction energies} $\ere_{\te{ER}}$ for the ER mechanism. For that,
 species X is adsorbed on the surface to $\sur$X and in equilibrium, that is at optimum
@@ -441,16 +471,13 @@ to form $\sur$Z. This follows the scheme
  \sur\X+\Y\gas \chemar  \sur\Z,
  \label{Theo:SurfaceReactionScheme}
 \end{equation} 
-much similar to \eqref{Theo:GasReactionScheme}.
+much similar to \eqref{Theo:GasReactionScheme}. 
 
 The $\ere_{\te{ER}}$ reaction energy is
 \begin{equation}
  \ere_{\te{ER}}:= E_{\sur\Z} - E_{\sur\X} - E_{\Y\gas}.
  \label{Theo:ReactionEnergySurface}
 \end{equation}
-Especially exothermic reactions are interesting, since in that case the surface has to absorb the 
-energy difference between reactants and product. If this is possible, the product $\sur$Z
-stays intact, otherwise it will react further.
 
 ER reactions, adsorption energies and gas phase reactions can be related. We can see
 that when starting from \eqref{Theo:ReactionEnergySurface} and inserting
@@ -464,18 +491,21 @@ that when starting from \eqref{Theo:ReactionEnergySurface} and inserting
  \end{aligned}
  \label{Theo:GasAndERReaction}
 \end{equation}
-This result is important. It means that gas phase reaction energies and adsorption energies can be
-calculated separately to yield ER reaction energies. The two components require very
-different system sizes -- small gas phase molecules and large surface+molecule systems. But
-equation \eqref{Theo:GasAndERReaction} allows us to independently choose methods adequate
-to the requirements of these two separate calculations. We will use this result when
-discussing ER reaction energies. 
+This result is important. It means that gas phase reaction energies and
+adsorption energies can be calculated separately to yield ER reaction energies.
+The two components require very different system sizes -- small gas phase
+molecules and large surface+molecule systems. But equation
+\eqref{Theo:GasAndERReaction} allows us to independently choose methods
+adequate to the requirements of these two separate calculations.
+We will use this result when discussing ER reaction energies in Section
+\ref{Sec:Ads:Reactions}.
 
 %% CHECK: Sollte das gemacht werden? Sonst Kommentar streichen und im Text die Energien belassen.
 The superscripts and subscripts on $\eint$, $\eads$ and $\ere$ may be ignored if it is sufficiently
 clear which energy is meant.
 
-We also want to introduce a third type of energy, the \ep{zero-point (vibrational) energy}.
+We also want to introduce an energy correction, the \ep{zero-point
+(vibrational) energy}.
 We describe it for some general system $\A$ that may contain any arrangement of atoms.
 For all calculations we do, we will work with fixed values for the atomic coordinates
 $\r_i$, $1 \le i \le N$ for some $N \in \N$. That description can only be accurate if
@@ -494,33 +524,36 @@ by
  \label{Theo:EZP}
 \end{equation}
 where $\te {tr} \ed{\H}$ is the \ep{trace} of the matrix $\H$, that is the sum of the eigenvalues
-of $\H$. In the harmonic approximation, which should be accurate for the vibrational ground 
-state, the eigenvalues of $\H$ are 
+of $\H$. In the harmonic approximation, which should be reasonably accurate for
+the vibrational ground state, the eigenvalues of $\H$ are 
 %% CHECK: proportional or identical?
-proportional
-to the eigenfrequencies of the system. We call the term $\Dl \ezp$ the \ep{zero-point (vibratinal energy)
-correction}.
+proportional to the eigenfrequencies of the system. We call the term $\Dl \ezp$
+the \ep{zero-point (vibrational energy) correction}.
 
 We will always use the superscript in $\ezp$ if we want to denote energies that are corrected 
-with $\Dl \ezp$ in \eqref{Theo:EZP}.
+with $\Dl \ezp$ as in \eqref{Theo:EZP}.
 
 \subsection{Methods of Quantum Chemistry}
 \label{Sec:Theo:QMMet}
 
-We already saw a few different energy expressions so far. The accurate calculation of these 
-is naturally vital to anything we want to do in this work. We now want to focus on the methods
-of quantum chemistry which will be used to describe the quantum mechanical part of our system.
+We already saw a few different energy expressions so far. The accurate
+calculation of these is naturally vital to anything we want to do in this work.
+We now want to focus on the methods of quantum chemistry which will be used to
+describe the quantum mechanical part of our system.
 
 \subsubsection{Basics of Density Functional Theory}
-For a system with a time-independent potential $V$, one usually looks for solution of the 
-\ep{time-independent Schrödinger equation}
+For a system with a time-independent potential $V$, one usually looks for a
+solution of the \ep{time-independent Schrödinger equation}
 \begin{equation}
  \Ha \keP{} = E \keP{}.
  \label{Theo:Schroedinger}
 \end{equation}
-This equation holds for all non-relativistic quantum mechanical particles. Within the \ep{Born-Oppenheimer}
-approximation, one can separate the dynamics of the atomic cores from the dynamics of the electrons. We will treat
-the cores in a more or less classical way, therefore we will for now focus on solving the Schrödinger 
+%% CHECK: True dat?
+This equation holds for all non-relativistic quantum mechanical particles.
+Within the \ep{Born-Oppenheimer} approximation, one can separate the dynamics
+of the atomic cores from the dynamics of the electrons. We will treat the cores
+in a classical way and only later incorporate the $\zpe$ correction to reduce
+that error. Therefore, we will focus on solving the Schrödinger
 equation for $N < \infty$ electrons, that is the Hamiltonian of our system is
 \begin{equation}
  \Ha = -\sum_{i=1}^N \frac{\hbar^2}{2m_e} \nabla_i^2 + \frac {e^2} {4 \pi \e_0} \sum_{1\le i < j \le N} \frac 1 {\abs{\r_i - \r_j}} + V(\r^N).
@@ -560,11 +593,11 @@ to the \ep{Pauli principle}
 \begin{aligned}
  &\bkt{\x_1,\ldots,\x_l,\ldots,\x_k,\ldots,\x_N | \Psi_i } \\
  &=\ph - \Psi_i(\x_1,\ldots,\x_l,\ldots,\x_k,\ldots,\x_N) \\
- &= - \Psi_i(\x_1,\ldots,\x_k,\ldots,\x_l,\ldots,\x_N),
+ &= - \Psi_i(\x_1,\ldots,\x_k,\ldots,\x_l,\ldots,\x_N).
 \end{aligned}
 \label{Theo:Pauli}
 \end{equation}
-where we used $\x_i=(\r_i,s_i)$ for orbital coordinates $\r_i$ and the spin coordinate $s_i$.
+We use $\x_i=(\r_i,s_i)$ for orbital coordinates $\r_i$ and the spin coordinate $s_i$.
 
  If $\Hil \suseq \mathcal {L}^2$, which is usually the case,
 the set of solutions can be chosen orthonormal $\bkt{\Psi_i | \Psi_j} = \dl_{ij}$.
@@ -618,9 +651,12 @@ ground state density, and for which the minimum value is the ground state energy
 of solving the Schrödinger equation \eqref{Theo:Schroedinger} is reduced to the task of finding
 the minimum of this density functional.
 
-The problem here is that not much is known about the nature of this density functional. The
-popular ansatz by Kohn and Sham \cite{KohnSham} is called Kohn-Sham (KS-)DFT, and the energy
-expression is given by
+The problem here is that not much is known about the nature of this density
+functional. Especially the kinetic energy, which has a clear and simple form
+for orbitals, has no accurate representation in orbital-free DFT.
+
+The popular ansatz by Kohn and Sham \cite{KohnSham} reintroduces orbitals into
+DFT. It is called Kohn-Sham (KS-)DFT, and the energy expression is given by
 % CHECK: Role of \vcc
 \newcommand\er{\ed{\rho}}
 \newcommand\exc{E_{\te{xc}}}
@@ -642,7 +678,8 @@ by  introducing \ep{Kohn-Sham orbitals} $\phi_i$ that solve the equations
 \end{equation}
 with the \ep{effective potential}
 \begin{equation}
-\veff(\r)=\vcc+V(\r) + \frac {e^2}2 \indr' \frac{\rho(\r')}{\abs{\r-\r'}}+\delti{\exc\er}{\rho(\r)}.
+\veff(\r)=\vcc+ \tilde V(\r) + \frac {e^2}2 \indr'
+\frac{\rho(\r')}{\abs{\r-\r'}}+\delti{\exc\er}{\rho(\r)}.
 \label{Theo:Veff}
 \end{equation}
 The latter term is often expressed by the \ep{exchange correlation potential}
@@ -661,9 +698,10 @@ With that, the kinetic energy functional is given by
 \begin{equation}
 T_s\er=\sum_{i=1}^N \indr\ \phi_i^*(\r) \rb{-\hm \nabla^2} \phi_i(\r).
 \end{equation}
-Now, the remaining problem before one can find self-consistent solution to \eqref{Theo:SCFDFT}
-with \eqref{Theo:Veff} and use them to minimize \eqref{Theo:EnergyDensityFunctional} is to
-find an expression for $\exc\er$ (see below).
+% Now, the remaining problem before one can find self-consistent solution to \eqref{Theo:SCFDFT}
+% with \eqref{Theo:Veff} and use them to minimize \eqref{Theo:EnergyDensityFunctional} is to
+% find an expression for $\exc\er$ (see below).
+The last remaining task is to find expressions for $\exc\er$ (see below).
 
 After one decides on some functional for $\exc$, one needs to find \ep{self-consistent} solution
 to \eqref{Theo:SCFDFT}. Since the KS orbitals $\phi_i$ define the potential $\veff$ in
@@ -684,8 +722,8 @@ Over the years, many different expressions for $\exc$ were proposed and used, ea
 defining a separate density functional with different advantages and disadvantages. There
 are three main classes of KS-DFT functionals: \ep{local density approximation} (LDA) functionals
 are functionals where $\vxc(\r)$ does only depend on the the value of $\rho(\r)$, which may
-be sensible for slowly varying densities. The more general \ep{generalized gradient approximation}
-(GGA) additionally incorporates dependencies on $\nabla\rho(\r)$ into $\vxc(\r)$. Thirdly,
+be sensible for slowly varying densities. The more universal \ep{generalized
+gradient approximation} (GGA) additionally incorporates dependencies on $\nabla\rho(\r)$ into $\vxc(\r)$. Thirdly,
 there are approximations that use linear combinations of LDA and GGA calculations and the
 Hartree-Fock exact exchange energy to obtain more accurate results \cite{Becke1993}. 
 These functionals are called \ep{hybrid} functionals. Rather recently, a variety of
@@ -696,25 +734,29 @@ We chose functionals from the GGA, Hybrid and Meta-GGA class.\newline
 \textbf{GGA}: \bp, \blyp, {\pbe} and \bns\cite{GrimmeB97-D2006}.\newline
 \textbf{Hybrid}: \btlyp, {\bhlyp} and \pbez. \newline
 \textbf{Meta-GGA}: \tpss, {\tpssh} and \pw. \newline
-The functionals {\bns} and $\pw$ (with additional dispersion correction, see below) and the
-{\pbez} functional were among the most accurate functionals in a study by Anacker and Friedrich
-\cite{Anacker2014} on water-water interaction. They also included the meta-GGA functional \mos. While
-{\mos} is indeed an accurate and fast functional, in our tests it had the strange deficiency of
-convergence failures when unbonded H-radicals were present in the system, starting with systems
-as small as $\hto + \te H$. The calculations still converged for geometries close to the
-equilibrium (energy minimum) geometry, but for even slightly longer separations of H and $\hto$
-lead to oscillations in the SCF convergence. This problem seemed to be mostly independent
-of the choice of basis set and the implementation of $\mos$ (the problem occured both
-in TURBOMOLE\cite{TURBOMOLE} and NWCHEM\cite{NWCHEM} calculations), and it could not be helped by standard approaches
-to facilitate convergence. For that reason, $\mos$ is not included
-in our further considerations despite it being among the most accurate functionals.
+%The functionals {\bns} and $\pw$ (with additional dispersion correction, see
+% below) and the {\pbez} functional were among the most accurate functionals in a study by Anacker and Friedrich
+%\cite{Anacker2014} on water-water interaction. They also included the meta-GGA
+% functional \mos.
+At the beginning of our research, we also considered the meta-GGA functional
+\mos. While {\mos} is indeed an accurate and fast functional, in our tests it
+had the strange deficiency of convergence failures when unbonded H-radicals
+were present in the system, starting with systems as small as $\hto + \te H$.
+The calculations still converged for geometries close to the optimum geometry,
+but even just slightly longer separations of H and $\hto$ lead to oscillations
+in the SCF convergence. This problem seemed to be mostly independent of the
+choice of basis set and the implementation of $\mos$ (the problem occured both
+in TURBOMOLE\cite{TURBOMOLE} and NWCHEM\cite{nwchem} calculations), and it could not
+be helped by standard approaches to facilitate convergence. For that reason,
+$\mos$ is not included in our further considerations despite it being among the most accurate functionals.
 
 \subsubsection{Basis Sets}
 \label{Sec:Theo:Basis}
 
 Now, the ansatz \eqref{Theo:RhoByPhi} is not yet fit for computational application since the
 functions $\phi_i$ may pertain to the infinite-dimensional Hilbert space $\mathcal L^2(\R^3)$.
-As usual, we have to restrict the approximation to a finite subspace $\st{\chi_\mu\ |\ 1 \le \mu \le M} = X \sus \mathcal L^2(\R^3)$.
+As usual, we have to restrict the approximation to a finite subspace 
+$\st{\chi_\mu\ |\ 1 \le \mu \le M} = X \sus \mathcal L^2(\R^3)$.
 The standard approach is then to find the functions $\phi_i$ by \ep{linear combination
 of atomic orbitals} (LCAO). An atomic orbital is a function $\chi_\mu(\r - \bo R_{A_\mu})$
 for some core $A_\mu$. In the LCAO approximation, one chooses $X$ to be a set of $M$ (approximated) atomic orbital
@@ -757,7 +799,6 @@ with the mass and charge of all atoms in Y set to zero (dummy atom), and vice ve
 For more than two interacting molecules, this \ep{counterpoise correction} (CP) gets
 more complicated, see for example Anacker and Friedrich \cite{Anacker2014}.
 
-%% CHECK: Wahr? Nachrechnen?
 We will not include a CP correction in our calculations. The reason is that we will mainly
 work with def2-TZVP and def2-TZVPD, so basis sets large enough to ignore the 
 BSSE. However, the comparison between def2-TZVP and for example def2-SVP results
@@ -777,7 +818,7 @@ of the density \cite{Kryachko} in the functionals.
 Since water-water interaction is strongly affected by non-covalent bonds, a correct
 account of dispersion is desirable for our approach to the system. Some of the functionals
 we use here are already (at least slighty) optimised to include dispersion, namely
-\pbez, \tpss, {\tpssh} and \bns. Others were not originally designed to
+$\pbez$, $\tpss$, $\tpssh$ and $\bns$. Others were not originally designed to
 consider systems dependent on dispersion. But there were a variety of correction
 terms proposed \cite{BeckeXDM2007}\cite{GrimmeDCorrection2010}, of which we will use
 Grimme's D3 correction \cite{GrimmeD32011}. Its most basic idea is to add a dispersion
@@ -815,11 +856,8 @@ will be the $\blyp$ functional plus the corresponding D3 dispersion correction.
 Note that even for functionals that are already meant to include dispersion there
 are still D3 corrected versions, like \bns\dt. For any functional, the correction
 may sometimes lead to overestimation of dispersion or still underestimate it
-at some circumstances. We will later present results of a small benchmark test including
-multiple basis sets and functionals from which we will determine the functionals
-with the most potential to describe water-water interaction and therefore the
-system we are about to study.
-
+at some circumstances. The effect of the D3 correction will also be tested in
+next section's benchmark.
 
  
 
@@ -868,7 +906,7 @@ system we are about to study.
 When there is no bond formation or breaking to be expected, quantum mechanical
 calculations can be replaced by classical calculation, that is the position
 of the atomic cores is again a sharply determinable quantity and motion
-is governed by forces. That is, all particles move in a classical potential.
+is governed by forces. All particles move in a classical potential.
 We will only treat water molecules as classical particles, so we need a good
 %% CHECK: Real source by Jorgensen? Or 1981 source?
 classical model of water. We decided on the quite popular $\tip$ potential 
@@ -881,9 +919,9 @@ coincide with the atoms forming $\hto$. Each site has a charge $\qal$ with
 \label{Theo:TIP3EC}
 \end{equation}
 where $\al,\be$ are the site types and $\ralbe$ is the distance between
-the sites $\al$ and $\be$. Sites also interact by Van-der-Waals forces
-which are described by a \ep{Lennard-Jones} (LJ) potential
-\newcommand\ELJ{\enmat V^{\te{LJ}}_{\al\be}}
+the sites $\al$ and $\be$ located at two different water molecules. Sites also
+interact by Van-der-Waals forces which are described by a \ep{Lennard-Jones}
+(LJ) potential \newcommand\ELJ{\enmat V^{\te{LJ}}_{\al\be}}
 \newcommand\salbe{\enmat{\si_{\al\be}}}
 \newcommand\ealbe{\enmat{\eps_{\al\be}}}
 \begin{equation}
@@ -897,9 +935,9 @@ a $\tip$ water molecule $i$ moves in the potential of all other $\tip$ waters by
 V_i(\r_i)=\sum_{j\neq i} \sum_{\al,\be} \ed{\EC(\ralbe(\r_i,\r_j)) + \ELJ(\ralbe(\r_i,\r_j))}.
 \label{Theo:TIP3Potential}
 \end{equation}
-The first sum runs over all other water molecules and the second over all sites in both
-molecules. \eqref{Theo:TIP3Potential} only contains intermolecular interaction. There
-would also be the possibility to include intramolecular degrees of freedom with
+The first sum runs over all other water molecules and the second over all
+pairs of sites. \eqref{Theo:TIP3Potential} only
+contains intermolecular interaction. There would also be the possibility to include intramolecular degrees of freedom with
 harmonic potentials for bond and angle stretching. This is not the case for $\tip$,
 where all sites are fixed within the molecule, reducing the 9-dimensional coordinate
 \mbox{$\r_i=\r_i\rb{\r_{\te O},\r_{\te H1},\r_{\te H2}}$} to a 6-dimensional one, \mbox{$\r_i=\r_i\rb{\r_{\te O},\Om}$}
@@ -956,7 +994,7 @@ for a given wave function \cite{Brorsen2014AnalyticalGradientDFT}.
 
 %% CHECK: Pre-reactive complex?
 \newcommand\ebased[2]{exp(-(\x-#1)^2/#2)} 
-\begin{figure}[ht]
+\begin{figure}[b!]
 %\includegraphics{
 \tikzsetexternalprefix{TikzPics/Theo/}
 \tikzsetnextfilename{Fig.Theo.PES} 
@@ -984,21 +1022,24 @@ for a given wave function \cite{Brorsen2014AnalyticalGradientDFT}.
 To evaluate our model, we will also calculate a \ep{transition state} (TS). This
 is the state of maximum energy along a \ep{reaction path}, that is a path that
 starts at some initial geometry with initial \ep{reaction coordinate} $\xi_0$
-and then follows the negative gradient to a maximum (the transition state) and
-after that reaches a new minimum by continuing on its route along the
-gradient. In Figure \ref{Fig:Theo:PES}, an example of such a path between
-reaction coordinates $\xi_0$ and $\xi_{\te{MIN}}$ is plotted. 
+and then follows the the direction corresponding to the lowest eigenvalue of the
+Hessian matrix to a saddle point (the transition state) and after that reaches
+a new minimum by continuing on its route along the gradient. In Figure
+\ref{Fig:Theo:PES}, an example of such a path between reaction coordinates
+$\xi_0$ and $\xi_{\te{MIN}}$ is plotted.
 
 %% CHECK: ZITAT. Außerdem Theorie checken!
-In this work, we obtain transition state with the \ep{dimer method} \cite{DimerMethod}. It uses two
-images of the system with a slight offset, then rotates them to find the minimum 
-eigenvalue of the Hessian matrix \eqref{Theo:Hessian}. It follows these ``gradients" 
-by an iterative scheme a saddle point is reached. This is the transition state.
+In this work, we obtain transition states with the \ep{dimer method}
+\cite{DimerMethod}. It uses two images of the system with a slight offset, then
+rotates them to find the minimum eigenvalue of the Hessian matrix
+\eqref{Theo:Hessian}. It follows these minimum eigenvalue directions by an
+iterative scheme until a saddle point is reached. This is the transition state.
 
-Transition states are important for calculating tunneling rates. These are interesting
-for the analysis of molecule formation on ice surfaces since at temperatures as low
-as in the interstellar medium, tunneling has a significant contribution to the dynamics of 
-these systems.
+Transition states are important for calculating activation energies and
+tunneling rates. The former govern reaction rates while the latter are also
+interesting for the analysis of molecule formation on ice surfaces since at
+temperatures as low as in the interstellar medium, tunneling has a significant
+contribution to the dynamics of these systems.
 
 \subsection{Technical Details}
 
@@ -1046,18 +1087,20 @@ We did also already name the basis sets we want to compare alongside the functio
 
 We used three different benchmarks, namely the interaction energies of an $\htoh$, an $\htohto$ and an $\htoo$ system.
 The reference calculations were in all cases performed with the MOLPRO \cite{MOLPRO_brief} package
-at the $\ccsdtf$ \cite{CCSDTF12} level of theory with the $\vtz$\cite{VTZ} basis set, for
-which we found energy minima \footnote{In the $\htoo$ case, a first minimum was calculated at the
-$\mrcif/\vtz$ \cite{MRCIF12} level of theory, where it was found that the wavefunction can be well
-described by a single-reference method. From there, the $\ccsdtf$ minimisation was carried out.}.
-For $\htoo$, the $\ccsdtf$ calculations were preceded by \ep{multi-reference}\cite{Multiref} calculation
-at the $\mrcif/\vtz$ level of theory to find an optimum geometry, which turned out to be
-suitable for single-reference treatment.
+at the $\ccsdtf$ \cite{KniziaAdlerWerner2009} level of theory with the
+$\vtz$\cite{YousafPeterson2008} basis set, for which we found energy minima
+%minima\footnote{In the $\htoo$ case, a first minimum was calculated at the
+%$\mrcif/\vtz$ \cite{ShiozakiKniziaWerner2011} level of theory, where it was
+%found that the wavefunction can be well described by a single-reference method.
+%From there, the $\ccsdtf$ minimisation was carried out.}.
+For $\htoo$, the $\ccsdtf$ calculations were preceded by \ep{multi-reference} 
+calculation at the $\mrcif/\vtz$\cite{ShiozakiKniziaWerner2011} level of theory
+including a Davidson correction\cite{LanghoffDavidson1974} to find an optimum
+geometry, which turned out to be suitable for single-reference treatment.
 
 At each optimum geometry, an additional calculation was carried out to find a CP
 corrected energy. For $\htoh$ and $\htohto$, this calculations was also at the $\ccsdtf/\vtz$ level
-of theory, while for the $\htoo$ interaction again an $\mrcif/\vtz$ calculation with
-Davidson correction\cite{DavidsonCorrection} was
+of theory, while for the $\htoo$ interaction again an $\mrcif/\vtz$ calculation was
 required due to the necessity of a multireference treatment of the case where the
 $^3\te O$ radical is set as a dummy atom. In all cases, the $\vtz$ basis set is 
 large enough to require only small CP corrections of $0.05 - 0.18 \ \kmo$. 
@@ -1093,19 +1136,19 @@ therefore consider the coupled cluster results as if they were the correct value
 interaction.
 
 %% CHECK: Speedup-table?
-Another remark before starting the benchmark is the accuracy with which numerical
-integration was carried out. In the TURBOMOLE code, we used an m4 integration grid
-with keyword ``\$scfconv 8''. The results were compared to the more accurate
+Another remark before starting the discussion is the accuracy with which
+numerical integration was carried out. In the \mbox{TURBOMOLE} code, we used an
+m4 integration grid with keyword ``\$scfconv 8''. The results were compared to the more accurate
 m5 grid and ``\$scfconv 9'', which meant no change in energy. Therefore, we recommend
-the slightly less accurate integration technique due to it being computationally
-faster. 
+the less accurate technique due to it being computationally faster while being
+very close to the more accurate alternative.
 
 \subsection{$\htoh$ Interaction}
 
 \tikzsetexternalprefix{TikzPics/Benchmark/}
 \tikzsetnextfilename{Fig.Bench.H2O+H.NoD3}
 \pgfplotsset{xtick style={draw=none}}
-\begin{figure}[h]
+\begin{figure}[b!]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -1167,12 +1210,13 @@ weakly bonded system. The CP correction contributes $+0.05\ \kmo$ to
 the energy.
 
 Before discussing different functionals and the dispersion corrections, we can have a look
-at the differences between the four basis sets used.Figure \ref{Fig:Bench:H2O+H:NoD3} does not contain our results
-for the def2-SVP basis set since they are much worse than all other results --
-up to $-20\ \kmo$ and usually more than $-5\ \kmo$ of deviation. Only the $\bhlyp$, $\pbez$ and
-$\pw$ functional had errors between $-2$ and $-5$ $\kmo$ with def2-SVP. However,
-the addition of diffuse functions effects quite a remarkable improvement to the
-def2-SVP results, such that def2-SVPD calculations are well comparable to 
+at the differences between the four basis sets used. Figure
+\ref{Fig:Bench:H2O+H:NoD3} does not contain our results for the def2-SVP basis
+set since they are much worse than all other results -- up to $-20\ \kmo$ and
+usually more than $-5\ \kmo$ of deviation. Only the $\bhlyp$, $\pbez$ and $\pw$
+functional had errors between $-2$ and $-5$ $\kmo$ with def2-SVP. However, the
+addition of diffuse functions effects quite a remarkable improvement to the
+def2-SVP results, such that def2-SVPD calculations are well comparable to
 results obtained by basis sets of more than double-$\zeta$ order.
 
 It is also
@@ -1185,11 +1229,12 @@ than both. def2-QZVP takes approximately 1.5 times as long to complete a single
 SCF iteration as def2-TZVPD. From a first glance
 at the ``better'' functionals in this case, one could therefore consider
 the def2-TZVP and def2-TZVPD basis sets as good compromises between
-accuracy and computational cost. 
+accuracy and computational cost. Without dispersion correction, $\tzvp$
+is the best basis set for many functionals.
 
 \tikzsetexternalprefix{TikzPics/Benchmark/}
 \tikzsetnextfilename{Fig.Bench.H2O+H.D3}
-\begin{figure}[h]
+\begin{figure}[b!]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -1226,7 +1271,8 @@ accuracy and computational cost.
 \legend{def2-SVPD,def2-TZVP,def2-TZVPD,def2-QZVP}
 \end{axis}
 \end{tikzpicture}
-\caption{The $\htoh$ benchmark results for different basis sets including dispersion correction.
+\caption{The $\htoh$ benchmark results for different basis sets and
+functionals including dispersion correction.
 Energies are plotted as differences to the reference energy from $\ccsdtf/\vtz$ calculations,
 see \eqref{Bench:RefEnergy}.}
 \label{Fig:Bench:H2O+H:D3}
@@ -1246,7 +1292,7 @@ We will therefore mainly focus on the data in Figure \ref{Fig:Bench:H2O+H:NoD3}.
 The results here tend to be very accurate.
 %% CHECK: Accuracy ccsd(t)?
 In fact, the deviations are within the error bonds of a $\ccsdtf$ calculation,
-so it is hard to favor a functional of the given choice. Still, at least two
+so it is hard to favor a functional of the given choice. Still, a few
 functionals need special remarks, but rather for their deficiencies. The first one
 are the $\tpss$ and $\tpss\dt$ functionals. They predict much too attractive energies
 for this benchmark, beyond $-7\ \kmo$ and $-9\ \kmo$, respectively. 
@@ -1254,29 +1300,32 @@ for this benchmark, beyond $-7\ \kmo$ and $-9\ \kmo$, respectively.
 They predict
 a wrong optimum geometry, where the H radical is at a distance of around $2.20\ \Ang$
 from the O atom in the water molecule, which is much less than the reference
-value of $3.34\ \Ang$.
+value of $3.34\ \Ang$. 
 
 The opposite problem happens for $\bns$ and $\bns\dt$ optimisations. Here, the attraction is
 considered close to being repulsive, with interaction energy values around
 \mbox{$\eint_{\bns}\approx -0.03\ \kmo$}. While the resulting deviation of around
 $0.37\ \kmo$ does not look too dramatic in Figures \ref{Fig:Bench:H2O+H:NoD3} and
-\ref{Fig:Bench:H2O+H:D3}, it is a qualitative mistake. The separation between
-radical H and water O is around $5.80\ \Ang$, which is close to describing two isolated
+especially Figure \ref{Fig:Bench:H2O+H:D3}, it is a qualitative mistake. The
+separation between radical H and water O is around $5.80\ \Ang$, which is close to describing two isolated
 systems.
 
 Comparing RMSD data of different functionals yields similar results as the energy comparison.
 Functionals without the D3 correction
-predict very accurate geometries with $\DRMSD < 0.01\ \Ang$ for all but $\tpss$ and $\bns$.
+predict very accurate geometries with \mbox{$\DRMSD < 0.01\ \Ang$} for all but
+$\tpss$ and $\bns$.
 Despite worse energy results, many D3 corrected versions still find accurate optimum geometries.
 Exclusions are $\btlyp\dt$, $\blyp\dt$, $\bp\dt$, which do find optima similar to the already mentioned
-$\tpss$ optimum, with the H radical too close to the water O. The $\bhlyp$ functional
-generally yields good geometries, only for the $\tzvp$ basis set it also predicts the H
-radical too close to the water O.
+$\tpss$ optimum, with the H radical too close to the water O.
+%% CHECK: Im Original stand bhlyo, aber das glaub ich nicht. Bhlyp-d3
+% vermutlich.
+The $\bhlyp\dt$ functional generally yields good geometries, only for the
+$\tzvp$ basis set it also predicts the H radical too close to the water O.
 
-Concerning the change of optimum geometry with respect to the choice of basis set, most
-basis sets lead to the same optimum geometry for nearly all functionals. Only the
-$\svp$ basis set and the $\tzvpp$ basis set often lead to wrong, i.e. too
-attractive, geometries. 
+Concerning the change of optimum geometry with respect to the choice of basis
+set, most basis sets lead to the same optimum geometry for nearly all
+functionals. Only the $\svp$ basis set and the $\tzvpp$ basis set often predict
+wrong, i.e. too attractive, geometries. 
 
 % Let us now look at the different functionals. The $\bns$ functional
 % seems to offer a very good approximation to $\ecc$  with and without dispersion
@@ -1356,9 +1405,9 @@ to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEn
 
 \subsection{$\htohto$ Interaction}
 
-Again, we compare energies to the reference energy as in \eqref{Bench:RefEnergy}. The
-reference energy for the $\htohto$ dimer is at \mbox{$\ecc=-20.80\ \kmo$}, where
-the CP correction contributes $+0.18\ \kmo$.
+Again, we compare $\dft$ energies to a reference energy as in
+\eqref{Bench:RefEnergy}. The reference energy for the $\htohto$ dimer is at
+\mbox{$\ecc=-20.80\ \kmo$}, where the CP correction contributes $+0.18\ \kmo$.
 In Figure \ref{Fig:Bench:H2O+H2O:TZVPCompare}, we take a look at the differences between
 dispersion corrected and not dispersion corrected results in the def2-TZVP and def2-TZVPD
 basis sets. The stronger attraction between the two $\hto$ molecules does prevent
@@ -1451,8 +1500,8 @@ of basis sets to describe electrons far from the core.
 The inclusion of polarisation functions as in def2-TZVPP does
 also affect the results positively, however not to the extent of additional
 diffuse functions. The def2-TZVPPD basis set is again an improvement
-to the def2-TZVPP basis set, it is also stronger than the def2-TZVPD
-basis set. Indeed, for all three functionals the def2-TZVPPD and
+to the def2-TZVPP basis set, it is also slightly more accurate than the
+def2-TZVPD basis set. Indeed, for all three functionals the def2-TZVPPD and
 def2-QZVPD results are strikingly close to one another, which could
 be an indication that the basis set truncation error is low and that
 the intrinsic quality of the methods is reached. In that case, the
@@ -1465,10 +1514,12 @@ methods' intrinstic error.
 % erwähnen?
 The results so far speak in favor of the def2-TZVPD basis set. Due 
 to the size of the quantum mechanical part of the QM/MM system we will later consider,
-it is computationally too expensive to use for the whole
-QM part. We will therefore use a hybrid system with the more important atoms described by the def2-TZVPD
-basis set and the less important ones by the def2-TZVP basis set. We will describe this
-further subdivision of the QM domain in more detail in Section \ref{Sec:Ads:Model}.
+it is computationally too expensive to use $\tzvpd$ for the whole
+QM part. We will therefore use a hybrid basis set with the more important atoms
+described by the def2-TZVPD basis set and the less important ones by the
+def2-TZVP basis set. We will describe this further subdivision of the QM domain
+in more detail in Section \ref{Sec:Ads:Model}.
+
 We should therefore determine functionals that are both good for def2-TZVP and def2-TZVPD,
 while their accuracy for def2-TZVPD is more important since the adsorption site will
 be closer to the def2-TZVPD atoms. Figure \ref{Fig:Bench:H2O+H2O:TZVPCompare} shows
@@ -1476,15 +1527,16 @@ that good compromises between the two basis sets
 are given by $\btlyp$, $\tpss$, $\tpssh$ and $\pw$, which all give mediocre results in
 both basis sets. $\bhlyp$, $\pbez$ and $\pw\dt$ are highly accurate for def2-TZVPD but not very good
 with def2-TZVP. $\bns\dt$ is somewhat between those functionals, being less accurate for 
-def2-TZVPD but still better for def2-TZVP. All other functionals are
-not accurate enough for def2-TZVP or def2-TZVPD.
+def2-TZVPD but still better for def2-TZVP than e.g. $\pbez$. All other
+functionals are not accurate enough for def2-TZVP or def2-TZVPD.
 
 For $\htohto$, the RMSD values are entirely unproblematic for any basis set beyond
-$\svp$. The worst RMSD is reached by $\bns\dt/\tzvpd$, it is of \mbox{$0.076\ \Ang$},
-which is just a slight displacement of H atoms. Especially $\btlyp$ and $\pw$ both
-with and without dispersion corrections predict RMSDs of less than $0.008\ \Ang$
-to the reference geometry, $\bhlyp$ is rougly at $0.010\ \Ang$ and the
-rest is between $0.02$ and $0.05\ \Ang$. Therefore, $\htohto$ interaction geometries
+$\svp$ (where an entirely wrong geometry is predicted). The worst RMSD is
+reached by $\bns\dt/\tzvpd$, it is of \mbox{$0.076\ \Ang$}, which is just a
+slight displacement of H atoms. Especially $\btlyp$ and $\pw$ both with and
+without dispersion corrections predict RMSDs of less than $0.008\ \Ang$ to the
+reference geometry, $\bhlyp$ is roughly at $0.010\ \Ang$ and the rest is
+between $0.02$ and $0.05\ \Ang$. Therefore, $\htohto$ interaction geometries
 are well described by any functional in a basis set bigger than $\svp$.
 
 % With these hybrid basis set considerations, we can therefore nominate seven functionals
@@ -1501,119 +1553,9 @@ are not well described by a single Slater determinant. At the optimum geometry,
 a single-reference approach is fortunately possible, so our results for this
 benchmark have the full credibility of the $\ccsdtf$ method. Only the CP
 correction is taken from an $\mrcif$ calculation, but it is as small as
-\mbox{$0.10\ \kmo$} and therefore unlikely to deteriorate our results.
-The CP corrected interaction energy is \mbox{$\ecc=-6.72\ \kmo$}.
+\mbox{$0.10\ \kmo$} and therefore the error here is unlikely to deteriorate our
+results. The CP corrected interaction energy is \mbox{$\ecc=-6.72\ \kmo$}.
 
-% \pgfplotsset{
-% % override style for non-boxed plots
-%     % which is the case for both sub-plots
-%     every non boxed x axis/.style={} 
-% }
-% \tikzsetexternalprefix{TikzPics/Benchmark/}
-% \tikzsetnextfilename{Fig.Bench.H2O+O.TZVPCompare}
-% \begin{figure}[h]
-% \centering
-%  \begin{tikzpicture}
-% \begin{groupplot}[
-%     group style={
-%         group name=my fancy plots,
-%         group size=1 by 2,
-%         xticklabels at=edge bottom,
-%         vertical sep=0pt
-%     },
-%     height=8cm,
-%     width=.48*\textwidth,
-% %     ybar,
-% %     xmin=.5,
-% %     xmax=10.5,
-% %     %ymax=9.5,
-% %     ybar=0pt,
-% %     axis x line*=bottom,
-% %     enlarge x limits=0.015,
-% %     enlarge y limits=0.15,
-% %     legend pos=north west,
-% %     legend style={legend columns=2},
-% %     ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
-% %     xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpss,\tpssh,\pw},
-% %     xtick=data,
-% %     grid=minor,
-% %     xticklabel style={rotate=90},
-% %     bar width = .008*\textwidth,
-% %     minor xtick={1.5,...,9.5},
-% %     yticklabel pos=left,
-% %     grid style={dotted,gray},
-% %     ymajorgrids=true,
-%     ]
-% \nextgroupplot[ymax=-12,
-%                %ytick={60,80},
-%                % 
-%                axis y discontinuity=parallel,
-%                height=3.5cm]
-% \nextgroupplot[ymin=-5,ymax=9.5,
-% axis x line=bottom,
-% ]
-% \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.1081968550) (2,-9.0107947650) (3,-.2511553300) (4,-17.9176722400) (5,-15.0656966100) (6,-20.1429410200) (7,-.9848250500) (8,-.8730050050) (9,-.0743016500) (10,-.5862478950) };
-% \addplot[red!20!black,fill=red!80!white] coordinates {(1,.4817004850) (2,1.1639366600) (3,.0664251500) (4,-4.9605409350) (5,-2.9669987850) (6,-16.2942468250) (7,-.5893722400) (8,-.1660366200) (9,.5068527750) (10,-.0768746400) };
-% \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-2.0464984850) (2,-15.1573265600) (3,-1.8328878050) (4,-21.1657045450) (5,-17.8578633500) (6,-21.2442857600) (7,-2.1535663750) (8,-2.4432115350) (9,-1.6152863650) (10,-1.5014446850) };
-% \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.4555772000) (2,-2.2273166700) (3,-1.5145721850) (4,-17.4665588300) (5,-15.0122414300) (6,-17.6048439150) (7,-1.6649345700) (8,-1.6973069850) (9,-1.0344207450) (10,-.9915725850) };
-% % \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-3.2642316400) (2,-8.9154103500) (3,-.1969912650) (4,-17.8199248750) (5,-14.9692619950) (6,-20.0472940550) (7,-.1117675350) (8,-9.5628061400) (9,-2.8443879350) (10,3.2840804200) };
-% % \addplot[red!20!black,fill=red!80!white] coordinates {(1,-1.2195447500) (2,-5.8266408750) (3,.0822569150) (4,-13.8070844200) (5,-11.7862370700) (6,-16.1985998600) (7,-.5081655250) (8,-6.8218629050) (9,-.8746065600) (10,-.3388207750) };
-% % \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-6.3561779700) (2,-15.0561660450) (3,-1.7440671400) (4,-21.0742583800) (5,-17.7669422850) (6,-21.1475885950) (7,-2.1064911600) (8,-11.6848927700) (9,-5.1798489500) (10,2.6702910300) };
-% % \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-4.1516243850) (2,-11.6611845050) (3,-1.4672344200) (4,-17.3701242150) (5,-14.9173821150) (6,-17.5065714500) (7,-1.6485777050) (8,-9.0171222200) (9,-3.1405180800) (10,-1.6287026700) };
-% \legend{def2-TZVP,def2-TZVPD,def2-TZVP+D3,def2-TZVPD+D3}
-% \end{groupplot}
-% \end{tikzpicture}
-% \caption{The $\htoo$ benchmark results for the def2-TZVP and def2-TZVPD basis sets.
-% The results with dashed bars include dispersion corrections. Energies are plotted as differences
-% to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
-% \label{Fig:Bench:H2O+O:TZVPCompare}
-% \end{figure}
-% \tikzsetexternalprefix{TikzPics/Benchmark/}
-% \tikzsetnextfilename{Fig.Bench.H2O+O.TZVPCompare}
-% \begin{figure}[h]
-% \centering
-%  \begin{tikzpicture}
-% 
-% \begin{axis}[
-%     height=8cm,
-%     width=.48*\textwidth,
-%     ybar,
-%     xmin=.5,
-%     xmax=10.5,
-%     ymin=-3.5,
-%     ybar=0pt,
-%     axis x line*=bottom,
-%     enlarge x limits=0.015,
-%     enlarge y limits=0.15,
-%     legend pos=north west,
-%     legend style={legend columns=2},
-%     ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
-%     xticklabels={\btlyp,\bns,\bhlyp,\blyp,\bp,\pbe,\pbez,\tpss,\tpssh,\pw},
-%     xtick=data,
-%     grid=minor,
-%     xticklabel style={rotate=90},
-%     bar width = .008*\textwidth,
-%     minor xtick={1.5,...,9.5},
-%     yticklabel pos=left,
-%     grid style={dotted,gray},
-%     ymajorgrids=true,
-%     ]
-% \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-.1081968550) (2,-9.0107947650) (3,-.2511553300) (4,-17.9176722400) (5,-15.0656966100) (6,-20.1429410200) (7,-.9848250500) (8,-.8730050050) (9,-.0743016500) (10,-.5862478950) };
-% \addplot[red!20!black,fill=red!80!white] coordinates {(1,.4817004850) (2,1.1639366600) (3,.0664251500) (4,-4.9605409350) (5,-2.9669987850) (6,-16.2942468250) (7,-.5893722400) (8,-.1660366200) (9,.5068527750) (10,-.0768746400) };
-% \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-2.0464984850) (2,-15.1573265600) (3,-1.8328878050) (4,-21.1657045450) (5,-17.8578633500) (6,-21.2442857600) (7,-2.1535663750) (8,-2.4432115350) (9,-1.6152863650) (10,-1.5014446850) };
-% \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-1.4555772000) (2,-2.2273166700) (3,-1.5145721850) (4,-17.4665588300) (5,-15.0122414300) (6,-17.6048439150) (7,-1.6649345700) (8,-1.6973069850) (9,-1.0344207450) (10,-.9915725850) };
-% % \addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-3.2642316400) (2,-8.9154103500) (3,-.1969912650) (4,-17.8199248750) (5,-14.9692619950) (6,-20.0472940550) (7,-.1117675350) (8,-9.5628061400) (9,-2.8443879350) (10,3.2840804200) };
-% % \addplot[red!20!black,fill=red!80!white] coordinates {(1,-1.2195447500) (2,-5.8266408750) (3,.0822569150) (4,-13.8070844200) (5,-11.7862370700) (6,-16.1985998600) (7,-.5081655250) (8,-6.8218629050) (9,-.8746065600) (10,-.3388207750) };
-% % \addplot[blue!20!black,pattern color=blue!80!white,pattern = horizontal lines] coordinates {(1,-6.3561779700) (2,-15.0561660450) (3,-1.7440671400) (4,-21.0742583800) (5,-17.7669422850) (6,-21.1475885950) (7,-2.1064911600) (8,-11.6848927700) (9,-5.1798489500) (10,2.6702910300) };
-% % \addplot[red!20!black,pattern color=red!80!white,pattern = horizontal lines] coordinates {(1,-4.1516243850) (2,-11.6611845050) (3,-1.4672344200) (4,-17.3701242150) (5,-14.9173821150) (6,-17.5065714500) (7,-1.6485777050) (8,-9.0171222200) (9,-3.1405180800) (10,-1.6287026700) };
-% \legend{def2-TZVP,def2-TZVPD,def2-TZVP+D3,def2-TZVPD+D3}
-% \end{axis}
-% \end{tikzpicture}
-% \caption{The $\htoo$ benchmark results for the def2-TZVP and def2-TZVPD basis sets.
-% The results with dashed bars include dispersion corrections. Energies are plotted as differences
-% to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
-% \label{Fig:Bench:H2O+O:TZVPCompare}
-% \end{figure}
 
 \tikzsetexternalprefix{TikzPics/Benchmark/}
 \tikzsetnextfilename{Fig.Bench.H2O+O.FuncCompare}
@@ -1658,7 +1600,8 @@ to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEn
 \label{Fig:Bench:H2O+O:FuncCompare}
 \end{figure}
 
-In the last two test systems, six functionals show a good overall performance.
+In the last two test systems, six functionals have shown a good overall
+performance.
 Figure \ref{Fig:Bench:H2O+O:FuncCompare} depicts the energy data of the $\htoo$ benchmark
 for these functionals. In contrast to the previous two systems, the $\svpd$
 basis set tends to yield the worst results. It always gives the most attractive
@@ -1681,38 +1624,41 @@ than $0.5\ \Ang$.
 
 \subsection{Conclusions}
 
-We have already decided on the $\tzvp$|$\tzvpd$ hybrid basis. Both basis sets
+We have already decided on the $\tzvp/\tzvpd$ hybrid basis. Both basis sets
 have proven to be able to yield good results, especially the $\tzvpd$ basis
-is in many cases among the most accurate. Since the adsorption process 
-can easily be restricted to by close to only atoms described by $\tzvpd$,
-a functional's results for the $\tzvpd$ basis set have to be the most important
-ones, while results in the $\tzvp$ basis should still be reasonable but not
-necessarily too accurate.
+is in many cases among the most accurate. Since the adsorbate molecules
+can be placed close to only described by $\tzvpd$, a functional's results for
+the $\tzvpd$ basis set are the most important ones, while results in the
+$\tzvp$ basis set should still be reasonable but not necessarily too accurate.
 
-Under these conditions, we find that $\pbez$, $\bhlyp$ and $\pw\dt$ are excellent
-functionals for describing our system. Of these, especially $\bhlyp$ seems
-to have a great accuracy for both $\htoh$ and $\htoo$. $\pbez$ is also
+Under these conditions, we find that $\pbez$, $\bhlyp$ and $\pw\dt$ should be
+very good functionals for describing our system. Of these, especially $\bhlyp$
+seems to have a great accuracy for both $\htoh$ and $\htoo$. $\pbez$ is also
 quite accurate in both cases. For $\pw\dt$, the interaction with oxygen
-may become problematic. $\pw$ is even better for both $\htoh$ and $\htoo$,
-but it is considerably worse for water-water interaction, therefore the $\pw\dt$
-functional seems preferable in a highly water-dominated system, especially
-since the (reference) water-water interaction energy is of $-20.80\ \kmo$.
+may become problematic. 
+%$\pw$ is even better for both $\htoh$ and $\htoo$,
+%but it is considerably worse for water-water interaction, therefore the
+% $\pw\dt$ functional seems preferable in a highly water-dominated system, especially
+%since the (reference) water-water interaction energy is of $-20.80\ \kmo$.
 
 %% CHECK: Anacker und Friedrich schlagen die Funktionale gar nicht wirklich vor, verwenden sie nur.
 %   in einem anderen paper schlagen sie m11 vor.
-The functionals $\btlyp$ and $\tpssh$ are also good options for functionals,
-despite not being recommended by Anacker and Friedrich\cite{Anacker2014}.
-They are however slightly inferior to $\bhlyp$ and $\pbez$.
+The functionals $\btlyp$, $\tpssh$ and $\pw$ are also good options for
+functionals. While the results for $\htohto$ interaction are not the most
+accurate ones in the $\tzvpd$ basis set, their higher accuracy with $\tzvp$
+makes them good candidates. Additionally, $\pw$ was better in describing both
+$\htoh$ and $\htoo$ interaction than its dispersion corrected counterpart.
+%despite not being recommended by Anacker and Friedrich\cite{Anacker2014}.
+%They are however slightly inferior to $\bhlyp$ and $\pbez$.
 
-For everything that follows, we will therefore mostly use results obtained
-with $\bhlyp$, $\pbez$, $\pw\dt$, $\btlyp$ or $\tpssh$. Especially on
+For everything that follows, we will therefore only use results obtained
+with $\bhlyp$, $\pbez$, $\pw\dt$, $\btlyp$, $\tpssh$ or $\pw$. Especially on
 adsorption under interstellar condition, there is not much experimental
 data available, therefore our only indication of good results may be
 agreement between the different functionals that seemed to yield credible results
 by the standards of this benchmark.
   
 %% CHECK: Interaction geometries?
-%% CHECK: Formation energy?
 \section{The Gas Phase}
 \label{Sec:Gas}
 
@@ -1729,11 +1675,11 @@ reliable in the previous benchmark.
 Bare energy values for different functionals can not be compared
 properly. Instead, we need to compare energy differences to
 a reference value. We do only study molecules with O and H atoms
-in them, so for a mlecular species X with $M_{\te{H}}$ H atoms and 
+in them, so for a molecular species X with $M_{\te{H}}$ H atoms and 
 $M_{\te O}$ O atoms, we define a standard energy of formation
 by
 \begin{equation}
-E^0_\X=E_\X - \frac {M_{\te H}} 2 E_{\htw} - \frac{M_{\te O}} 2 E_{\tripot}.
+E^0_\X=E_\X - M_{\te H} 2 \frac {E_{\htw}} 2 - M_{\te O} \frac {E_{\tripot}} 2.
 \label{Gas:FormationEnergy} 
 \end{equation}
 $\tripot$ is the triplet oxygen. The spin multiplicity of a molecule will
@@ -1741,8 +1687,8 @@ only be given if the choice is not obvious. This is the case for the
 pure oxygen species $\singo$, $\tripo$, $\singot$ and $\tripot$. All other
 species have singlet or dublet spin.
 
-The value is of only minor physical importance, but if two electron
-strutcture methods agree well, they should obviously agree well with respect to
+The value is of only minor physical importance, but if two electronic
+structure methods agree well, they should obviously agree well with respect to
 $E^0$.
 We include $\zpe$ corrections into $E^0$. For each functional, 
 the correction is calculated at the corresponding optimum geometry
@@ -1759,10 +1705,10 @@ An energy adjusted by \eqref{Gas:FormationEnergy} has two problems. For
 once, we can not say how accurately the energies for $\htw$ and $\tripot$
 themselves are predicted. This leads to the second problem that inaccurate
 data for these will possibly make the entire set of results for a functional
-seem less inaccurate instead of only a few data points. We have to bear this in
+seem less accurate instead of only a few data points. We have to bear this in
 mind for the comparison. 
 
-\begin{table*}[htb]
+\begin{table*}[h!]
   \centering
   \caption{Energies for DFT functionals, according to \eqref{Gas:FormationEnergy}.
   All values are ZPE corrected. All energies in $\kmo$.}
@@ -1799,7 +1745,7 @@ $\pw$ covers the results of both functionals.
 To get estimates of the overall performance of the functionals,
 we give the \ep{mean absolute deviation} (MAD) and minimum (MIN)
 and maximum (MAX) deviations as well as the overall mean deviation
-from the $\ccsdtf$ for each functional. The MAD agreement is
+from the $\ccsdtf$ calculation for each functional. The MAD agreement is
 best for $\pw$ and $\btlyp$. We can also see immediately
 that $\btlyp$ and $\tpssh$ always yield greater formation energies
 than the $\ccsdtf$ calculations. Indeed, only $\bhlyp$ yields 
@@ -1839,7 +1785,7 @@ We already described gas phase reaction in Section \ref{Sec:Theo:Interaction} by
 \eqref{Theo:GasReactionScheme}. For simplicity, we drop the $(\te g)$ subscript.
 
 We calculated DFT energies in the $\tzvpd$ basis set with
-the $\btlyp$, $\bhlyp$, $\pbez$, $\tpssh$, $\pw$ and $\pw\dt$
+the $\btlyp$, $\bhlyp$, $\pbez$, $\tpssh$ and $\pw$ 
 functionals. We did also calculate $\ccsdtf/\vtz$ energy data.
 All results were supplemented by a $\zpe$ correction at the
 optimum geometry obtained by $\dlfind$. 
@@ -1950,7 +1896,7 @@ The sudied reactions are
 \end{subequations}
 
 The $\singo$ in \eqref{Gas:H2O+O->H2O2} is in an excited state
-compared to the ground state $\tripo$, with a excitation energy difference
+compared to the ground state $\tripo$, with an excitation energy difference
 of $206.50~\kmo$ according to the most precise result in Table
 \ref{Tab:Gas:Energies}. The reaction with the radical $\ho$ to the more stable
 $\hto$ will therefore be barrierless. All the other reactions are cases of
@@ -1978,13 +1924,17 @@ formation energy most accurately. The opposite is the case for reaction
 \eqref{Gas:HO+HO->H2O2}, where the agreement between $\bhlyp$ and the reference
 data is much worse than the one of the other functionals. And again, for the
 formation energy $\bhlyp$ was not as accurate as the other functionals for
-$\ho$. It seems to be the case that if Table \ref{Tab:Gas:Energies} implies
-that a functional describes a molecular species well or badly, a reaction
-energy containing this molecular species will also be accurate or inaccurate.
-This can be seen as an indication that the descprition of the accuracy of the
-functionals for the different molecular species in Table \ref{Tab:Gas:Energies}
-is not too strongly contaminated by the functional's respective errors in the
-description of $\htw$ and $\tripot$.
+$\ho$.
+%% CHECK: Dieser Abschnitt ist Unsinn. Natrülich überträgt sich die Genauigkeit
+% aus Tabelle 1 auf Tabelle 2. Subtrahiere auf beiden Seiten die entsprechenden
+% H2 und O2 Energien und du hast die Differenz zwischen formation energies.
+% It
+% seems to be the case that if Table \ref{Tab:Gas:Energies} implies that a functional describes a molecular species well or badly, a reaction
+% energy containing this molecular species will also be accurate or inaccurate.
+% This can be seen as an indication that the descprition of the accuracy of the
+% functionals for the different molecular species in Table \ref{Tab:Gas:Energies}
+% is not too strongly contaminated by the functional's respective errors in the
+% description of $\htw$ and $\tripot$.
 
 The agreement between $\ccsdtf$ and DFT functionals is never better than a
 difference of $5~\kmo$. Still, for most cases we can find at least one
@@ -2032,6 +1982,7 @@ energies and experimental data.
 %% CHECK: Barnes mal lesen? Brauchen wir das Fletcher-Zitat?
 Barnes \cite{Barnes1929} established a first model of water at temperatures
 as low as $90\K$ in 1929. He could not locate the hydrogen atoms due
+%% CHECK: Scattering?
 to their low X-ray scattering power\cite{Fletcher1966}, but he was able
 to experimentally verify that the oxygen atoms are aligned hexagonally
 on layers. The hydrogen atoms were then mostly described by statistical
@@ -2049,11 +2000,11 @@ The O atoms are not all in the same plane.}
 \label{Fig:Ads:Fletcher}
 \end{figure}
 
-It is given in Figure \ref{Fig:Ads:Fletcher}. Starting from a layer of
-hexagonally arranged O atoms (which are not arranged on a plane but 
+It is best understood by consindering Figure \ref{Fig:Ads:Fletcher}. Starting
+from a layer of hexagonally arranged O atoms (which are not arranged on a plane but 
 alteratingly above and below the plane), one can connect each O atom to its
 four nearest neighbors. On these designated hydrogen bonds, H atoms can be placed close
-to one of the two O atoms taking part in the bond. This can lead to a multitude
+to one of the two O atoms taking part in the bond. This leads to a multitude
 of possible arrangements. Fletcher's approach is to draw parallel
 lines into the lattice to group the molecules in rows. Molecules in the
 same row have the same orientation. In Figure \ref{Fig:Ads:Fletcher}, these
@@ -2068,30 +2019,32 @@ extended to the full system.
 Such a crystalline surface must be considered as an idealisation. For once,
 since we are interested in an ice surface on a grain, the interaction between
 the water molecules and the grain at the grain surface will surely lead to
-changes in the surface, probably both in O position as well as in H orientation.
+changes in the water crystal, probably both in O position as well as in H
+orientation.
 Research in that respect was presented by Cabrera Sanfelix
 \etal\cite{CabreraSanfelix2003} on a graphite surface, where a water dimer
 adsorbed on the surface has different bond angles than the gaseous water dimer.
 Therefore, an undisturbed crystalline surface will only be reasonable if the
-water ice is several monolayers thick, which is only the case in the cold
-interstellar medium. A second idealization is that the crystalline structure of
-water ice can only be true to the perfect hexagonal structure if a layer like in
-Figure \ref{Fig:Ads:Fletcher} is wihtin the crystal, i. e. there are more such
-layers above and below. Then, there is a balance of force. If the layers
-above are removed to describe a surface layer, the forces from inside the crystal will
-surely deform an ideal surface layer. We will see this effect in Section
-\ref{Sec:Ads:Optima}.
+water ice is several monolayers thick, which is only the case for very cold
+interstellar clouds. A second idealization is that the crystalline structure of
+water ice can only be true to the perfect hexagonal structure if a layer like
+in Figure \ref{Fig:Ads:Fletcher} is wihtin the crystal, i. e. there are more
+such layers above and below. Then, there is a balance of force. If the layers
+above are removed to describe a surface layer, the forces from inside the
+crystal will surely deform an the ideal surface layer of Figure
+\ref{Fig:Ads:Fletcher}.
+We will see this effect in Section \ref{Sec:Ads:Optima}.
 
 Instead of choosing a cuboid subdomain of the Fletcher surface -- which would be more adequate
 to the surface's translational symmetry -- we will consider a hemisphere as depicted in Figure
 \ref{Fig:Ads:QMMM}. We do so because the surface model shall be used in future studies
 to investigate reactions. These depend on energy dissipation processes throughout the
 surface, which will propagate spherically from a reaction site. The symmetry of the model
-is chosen to be adequate to that.
+is chosen to be adequate to that, with the designated reaction site at the
+central ring.
 
 \subsubsection{The QM/MM Region}
 \label{Sec:Ads:QM/MM}
-%% CHECK: Pics?
 %% CHECK: what is prismatic surface? Thing in Fletcher?
 %\tikzsetexternalprefix{TikzPics/Adsorption/}
 %\tikzsetnextfilename{Fig.Ads.QMMM}
@@ -2127,21 +2080,20 @@ The decomposition into QM/MM domains is described in Figure \ref{Fig:Ads:QMMM}.
 At a sphere of radius $8~\Ang$ we separate the system into two domains. The
 domain within this sphere is the QM domain and the domain outside of it
 is the MM domain. 
-The QM region contains three layers of molecules. On the surface layer,
+The QM region then contains three layers of molecules. On the surface layer,
 there is the central hexagonal ring of water molecules and the six
 rings adjacent to it. The second layer has a water ring and the six
 molecules forming hydrogen bonds with the O atoms of the ring. On 
 the third layer, there is only one ring left. This would total
 to 24+12+6=42 QM molecules. However, the QM description is only
 necessary for regions where chemistry takes place. In our study,
-this will all happen close to the surface. Therefore, going three
+this will all happen close to the surface layer. Therefore, going three
 layers deep with the QM domain is not necessary and the the six
 atoms of the lowest ring are also treated by MM. This makes the system slightly
 less symmetric, but for the problems discussed here, the decrease in
 computation time is enough to make up for that: calculations with 42 QM molecules
-take on average 1.4 times as long as calculations with 36 QMmolecules.
-Therefore, we decide on a total of 36 QM molecules. 
-Of these, only the central ring at
+take on average 1.4 times as long as calculations with 36 QM molecules.
+Therefore, we decide on a total of 36 QM molecules. Of these, only the central ring at
 the surface is described by the $\tzvpd$ basis set, the rest
 uses the $\tzvp$ basis set. 
 
@@ -2149,20 +2101,20 @@ As for the MM domain, it is again separated at $15~\Ang$ of the system center.
 Those molecules within that radius can change their position (active molecules) in the optimisations we
 later carry out. The rest of the MM molecules is fixed in position (frozen molecules) to yield
 %% CHECK: envelope? shell?
-boundary conditions. The $10~\Ang$ envelope of frozen molecules may not be necessary as a boundary,
-but on the other hand it has virtually no effect on computation time to include
-these additional MM atoms, and if necessary they can be turned into
-further active atoms. There is a total of 1121 MM molecules, of
-which 231 are active MM molecules and 890 frozen MM molecules.
+boundary conditions. The $10~\Ang$ thick envelope of frozen molecules may not be
+necessary as a boundary, but on the other hand it has virtually no effect on
+computation time to include these additional MM atoms, and if necessary they
+can be turned into further active atoms. There is a total of 1121 MM molecules, of
+which 225 are active MM molecules and 890 frozen MM molecules.
 
 The geometry of the original Fletcher surface has to be changed to fit the requirements
 of the $\tip$ potential. In the original formulation the hydrogen atoms
 are placed directly on the hydrogen bonds, that is connecting lines between each oxygen atom
-and its four nearest neighbors. This process yields bond angles of $109.50 \degree$
-with a in princple variable bond length. The latter can be easily adjusted
+and its four nearest neighbors. This process yields bond angles of $109.50\degree$
+with a in principle variable bond length. The latter can be easily adjusted
 to the $\tip$ requirements by simple stretching. This does not change the bond angles which
 are still in disagreement with the bond angles of the $\tip$ potential
-fixed at $104.52 \degree$. This is mended by simply taking a perfect
+fixed at $104.52\degree$. This is mended by simply taking a perfect
 Fletcher surface with adjusted bond lenghts $\abs{\r_{\te O - \te H1}}=\abs{\r_{\te O - \te H2}}=0.9572~\Ang$
 and changing the angles to the appropriate value while maintaining
 the orientation of the water dipole moment, that is the vector $\r_{\te O - \te H1}+\r_{\te O - \te H2}$
@@ -2175,8 +2127,8 @@ respect to the dipole moment.
 To verify the agreement between the theoretically assumed Fletcher surface and the
 methods we want to use on it, we calculated RMSD values \eqref{Bench:RMSD} between
 the ideal Fletcher surface and the surface it changes into after QM/MM optimisation.
-Note that the factor $\frac 1 M$ in \eqref{Bench:RMSD} is not defined by the full number of QM/MM atoms
-in the system but by the number of active QM/MM atoms.
+Note that the factor $\frac 1 M$ in \eqref{Bench:RMSD} is not defined by the
+full number of QM/MM atoms in the system but by the number of active QM/MM atoms.
 
 % Table generated by Excel2LaTeX from sheet 'Tabelle1'
 \begin{table}[t]
@@ -2200,19 +2152,19 @@ Data for the RMSD values are presented in Table \ref{Tab:Ads:RMSD.Methodcompare}
 We include the pure MM optimisation with $\tip$. Generally,
 the results can be considered good. For all systems, the same effect is visible: the
 active $\hto$ molecules sink slightly into the surface. We did already have reasons
-to expect that, as explained in Section \ref{Sec:Ads:Surface}.
+to expect that, as explained in Section \ref{Sec:Ads:Model}.
 %This can be expected, since
 %the initial geometry is gained by cutting a perfect crystal at a plain, so the molecules
 %that are now at the surface do not feel the attractive hydrogen bonds of the removed
 %molecules anymore and move closer to the remaining molecules within the surface. 
-This effect is not sinking process leads to an RMSD of order $< 0.2~\Ang$, and the displacement
-is stronger the further a molecule is away from the frozen molecule region. Below
+This initial sinking in process leads to an RMSD of order $< 0.2~\Ang$, and the
+displacement is stronger the further a molecule is away from the frozen molecule region. Below
 the surface layer, the displacements due to this effect are not very strong.
 
 The RMSD among the DFT optima is very small, $0.035~\Ang$ and less. Even those
 functionals we excluded in the benchmark yield optimum geometries within 
 boundaries of an RMSD of $0.063~\Ang$. Between the functionals of Table \ref{Tab:Ads:RMSD.Methodcompare}
-and the $\tip$ potential, there is an RMSD of roughly $0.1~\Ang$. The source of
+and the $\tip$ potential, there is an RMSD of around $0.1~\Ang$. The source of
 this deviation is that the DFT water does not have the $\anghoh$ bond angle that
 $\tip$ water has to satisfy.
 
@@ -2225,8 +2177,8 @@ to the ideal Fletcher geometry.
 \tikzsetnextfilename{Fig.Ads.QMMMConvergence}
 \begin{figure}[h]
 \centering
- \begin{tikzpicture}
-\begin{axis}[
+\begin{tikzpicture}
+ \begin{axis}[
     height=8cm,
     width=\linewidth,
     axis x line*=bottom,
@@ -2243,8 +2195,9 @@ to the ideal Fletcher geometry.
     ]
 \addplot[red] coordinates {(0,225.924275) (1,221.644710) (2,187.276915) (3,138.232575) (4,72.201250) (5,45.421150) (6,17.039495) (7,17.774635) (8,24.942250) (9,27.488985) (10,26.543805) (11,23.445715) (12,19.586230) (13,13.678855) (14,10.291960) (15,10.186940) (16,12.129810) (17,14.597780) (18,15.437940) (19,14.282720) (20,11.158375) (21,7.561440) (22,4.620880) (23,5.487295) (24,9.189250) (25,12.024790) (26,17.407065) (27,15.044115) (28,12.917460) (29,9.478055) (30,7.666460) (31,6.196180) (32,6.721280) (33,7.482675) (34,7.929010) (35,10.055665) (36,8.480365) (37,7.902755) (38,7.456420) (39,6.931320) (40,6.800045) (41,7.193870) (42,7.246380) (43,7.640205) (44,8.217815) (45,8.821680) (46,8.900445) (47,8.480365) (48,7.666460) (49,7.088850) (50,6.878810) (51,6.747535) (52,6.695025) (53,6.563750) (54,6.379965) (55,5.854865) (56,5.776100) (57,5.198490) (58,4.620880) (59,4.620880) (60,4.568370) (61,4.253310) (62,3.911995) (63,3.386895) (64,3.544425) (65,3.360640) (66,3.334385) (67,3.308130) (68,3.150600) (69,2.704265) (70,2.520480) (71,2.100400) (72,1.759085) (73,1.601555) (74,1.417770) (75,1.417770) (76,1.365260) (77,1.312750) (78,1.312750) (79,1.102710) (80,.866415) (81,.446335) (82,-.078765) (83,-.052510) (84,-.026255) (85,-.026255) (86,-.105020) (87,-.078765) (88,-.105020) (89,-.157530) (90,-.210040) (91,-.210040) (92,-.210040) (93,-.183785) (94,-.157530) (95,-.131275) (96,-.131275) (97,-.210040) (98,-.236295) (99,-.288805) (100,-.315060) (101,-.341315) (102,-.367570) (103,-.341315) (104,-.288805) (105,-.157530) (106,-.183785) (107,-.183785) (108,-.183785) (109,-.157530) (110,-.131275) (111,-.105020) (112,-.052510) (113,0) (114,0) (115,0) (116,0) (117,0) (118,0) (119,0) (120,0) };
 \addplot[blue] coordinates {(0,42.979435) (1,42.506845) (2,37.518395) (3,31.427235) (4,39.408755) (5,48.598005) (6,58.548650) (7,46.471350) (8,30.403290) (9,22.946870) (10,18.509775) (11,17.958420) (12,19.192405) (13,21.686630) (14,22.159220) (15,20.216350) (16,16.750690) (17,12.418615) (18,9.530565) (19,8.979210) (20,10.843315) (21,12.864950) (22,14.151445) (23,11.683475) (24,6.458730) (25,2.467970) (26,-3.675700) (27,-2.993070) (28,-1.444025) (29,1.023945) (30,2.572990) (31,2.940560) (32,2.074145) (33,.866415) (34,-.210040) (35,-1.417770) (36,-.971435) (37,-1.050200) (38,-.840160) (39,-.630120) (40,-.945180) (41,-1.444025) (42,-1.942870) (43,-2.467970) (44,-3.281875) (45,-4.200800) (46,-4.594625) (47,-4.332075) (48,-3.780720) (49,-3.360640) (50,-3.360640) (51,-3.570680) (52,-3.623190) (53,-3.675700) (54,-3.623190) (55,-3.413150) (56,-3.413150) (57,-3.098090) (58,-2.546735) (59,-2.730520) (60,-2.730520) (61,-2.572990) (62,-2.362950) (63,-1.706575) (64,-2.074145) (65,-1.995380) (66,-2.047890) (67,-2.100400) (68,-2.021635) (69,-1.706575) (70,-1.575300) (71,-1.233985) (72,-.945180) (73,-.840160) (74,-.735140) (75,-.761395) (76,-.787650) (77,-.708885) (78,-.761395) (79,-.603865) (80,-.393825) (81,-.026255) (82,.498845) (83,.420080) (84,.367570) (85,.341315) (86,.393825) (87,.367570) (88,.367570) (89,.420080) (90,.446335) (91,.420080) (92,.420080) (93,.367570) (94,.341315) (95,.315060) (96,.288805) (97,.367570) (98,.367570) (99,.393825) (100,.446335) (101,.446335) (102,.446335) (103,.420080) (104,.367570) (105,.210040) (106,.236295) (107,.236295) (108,.236295) (109,.210040) (110,.157530) (111,.131275) (112,.078765) (113,.026255) (114,0) (115,0) (116,0) (117,0) (118,0) (119,0) (120,0) };
-\legend{QM energies, MM energies}
-\end{axis}
+\addplot[green] coordinates {(0,268.903710) (1,264.151555) (2,224.795310) (3,169.659810) (4,111.610005) (5,94.019155) (6,75.588145) (7,64.245985) (8,55.345540) (9,50.435855) (10,45.053580) (11,41.404135) (12,38.778635) (13,35.365485) (14,32.451180) (15,30.403290) (16,28.880500) (17,27.016395) (18,24.968505) (19,23.261930) (20,22.001690) (21,20.426390) (22,18.772325) (23,17.170770) (24,15.647980) (25,14.492760) (26,13.731365) (27,12.051045) (28,11.473435) (29,10.502000) (30,10.239450) (31,9.136740) (32,8.795425) (33,8.349090) (34,7.718970) (35,8.637895) (36,7.508930) (37,6.852555) (38,6.616260) (39,6.301200) (40,5.854865) (41,5.749845) (42,5.303510) (43,5.172235) (44,4.935940) (45,4.620880) (46,4.305820) (47,4.148290) (48,3.885740) (49,3.728210) (50,3.518170) (51,3.176855) (52,3.071835) (53,2.888050) (54,2.756775) (55,2.441715) (56,2.362950) (57,2.100400) (58,2.074145) (59,1.890360) (60,1.837850) (61,1.680320) (62,1.549045) (63,1.680320) (64,1.470280) (65,1.365260) (66,1.286495) (67,1.207730) (68,1.128965) (69,.997690) (70,.945180) (71,.866415) (72,.813905) (73,.761395) (74,.682630) (75,.656375) (76,.577610) (77,.603865) (78,.551355) (79,.498845) (80,.472590) (81,.420080) (82,.420080) (83,.367570) (84,.341315) (85,.315060) (86,.288805) (87,.288805) (88,.262550) (89,.262550) (90,.236295) (91,.210040) (92,.210040) (93,.183785) (94,.183785) (95,.183785) (96,.157530) (97,.157530) (98,.131275) (99,.105020) (100,.131275) (101,.105020) (102,.078765) (103,.078765) (104,.078765) (105,.052510) (106,.052510) (107,.052510) (108,.052510) (109,.052510) (110,.026255) (111,.026255) (112,.026255) (113,.026255) (114,0) (115,0) (116,0) (117,0) (118,0) (119,0) (120,0) };
+\legend{QM energies, MM energies, QM/MM energies};
+ \end{axis}
 \end{tikzpicture}
 \caption{The QM/MM energy changes during a typical optimisation. The 
 energies are deviations from their value at the optimum geometry.
@@ -2254,20 +2207,21 @@ Functional: $\bhlyp$.}
 
 We can also compare the behaviour of the QM and MM part during the optimisation
 process starting at the initial crystalline geometry. Figure \ref{Fig:Ads:QMMMConvergence}
-gives a typical example with the $\bhlyp$ functional. Both QM and MM energies are differences to
-their values at the energy minimum. At the fully crystalline system, the
-energy difference is too high for the plot axis, it goes up to $226~\kmo$ for the
+gives a typical example with the $\bhlyp$ functional. The QM, MM and
+QM/MM energies are given as differences to their values at the energy minimum.
+At the fully crystalline system, the energy difference is too high for the plot axis, it goes up to $226~\kmo$ for the
 QM part and $43~\kmo$ for the MM part. This is again an implication that the actual
 optimum geometry has to be tighter bound and that the effect is strongest for the
 QM region, although the high energies in the QM region must also be due to the
-wrong geometry. After the first few iterations, one can see that the
-energy changes in both domains are of the same order of magnitude. There is a codependence visible
-where a more attractive interaction in the MM region is accompanied by a
-less attractive interaction in the QM region and vice versa. We take
-this as an implication that the interaction between the two region works
-well and that neither one of them is outbalanced by too strong energy
-gradients in the other one. We also see this as an indication that active MM atoms
-should be included in a geometry optimization.
+physically wrong $\tip$ geometry. After the first few iterations, one can see
+that the energy changes in both domains are of the same order of magnitude. The
+overall energy seems to converge more or less smoothly. There is a codependence
+visible where a more attractive interaction in the MM region is accompanied by
+a less attractive interaction in the QM region and vice versa. We take this as
+an implication that the interaction between the two region works well and that
+neither one of them is outbalanced by too strong energy gradients in the other
+one. We also see this as an indication that active MM atoms should be included
+in a geometry optimization.
 
 \subsection{ZPE Corrections}
 \label{Sec:Ads:ZPE}
@@ -2297,8 +2251,8 @@ will mostly affect the atoms within the ring. The effect on atoms further
 away should be considerably less. However, the question if the cutoff for this effect
 should only include the central ring must be further investigated. The
 upshot is obvious: With $M$ being the number of atoms in the adsorbate, these $18+M$ atoms
-need $54+3M$ displacements (plus one initial geometry). This is much less than the
-original $324+3M$ displacements for $108+M$ QM atoms.
+need $108+6M$ displacements (plus one initial geometry). This is much less than
+the original $648+6M$ displacements for $108+M$ QM atoms.
 
 We will call this selective correction the $\zpering$ correction in contrast to
 the $\zpeall$ correction for all QM atoms. Corresponding energies are then called
@@ -2321,7 +2275,7 @@ Of the molecules relevant in Section \ref{Sec:Gas}, we examine adsorption
 %   zu Physisorption behandeln?
 energies for all species but $\singo$, since it is chemisorbed by the surface
 to form some conformation of $\htot$. This is a result of the barrierless
-and very exothermic reaction $\hto+\singo\chemar\htot$, as described in
+and very exothermic reaction \mbox{$\hto+\singo\chemar\htot$}, as described in
 \eqref{Gas:H2O+O->H2O2}.
 
 %% CHECK: Vllt lieber die Corrections als die Energiewerte?
@@ -2373,7 +2327,7 @@ and very exothermic reaction $\hto+\singo\chemar\htot$, as described in
 Before discussing adsorption data, we want to discuss the relevance of the
 $\zpe$ correction and the differences between $\zpeall$ and $\zpering$
 as well as the differences between the $\zpering$ correction for $\btlyp$ and
-$\pbez$, which we hope to represent the general variability of the
+$\pbez$, which we hope to represent the variability of the
 $\zpe$ correction for different functionals.
 
 In general, the value of the corrective term does vary from
@@ -2399,7 +2353,7 @@ accurate either, it seems alright to use the correction of the smaller
 system while accepting error bars of $\pm 2~\kmo$.
 
 Comparing the corrective terms for $\btlyp$ and $\pbez$, we generally find
-good agreement. With the exception of $\sur^1\ot$, the energies
+good agreement. With the exception of $\sur\singot$, the energies
 differ by less than $0.6~\kmo$.
 %The case of $\sur^1\ot$ is also
 %interesting because it is the only case where the $\pbez$ correction
@@ -2415,7 +2369,7 @@ following data.
 Talking about the differences between $\zpe$ corrected adsorption energies
 and those without correction, there are the interesting cases of 
 $\sur$H, $\sur\htw$ and $\sur\tripot$. In all three cases, the uncorrected
-$E$ predicts attractive interaction, while the corrected $\eall$
+$E$ predicts weakly attractive interaction, while the corrected $\eall$
 and $\ering$ both predict repulsive interaction. That means that
 the binding site found by the uncorrected DFT method is probably not the
 desired optimum.
@@ -2427,6 +2381,11 @@ molecules would repel one another. The problem here may be more the
 $\btlyp$ functional than the $\zpe$ correction alone. Due to the computational
 cost of a single ZPE correction, an optimization on a more sophisticated 
 PES will be very difficult to achieve.
+
+Still, the $\zpe$ correction in such a weakly adsorbed case is probably
+erroneous since the minimum can only be very local. This means that
+approximating the PES by a harmonic potential does not reproduce the PES
+correctly.
 
 In any case, it is safe to say that the adsorbates $\sur$H, $\sur\htw$ and $\sur\tripot$
 are only very weakly bound to the surface.
@@ -2500,7 +2459,7 @@ are only very weakly bound to the surface.
 Let us now turn to Table \ref{Tab:Ads:AdsForFuncs}, where ZPE corrected adsorption
 energies are given. Where there is experimental data available, it is given
 in the last column. So far, not many studies exist on measuring 
-adsorption under interstellar conditions. We therefore also included some data
+adsorption under interstellar conditions. We therefore also include some data
 for $\ho$, $\tripo$ and $\singot$ adsorption on bare amorphous silicates, which were gathered in order to
 gain a better understanding of water ice formation on bare silicates \cite{HeVidali2014,HeJingVidali2014}.
 Other data include $\hto$ adsorption on an Au surface covered in crystalline water
@@ -2540,10 +2499,10 @@ to the adsorption energies on water surfaces on grains.
 % of $\sur^3\ot$ for $\btlyp$.
 
 Table \ref{Tab:Ads:AdsForFuncs} also contains a column with average values
-for each adsorbate. Due to its usual deviation from the other functionals,
-$\pw\dt$ is not included into the averaging. For $\sur\tripot$, 
-$\pw$ is aditionally excluded because of the very unphysical value of
-$26.68~\kmo$. We will use this average energy when discussing reactions.
+for each adsorbate.
+For $\sur\tripot$, $\pw$ and $\pw\dt$ are excluded from the average because of
+the two very unphysical values. We will use this average energy
+when discussing reactions.
 
 %% CHECK: Sehr schwammig hier.
 Where there is no experimental data available, we can only compare the
@@ -2556,9 +2515,9 @@ very fragile and that rather oxygen and hydrogenated oxygen species
 have longer residence times than hydrogen.
 For $\tripot$, the case is a little puzzling. $\pw$ predicts a strong
 repulsion between surface and $\tripot$, which is supported by
-$\pw\dt$. This looks like an error in input values, however we were
+$\pw\dt$. This looks like an error in some computation script, however we were
 unable to find such an error. We must therefore consider $\pw$
-to be to be unreliable for $\tripot$ adsorption. The other
+to be unreliable for $\tripot$ adsorption. The other
 functionals predict very weak attraction, only $\btlyp$ predicts
 a very weak repulsion. We thus infer that $\tripot$, too, is
 probably only weakly bound to the surface and must have a short
@@ -2576,8 +2535,7 @@ For many cases, one of the two $\pw$ functionals is furthest from an average
 value of all six functionals. This is especially true for O and $\ot$.
 Since it is either $\pw$ or $\pw\dt$, this could be an indication
 that neither the $\pw$ nor the D3 dispersion correction are universally
-reliable for the study at hand. Of course, some of these possibly erroneous
-results could stem from $\dlfind$ getting stuck in the wrong minima. 
+reliable for the study at hand.
 
 Comparing the results to experimental findings, the agreement is more qualitative
 than quantitative. As already mentioned, the systems described by experiment
@@ -2678,7 +2636,7 @@ functionals have lost some credibility.
     \\[2pt]
     
     \hline \hline
-\multicolumn{2}{r|}{\multirow{4}{*}{$E_{\dft} - \avg$}} &
+\multicolumn{2}{r|}{\multirow{4}{*}{$E_{\dft} - \erehyb$}} &
                             MAD   & 19.71 & 40.13 & 27.26 & 24.70 & 19.32 & 17.04 &  \\
     \multicolumn{2}{r|}{} &  MIN   & $-$58.37 & $-$13.68 & $-$83.10 & $-$82.21 & $-$61.07 & $-$63.33 &  \\
     \multicolumn{2}{r|}{} &  MAX   & 26.17 & 68.29 & 33.07 & 33.57 & 22.49 & 19.39 &  \\
@@ -2703,12 +2661,12 @@ With the adsorption energy data and corresponding gas phase energies at the
 $\tzvpd$ level, we can calculate reaction energies. We will only
 consider reactions of the Eley-Rideal mechanism in which a molecule
 from the surrounding gas approaches an adsorbed molecule to form
-a new molecular species, as described in Section \ref{Sec:Theo:Interaction}.
+a new molecular species, as described in the introduction.
 The product will for our study always be a single adsorbed molecule. With our data,
 one could also investigate cases where two product molecules remain
 of which none, one or both remain adsorbed on the surface.
 
-We use Eley-Rideal versions of the gas phase reaction \eqref{Gas:Reactions}, namely
+We use ER versions of the gas phase reaction \eqref{Gas:Reactions}, namely
 
 \renewcommand\ronebox[1]{\makebox[1cm][l]{\enmat{#1}}}
 \renewcommand\rtwobox[1]{\makebox[1.cm][l]{\ \enmat{#1}}}
@@ -2735,14 +2693,14 @@ We use Eley-Rideal versions of the gas phase reaction \eqref{Gas:Reactions}, nam
 \label{Surf:Reactions}
 \end{subequations}
 
-Note that both \eqref{Surf:HO+O->HO2} and \eqref{Surf:O+HO->HO2} are Eley-Rideal
+Note that both \eqref{Surf:HO+O->HO2} and \eqref{Surf:O+HO->HO2} are ER
 versions of \eqref{Gas:HO+O->HO2}, but with different reactant adsorbates.
 
 The reaction energies for \eqref{Surf:Reactions} are given in Table \ref{Tab:Ads:React}.
 All reaction energies are computed according to \eqref{Theo:ReactionEnergySurface}.
 
-For each molecule, we use the energy values at the optimized geometries of each functional plus
-the $\zpeall$ correction with the $\btlyp$ functional. Note that we have an ambiguity in the choice
+For each molecule, we use the energy values at the optimized
+geometries of each functional plus the $\zpeall$ correction with the $\btlyp$ functional. Note that we have an ambiguity in the choice
 of $\zpe$ corrections for the reactions with $\ho\gas$. This is the only
 case where the gaseous reactant does have a non-vanishing $\zpe$ correction.
 This means that we can either use the corrective term demanded by the
@@ -2756,7 +2714,7 @@ agreement with the rest of the reaction energies anyway.
 
 Recalling the strong deviations between DFT and $\ccsdtf$ gas phase
 reaction energies, we should not assume any DFT calculation to yield
-ER reaction energies close to the physically correct value. But we know
+ER reaction energies too close to the physically correct value. But we know
 that we can decompose an ER reaction energy into a difference between
 adsorption energies and the gas phase reaction energy. We can expect that
 the gas phase reaction is described more accurately by $\ccsdtf$ than by
@@ -2785,7 +2743,8 @@ strongly between functionals, the functionals usually stay
 as close to the coupled-cluster results as they did in the gas phase. This
 is clearly visible when comparing the MAD, MIN, MAX and MEAN deviations.
 There are small shifts in approximative power among the functionals,
-the boldface functionals are now not always the best approximations $\erehyb$.
+the boldface functionals are now not always the best approximations to
+$\erehyb$.
 But this is not really a matter of accuracy, since the change in difference
 to the reference value does only depend on the adsorption energy average $\avg$,
 that is a functional can get closer to $\erehyb$ by over- or underestimating
@@ -2859,7 +2818,7 @@ very weakly bound $\sur\tripot$. This reaction is more exothermic
 by $-53.02~\kmo$. This is also a special case where the bad description
 of $\sur\tripot$ brings $\pw\dt$ close to the $\ccsdtf$ results.
 
-We can also see a big energy difference between the related reactions
+We can see a big energy difference between the related reactions
 \eqref{Surf:HO+O->HO2} and \eqref{Surf:O+HO->HO2}. \eqref{Surf:HO+O->HO2}
 is $+21.95~\kmo$ more endothermic than \eqref{Surf:O+HO->HO2}. This, too,
 is the difference in adsorption energy between the strongly bound $\ho$
@@ -2881,7 +2840,7 @@ in this section is not meant to be complete in any way.
 
 
 In the previous calculations, we did not investigate how strongly the optimum
-geometry for an adsorption is dependent on an initial geometry and if there
+geometry of adsorption is dependent on an initial geometry and if there
 are other local energy minima that molecules adsorbing to the surface can occupy.
 It is well possible, especially for those molecules that have additional orientational
 degrees of freedom, that our search algorithm did not even find the most attractive
@@ -2890,13 +2849,14 @@ geometry possible.
 In this binding site study, we want to look a little deeper into these problems. For
 simplicity, we choose the $\sur\tripo$ system. $\tripo$ has spherical symmetry, 
 therefore the binding energy does only depend on the position of $\tripo$ in space
-(and the corresponding surface deformation, which we neglect here). 
+(and the corresponding surface deformation, which assume to be uniquely
+defined by adsorbate position).
 The average binding energy for
 all functionals was \mbox{$\avg{^{\te{,ZPE}}}=-12.35~\kmo$}. The $\zpe$ correction was
 \mbox{$\Dl\eall_{\btlyp}=2.69~\kmo$}, which means an uncorrected binding energy
 of \mbox{$\avg=-15.04~\kmo$}.
 
-\begin{figure}[ht]
+\begin{figure}[b!]
 %\hskip-2cm
 \includegraphics[width=.24\textwidth]{./img/SiteSnapshotMany.png}
 \includegraphics[width=.24\textwidth]{./img/SiteSnapshotOriginal.png}
@@ -2934,13 +2894,13 @@ We covered the area $(r,\phi) \in [0,\rmax] \times [0, 2\pi)$ with aequidistantl
 distributed points according to $r_k=\rmin+k(\rmax-\rmin)/(N-1)$ and $\phi_l=2\pi l/M$,
 $0 \leq k < N$ and $0 \leq l < M$, with $\rmin=0.4~\Ang$ and point numbers
 $N=5$, $M=15$, leading to a total of 75 initial geometries. The aequidistant
-distrubtion is chosen to cover as many local minima on the $x-z$ plane as
+distribution is chosen to cover as many local minima on the $x$-$z$ plane as
 possible.
 
 The oxygen atoms are added to the optimum geometry of the bare surface, where
-the central ring is slightly distorted.
+the central ring is nearly undistorted.
 
-\begin{figure}[th]
+\begin{figure}[b!]
 %\hskip-2cm
 \includegraphics[width=.49\textwidth]{./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf}
 \caption{Population of optimum geometry energies. Of the 75 initial guesses
@@ -2949,12 +2909,14 @@ geometry at $E=-5.01~\kmo$ is not included. Energies in $\kmo$.}
 \label{Fig:Adv:BindingSitesEnergies}
 \end{figure}
 
-We then used the $\dlfind$ algorithm to find new energy minima. The resulting
-energies are plotted in Figure \ref{Fig:Adv:BindingSitesEnergies}. One can see
-that most prominently, two adsorption energy values are found. One around 
-$-8.4~\kmo$ and one around $-7.85~\kmo$. In our first study, we only found
-the less attractive geometry, which is directly above the center of mass at
-$(0,2,0)^\intercal$, so close to the initial guess there. Other minima are
+We then used the $\dlfind$ algorithm to find new energy minima. Of the 75
+initial guesses, four did not converge in the six day computation time limit
+of the JUSTUS cluster. The remaining initial positions were optimized
+and yielded the energies plotted in Figure \ref{Fig:Adv:BindingSitesEnergies}.
+One can see that most prominently, two adsorption energy values are found. One
+around $-8.4~\kmo$ and one around $-7.85~\kmo$. In our first study, we only
+found the less attractive geometry, which is directly above the center of mass
+at $(0,2,0)^\intercal$, so close to the initial guess there. Other minima are
 usually above lines connecting oxygen atoms. The most attractive geometries
 profit of hydrogen bonds. The worst case, with an energy value of only
 $-5.01~\kmo$, has the adsorbate positioned on a broken H bond. This minimum is
@@ -2972,10 +2934,11 @@ they are not clearly within one ring or the other.
 However, this becomes interesting when we consider hopping of adsorbates. In
 Figure \ref{Fig:Adv:BindingSitesGuess}, the optima with $E<-8~\kmo$ lie to the
 left and right. But then, due to quantum tunneling or temperature-dependent
-vibrations, an O atom located above the central ring can hop into another
-optimum, we may call it a transmission optimum, and continue hopping into other
-rings from there. This mechanism should be favourable for hopping ratios, but
-then there should be a preferred direction of hopping on a Fletcher surface.
+vibrations, an O atom located above the center of mass can hop into another
+optimum at the boundary of the ring, we may call it a transmission optimum, and
+continue hopping into other rings from there. This mechanism should be
+favourable for hopping ratios, but then there should be a preferred direction
+of hopping on a Fletcher surface.
 
 This may be interesting to study. However, one has to bear in mind that the
 Fletcher surface is only an idealization in a zero temperature limit. Even at
@@ -2988,7 +2951,7 @@ what extent this happens could be crucial to further analysis.
 \newcommand\hoht{\mbox{\enmat{\ho+\htw}}}
 %% CHECK: Theory entry
 
-\begin{figure}[ht]
+\begin{figure}[b!]
 %\hskip-2cm
 \includegraphics[width=.49\textwidth]{./img/FletcherAdsorption.png}
 \caption{$\hoht$ transition state on Fletcher surface. Calculated with $\btlyp$.
@@ -2999,13 +2962,13 @@ region.}
 
 We did already note that transition states are important to reaction kinetics.
 The energy difference between a system at the transition state and a system at
-the optimum geometry yield the activation energy, a key ingedrient to the
-activation energy.
+the optimum geometry yield the activation energy, a key ingedrient to reaction
+kinetics.
 
 %% CHECK: Experimente? Zitate prüfen!
 We studied the system $\hoht$, which is interesting for the reaction
 \mbox{$\hoht\chemar\hto+\te H$}. This reaction is part of the water
-formation scheme proposed by Thielens and Hagen \cite{ThielensHagen1982}.
+formation scheme proposed by Tielens and Hagen \cite{TielensHagen1982}.
 
 We did not use any coupled-cluster references in this test but started
 dircetly with DFT calculations. Since it was closest to the average value for
@@ -3019,8 +2982,8 @@ radical should be at least as close to the surface as the $\htw$ molecule, since
 its adsorption energy is predicted to be far more attractive. We therefore
 chose an initial geometry where the $\ho$ is placed above the center of the
 central ring, the $\htw$ is slightly above it. To get a better guess for the
-initial geometry, we then performed an optimization with the smaller $\svp$
-basis set, despite it being not too good at describing geometries in the
+initial geometry, we then performed dimer method iteration with the smaller
+$\svp$ basis set, despite it being not too good at describing geometries in the
 benchmarks. Still, the dimer method typically requires more than one energy
 evaluation per iteration cycle, which makes it computationally very expensive
 for the hybrid basis set if the initial geometry is too far from the transition
@@ -3049,7 +3012,7 @@ for larger surface reactions. As a third note, the effect of orientation of the
 adsorbate in the initial geometry may be an interesting topic for future
 research.
 
-\begin{figure}[ht]
+\begin{figure}[t!]
 %\hskip-2cm
 \includegraphics[width=.49\textwidth]{TikzPics/TikzCreation/HO.H2/HOH2.pdf}
 \caption{Left: Optimum geometry for $\hoht$. Right: Transition state for $\hoht$.
@@ -3075,7 +3038,7 @@ Comparing gas phase and adsorbate geometries, we find very good agreement in
 both optimum as well as transition state geometry. Both transition states are
 predicted nearly planar, which is not true for the optimum geometry. Bond
 lengths do not change greatly between transition state and optimum geometry,
-but the separation between the two molecules decreases. 
+but the separation between the two molecules decreases in the transition state.
 
 %% CHECK: Activation energy. Diagram with H2O+H?
 

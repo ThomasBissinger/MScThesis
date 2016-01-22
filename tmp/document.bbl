@@ -43,15 +43,15 @@ S.~Grimme, ``{Semiempirical GGA-Type Density Functional Constructed with a
   Long-Range Dispersion Correction},'' {\em Journal of Computational
   Chemistry}, vol.~27, no.~15, pp.~1787--1799, 2006.
 
-\bibitem{Anacker2014}
-T.~Anacker and J.~Friedrich, ``{New Accurate Benchmark Energies for Large Water
-  Clusters: {DFT} Is Better Than Expected},'' {\em Journal of Computational
-  Chemistry}, vol.~35, pp.~634--643, Jan 2014.
-
 \bibitem{TURBOMOLE}
 ``{TURBOMOLE V6.6 2014}, a development of {University of Karlsruhe} and
   {Forschungszentrum Karlsruhe GmbH}, 1989-2007, {TURBOMOLE GmbH}, since 2007;
   available from \\ {\tt http://www.turbomole.com}..''
+
+\bibitem{Anacker2014}
+T.~Anacker and J.~Friedrich, ``{New Accurate Benchmark Energies for Large Water
+  Clusters: {DFT} Is Better Than Expected},'' {\em Journal of Computational
+  Chemistry}, vol.~35, pp.~634--643, Jan 2014.
 
 \bibitem{BeckeXDM2007}
 A.~D. Becke and E.~R. Johnson, ``{Exchange-hole dipole moment and the
@@ -115,6 +115,26 @@ H.-J. Werner, P.~J. Knowles, G.~Knizia, F.~R. Manby, M.~{Sch\"{u}tz}, {\em
 \bibitem{HUMP96}
 W.~Humphrey, A.~Dalke, and K.~Schulten, ``{VMD} -- {V}isual {M}olecular
   {D}ynamics,'' {\em Journal of Molecular Graphics}, vol.~14, pp.~33--38, 1996.
+
+\bibitem{KniziaAdlerWerner2009}
+G.~Knizia, T.~B. Adler, and H.-J. Werner, ``Simplified {CCSD}(t)-f12~{m}ethods:
+  Theory and benchmarks,'' {\em The Journal of Chemical Physics}, vol.~130,
+  no.~5, p.~054104, 2009.
+
+\bibitem{YousafPeterson2008}
+K.~E. Yousaf and K.~A. Peterson, ``Optimized auxiliary basis sets for
+  explicitly correlated methods,'' {\em The Journal of Chemical Physics},
+  vol.~129, no.~18, p.~184108, 2008.
+
+\bibitem{ShiozakiKniziaWerner2011}
+T.~Shiozaki, G.~Knizia, and H.-J. Werner, ``Explicitly correlated
+  multireference configuration interaction: {MRCI}-f12,'' {\em The Journal of
+  Chemical Physics}, vol.~134, no.~3, p.~034113, 2011.
+
+\bibitem{LanghoffDavidson1974}
+S.~R. Langhoff and E.~R. Davidson, ``Configuration interaction calculations on
+  the nitrogen molecule,'' {\em Int. J. Quantum Chem.}, vol.~8, pp.~61--72, jan
+  1974.
 
 \bibitem{Barnes1929}
 W.~H. Barnes, ``{The Crystal Structure of Ice between 0 degrees C. and - 183
