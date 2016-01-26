@@ -3,16 +3,13 @@ The style file: ieeetr.bst
 Database file #1: ShortTitles.bib
 Database file #2: MasterBib.bib
 Warning--string name "molpro_url" is undefined
---line 446 of file MasterBib.bib
+--line 603 of file MasterBib.bib
 Warning--string name "molpro_address" is undefined
---line 447 of file MasterBib.bib
-Warning--I didn't find a database entry for "Lin2005"
+--line 604 of file MasterBib.bib
 Warning--I didn't find a database entry for "HohenbergKohn"
 Warning--I didn't find a database entry for "KohnSham"
-Warning--I didn't find a database entry for "Becke1993"
 Warning--I didn't find a database entry for "nwchem"
-Warning--I didn't find a database entry for "def2Basis"
 Warning--I didn't find a database entry for "Kryachko"
 Warning--I didn't find a database entry for "CHARMM"
 Warning--I didn't find a database entry for "DimerMethod"
-(There were 11 warnings)
+(There were 8 warnings)

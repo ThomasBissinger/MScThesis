@@ -249,49 +249,67 @@ the reaction rates governing the formation of molecules can not properly be expl
 chemistry alone.
 
 A prominent theory to mend this discrepancy is to consider the
-contribution of surface reactions on interstellar dust grains. Interstellar dust
-was first observed by Trumpler\cite{Trumpler1930}, who attributed extinction
-of starlight in the ISM to the presence of dust. Following this first
+contribution of surface reactions on interstellar dust
+grains\cite{WilliamsHerbst2002}.
+Interstellar dust was first observed by Trumpler\cite{Trumpler1930}, who attributed extinction of starlight in the ISM to the presence of dust. Following this first
 observation, many investigations confirmed Trumpler's assumption and nowadays the presence
 of dust grains in many regions of the ISM as well as in circumstellar disks is
-considered proven \cite{Draine2003}.
+considered proven. Following Draine $\etal$, the vast majority of interstellar
+dust grains is composed of silicates or carbonaceous material \cite{Draine2003}.
 
 Apart from dust, a wide variety of molecules is observed in the ISM. In
 1976, Merrill \ep{et al.} \cite{Merrill1976} discovered an absorption feature
 which they identified with the $\hto$ stretching vibration. The presence of
 water was controversial at first, but definite proof of the existence of water
 in the ISM was given at latest by the Interstellar Space Observatory in 2004
-\cite{Gibb2004}.
+\cite{Gibb2004}. It was shown that $\hto$ ice is the most common ice in
+interstellar clouds.
 
 While at high temperatures the water will not freeze on the grains, at
 temperatures as low as in molecular clouds (between 10 and 20
-K\cite{Ferriere2001}) some of the grains are believed to have icy mantles. The
-mantle material is mostly composed of $\hto$ and CO. In the case of water, one
-faces \ep{amorphous solid water} (ASW), but at very low temperatures one may
-find a state close to the crystalline $I_h$ state of frozen water.
+K\cite{Ferriere2001}) some of the grains are believed to have icy mantles.
+Among the first to observe water ice in a molecular cloud were Léger $\etal$ in
+1979\cite{Leger1979}.
 
-In 1982 Tielens and Hagen \cite{TielensHagen1982} published an influential paper
+Concluding from the observed abundancies, the grain mantle material is mostly
+composed of $\hto$, CO and CO$_2$.
+In the case of water, one faces \ep{amorphous solid water} (ASW), but at very
+low temperatures one may find a state close to the crystalline $I_h$ state of
+frozen water. In 2009, Dulieu $\etal$ found evidence for the formation of water
+on a water ice substrate at 10 K with temperature-programmed desorption. 
+
+The formation of water itself can be described by various reaction channels. In
+1982, Tielens and Hagen \cite{TielensHagen1982} published an influential paper
 proposing a network of water formation reactions by hydrogenation of O, $\ot$
 and O$_3$. The network was refined by later studies
-\cite{RomanzinIoppoloCuppenEtAl2011}. The modern version gives an account of the
-most relevant reactions that lead to water formation. Depending on temperatures,
-densities and radiation, different reactions of the network are assigned
-varying importance dependent on the interstellar region.
+\cite{RomanzinIoppoloCuppenEtAl2011}. The modern version gives an account of
+the most relevant reactions that lead to water formation. Depending on
+temperatures, densities and radiation, different reactions of the network are
+assigned varying importance dependent on the interstellar region. For example
+within a continuous-time random-walk Monte Carlo simulation by Cuppen and
+Herbst, the reaction \mbox{$\htw+\ho\chemar\hto+\te H$} is most likely dominant
+in dark molecular clouds, while in diffuse clouds the solid-state reaction
+\mbox{$\te H+\ho\chemar\hto+\te H$} is dominant \cite{CuppenHerbst2007}.
 
 %% CHECK: Langmuir-Hinshelwood!
 The surface can serve as a catalyst to reactions. There are two main mechanisms
 in molecular clouds to describe that. The first is the Langmuir-Hinshelwood (LH)
-mechanism. Here, molecules X and Y both adsorb on the surface. They diffuse and
-when they meet, they react to a molecule Z (or two or more molecules Z, Z',
-Z'', \ldots).
+mechanism. Here, molecules X and Y both adsorb on the surface. They move
+by diffuse processes and when they meet, they react to a
+molecule Z (or two or more molecules Z, Z', Z'', \ldots).
 In the Eley-Rideal reaction mechanism, only molecule X is adsorbed. Molecule Y approaches X from the gas
 phase and both react to Z (or more molecules). In any case, if the
 reaction is exothermic, the surface has to absorb the energy difference between
 reactants and product. If this is possible, the product Z stays intact,
-otherwise it will react further. If the reaction is endothermic or has a
-barrier, the energy difference has to be supplied by the surface if it can
-not be supplied by the kinetic energies of the molecules
-(and neglecting quantum tunneling).
+otherwise it will react further or undergo desorption. For example, Papoular
+\cite{Papoular2005} found for the ER reaction $\sur{\te
+H}+{\ho}\gas\chemar\sur{\hto}$ leads to immediate desorption of the resulting
+$\hto$, while a study by Bergeron $\etal$ predicted that the product of the LH
+reaction $\sur{\te H}+\sur{\te O}\chemar\sur{\ho}$ remains mostly adsorbed on a
+graphite surface\cite{BergeronRougeauSidisEtAl2008}.
+If the reaction is endothermic or has a barrier, the energy difference has to
+be supplied by the surface if it can not be supplied by the kinetic energies of
+the molecules (and neglecting quantum tunneling).
 
 While experimental research in the field of surface reaction has grown over the
 past years, theoretical data is still sparse. Especially \ep{ab initio}
@@ -305,11 +323,26 @@ Ice surface structure was analysed by Cabrera Sanfelix $\etal~$
 on a bare graphite grain using density functional theory (DFT) with the PW91
 functional. They found that the water is physisorbed on the surface and that
 for high coverages of the surface, ice-like layers are formed. A 2005 study by
-Lin $\etal~$ \cite{Lin2005} investigated adsorption of small water clusters
+Lin $\etal~$ \cite{LinZhangLeeEtAl2005} investigated adsorption of small water clusters
 (not more than six molecules) on a graphite surface with a density functional
 tight-binding method and a dispersion correction. They found that the ring
 structure for a water hexamer is not the most stable structure when physisorbed
 onto the surface.
+
+DFT methods were also employed by Goumans $\etal$\cite{GoumansCatlowBrown2008}
+to study the hydrogenation of CO on a silica surface with a QM/MM technique.
+They were able to calculate binding energies and the catalytic effect of the
+surface on the formation of CH$_3$OH. With similar methods, Goumans $\etal$
+\cite{GoumansCatlowBrownEtAl2009} studied the formation of water on an
+interstellar dust grain. They gained transition states with the climbing image
+nudged-elastic band method\cite{HenkelmanUberuagaJonsson2000}.
+
+For water surfaces, theoretical studies by Woon\cite{Woon2002}
+and Xie $\etal$\cite{XieDingSun2006} studied the effect of a water ice surface
+on reaction barriers. Woon used MP2 \cite{MP2} alongside the QCISD(T)
+\cite{QCISD} techniques with double-$\zeta$ precision, while Xie $\etal$
+employed DFT with $\btlyp$ with the 6-31G(d) basis set. Both concluded that
+$\hto$ adsorption may significantly lower reaction barriers.
 
 Other computational approaches to ice adsorption did so far not employ an
 electronic structure theory directly but used simulation models which had
@@ -729,18 +762,31 @@ Hartree-Fock exact exchange energy to obtain more accurate results \cite{Becke19
 These functionals are called \ep{hybrid} functionals. Rather recently, a variety of
 \ep{meta-hybrid GGA} functionals was introduced that promise to be potentially even more accurate.
 
-We chose functionals from the GGA, Hybrid and Meta-GGA class.\newline
+We chose functionals from the GGA, meta-GGA and (meta-)hybrid GGA class.\newline
 %% CHECK: Vielleicht muss das etwas schöner\ldots
-\textbf{GGA}: \bp, \blyp, {\pbe} and \bns\cite{GrimmeB97-D2006}.\newline
-\textbf{Hybrid}: \btlyp, {\bhlyp} and \pbez. \newline
-\textbf{Meta-GGA}: \tpss, {\tpssh} and \pw. \newline
+%% CHECK: Was kann man noch einarbeiten?
+%% 1: BHLYP gut für Atomisierungsenergien und Energiedifferenzen, shclecht bei
+%    Ionen und Protonenaffinitäten,
+%    http://scitation.aip.org/content/aip/journal/jcp/98/7/10.1063/1.464913
+\textbf{GGA}: \bp\cite{Becke1988,Perdew1986},
+\blyp\cite{Becke1988,LeeYangParr1988}, {\pbe}\cite{PerdewErnzerhofBurke1996}
+and \bns\cite{GrimmeB97-D2006}.
+\newline
+\textbf{Meta-GGA}: \tpss\cite{TaoPerdewStaroverovEtAl2003}
+and \pw\cite{ZhaoTruhlar2005}.
+\newline \textbf{Hybrid}:
+\btlyp\cite{Becke1993,StephensDevlinChabalowskiEtAl1994}, 
+{\bhlyp}\cite{Becke1993BHLYP},
+{\tpssh}\cite{TaoPerdewStaroverovEtAl2003,StaroverovScuseriaTaoEtAl2003} and
+\pbez\cite{PerdewErnzerhofBurke1996,AdamoBarone1999}.
+\newline
 %The functionals {\bns} and $\pw$ (with additional dispersion correction, see
 % below) and the {\pbez} functional were among the most accurate functionals in a study by Anacker and Friedrich
 %\cite{Anacker2014} on water-water interaction. They also included the meta-GGA
 % functional \mos.
 At the beginning of our research, we also considered the meta-GGA functional
-\mos. While {\mos} is indeed an accurate and fast functional, in our tests it
-had the strange deficiency of convergence failures when unbonded H-radicals
+\mos\cite{ZhaoTruhlar2007}. While {\mos} is indeed an accurate and fast
+functional, in our tests it had the strange deficiency of convergence failures when unbonded H-radicals
 were present in the system, starting with systems as small as $\hto + \te H$.
 The calculations still converged for geometries close to the optimum geometry,
 but even just slightly longer separations of H and $\hto$ lead to oscillations
@@ -777,16 +823,17 @@ efficiency does however compensate the increase in the number of basis functions
 % \begin{equation}
 %  \chi_\mu(\r)=N_\mu \exp\rb{-\al_\mu\abs{\r-\bo R_\mu}^2}S_{l_\mu,m_\mu}(\r-\bo R_\mu).
 % \end{equation}
-
-%% CHECK: More citations!
-%% CHECK: http://www.gaussian.com/g_tech/g_ur/m_basis_sets.htm
 Basically, a larger basis set increases computational accuracy while also demanding more
 computational resources, which means that some compromise between these two has to
 be found. This is also done by benchmarking. In our benchmark, we used the
-def2-SVP, def2-TZVP and def2-QZVP basis sets \cite{def2Basis}. We also used the
-def2-SVPD, def2-TZVPD and def2-QZVPD basis sets with additional diffuse functions,
-the def2-TZVPP basis set with additional polarisation functions and finally the 
-def2-TZVPPD basis set with both additional polarisation and diffuse functions.
+$\svp$\cite{SchaeferHornAhlrichs1992},
+$\tzvp$\cite{WeigendHaeserPatzeltEtAl1998} and
+$\qzvp$\cite{WeigendFurcheAhlrichs2003} basis sets. We also used the def2-SVPD,
+def2-TZVPD and def2-QZVPD basis sets with additional diffuse
+functions\cite{RappoportFurche2010}, the
+def2-TZVPP\cite{WeigendHaeserPatzeltEtAl1998} basis set with additional
+polarisation functions and finally the def2-TZVPPD\cite{RappoportFurche2010}
+basis set with both additional polarisation and diffuse functions.
 
 Also, due to the truncation of the basis set (that is the operation in the finite subspace $X$),
 the \ep{basis set superposition error} BSSE arises. That is the basis set of molecule Y plays a
@@ -3115,6 +3162,9 @@ way.
 %\clearpage
 % \bibliographystyle{apalikenotitle}
 \bibliographystyle{ieeetr}
+%\bibliographystyle{plain}
+%\bibliographystyle{abbr}
+
 % \begin{thebibliography}
 %\bibliography{MasterBib}
 \bibliography{ShortTitles,MasterBib}{}
