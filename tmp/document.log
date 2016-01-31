@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  27 JAN 2016 00:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  31 JAN 2016 16:07
 entering extended mode
 **./document.tex
 (document.tex
@@ -1513,182 +1513,190 @@ Package pdftex.def Info: ./img/unilogo_international.png used on input line 186
 {C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/unil
 ogo_international.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 240.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 240.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 240.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 240.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 240.
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--236
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--236
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 253.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 257.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 253.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 257.
 [2
 
 
 
 ] [3]
-Underfull \hbox (badness 1721) in paragraph at lines 492--498
+Underfull \hbox (badness 1721) in paragraph at lines 523--531
 []\OT1/ptm/m/n/10 Positive $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 means an \O
 T1/ptm/m/it/10 en-dother-mic\OT1/ptm/m/n/10 , neg-a-tive $\OML/ptmcm/m/it/10 E[
 ]$ \OT1/ptm/m/n/10 an
  []
 
-[4] [5]
+[4] [5] [6]
 
-Package natbib Warning: Citation `HohenbergKohn' on page 6 undefined on input l
-ine 680.
-
-
-Package natbib Warning: Citation `KohnSham' on page 6 undefined on input line 6
-91.
-
-
-Package natbib Warning: Citation `nwchem' on page 6 undefined on input line 795
+Package natbib Warning: Citation `nwchem' on page 7 undefined on input line 833
 .
 
-[6]
-
-Package natbib Warning: Citation `Kryachko' on page 7 undefined on input line 8
-64.
-
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 900--902
+Underfull \hbox (badness 10000) in paragraph at lines 938--940
 [][]\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
  []
 
 ===== Image 'TikzPics/Theo/FigTheoTIP3Geo' is up-to-date. ======
 
-Package natbib Warning: Citation `CHARMM' on page 8 undefined on input line 979
-.
+Package natbib Warning: Citation `CHARMM' on page 8 undefined on input line 101
+7.
 
+[8 <./TikzPics/Theo/FigTheoTIP3Geo.pdf>]
 ===== Image 'TikzPics/Theo/Fig.Theo.PES' is up-to-date. ======
 
-Overfull \hbox (8.45982pt too wide) detected at line 1061
+Overfull \hbox (8.45982pt too wide) detected at line 1099
 []
  []
 
-[8 <./TikzPics/Theo/FigTheoTIP3Geo.pdf>]
 
 Package natbib Warning: Citation `DimerMethod' on page 9 undefined on input lin
-e 1080.
+e 1118.
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 1079--1084
+Underfull \hbox (badness 1325) in paragraph at lines 1117--1122
 [][]\OT1/ptm/m/n/10 In this work, we ob-tain tran-si-tion states with the \OT1/
 ptm/m/it/10 dimer
  []
 
-
-Underfull \hbox (badness 7012) in paragraph at lines 1148--1163
+[9 <./TikzPics/Theo/Fig.Theo.PES.pdf>]
+Underfull \hbox (badness 7012) in paragraph at lines 1189--1204
 [][]\OT1/ptm/m/n/10 At each op-ti-mum ge-om-e-try, an ad-di-tional cal-cu-la-ti
 on
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 1148--1163
+Underfull \hbox (badness 3148) in paragraph at lines 1189--1204
 \OT1/ptm/m/n/10 was car-ried out to find a CP cor-rected en-ergy. For
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 1148--1163
+Underfull \hbox (badness 2351) in paragraph at lines 1189--1204
 $[]\OML/ptmcm/m/it/10 =[]\OT1/ptmcm/m/n/10 12$ \OT1/ptm/m/n/10 level of the-ory
 , while for the
  []
 
-[9 <./TikzPics/Theo/Fig.Theo.PES.pdf>]
-===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3' is up-to-date. ======
 
-Underfull \hbox (badness 2790) in paragraph at lines 1252--1258
+Underfull \hbox (badness 2790) in paragraph at lines 1215--1219
 $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
 [] of the sys-
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 1252--1258
-\OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-
+Underfull \hbox (badness 2134) in paragraph at lines 1215--1219
+\OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and ba-sis
  []
 
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3' is up-to-date. ======
 
-Underfull \hbox (badness 1655) in paragraph at lines 1252--1258
-\OT1/ptm/m/n/10 sis set, and $\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 is the CP
- cor-rected in-ter-ac-tion en-ergy
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1299
+[]\OT1/ptm/b/n/10 Reference en-ergy. \OT1/ptm/m/n/10 For $[]$, we found
  []
 
-===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.D3' is up-to-date. ======
 [10 <./TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.pdf>]
-Underfull \hbox (badness 2582) in paragraph at lines 1352--1359
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.D3' is up-to-date. ======
+
+Underfull \hbox (badness 2582) in paragraph at lines 1391--1398
 \OT1/ptm/m/n/10 op-ti-mi-sa-tions. Here, the at-trac-tion is con-sid-ered close
 
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 1352--1359
+Underfull \hbox (badness 1097) in paragraph at lines 1391--1398
 \OT1/ptm/m/n/10 to be-ing re-pul-sive, with in-ter-ac-tion en-ergy val-ues arou
 nd
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1352--1359
+Underfull \hbox (badness 1231) in paragraph at lines 1391--1398
 []\OT1/ptm/m/n/10 . While the re-sult-ing de-vi-a-tion of
  []
 
+===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
+action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare" "
+\def\tikzexternalrealjob{document}\input{document}"' ========
+\openout3 = `document.auxlock'.
+
+runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ben
+chmark/Fig.Bench.H2O+H2O.BasisCompare" "\def\tikzexternalrealjob{document}\inpu
+t{document}")...disabled (restricted).
+
+\openout3 = `document.auxlock'.
+
+
+! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
+ion=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare" "\de
+f\tikzexternalrealjob{document}\input{document}"' did NOT result in a usable ou
+tput file 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare' (expected one of 
+.pdf:.jpg:.jpeg:.png:). Please verify that you have enabled system calls. For p
+dflatex, this is 'pdflatex -shell-escape'. Sometimes it is also named 'write 18
+' or something like that. Or maybe the command simply failed? Error messages ca
+n be found in 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.log'. If you c
+ontinue now, I'll try to typeset the picture.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1501 \end{tikzpicture}
+                        
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+[11 <./TikzPics/Benchmark/Fig.Bench.H2O+H.D3.pdf>]
 ===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare' is up-to-date. =
 =====
-[11 <./TikzPics/Benchmark/Fig.Bench.H2O+H.D3.pdf> <./TikzPics/Benchmark/Fig.Ben
-ch.H2O+H2O.TZVPCompare.pdf>]
-===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare' is up-to-date. 
-======
+[12 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare.pdf>]
 ===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare' is up-to-date. ===
 ===
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.pdf>] [13 <./TikzPics/
-Benchmark/Fig.Bench.H2O+O.FuncCompare.pdf>]
+[13 <./TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare.pdf>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-<./img/FletcherAboveGlossyNoCueing.png, id=181, 1124.2pt x 1142.2675pt>
+[14] [15]
+<./img/FletcherAboveGlossyNoCueing.png, id=170, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAboveGlossyNoCueing.png Graphic file (type png)
 
 <use ./img/FletcherAboveGlossyNoCueing.png>
 Package pdftex.def Info: ./img/FletcherAboveGlossyNoCueing.png used on input li
-ne 2043.
+ne 2100.
 (pdftex.def)             Requested size: 245.8296pt x 249.76582pt.
- [15]
-<TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=185, 114.92537pt x 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+<TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=174, 114.92537pt x 
 51.21533pt>
 File: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf Graphic file (type
  pdf)
  <use TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf
- used on input line 2102.
+ used on input line 2160.
 (pdftex.def)             Requested size: 512.1496pt x 228.33336pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 5862) has occurred while \output is active []
-
- [16]
+[17 <./img/FletcherAboveGlossyNoCueing.png>]
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Adsorption/Fig.Ads.QMMMConvergence" "\def\t
 ikzexternalrealjob{document}\input{document}"' ========
@@ -1715,93 +1723,98 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2248 \end{tikzpicture}
+l.2306 \end{tikzpicture}
                         
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
+(That was another \errmessage.)
 
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.83101pt too wide) in paragraph at lines 2227--2251
+Overfull \hbox (2.83101pt too wide) in paragraph at lines 2285--2309
  [][][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17 <./img/FletcherAboveGlossyNoCueing.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \vbox (badness 1205) has occurred while \output is active []
 
  [18 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>] [19]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2488.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2546.
  [20]
-Underfull \hbox (badness 10000) in paragraph at lines 2762--2775
+Underfull \hbox (badness 10000) in paragraph at lines 2820--2833
 [][]\OT1/ptm/m/n/10 Recalling the strong de-vi-a-tions be-tween DFT and
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 2762--2775
-$[]$ \OT1/ptm/m/n/10 gas phase re-ac-tion en-er-gies, we should
+Underfull \hbox (badness 4492) in paragraph at lines 2820--2833
+$[]$ \OT1/ptm/m/n/10 gas-phase re-ac-tion en-er-gies, we should
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 2820--2833
+\OT1/ptm/m/n/10 dif-fer-ence be-tween ad-sorp-tion en-er-gies and the gas-phase
+
  []
 
 [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 4779) in paragraph at lines 2844--2860
+[][]\OT1/ptm/m/n/10 We high-light the func-tion-als that were clos-est to the
+ []
 
-
-Underfull \hbox (badness 1303) in paragraph at lines 2889--2895
+[22]
+Underfull \hbox (badness 1303) in paragraph at lines 2946--2952
 []\OT1/ptm/m/n/10 In the pre-vi-ous cal-cu-la-tions, we did not in-ves-ti-gate 
 how
  []
 
-<./img/SiteSnapshotMany.png, id=215, 1124.2pt x 1142.2675pt>
+<./img/SiteSnapshotMany.png, id=204, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotMany.png Graphic file (type png)
 
 <use ./img/SiteSnapshotMany.png>
-Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 2908.
+Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 2965.
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
 
-<./img/SiteSnapshotOriginal.png, id=216, 1124.2pt x 1142.2675pt>
+<./img/SiteSnapshotOriginal.png, id=205, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotOriginal.png Graphic file (type png)
 
 <use ./img/SiteSnapshotOriginal.png>
-Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 2909
+Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 2966
 .
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
- [22]
+
+Underfull \vbox (badness 4108) has occurred while \output is active []
+
+
 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pd
-f, id=220, 237.97708pt x 198.2336pt>
+f, id=206, 237.97708pt x 198.2336pt>
 File: ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
 on.pdf Graphic file (type pdf)
 
 <use ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributio
 n.pdf>
 Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
-ingEnergyDistribution.pdf used on input line 2952.
+ingEnergyDistribution.pdf used on input line 3009.
 (pdftex.def)             Requested size: 250.95612pt x 209.04976pt.
- <./img/FletcherAdsorption.png, id=221, 1124.2pt x 1142.2675pt>
+ [23 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png> <./TikzPics/
+TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
+<./img/FletcherAdsorption.png, id=221, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAdsorption.png Graphic file (type png)
 
 <use ./img/FletcherAdsorption.png>
-Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3003.
+Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3060.
 (pdftex.def)             Requested size: 250.95612pt x 254.97726pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png> <./TikzPics/
-TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
-<TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=236, 347.52335pt x 254.65338pt>
+ [24 <./img/FletcherAdsorption.png>]
+<TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=225, 347.52335pt x 254.65338pt>
 File: TikzPics/TikzCreation/HO.H2/HOH2.pdf Graphic file (type pdf)
 
 <use TikzPics/TikzCreation/HO.H2/HOH2.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2/HOH2.pdf used on input lin
-e 3064.
+e 3121.
 (pdftex.def)             Requested size: 250.95612pt x 183.89427pt.
- [24 <./img/FletcherAdsorption.png> <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>] (
-document.bbl [25]
-Underfull \hbox (badness 1189) in paragraph at lines 52--54
+ [25 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>] (document.bbl
+Underfull \hbox (badness 1189) in paragraph at lines 62--64
 [][]\OT1/ptm/m/n/10 R. Pa-poular, ``On wa-ter ice for-ma-tion in in-ter-stel-la
 r
  []
@@ -1809,7 +1822,7 @@ r
 ! Argument of \OT1\' has an extra }.
 <inserted text> 
                 \par 
-l.82 G.~Henkelman, B.~P. Uberuaga, and H.~Jo{\'}
+l.92 G.~Henkelman, B.~P. Uberuaga, and H.~Jo{\'}
                                                 nsson, ``A climbing image nu...
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1822,18 +1835,23 @@ Runaway argument?
 ! Paragraph ended before \OT1\' was complete.
 <to be read again> 
                    \par 
-l.82 G.~Henkelman, B.~P. Uberuaga, and H.~Jo{\'}
+l.92 G.~Henkelman, B.~P. Uberuaga, and H.~Jo{\'}
                                                 nsson, ``A climbing image nu...
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 [26]
-Underfull \hbox (badness 1331) in paragraph at lines 163--166
+Underfull \hbox (badness 1308) in paragraph at lines 116--119
+\OT1/ptm/m/n/10 Cup-pen, ``Long-timescale sim-u-la-tions of dif-fu-sion in
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 187--190
 [][]\OT1/ptm/m/n/10 C. Adamo and V. Barone, ``To-ward re-li-able den-sity
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 177.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 201.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -1846,62 +1864,64 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.180 A.~Schä
+l.204 A.~Schä
                fer, H.~Horn, and R.~Ahlrichs, ``Fully optimized contracted {...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-Underfull \hbox (badness 1668) in paragraph at lines 205--208
+[27]
+Underfull \hbox (badness 1668) in paragraph at lines 234--237
 \OT1/ptm/m/n/10 mo-ment and the dis-per-sion in-ter-ac-tion re-vis-ited,'' \OT1
 /ptm/m/it/10 J.
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 216--219
+Underfull \hbox (badness 1221) in paragraph at lines 245--248
 [][]\OT1/ptm/m/n/10 S. Grimme, S. Ehrlich, and L. Go-erigk, ``Ef-fect of
  []
 
-[27]
-Underfull \hbox (badness 5787) in paragraph at lines 256--257
+
+Underfull \hbox (badness 5787) in paragraph at lines 285--286
 [][]\OT1/ptm/m/n/10 ``Chemshell, a com-pu-ta-tional chem-istry shell, see
  []
 
-)
+[28])
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[28] (document.aux) ) 
+[29
+
+] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 34449 strings out of 493634
- 807813 string characters out of 3141310
- 985803 words of memory out of 3000000
- 37202 multiletter control sequences out of 15000+200000
+ 34623 strings out of 493634
+ 812021 string characters out of 3141310
+ 983442 words of memory out of 3000000
+ 37374 multiletter control sequences out of 15000+200000
  88729 words of font info for 186 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,20n,100p,10382b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontnam
-e/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/c
-mex9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
-w/zapfchan/uzcmi8a.pfb>
-Output written on document.pdf (28 pages, 2681532 bytes).
+ 55i,20n,100p,10382b,2303s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
+r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex
+9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/z
+apfchan/uzcmi8a.pfb>
+Output written on document.pdf (29 pages, 2680553 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
+ 294 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

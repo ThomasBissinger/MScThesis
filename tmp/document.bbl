@@ -13,15 +13,25 @@ R.~J. Trumpler, ``{ABSORPTION OF LIGHT IN THE GALACTIC SYSTEM},'' {\em
 B.~Draine, ``{Interstellar Dust Grains},'' {\em Annual Review of Astronomy and
   Astrophysics}, vol.~41, pp.~241--289, sep 2003.
 
-\bibitem{Merrill1976}
-K.~Merrill, R.~Russell, and B.~Soifer, ``Infrared observations of ices and
-  silicates in molecular clouds,'' {\em The Astrophysical Journal}, vol.~207,
-  pp.~763--769, 1976.
+\bibitem{BecklinNeugebauer1967}
+E.~E. Becklin and G.~Neugebauer, ``{Observations of an Infrared Star in the
+  Orion Nebula},'' {\em {ApJ}}, vol.~147, p.~799, feb 1967.
 
-\bibitem{Gibb2004}
-E.~L. Gibb, D.~C.~B. Whittet, A.~C.~A. Boogert, and A.~G. G.~M. Tielens,
-  ``{Interstellar Ice: The Infrared Space Observatory Legacy},'' {\em The
-  Astrophysical Journal Supplement Series}, vol.~151, pp.~35--73, mar 2004.
+\bibitem{GillettForrest1973}
+F.~C. Gillett and W.~J. Forrest, ``{Spectra of the Becklin-Neugebauer point
+  source and the Kleinmann-low nebula from 2.8 to 13.5~{m}icrons.},'' {\em
+  {ApJ}}, vol.~179, p.~483, jan 1973.
+
+\bibitem{Hiraoka1998}
+K.~Hiraoka, T.~Miyagoshi, T.~Takayama, K.~Yamamoto, and Y.~Kihara, ``{Gas-Grain
+  Processes for the Formation of CH4 and H2O: Reactions of H Atoms with C, O,
+  and CO in the Solid Phase at 12 K},'' {\em The Astrophysical Journal},
+  vol.~498, no.~2, p.~710, 1998.
+
+\bibitem{BoogertGerakinesWhittet2015}
+A.~A. Boogert, P.~A. Gerakines, and D.~C. Whittet, ``{Observations of the Icy
+  Universe},'' {\em Annual Review of Astronomy and Astrophysics}, vol.~53,
+  pp.~541--581, aug 2015.
 
 \bibitem{Ferriere2001}
 K.~M. Ferri{\`{e}}re, ``The interstellar environment of our galaxy,'' {\em
@@ -38,10 +48,10 @@ A.~G. G.~M. Tielens and W.~Hagen, ``{Model Calculations of the Molecular
   Composition of Interstellar Grain Mantles},'' {\em Astronomy and
   Astrophysics}, vol.~114, pp.~245--260, 1982.
 
-\bibitem{RomanzinIoppoloCuppenEtAl2011}
-C.~Romanzin, S.~Ioppolo, H.~M. Cuppen, E.~F. van Dishoeck, and H.~Linnartz,
-  ``{Water formation by surface O3 hydrogenation},'' {\em The Journal of
-  Chemical Physics}, vol.~134, no.~8, p.~084504, 2011.
+\bibitem{DishoeckHerbstNeufeld2013}
+E.~F. van Dishoeck, E.~Herbst, and D.~A. Neufeld, ``Interstellar water
+  chemistry: From laboratory to observations,'' {\em Chemical Reviews},
+  vol.~113, pp.~9043--9085, dec 2013.
 
 \bibitem{CuppenHerbst2007}
 H.~Cuppen and E.~Herbst, ``{Simulation of the formation and morphology of ice
@@ -101,6 +111,20 @@ C.~M{\o}ller and M.~S. Plesset, ``{Note on an Approximation Treatment for
 J.~Gauss and D.~Cremer, ``{Analytical evaluation of energy gradients in
   quadratic configuration interaction theory},'' {\em Chemical Physics
   Letters}, vol.~150, pp.~280--286, sep 1988.
+
+\bibitem{KarssemeijerPedersenJonssonEtAl2012}
+L.~J. Karssemeijer, A.~Pedersen, H.~J{\'{o}}nsson, and H.~M. Cuppen,
+  ``{Long-timescale simulations of diffusion in molecular solids},'' {\em Phys.
+  Chem. Chem. Phys.}, vol.~14, no.~31, p.~10844, 2012.
+
+\bibitem{HohenbergKohn1964}
+P.~Hohenberg and W.~Kohn, ``{Inhomogeneous Electron Gas},'' {\em Phys. Rev.},
+  vol.~136, pp.~B864--B871, nov 1964.
+
+\bibitem{KohnSham1965}
+W.~Kohn and L.~J. Sham, ``{Self-Consistent Equations Including Exchange and
+  Correlation Effects},'' {\em Phys. Rev.}, vol.~140, pp.~A1133--A1138, nov
+  1965.
 
 \bibitem{Becke1993}
 A.~D. Becke, ``Density-functional thermochemistry. {III}. the role of exact
@@ -200,6 +224,11 @@ D.~Rappoport and F.~Furche, ``Property-optimized {Gauss}ian basis sets for
 T.~Anacker and J.~Friedrich, ``{New Accurate Benchmark Energies for Large Water
   Clusters: {DFT} Is Better Than Expected},'' {\em Journal of Computational
   Chemistry}, vol.~35, pp.~634--643, Jan 2014.
+
+\bibitem{Kryachko2012}
+E.~S. Kryachko and E.~V. Lude{\~n}a, {\em {Energy density functional theory of
+  many-electron systems}}, vol.~4.
+\newblock Springer Science \& Business Media, 2012.
 
 \bibitem{BeckeXDM2007}
 A.~D. Becke and E.~R. Johnson, ``{Exchange-hole dipole moment and the

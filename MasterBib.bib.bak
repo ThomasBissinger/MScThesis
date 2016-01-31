@@ -102,6 +102,19 @@
   url = {http://dx.doi.org/10.1063/1.2795701}
 }
 
+@Article{BecklinNeugebauer1967,
+  author =    {E. E. Becklin and G. Neugebauer},
+  title =     {{Observations of an Infrared Star in the Orion Nebula}},
+  journal =   {{ApJ}},
+  year =      {1967},
+  volume =    {147},
+  pages =     {799},
+  month =     {feb},
+  doi =       {10.1086/149055},
+  publisher = {{IOP} Publishing},
+  url =       {http://dx.doi.org/10.1086/149055}
+}
+
 @Article{BergeronRougeauSidisEtAl2008,
   author =    {H. Bergeron and N. Rougeau and V. Sidis and M. Sizun and D. Teillet-Billy and F. Aguillon},
   title =     {{{OH} Formation from O and H Atoms Physisorbed on a Graphitic Surface through the Langmuir-Hinshelwood Mechanism: A Quasi-Classical Approach}},
@@ -114,6 +127,20 @@
   doi =       {10.1021/jp8050966},
   publisher = {American Chemical Society ({ACS})},
   url =       {http://dx.doi.org/10.1021/jp8050966}
+}
+
+@Article{BoogertGerakinesWhittet2015,
+  author =    {A.C. Adwin Boogert and Perry A. Gerakines and Douglas C.B. Whittet},
+  title =     {{Observations of the Icy Universe}},
+  journal =   {Annual Review of Astronomy and Astrophysics},
+  year =      {2015},
+  volume =    {53},
+  number =    {1},
+  pages =     {541--581},
+  month =     {aug},
+  doi =       {10.1146/annurev-astro-082214-122348},
+  publisher = {Annual Reviews},
+  url =       {http://dx.doi.org/10.1146/annurev-astro-082214-122348}
 }
 
 @ARTICLE{Brorsen2014AnalyticalGradientDFT,
@@ -281,6 +308,19 @@
   url =       {http://dx.doi.org/10.1086/381182}
 }
 
+@Article{GillettForrest1973,
+  author =    {F. C. Gillett and W. J. Forrest},
+  title =     {{Spectra of the Becklin-Neugebauer point source and the Kleinmann-low nebula from 2.8 to 13.5~{m}icrons.}},
+  journal =   {{ApJ}},
+  year =      {1973},
+  volume =    {179},
+  pages =     {483},
+  month =     {jan},
+  doi =       {10.1086/151888},
+  publisher = {{IOP} Publishing},
+  url =       {http://dx.doi.org/10.1086/151888}
+}
+
 @Article{GoumansCatlowBrown2008,
   author =    {T. P. M. Goumans and C. Richard A. Catlow and Wendy A. Brown},
   title =     {Hydrogenation of {CO} on a silica surface: An embedded cluster approach},
@@ -440,6 +480,33 @@
   url = {http://dx.doi.org/10.1088/0004-637X/788/1/50}
 }
 
+@Article{Hiraoka1998,
+  author =   {Kenzo Hiraoka and Takashi Miyagoshi and Toshikazu Takayama and Kazuyoshi Yamamoto and Yoshihide Kihara},
+  title =    {{Gas-Grain Processes for the Formation of CH4 and H2O: Reactions of H Atoms with C, O, and CO in the Solid Phase at 12 K}},
+  journal =  {The Astrophysical Journal},
+  year =     {1998},
+  volume =   {498},
+  number =   {2},
+  pages =    {710},
+  abstract = {The reactions of H atoms with C, O, CO, and CH 3 CN in solid phase at 12 K were investigated by temperature-programmed mass spectrometry. In the reaction of H atoms with C atoms trapped in the CO matrix, H atoms migrate in the CO matrix and react with trapped C atoms selectively to form CH 4 . D 2 O was the major product from the reactions of D atoms with O atoms trapped in a N 2 O matrix. CH 4 was found to be one of the final products from the reactions of H atoms with solid CO. The precursor for the formation of CH 4 may be the CH 2 OH radical. No products were detected from the reaction of H atoms with CH 3 CN, suggesting that the nitrile group is not amenable to the hydrogenation reactions by H atoms at 12 K. When CH 4 molecules are trapped in matrices such as CH 3 OH and H 2 O, the desorption of CH 4 is greatly suppressed, i.e., from ~50 K for neat CH 4 to ~100 K for CH 4 in the CH 3 OH matrix and to ~150 K for CH 4 in the H 2 O matrix.},
+  url =      {http://stacks.iop.org/0004-637X/498/i=2/a=710}
+}
+
+@Article{HohenbergKohn1964,
+  author =        {P. Hohenberg and W. Kohn},
+  title =         {{Inhomogeneous Electron Gas}},
+  journal =       {Phys. Rev.},
+  year =          {1964},
+  volume =        {136},
+  number =        {3B},
+  pages =         {B864--B871},
+  month =         {nov},
+  __markedentry = {[Thomas:]},
+  doi =           {10.1103/physrev.136.b864},
+  publisher =     {American Physical Society ({APS})},
+  url =           {http://dx.doi.org/10.1103/PhysRev.136.B864}
+}
+
 @ARTICLE{HUMP96,
   author = {William Humphrey and Andrew Dalke and Klaus Schulten},
   title = {{VMD} -- {V}isual {M}olecular {D}ynamics},
@@ -488,6 +555,19 @@
   url = {http://dx.doi.org/10.1021/jp9028968}
 }
 
+@Article{KarssemeijerPedersenJonssonEtAl2012,
+  author =    {L. J. Karssemeijer and A. Pedersen and H. J{\'{o}}nsson and H. M. Cuppen},
+  title =     {{Long-timescale simulations of diffusion in molecular solids}},
+  journal =   {Phys. Chem. Chem. Phys.},
+  year =      {2012},
+  volume =    {14},
+  number =    {31},
+  pages =     {10844},
+  doi =       {10.1039/c2cp41634d},
+  publisher = {Royal Society of Chemistry ({RSC})},
+  url =       {http://dx.doi.org/10.1039/C2CP41634D}
+}
+
 @Article{KniziaAdlerWerner2009,
   author =    {Gerald Knizia and Thomas B. Adler and Hans-Joachim Werner},
   title =     {Simplified {CCSD}(T)-F12~{m}ethods: Theory and benchmarks},
@@ -499,6 +579,29 @@
   doi =       {10.1063/1.3054300},
   publisher = {{AIP} Publishing},
   url =       {http://dx.doi.org/10.1063/1.3054300}
+}
+
+@Article{KohnSham1965,
+  author =        {W. Kohn and L. J. Sham},
+  title =         {{Self-Consistent Equations Including Exchange and Correlation Effects}},
+  journal =       {Phys. Rev.},
+  year =          {1965},
+  volume =        {140},
+  number =        {4A},
+  pages =         {A1133--A1138},
+  month =         {nov},
+  __markedentry = {[Thomas:6]},
+  doi =           {10.1103/physrev.140.a1133},
+  publisher =     {American Physical Society ({APS})},
+  url =           {http://dx.doi.org/10.1103/PhysRev.140.A1133}
+}
+
+@Book{kryachko2012energy,
+  title =     {Energy density functional theory of many-electron systems},
+  publisher = {Springer Science \& Business Media},
+  year =      {2012},
+  author =    {Kryachko, Eugene S and Lude{\~n}a, Eduardo V},
+  volume =    {4}
 }
 
 @Article{LanghoffDavidson1974,
@@ -607,18 +710,17 @@
 }
 
 @Article{MP2,
-  author =        {Chr. M{\o}ller and M. S. Plesset},
-  title =         {{Note on an Approximation Treatment for Many-Electron Systems}},
-  journal =       {Phys. Rev.},
-  year =          {1934},
-  volume =        {46},
-  number =        {7},
-  pages =         {618--622},
-  month =         {oct},
-  __markedentry = {[Thomas:6]},
-  doi =           {10.1103/physrev.46.618},
-  publisher =     {American Physical Society ({APS})},
-  url =           {http://dx.doi.org/10.1103/PhysRev.46.618}
+  author =    {Chr. M{\o}ller and M. S. Plesset},
+  title =     {{Note on an Approximation Treatment for Many-Electron Systems}},
+  journal =   {Phys. Rev.},
+  year =      {1934},
+  volume =    {46},
+  number =    {7},
+  pages =     {618--622},
+  month =     {oct},
+  doi =       {10.1103/physrev.46.618},
+  publisher = {American Physical Society ({APS})},
+  url =       {http://dx.doi.org/10.1103/PhysRev.46.618}
 }
 
 @Article{Papoular2005,
@@ -690,6 +792,20 @@
   publisher = {AIP Publishing},
   timestamp = {2015.12.15},
   url = {http://dx.doi.org/10.1063/1.1808117}
+}
+
+@Article{QCISD,
+  author =    {Jürgen Gauss and Dieter Cremer},
+  title =     {{Analytical evaluation of energy gradients in quadratic configuration interaction theory}},
+  journal =   {Chemical Physics Letters},
+  year =      {1988},
+  volume =    {150},
+  number =    {3-4},
+  pages =     {280--286},
+  month =     {sep},
+  doi =       {10.1016/0009-2614(88)80042-3},
+  publisher = {Elsevier {BV}},
+  url =       {http://dx.doi.org/10.1016/0009-2614(88)80042-3}
 }
 
 @Article{RappoportFurche2010,
@@ -888,18 +1004,17 @@
 }
 
 @Article{Woon2002,
-  author =        {David~E. Woon},
-  title =         {{Modeling Gas-Grain Chemistry with Quantum Chemical Cluster Calculations. I. Heterogeneous Hydrogenation of {CO} and H 2 {CO} on Icy Grain Mantles}},
-  journal =       {{ApJ}},
-  year =          {2002},
-  volume =        {569},
-  number =        {1},
-  pages =         {541--548},
-  month =         {apr},
-  __markedentry = {[Thomas:]},
-  doi =           {10.1086/339279},
-  publisher =     {{IOP} Publishing},
-  url =           {http://dx.doi.org/10.1086/339279}
+  author =    {David~E. Woon},
+  title =     {{Modeling Gas-Grain Chemistry with Quantum Chemical Cluster Calculations. I. Heterogeneous Hydrogenation of {CO} and H 2 {CO} on Icy Grain Mantles}},
+  journal =   {{ApJ}},
+  year =      {2002},
+  volume =    {569},
+  number =    {1},
+  pages =     {541--548},
+  month =     {apr},
+  doi =       {10.1086/339279},
+  publisher = {{IOP} Publishing},
+  url =       {http://dx.doi.org/10.1086/339279}
 }
 
 @Article{XieDingSun2006,
