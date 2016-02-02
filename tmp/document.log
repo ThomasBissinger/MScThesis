@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  31 JAN 2016 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  2 FEB 2016 18:10
 entering extended mode
 **./document.tex
 (document.tex
@@ -1570,10 +1570,6 @@ Overfull \hbox (8.45982pt too wide) detected at line 1099
  []
 
 
-Package natbib Warning: Citation `DimerMethod' on page 9 undefined on input lin
-e 1118.
-
-
 Underfull \hbox (badness 1325) in paragraph at lines 1117--1122
 [][]\OT1/ptm/m/n/10 In this work, we ob-tain tran-si-tion states with the \OT1/
 ptm/m/it/10 dimer
@@ -1696,7 +1692,8 @@ Package pdftex.def Info: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf
  used on input line 2160.
 (pdftex.def)             Requested size: 512.1496pt x 228.33336pt.
 
-[17 <./img/FletcherAboveGlossyNoCueing.png>]
+[17 <./img/FletcherAboveGlossyNoCueing.png>] [18 <./TikzPics/TikzCreation/Surfa
+ceQMMM/SurfaceQMMMAside.pdf>]
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Adsorption/Fig.Ads.QMMMConvergence" "\def\t
 ikzexternalrealjob{document}\input{document}"' ========
@@ -1723,48 +1720,42 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2306 \end{tikzpicture}
+l.2341 \end{tikzpicture}
                         
 (That was another \errmessage.)
 
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.83101pt too wide) in paragraph at lines 2285--2309
+Overfull \hbox (2.83101pt too wide) in paragraph at lines 2320--2344
  [][][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 1205) has occurred while \output is active []
-
- [18 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>] [19]
+[19]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2546.
- [20]
-Underfull \hbox (badness 10000) in paragraph at lines 2820--2833
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2581.
+ [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 2855--2868
 [][]\OT1/ptm/m/n/10 Recalling the strong de-vi-a-tions be-tween DFT and
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 2820--2833
+Underfull \hbox (badness 4492) in paragraph at lines 2855--2868
 $[]$ \OT1/ptm/m/n/10 gas-phase re-ac-tion en-er-gies, we should
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 2820--2833
+Underfull \hbox (badness 1281) in paragraph at lines 2855--2868
 \OT1/ptm/m/n/10 dif-fer-ence be-tween ad-sorp-tion en-er-gies and the gas-phase
 
  []
 
-[21]
-Underfull \hbox (badness 4779) in paragraph at lines 2844--2860
+
+Underfull \hbox (badness 4779) in paragraph at lines 2879--2895
 [][]\OT1/ptm/m/n/10 We high-light the func-tion-als that were clos-est to the
  []
 
 [22]
-Underfull \hbox (badness 1303) in paragraph at lines 2946--2952
+Underfull \hbox (badness 1303) in paragraph at lines 2981--2987
 []\OT1/ptm/m/n/10 In the pre-vi-ous cal-cu-la-tions, we did not in-ves-ti-gate 
 how
  []
@@ -1773,155 +1764,125 @@ how
 File: ./img/SiteSnapshotMany.png Graphic file (type png)
 
 <use ./img/SiteSnapshotMany.png>
-Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 2965.
+Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 3000.
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
 
 <./img/SiteSnapshotOriginal.png, id=205, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotOriginal.png Graphic file (type png)
 
 <use ./img/SiteSnapshotOriginal.png>
-Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 2966
+Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3001
 .
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
-
-Underfull \vbox (badness 4108) has occurred while \output is active []
-
-
+ [23 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png>]
 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pd
-f, id=206, 237.97708pt x 198.2336pt>
+f, id=210, 237.97708pt x 198.2336pt>
 File: ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
 on.pdf Graphic file (type pdf)
 
 <use ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributio
 n.pdf>
 Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
-ingEnergyDistribution.pdf used on input line 3009.
+ingEnergyDistribution.pdf used on input line 3044.
 (pdftex.def)             Requested size: 250.95612pt x 209.04976pt.
- [23 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png> <./TikzPics/
-TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
-<./img/FletcherAdsorption.png, id=221, 1124.2pt x 1142.2675pt>
+ <./img/FletcherAdsorption.png, id=211, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAdsorption.png Graphic file (type png)
 
 <use ./img/FletcherAdsorption.png>
-Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3060.
+Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3095.
 (pdftex.def)             Requested size: 250.95612pt x 254.97726pt.
- [24 <./img/FletcherAdsorption.png>]
+ [24 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
+on.pdf> <./img/FletcherAdsorption.png>]
 <TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=225, 347.52335pt x 254.65338pt>
 File: TikzPics/TikzCreation/HO.H2/HOH2.pdf Graphic file (type pdf)
 
 <use TikzPics/TikzCreation/HO.H2/HOH2.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2/HOH2.pdf used on input lin
-e 3121.
+e 3156.
 (pdftex.def)             Requested size: 250.95612pt x 183.89427pt.
  [25 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>] (document.bbl
-Underfull \hbox (badness 1189) in paragraph at lines 62--64
+Underfull \vbox (badness 7238) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 63--65
 [][]\OT1/ptm/m/n/10 R. Pa-poular, ``On wa-ter ice for-ma-tion in in-ter-stel-la
 r
  []
 
-! Argument of \OT1\' has an extra }.
-<inserted text> 
-                \par 
-l.92 G.~Henkelman, B.~P. Uberuaga, and H.~Jo{\'}
-                                                nsson, ``A climbing image nu...
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-! Paragraph ended before \OT1\' was complete.
-<to be read again> 
-                   \par 
-l.92 G.~Henkelman, B.~P. Uberuaga, and H.~Jo{\'}
-                                                nsson, ``A climbing image nu...
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 [26]
-Underfull \hbox (badness 1308) in paragraph at lines 116--119
+Underfull \hbox (badness 3590) in paragraph at lines 67--72
+\OT1/ptm/m/n/10 Ap-proach,'' \OT1/ptm/m/it/10 The Jour-nal of Phys-i-cal Chem-i
+stry A\OT1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 121--124
 \OT1/ptm/m/n/10 Cup-pen, ``Long-timescale sim-u-la-tions of dif-fu-sion in
  []
 
-
-Underfull \hbox (badness 1331) in paragraph at lines 187--190
+[27]
+Underfull \hbox (badness 1331) in paragraph at lines 194--197
 [][]\OT1/ptm/m/n/10 C. Adamo and V. Barone, ``To-ward re-li-able den-sity
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 201.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-! Package inputenc Error: Unicode char ̈ (U+308)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.204 A.~Schä
-               fer, H.~Horn, and R.~Ahlrichs, ``Fully optimized contracted {...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[27]
-Underfull \hbox (badness 1668) in paragraph at lines 234--237
-\OT1/ptm/m/n/10 mo-ment and the dis-per-sion in-ter-ac-tion re-vis-ited,'' \OT1
-/ptm/m/it/10 J.
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 245--248
+Underfull \hbox (badness 1221) in paragraph at lines 252--255
 [][]\OT1/ptm/m/n/10 S. Grimme, S. Ehrlich, and L. Go-erigk, ``Ef-fect of
  []
 
 
-Underfull \hbox (badness 5787) in paragraph at lines 285--286
-[][]\OT1/ptm/m/n/10 ``Chemshell, a com-pu-ta-tional chem-istry shell, see
+Underfull \hbox (badness 4144) in paragraph at lines 297--298
+[][]\OT1/ptm/m/n/10 ChemShell, a Com-pu-ta-tional Chem-istry Shell, see
  []
 
-[28])
+[28]
+Underfull \hbox (badness 6300) in paragraph at lines 300--304
+[][]\OT1/ptm/m/n/10 H.-J. Werner, P. J. Knowles, G. Knizia, F. R.
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 300--304
+\OT1/ptm/m/n/10 Manby, M. Sch[]utz, \OT1/ptm/m/it/10 et al.\OT1/ptm/m/n/10 , 20
+12.  MOL-PRO, ver-
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 300--304
+\OT1/ptm/m/n/10 sion 2012.1, a pack-age of ab ini-tio pro-grams, see
+ []
+
+)
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[29
-
-] (document.aux) ) 
+[29] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 34623 strings out of 493634
- 812021 string characters out of 3141310
- 983442 words of memory out of 3000000
- 37374 multiletter control sequences out of 15000+200000
- 88729 words of font info for 186 fonts, out of 3000000 for 9000
+ 34589 strings out of 493634
+ 811580 string characters out of 3141310
+ 981693 words of memory out of 3000000
+ 37345 multiletter control sequences out of 15000+200000
+ 88214 words of font info for 184 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,20n,100p,10382b,2303s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
-r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex
-9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/z
-apfchan/uzcmi8a.pfb>
-Output written on document.pdf (29 pages, 2680553 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontnam
+e/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/c
+mex9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on document.pdf (29 pages, 2674447 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
+ 290 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,11 +2,10 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: document.aux
 The style file: ieeetr.bst
 Database file #1: ShortTitles.bib
 Database file #2: MasterBib.bib
-Warning--string name "molpro_url" is undefined
---line 706 of file MasterBib.bib
+Warning--entry type for "chemshell" isn't style-file defined
+--line 200 of file MasterBib.bib
 Warning--string name "molpro_address" is undefined
---line 707 of file MasterBib.bib
+--line 717 of file MasterBib.bib
 Warning--I didn't find a database entry for "nwchem"
 Warning--I didn't find a database entry for "CHARMM"
-Warning--I didn't find a database entry for "DimerMethod"
-(There were 5 warnings)
+(There were 4 warnings)

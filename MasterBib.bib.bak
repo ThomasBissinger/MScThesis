@@ -75,7 +75,7 @@
 
 @Article{Becke1993BHLYP,
   author =    {Axel D. Becke},
-  title =     {A new mixing of Hartree{\textendash}Fock and local density-functional theories},
+  title =     {{A new mixing of Hartree{\textendash}Fock and local density-functional theories}},
   journal =   {The Journal of Chemical Physics},
   year =      {1993},
   volume =    {98},
@@ -164,7 +164,7 @@
 
 @Article{CabreraSanfelix2003,
   author =    {Cabrera Sanfelix, P and Holloway, S and Kolasinski, KW and Darling, GR},
-  title =     {The structure of water on the (0001) surface of graphite},
+  title =     {{The structure of water on the (0001) surface of graphite}},
   journal =   {Surface Science},
   year =      {2003},
   volume =    {532-535},
@@ -216,7 +216,7 @@
 
 @Article{DishoeckHerbstNeufeld2013,
   author =    {Ewine F. van Dishoeck and Eric Herbst and David A. Neufeld},
-  title =     {Interstellar Water Chemistry: From Laboratory to Observations},
+  title =     {{Interstellar Water Chemistry: From Laboratory to Observations}},
   journal =   {Chemical Reviews},
   year =      {2013},
   volume =    {113},
@@ -450,6 +450,20 @@
   url =       {http://dx.doi.org/10.1039/c3cp54328e}
 }
 
+@Article{HenkelmanJonsson1999,
+  author =        {Graeme Henkelman and Hannes Jo{\'}nsson},
+  title =         {{A dimer method for finding saddle points on high dimensional potential surfaces using only first derivatives}},
+  journal =       {The Journal of Chemical Physics},
+  year =          {1999},
+  volume =        {111},
+  number =        {15},
+  pages =         {7010},
+  __markedentry = {[Thomas:6]},
+  doi =           {10.1063/1.480097},
+  publisher =     {{AIP} Publishing},
+  url =           {http://dx.doi.org/10.1063/1.480097}
+}
+
 @Article{HenkelmanUberuagaJonsson2000,
   author =    {Graeme Henkelman and Blas P. Uberuaga and Hannes Jo{\'}nsson},
   title =     {A climbing image nudged elastic band method for finding saddle points and minimum energy paths},
@@ -493,18 +507,17 @@
 }
 
 @Article{HohenbergKohn1964,
-  author =        {P. Hohenberg and W. Kohn},
-  title =         {{Inhomogeneous Electron Gas}},
-  journal =       {Phys. Rev.},
-  year =          {1964},
-  volume =        {136},
-  number =        {3B},
-  pages =         {B864--B871},
-  month =         {nov},
-  __markedentry = {[Thomas:]},
-  doi =           {10.1103/physrev.136.b864},
-  publisher =     {American Physical Society ({APS})},
-  url =           {http://dx.doi.org/10.1103/PhysRev.136.B864}
+  author =    {P. Hohenberg and W. Kohn},
+  title =     {{Inhomogeneous Electron Gas}},
+  journal =   {Phys. Rev.},
+  year =      {1964},
+  volume =    {136},
+  number =    {3B},
+  pages =     {B864--B871},
+  month =     {nov},
+  doi =       {10.1103/physrev.136.b864},
+  publisher = {American Physical Society ({APS})},
+  url =       {http://dx.doi.org/10.1103/PhysRev.136.B864}
 }
 
 @ARTICLE{HUMP96,
@@ -590,14 +603,14 @@
   number =        {4A},
   pages =         {A1133--A1138},
   month =         {nov},
-  __markedentry = {[Thomas:6]},
+  __markedentry = {[Thomas:]},
   doi =           {10.1103/physrev.140.a1133},
   publisher =     {American Physical Society ({APS})},
   url =           {http://dx.doi.org/10.1103/PhysRev.140.A1133}
 }
 
-@Book{kryachko2012energy,
-  title =     {Energy density functional theory of many-electron systems},
+@Book{Kryachko2012,
+  title =     {{Energy density functional theory of many-electron systems}},
   publisher = {Springer Science \& Business Media},
   year =      {2012},
   author =    {Kryachko, Eugene S and Lude{\~n}a, Eduardo V},

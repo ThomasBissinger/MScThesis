@@ -1045,8 +1045,8 @@ QM/MM coupling scheme proposed by Warshel and Levitt \cite{Warshel1976QMMM}
 is nowadays only one among several schemes.
 %% CHECK: Dringend checken, ob das irgendwie stimmt.
 We chose an approximation
-in which the QM part was subject to the external potential defined
-by the MM charges and the MM part interacted with the QM atoms by
+in which the QM part is subject to the external potential defined
+by the MM charges and the MM part interacts with the QM atoms by
 the LJ potential \eqref{Theo:TIP3ELJ}. That way, the electrostatic
 interaction is covered by the QM part while the MM part accounts for
 VdW interaction.
@@ -1115,9 +1115,9 @@ $\xi_0$ and $\xi_{\te{MIN}}$ is plotted.
 
 %% CHECK: ZITAT. Außerdem Theorie checken!
 In this work, we obtain transition states with the \ep{dimer method}
-\cite{DimerMethod}. It uses two images of the system with a slight offset, then
-rotates them to find the minimum eigenvalue of the Hessian matrix
-\eqref{Theo:Hessian}. It follows these minimum eigenvalue directions by an
+\cite{HenkelmanJonsson1999}. It uses two images of the system with a slight offset, then
+rotates them to find the eigenvector to the minimum eigenvalue of the Hessian
+matrix \eqref{Theo:Hessian}. It follows these minimum eigenvalue directions by an
 iterative scheme until a saddle point is reached. This is the transition state.
 
 Transition states are important for calculating activation energies and
@@ -1377,7 +1377,7 @@ Therefore, we can generally say that the description of $\htoh$ seems to be
 tricky with the functionals and basis sets we used in this test. 
 %% CHECK: Accuracy ccsd(t)?
 %Still, the deviations are within the error bonds of a $\ccsdtf$ calculation,
-%so it is hard to favor a functional of the given choice.
+%so it is hard to favour a functional of the given choice.
 A few functionals need special remarks, but rather for their deficiencies. The
 first one are the $\tpss$ and $\tpss\dt$ functionals. They predict much too
 attractive energies for this benchmark, beyond $-7\ \kmo$ and $-9\ \kmo$,
@@ -1534,7 +1534,7 @@ capable of yielding excellent approximations to our coupled-cluster data,
 and the results at the def2-TZVPD basis set are already close to the
 methods' intrinstic error.  
 
-The results so far speak in favor of the def2-TZVPD basis set. Due 
+The results so far speak in favour of the def2-TZVPD basis set. Due 
 to the size of the quantum mechanical part of the QM/MM system we will later consider,
 it is computationally too expensive to use $\tzvpd$ for the whole
 QM part. We will therefore use a hybrid basis set with the more important atoms
@@ -2225,6 +2225,41 @@ and changing the angles to the appropriate value while maintaining
 the orientation of the water dipole moment, that is the vector $\r_{\te O - \te H1}+\r_{\te O - \te H2}$
 stays the same for each molecule. This means symmetrical bending of all bond angles with
 respect to the dipole moment.
+
+\subsubsection{Setting Up the Model}
+
+Now we did talk about how we defined the surface geometry and how to decompose
+the system into QM and MM domains. To give guidance for a general approach to
+set up a surface model, we want to repeat the steps we took.
+
+\begin{enumerate}
+  \item \textbf{Geometry.} Set up the lattice for oxygen atoms with hexagonal
+  rings. Include the hydrogen atoms to arrive at the fully ordered Fletcher
+  surface. If desired, this ordered surface can lose some order by changing the
+  hydrogen orientation. It may be even further disordered by a short molecular
+  dynamics calculation with a classical force field and a finite temperature,
+  which should lead to some form of ASW. When the surface satisfies the
+  requirements, take a hemispherical cut. You can then add adsorbates or other
+  perform other manipulations to adjust the system to your requirements.
+  \item \textbf{Subdomains.} Select QM atoms and MM molecules. Divide
+  the MM molecules into frozen and active molecules.
+  \item \textbf{Force field.} Decide on a force field for the MM region.
+  We used $\tip$ and believe that the force field does not have a very strong
+  impact on the result of the calculation due to the large QM region, but for
+  smaller QM regions, its effect may be more considerable.
+  %Provide the required
+  %parameter and input files.
+  \item \textbf{DFT.} Decide on the details of your DFT calculations. Our
+  benchmark favours $\tzvpd$, therefore we recommend a $\tzvp$/$\tzvpd$ basis
+  set and the functionals discussed at the end of Section \ref{Sec:Bench}.
+  \item \textbf{QM/MM.} Set up the communication between QM and MM region. Note
+  that you may require MM parameters for your QM atoms and that on the other
+  hand your QM calculations should support point charges.
+\end{enumerate}
+Approaching the problem like this was very easy for us, since we used the
+chemshell package. It supports a QM/MM interface where the QM and MM theories
+can be defined independent of one another. They are then coupled to yield a
+hybrid theory, which is given to $\dlfind$ alongside the initial geometry.
 
 \subsection{First Geometry Optimisations}
 \label{Sec:Ads:Optima}

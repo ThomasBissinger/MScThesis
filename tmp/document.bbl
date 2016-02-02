@@ -15,12 +15,13 @@ B.~Draine, ``{Interstellar Dust Grains},'' {\em Annual Review of Astronomy and
 
 \bibitem{BecklinNeugebauer1967}
 E.~E. Becklin and G.~Neugebauer, ``{Observations of an Infrared Star in the
-  Orion Nebula},'' {\em {ApJ}}, vol.~147, p.~799, feb 1967.
+  Orion Nebula},'' {\em {The Astrophysical Journal}}, vol.~147, p.~799, feb
+  1967.
 
 \bibitem{GillettForrest1973}
 F.~C. Gillett and W.~J. Forrest, ``{Spectra of the Becklin-Neugebauer point
-  source and the Kleinmann-low nebula from 2.8 to 13.5~{m}icrons.},'' {\em
-  {ApJ}}, vol.~179, p.~483, jan 1973.
+  source and the Kleinmann-low nebula from 2.8 to 13.5~{m}icrons.},'' {\em {The
+  Astrophysical Journal}}, vol.~179, p.~483, jan 1973.
 
 \bibitem{Hiraoka1998}
 K.~Hiraoka, T.~Miyagoshi, T.~Takayama, K.~Yamamoto, and Y.~Kihara, ``{Gas-Grain
@@ -49,8 +50,8 @@ A.~G. G.~M. Tielens and W.~Hagen, ``{Model Calculations of the Molecular
   Astrophysics}, vol.~114, pp.~245--260, 1982.
 
 \bibitem{DishoeckHerbstNeufeld2013}
-E.~F. van Dishoeck, E.~Herbst, and D.~A. Neufeld, ``Interstellar water
-  chemistry: From laboratory to observations,'' {\em Chemical Reviews},
+E.~F. van Dishoeck, E.~Herbst, and D.~A. Neufeld, ``{Interstellar Water
+  Chemistry: From Laboratory to Observations},'' {\em Chemical Reviews},
   vol.~113, pp.~9043--9085, dec 2013.
 
 \bibitem{CuppenHerbst2007}
@@ -66,11 +67,12 @@ R.~Papoular, ``{On water ice formation in interstellar clouds},'' {\em Monthly
 H.~Bergeron, N.~Rougeau, V.~Sidis, M.~Sizun, D.~Teillet-Billy, and F.~Aguillon,
   ``{{OH} Formation from O and H Atoms Physisorbed on a Graphitic Surface
   through the Langmuir-Hinshelwood Mechanism: A Quasi-Classical Approach},''
-  {\em J. Phys. Chem. A}, vol.~112, pp.~11921--11930, nov 2008.
+  {\em The Journal of Physical Chemistry A}, vol.~112, pp.~11921--11930, nov
+  2008.
 
 \bibitem{CabreraSanfelix2003}
-P.~Cabrera~Sanfelix, S.~Holloway, K.~Kolasinski, and G.~Darling, ``The
-  structure of water on the (0001) surface of graphite,'' {\em Surface
+P.~Cabrera~Sanfelix, S.~Holloway, K.~Kolasinski, and G.~Darling, ``{The
+  structure of water on the (0001) surface of graphite},'' {\em Surface
   Science}, vol.~532-535, pp.~166--172, Jun 2003.
 
 \bibitem{LinZhangLeeEtAl2005}
@@ -86,26 +88,29 @@ T.~P.~M. Goumans, C.~R.~A. Catlow, and W.~A. Brown, ``Hydrogenation of {CO} on
 \bibitem{GoumansCatlowBrownEtAl2009}
 T.~P.~M. Goumans, C.~R.~A. Catlow, W.~A. Brown, J.~Kästner, and P.~Sherwood,
   ``An embedded cluster study of the formation of water on interstellar dust
-  grains,'' {\em Phys. Chem. Chem. Phys.}, vol.~11, no.~26, p.~5431, 2009.
+  grains,'' {\em Physical Chemistry Chemical Physics}, vol.~11, no.~26,
+  p.~5431, 2009.
 
 \bibitem{HenkelmanUberuagaJonsson2000}
-G.~Henkelman, B.~P. Uberuaga, and H.~Jo{\'}nsson, ``A climbing image nudged
+G.~Henkelman, B.~P. Uberuaga, and H.~J{\'o}nsson, ``A climbing image nudged
   elastic band method for finding saddle points and minimum energy paths,''
   {\em The Journal of Chemical Physics}, vol.~113, no.~22, p.~9901, 2000.
 
 \bibitem{Woon2002}
 D.~E. Woon, ``{Modeling Gas-Grain Chemistry with Quantum Chemical Cluster
   Calculations. I. Heterogeneous Hydrogenation of {CO} and H 2 {CO} on Icy
-  Grain Mantles},'' {\em {ApJ}}, vol.~569, pp.~541--548, apr 2002.
+  Grain Mantles},'' {\em {The Astrophysical Journal}}, vol.~569, pp.~541--548,
+  apr 2002.
 
 \bibitem{XieDingSun2006}
 H.~bin Xie, Y.~hong Ding, and C.~chung Sun, ``Reaction mechanism of oxygen
-  atoms with cyanoacetylene in the gas phase and on water ice,'' {\em {ApJ}},
-  vol.~643, pp.~573--581, may 2006.
+  atoms with cyanoacetylene in the gas phase and on water ice,'' {\em {The
+  Astrophysical Journal}}, vol.~643, pp.~573--581, may 2006.
 
 \bibitem{MP2}
 C.~M{\o}ller and M.~S. Plesset, ``{Note on an Approximation Treatment for
-  Many-Electron Systems},'' {\em Phys. Rev.}, vol.~46, pp.~618--622, oct 1934.
+  Many-Electron Systems},'' {\em Physical Review}, vol.~46, pp.~618--622, oct
+  1934.
 
 \bibitem{QCISD}
 J.~Gauss and D.~Cremer, ``{Analytical evaluation of energy gradients in
@@ -114,17 +119,17 @@ J.~Gauss and D.~Cremer, ``{Analytical evaluation of energy gradients in
 
 \bibitem{KarssemeijerPedersenJonssonEtAl2012}
 L.~J. Karssemeijer, A.~Pedersen, H.~J{\'{o}}nsson, and H.~M. Cuppen,
-  ``{Long-timescale simulations of diffusion in molecular solids},'' {\em Phys.
-  Chem. Chem. Phys.}, vol.~14, no.~31, p.~10844, 2012.
+  ``{Long-timescale simulations of diffusion in molecular solids},'' {\em
+  Physical Chemistry Chemical Physics}, vol.~14, no.~31, p.~10844, 2012.
 
 \bibitem{HohenbergKohn1964}
-P.~Hohenberg and W.~Kohn, ``{Inhomogeneous Electron Gas},'' {\em Phys. Rev.},
-  vol.~136, pp.~B864--B871, nov 1964.
+P.~Hohenberg and W.~Kohn, ``{Inhomogeneous Electron Gas},'' {\em Physical
+  Review}, vol.~136, pp.~B864--B871, nov 1964.
 
 \bibitem{KohnSham1965}
 W.~Kohn and L.~J. Sham, ``{Self-Consistent Equations Including Exchange and
-  Correlation Effects},'' {\em Phys. Rev.}, vol.~140, pp.~A1133--A1138, nov
-  1965.
+  Correlation Effects},'' {\em Physical Review}, vol.~140, pp.~A1133--A1138,
+  nov 1965.
 
 \bibitem{Becke1993}
 A.~D. Becke, ``Density-functional thermochemistry. {III}. the role of exact
@@ -133,17 +138,18 @@ A.~D. Becke, ``Density-functional thermochemistry. {III}. the role of exact
 
 \bibitem{Becke1988}
 A.~D. Becke, ``Density-functional exchange-energy approximation with correct
-  asymptotic behavior,'' {\em Phys. Rev. A}, vol.~38, pp.~3098--3100, sep 1988.
+  asymptotic behavior,'' {\em Physical Review A}, vol.~38, pp.~3098--3100, sep
+  1988.
 
 \bibitem{Perdew1986}
 J.~P. Perdew, ``Density-functional approximation for the correlation energy of
-  the inhomogeneous electron gas,'' {\em Phys. Rev. B}, vol.~33,
+  the inhomogeneous electron gas,'' {\em Physical Review B}, vol.~33,
   pp.~8822--8824, jun 1986.
 
 \bibitem{LeeYangParr1988}
 C.~Lee, W.~Yang, and R.~G. Parr, ``Development of the colle-salvetti
   correlation-energy formula into a functional of the electron density,'' {\em
-  Phys. Rev. B}, vol.~37, pp.~785--789, jan 1988.
+  Physical Review B}, vol.~37, pp.~785--789, jan 1988.
 
 \bibitem{PerdewErnzerhofBurke1996}
 J.~P. Perdew, M.~Ernzerhof, and K.~Burke, ``Rationale for mixing exact exchange
@@ -158,13 +164,14 @@ S.~Grimme, ``{Semiempirical GGA-Type Density Functional Constructed with a
 \bibitem{TaoPerdewStaroverovEtAl2003}
 J.~Tao, J.~P. Perdew, V.~N. Staroverov, and G.~E. Scuseria, ``Climbing the
   density functional ladder: Nonempirical meta{\textendash}generalized gradient
-  approximation designed for molecules and solids,'' {\em Phys. Rev. Lett.},
-  vol.~91, sep 2003.
+  approximation designed for molecules and solids,'' {\em Physical Review
+  Letters}, vol.~91, sep 2003.
 
 \bibitem{ZhaoTruhlar2005}
 Y.~Zhao and D.~G. Truhlar, ``Design of density functionals that are broadly
   accurate for thermochemistry, thermochemical kinetics, and nonbonded
-  interactions,'' {\em J. Phys. Chem. A}, vol.~109, pp.~5656--5667, jun 2005.
+  interactions,'' {\em The Journal of Physical Chemistry A}, vol.~109,
+  pp.~5656--5667, jun 2005.
 
 \bibitem{StephensDevlinChabalowskiEtAl1994}
 P.~J. Stephens, F.~J. Devlin, C.~F. Chabalowski, and M.~J. Frisch, ``Ab initio
@@ -173,8 +180,8 @@ P.~J. Stephens, F.~J. Devlin, C.~F. Chabalowski, and M.~J. Frisch, ``Ab initio
   vol.~98, pp.~11623--11627, nov 1994.
 
 \bibitem{Becke1993BHLYP}
-A.~D. Becke, ``A new mixing of hartree{\textendash}fock and local
-  density-functional theories,'' {\em The Journal of Chemical Physics},
+A.~D. Becke, ``{A new mixing of Hartree{\textendash}Fock and local
+  density-functional theories},'' {\em The Journal of Chemical Physics},
   vol.~98, no.~2, p.~1372, 1993.
 
 \bibitem{StaroverovScuseriaTaoEtAl2003}
@@ -192,18 +199,18 @@ C.~Adamo and V.~Barone, ``Toward reliable density functional methods without
 Y.~Zhao and D.~G. Truhlar, ``The m06~{s}uite of density functionals for main
   group thermochemistry, thermochemical kinetics, noncovalent interactions,
   excited states, and transition elements: two new functionals and systematic
-  testing of four m06-class functionals and 12 other functionals,'' {\em Theor
-  Chem Account}, vol.~120, pp.~215--241, jul 2007.
+  testing of four m06-class functionals and 12 other functionals,'' {\em
+  Theoretical Chemistry Accounts}, vol.~120, pp.~215--241, jul 2007.
 
 \bibitem{TURBOMOLE}
-``{TURBOMOLE V6.6 2014}, a development of {University of Karlsruhe} and
+{TURBOMOLE V6.6 2014}, a development of {University of Karlsruhe} and
   {Forschungszentrum Karlsruhe GmbH}, 1989-2007, {TURBOMOLE GmbH}, since 2007;
-  available from \\ {\tt http://www.turbomole.com}..''
+  available from { http://www.turbomole.com}.
 
 \bibitem{SchaeferHornAhlrichs1992}
-A.~Schäfer, H.~Horn, and R.~Ahlrichs, ``Fully optimized contracted {Gauss}ian
-  basis sets for atoms li to kr,'' {\em The Journal of Chemical Physics},
-  vol.~97, no.~4, p.~2571, 1992.
+A.~Sch{\"a}fer, H.~Horn, and R.~Ahlrichs, ``{Fully optimized contracted
+  {Gauss}ian basis sets for atoms Li to Kr},'' {\em The Journal of Chemical
+  Physics}, vol.~97, no.~4, p.~2571, 1992.
 
 \bibitem{WeigendHaeserPatzeltEtAl1998}
 F.~Weigend, M.~Häser, H.~Patzelt, and R.~Ahlrichs, ``{RI}-{MP}2: optimized
@@ -211,8 +218,8 @@ F.~Weigend, M.~Häser, H.~Patzelt, and R.~Ahlrichs, ``{RI}-{MP}2: optimized
   Letters}, vol.~294, pp.~143--152, sep 1998.
 
 \bibitem{WeigendFurcheAhlrichs2003}
-F.~Weigend, F.~Furche, and R.~Ahlrichs, ``{Gauss}ian basis sets of quadruple
-  zeta valence quality for atoms h{\textendash}kr,'' {\em The Journal of
+F.~Weigend, F.~Furche, and R.~Ahlrichs, ``{Gaussian basis sets of quadruple
+  zeta valence quality for atoms H{\textendash}Kr},'' {\em The Journal of
   Chemical Physics}, vol.~119, no.~24, p.~12753, 2003.
 
 \bibitem{RappoportFurche2010}
@@ -232,14 +239,14 @@ E.~S. Kryachko and E.~V. Lude{\~n}a, {\em {Energy density functional theory of
 
 \bibitem{BeckeXDM2007}
 A.~D. Becke and E.~R. Johnson, ``{Exchange-hole dipole moment and the
-  dispersion interaction revisited},'' {\em J. Chem. Phys.}, vol.~127, no.~15,
-  p.~154108, 2007.
+  dispersion interaction revisited},'' {\em The Journal of Chemical Physics},
+  vol.~127, no.~15, p.~154108, 2007.
 
 \bibitem{GrimmeDCorrection2010}
 S.~Grimme, J.~Antony, S.~Ehrlich, and H.~Krieg, ``{A consistent and accurate ab
   initio parametrization of density functional dispersion correction ({DFT}-D)
-  for the 94 elements H-Pu},'' {\em J. Chem. Phys.}, vol.~132, no.~15,
-  p.~154104, 2010.
+  for the 94 elements H-Pu},'' {\em The Journal of Chemical Physics}, vol.~132,
+  no.~15, p.~154104, 2010.
 
 \bibitem{GrimmeD32011}
 S.~Grimme, S.~Ehrlich, and L.~Goerigk, ``{Effect of the damping function in
@@ -249,13 +256,13 @@ S.~Grimme, S.~Ehrlich, and L.~Goerigk, ``{Effect of the damping function in
 \bibitem{Jorgensen1983TIP3P}
 W.~L. Jorgensen, J.~Chandrasekhar, J.~D. Madura, R.~W. Impey, and M.~L. Klein,
   ``{Comparison of simple potential functions for simulating liquid water},''
-  {\em J. Chem. Phys.}, vol.~79, no.~2, p.~926, 1983.
+  {\em The Journal of Chemical Physics}, vol.~79, no.~2, p.~926, 1983.
 
 \bibitem{MacKerell1998CHARMMTIP3}
 A.~D. MacKerell, D.~Bashford, M.~Bellott, R.~L. Dunbrack, J.~D. Evanseck, M.~J.
   Field, S.~Fischer, J.~Gao, H.~Guo, S.~Ha, and et~al., ``{All-Atom Empirical
-  Potential for Molecular Modeling and Dynamics Studies of Proteins},'' {\em J.
-  Phys. Chem. B}, vol.~102, pp.~3586--3616, Apr 1998.
+  Potential for Molecular Modeling and Dynamics Studies of Proteins},'' {\em
+  The Journal of Physical Chemistry B}, vol.~102, pp.~3586--3616, Apr 1998.
 
 \bibitem{Warshel1976QMMM}
 A.~Warshel and M.~Levitt, ``{Theoretical Studies of Enzymic Reactions:
@@ -275,6 +282,11 @@ K.~R. Brorsen, F.~Zahariev, H.~Nakata, D.~G. Fedorov, and M.~S. Gordon,
   Molecular Orbital Method},'' {\em Journal of Chemical Theory and
   Computation}, vol.~10, pp.~5297--5307, Dec 2014.
 
+\bibitem{HenkelmanJonsson1999}
+G.~Henkelman and H.~J{\'o}nsson, ``{A dimer method for finding saddle points on
+  high dimensional potential surfaces using only first derivatives},'' {\em The
+  Journal of Chemical Physics}, vol.~111, no.~15, p.~7010, 1999.
+
 \bibitem{CHARMM2009}
 B.~R. Brooks, C.~L. Brooks, A.~D. Mackerell, L.~Nilsson, R.~J. Petrella,
   B.~Roux, Y.~Won, G.~Archontis, C.~Bartels, S.~Boresch, and et~al., ``{CHARMM:
@@ -282,12 +294,13 @@ B.~R. Brooks, C.~L. Brooks, A.~D. Mackerell, L.~Nilsson, R.~J. Petrella,
   Chemistry}, vol.~30, pp.~1545--1614, Jul 2009.
 
 \bibitem{chemshell}
-``Chemshell, a computational chemistry shell, see www.chemshell.org.''
+ChemShell, a Computational Chemistry Shell, see www.chemshell.org.
 
 \bibitem{MOLPRO_brief}
 H.-J. Werner, P.~J. Knowles, G.~Knizia, F.~R. Manby, M.~{Sch\"{u}tz}, {\em
-  et~al.}, ``Molpro, version 2012.1, a package of ab initio programs,'' 2012.
-\newblock see.
+  et~al.}, 2012.
+\newblock MOLPRO, version 2012.1, a package of ab initio programs, see
+  http://www.molpro.com/.
 
 \bibitem{HUMP96}
 W.~Humphrey, A.~Dalke, and K.~Schulten, ``{VMD} -- {V}isual {M}olecular
@@ -310,8 +323,8 @@ T.~Shiozaki, G.~Knizia, and H.-J. Werner, ``Explicitly correlated
 
 \bibitem{LanghoffDavidson1974}
 S.~R. Langhoff and E.~R. Davidson, ``Configuration interaction calculations on
-  the nitrogen molecule,'' {\em Int. J. Quantum Chem.}, vol.~8, pp.~61--72, jan
-  1974.
+  the nitrogen molecule,'' {\em International Journal of Quantum Chemistry},
+  vol.~8, pp.~61--72, jan 1974.
 
 \bibitem{Barnes1929}
 W.~H. Barnes, ``{The Crystal Structure of Ice between 0 degrees C. and - 183
