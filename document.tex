@@ -3065,12 +3065,18 @@ $-8.64~\kmo$ is also reached by only a single calculation. Therefore, we
 conclude that there are two strongly attractive (in a numerical sense) energy
 minima to which more than half of the initial geometries are drawn.
 
-We recommend the binding site $(0,2,0)^\intercal$ despite it being not the most
-attractive. The reason for that choice is that all other binding sites are
-located more or less above the central ring. This means that for simulations,
-they are not clearly within one ring or the other.
+We recommend a central binding site at $(0,2,0)^\intercal$. This is not the
+strongest binding site, but all optimum geometry searches starting close to it
+converged there, so we can infer that there is no other energy minimum close by.
+At greater distance from the center, we recommend further binding sites above
+hydrogen atoms pointing out of the surface.
 
-However, this becomes interesting when we consider hopping of adsorbates. In
+% We recommend the binding site $(0,2,0)^\intercal$ despite it being not the most
+% attractive. The reason for that choice is that all other binding sites are
+% located more or less above the central ring. This means that for simulations,
+% they are not clearly within one ring or the other.
+
+This becomes interesting when we consider hopping of adsorbates. In
 Figure \ref{Fig:Adv:BindingSitesGuess}, the optima with $E<-8~\kmo$ lie to the
 left and right. But then, due to quantum tunneling or temperature-dependent
 vibrations, an O atom located above the center of mass can hop into another
@@ -3157,7 +3163,7 @@ research.
 \caption{Left: Optimum geometry for $\hoht$. Right: Transition state for $\hoht$.
 Values are given for the adsorbate, values in brackets are for the gas phase. The
 %% CHECK: Korrigiere fehlendes Surface-Optimum.
-dihedral angles for the optimum geometry are 33.58$^{\circ}$ (33.58$^{\circ}$)
+dihedral angles for the optimum geometry are 50.21$^{\circ}$ (33.58$^{\circ}$)
 and for the transition state $2.58^{\circ}$ ($1.32^{\circ}$).}
 
 \label{Fig:Adv:TSLengths}
@@ -3173,13 +3179,43 @@ tilted towards the O atom of $\ho$, while the H atom in $\ho$ is oriented
 towards a $\hto$ molecule with a clipped hydrogen bond pointing out. The
 $\htw$ molecule is too far from the surface to relevantly deform it.
 
-Comparing gas-phase and adsorbate geometries, we find very good agreement in
-both optimum as well as transition state geometry. Both transition states are
-predicted nearly planar, which is not true for the optimum geometry. Bond
-lengths do not change greatly between transition state and optimum geometry,
-but the separation between the two molecules decreases in the transition state.
+Comparing gas-phase and adsorbate geometries for the transition state, we find
+very good agreement. Both transition states are predicted nearly planar,
+which is not true for the optimum geometry. Bond lengths do not change greatly
+between transition state and optimum geometry, but the separation between the
+two molecules decreases in the transition state. If we compare the gas-phase
+geometry to the adsorbate geometry for the optimum, the disagreement is
+stronger. The $\htw$ molecule has an increased separation from the $\ho$
+radical. The ``upper'' H atom in $\htw$ tilts towards the surface. The stronger
+deformation may be attributed to the fact that the interaction between $\ho$ and
+$\htw$ is weaker in the optimum geometry and that therefore the surface affects
+the optimum geometry stronger. 
 
+\begin{figure}[t!]
+%\hskip-2cm
+\includegraphics[width=.49\textwidth]{TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf}
+\caption{Energy diagram for the reaction $\ho + \htw \chemar \hto + \text H$ on
+the surface. Values without brackets use the $\zpering$ correction, values in
+brackets are uncorrected for ZPE.}
+\label{Fig:Adv:ReactionEnergyDiagram}
+\end{figure}
 %% CHECK: Activation energy. Diagram with H2O+H?
+
+A reaction energy diagram is presented in Figure
+\ref{Fig:Adv:ReactionEnergyDiagram}. The influence of the
+$\zpering$ correction is small for the transition state compared to the initial
+$\ho + \htw$ energy, whereas the correction has a stronger effect on the prdocut
+state, where it makes up $18\%$ of the energy.
+
+We find the activation energy for the reaction \mbox{$\ho + \htw \chemar \hto +
+\te H$} to be $7.16~\kmo$ and the reaction energy to be $-44.03~\kmo$. This does
+not compare well to experimental data by Romanzin
+\etal\cite{RomanzinIoppoloCuppenEtAl2011}, who found an activation energy of
+$22.19~\kmo$ and a reaction energy of $96.49~\kmo$. A source of error could be
+the neglect of a finite temperature in the optimisation. Part of the problems
+may also come from problems of DFT describing the breaking and rearrangement of
+bonds of the given reactions, which we already encountered for gas-phase
+reactions in Section \ref{Sec:Gas:Reaction}.
 
 
 \section{Summary and Conclusion}

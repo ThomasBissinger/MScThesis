@@ -29,18 +29,19 @@
 \def\stretch{2.}
 %\def\nuPi{{3.1459265/360}}
 \begin{scope}
+ \def\rot{13.11}
  \def\sepx{-7};
- \def\sepy{0};
+ \def\sepy{.5};
 %% OPTIMUM
 %DIHEDRAL: Gas: 33.58°
 
  \coordinate (OGas) at (\sepx,\sepy);
- \coordinate (H1Gas) at ({\sepx+\stretch*.98*sin(90.47)},{\sepy+\stretch*.98*cos(90.47)});
- \coordinate (H2Gas) at ({\sepx+\stretch*0},{\sepy+\stretch*2.43});
- \coordinate (H3Gas) at ($(H2Gas)+({\stretch*0.75*sin(49.88)},{\stretch*0.75*cos(49.88)})$);
+ \coordinate (H1Gas) at ({\sepx+\stretch*1.00*sin(\rot+97.83)},{\sepy+\stretch*1.00*cos(\rot+97.83)});
+ \coordinate (H2Gas) at ({\sepx+\stretch*2.65*sin(\rot)},{\sepy+\stretch*2.65*cos(\rot)});
+ \coordinate (H3Gas) at ($(H2Gas)+({\stretch*0.75*sin(\rot+21.77)},{\stretch*0.75*cos(\rot+21.77)})$);
 
- \draw (OGas.center) -- node[below] {\twovals{0.98 \AA}{0.98 \AA}} (H1Gas.center);
- \draw[dashed] (OGas.center) -- node[left] {\twovals{2.43 \AA}{2.43 \AA}} (H2Gas.center);
+ \draw (OGas.center) -- node[below] {\twovals{1.00 \AA}{0.98 \AA}} (H1Gas.center);
+ \draw[dashed] (OGas.center) -- node[left] {\twovals{2.65 \AA}{2.43 \AA}} (H2Gas.center);
 % \draw (H2Gas.center) -- node[above left] {\twovals{$0.75$ \AA}{0.75 \AA}} (H3Gas.center);
 \fill[pattern=north west lines] (H2Gas.center) -- node[above left]{\twovals{$0.75$ \AA}{0.75 \AA}}  ($(H3Gas.center)+(-.21,0)$) -- ($(H3Gas.center)+(-.1,-.2)$) -- cycle;
 
@@ -51,9 +52,9 @@
  \draw(H2Gas) node[circle,inner sep=0pt, fill=white] {H};
  \draw(H3Gas) node[circle,inner sep=0pt, fill=white] {H};
 
-\draw pic["\qquad \qquad \begin{tabular}{c} 90.47$^\circ$ \\ (90.47$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+\draw pic["\qquad \qquad \begin{tabular}{c} 97.83$^\circ$ \\ (90.47$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
     {angle=H1Gas--OGas--H2Gas};
-\draw pic["\qquad\qquad   \begin{tabular}{c} \\ 130.12$^\circ$ \\ (130.12$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
+\draw pic["\qquad\qquad   \begin{tabular}{c} \\ 158.23$^\circ$ \\ (130.12$^\circ$) \end{tabular}", draw=orange, <->, angle eccentricity=1.2, angle radius=.5cm]
     {angle=OGas--H2Gas--H3Gas};
 
 \draw ({\sepx-\stretch*1},-1.5) -- ({\sepx+\stretch*1.6},-1.5);

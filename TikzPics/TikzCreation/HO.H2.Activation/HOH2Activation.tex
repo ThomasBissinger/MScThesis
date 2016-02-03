@@ -1,0 +1,44 @@
+\documentclass[crop,tikz]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+%\usepackage{tikz-3dplot}
+\usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
+%\usepackage{C:/Users/Thomas/workspace/MScThesis/MyChem}
+%\usepackage{C:/Users/Thomas/workspace/MScThesis/MyStandard}
+
+\begin{document}
+\tdplotsetmaincoords{60}{110}
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+
+\newcommand\twovals[2]{
+\begin{tabular}{c} #1 \\ #2 \end{tabular}}
+\begin{tikzpicture}
+\def\nuPi{3.1459265}
+\def\TS{.716}
+\def\Prod{-4.403}
+
+\begin{scope}
+\draw[->] (.7,-5.0) -- node[sloped, anchor=center, above]{$E$  (kJ/mol)} (.7,1.5) ;
+\draw (1,0) --node[above]{OH + H$_2$} (3,0);
+%\draw[dashed] (3,0) -- (3.5,\TS);
+\draw (3,0) -- (3.5,\TS);
+\draw (3.5,\TS) --node[above]{TS} (5.5,\TS);
+%\draw[dashed] (7,\TS) -- (9,\Prod);
+\draw (5.5,\TS) -- (6,\Prod);
+\draw (6,\Prod) -- node[above]{H$_2$O + H} (8,\Prod);
+%\draw[<->] (3.5,0) -- node[right]{\twovals{$7.16$}{($6.88$)}}(3.5,\TS);
+\draw[<->] (3.5,0) -- (3.5,\TS);
+\node at (4.2,.2) {\twovals{$7.16$}{($6.88$)}};
+\draw[<->] (6,0) -- node[right]{\twovals{$-44.03$}{($-51.90$)}}(6,\Prod);
+%\draw[dashed] (-.2,0) -- (11,0);
+%\draw[dashed] (5,\TS) -- (11,\TS);
+%\draw[<->] (11,0) -- node[right]{\twovals{$7.16$}{($6.88$)}}(11,\TS);
+%\draw[<->] (11,0) -- node[right]{\twovals{$-44.03$}{($-51.90$)}}(11,\Prod);
+%\draw[<->] (5,0) -- node[right]{$7.16$ ($6.88$)}(5,\TS);
+%\draw[<->] (9,0) -- node[right]{$-44.03$ ($-51.90$)}(9,\Prod);
+\end{scope}
+\end{tikzpicture}
+\end{document}

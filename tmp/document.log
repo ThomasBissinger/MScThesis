@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  2 FEB 2016 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.24)  3 FEB 2016 15:41
 entering extended mode
 **./document.tex
 (document.tex
@@ -1789,27 +1789,46 @@ ingEnergyDistribution.pdf used on input line 3044.
 File: ./img/FletcherAdsorption.png Graphic file (type png)
 
 <use ./img/FletcherAdsorption.png>
-Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3095.
+Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3101.
 (pdftex.def)             Requested size: 250.95612pt x 254.97726pt.
  [24 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
 on.pdf> <./img/FletcherAdsorption.png>]
-<TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=225, 347.52335pt x 254.65338pt>
+<TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=225, 347.52335pt x 281.21661pt>
 File: TikzPics/TikzCreation/HO.H2/HOH2.pdf Graphic file (type pdf)
 
 <use TikzPics/TikzCreation/HO.H2/HOH2.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2/HOH2.pdf used on input lin
-e 3156.
-(pdftex.def)             Requested size: 250.95612pt x 183.89427pt.
- [25 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>] (document.bbl
-Underfull \vbox (badness 7238) has occurred while \output is active []
+e 3162.
+(pdftex.def)             Requested size: 250.95612pt x 203.07654pt.
+
+<TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf, id=226, 224.86508pt
+ x 185.34244pt>
+File: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf Graphic file (t
+ype pdf)
+
+<use TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf>
+Package pdftex.def Info: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.
+pdf used on input line 3196.
+(pdftex.def)             Requested size: 250.95612pt x 206.84962pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3210--3219
+[][]\OT1/ptm/m/n/10 We find the ac-ti-va-tion en-ergy for the re-ac-tion
+ []
 
 
+Underfull \hbox (badness 2653) in paragraph at lines 3210--3219
+[] \OT1/ptm/m/n/10 to be $\OT1/ptmcm/m/n/10 7\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n
+/10 16 [][]$ \OT1/ptm/m/n/10 and the re-ac-
+ []
+
+[25 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>] (document.bbl [26 <./TikzPics/Tik
+zCreation/HO.H2.Activation/HOH2Activation.pdf>]
 Underfull \hbox (badness 1189) in paragraph at lines 63--65
 [][]\OT1/ptm/m/n/10 R. Pa-poular, ``On wa-ter ice for-ma-tion in in-ter-stel-la
 r
  []
 
-[26]
+
 Underfull \hbox (badness 3590) in paragraph at lines 67--72
 \OT1/ptm/m/n/10 Ap-proach,'' \OT1/ptm/m/it/10 The Jour-nal of Phys-i-cal Chem-i
 stry A\OT1/ptm/m/n/10 ,
@@ -1825,7 +1844,7 @@ Underfull \hbox (badness 1331) in paragraph at lines 194--197
 [][]\OT1/ptm/m/n/10 C. Adamo and V. Barone, ``To-ward re-li-able den-sity
  []
 
-
+[28]
 Underfull \hbox (badness 1221) in paragraph at lines 252--255
 [][]\OT1/ptm/m/n/10 S. Grimme, S. Ehrlich, and L. Go-erigk, ``Ef-fect of
  []
@@ -1835,7 +1854,7 @@ Underfull \hbox (badness 4144) in paragraph at lines 297--298
 [][]\OT1/ptm/m/n/10 ChemShell, a Com-pu-ta-tional Chem-istry Shell, see
  []
 
-[28]
+
 Underfull \hbox (badness 6300) in paragraph at lines 300--304
 [][]\OT1/ptm/m/n/10 H.-J. Werner, P. J. Knowles, G. Knizia, F. R.
  []
@@ -1851,38 +1870,41 @@ Underfull \hbox (badness 1831) in paragraph at lines 300--304
 \OT1/ptm/m/n/10 sion 2012.1, a pack-age of ab ini-tio pro-grams, see
  []
 
-)
+[29])
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[29] (document.aux) ) 
+[30
+
+] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 34589 strings out of 493634
- 811580 string characters out of 3141310
- 981693 words of memory out of 3000000
- 37345 multiletter control sequences out of 15000+200000
+ 34599 strings out of 493634
+ 812026 string characters out of 3141310
+ 981719 words of memory out of 3000000
+ 37353 multiletter control sequences out of 15000+200000
  88214 words of font info for 184 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,20n,100p,10382b,2303s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontnam
-e/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/c
-mex9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on document.pdf (29 pages, 2674447 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
+r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex
+9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+urw/zapfchan/uzcmi8a.pfb>
+Output written on document.pdf (30 pages, 2687685 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
+ 310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -42,7 +42,7 @@ K.~M. Ferri{\`{e}}re, ``The interstellar environment of our galaxy,'' {\em
 A.~{Léger}, J.~{Klein}, S.~{de Cheveigne}, C.~{Guinet}, D.~{Defourneau}, and
   M.~{Belin}, ``{The 3.1 micron Absorption in Molecular Clouds Is Probably Due
   to Amorphous H2O Ice},'' {\em Astronomy and Astrophysics}, vol.~79,
-  pp.~256--259, Oct. 1979.
+  pp.~256--259, oct 1979.
 
 \bibitem{TielensHagen1982}
 A.~G. G.~M. Tielens and W.~Hagen, ``{Model Calculations of the Molecular
@@ -73,7 +73,7 @@ H.~Bergeron, N.~Rougeau, V.~Sidis, M.~Sizun, D.~Teillet-Billy, and F.~Aguillon,
 \bibitem{CabreraSanfelix2003}
 P.~Cabrera~Sanfelix, S.~Holloway, K.~Kolasinski, and G.~Darling, ``{The
   structure of water on the (0001) surface of graphite},'' {\em Surface
-  Science}, vol.~532-535, pp.~166--172, Jun 2003.
+  Science}, vol.~532-535, pp.~166--172, jun 2003.
 
 \bibitem{LinZhangLeeEtAl2005}
 C.~S. Lin, R.~Q. Zhang, S.~T. Lee, M.~Elstner, T.~Frauenheim, and L.~J. Wan,
@@ -230,7 +230,7 @@ D.~Rappoport and F.~Furche, ``Property-optimized {Gauss}ian basis sets for
 \bibitem{Anacker2014}
 T.~Anacker and J.~Friedrich, ``{New Accurate Benchmark Energies for Large Water
   Clusters: {DFT} Is Better Than Expected},'' {\em Journal of Computational
-  Chemistry}, vol.~35, pp.~634--643, Jan 2014.
+  Chemistry}, vol.~35, pp.~634--643, jan 2014.
 
 \bibitem{Kryachko2012}
 E.~S. Kryachko and E.~V. Lude{\~n}a, {\em {Energy density functional theory of
@@ -251,7 +251,7 @@ S.~Grimme, J.~Antony, S.~Ehrlich, and H.~Krieg, ``{A consistent and accurate ab
 \bibitem{GrimmeD32011}
 S.~Grimme, S.~Ehrlich, and L.~Goerigk, ``{Effect of the damping function in
   dispersion corrected density functional theory},'' {\em Journal of
-  Computational Chemistry}, vol.~32, pp.~1456--1465, Mar 2011.
+  Computational Chemistry}, vol.~32, pp.~1456--1465, mar 2011.
 
 \bibitem{Jorgensen1983TIP3P}
 W.~L. Jorgensen, J.~Chandrasekhar, J.~D. Madura, R.~W. Impey, and M.~L. Klein,
@@ -262,25 +262,25 @@ W.~L. Jorgensen, J.~Chandrasekhar, J.~D. Madura, R.~W. Impey, and M.~L. Klein,
 A.~D. MacKerell, D.~Bashford, M.~Bellott, R.~L. Dunbrack, J.~D. Evanseck, M.~J.
   Field, S.~Fischer, J.~Gao, H.~Guo, S.~Ha, and et~al., ``{All-Atom Empirical
   Potential for Molecular Modeling and Dynamics Studies of Proteins},'' {\em
-  The Journal of Physical Chemistry B}, vol.~102, pp.~3586--3616, Apr 1998.
+  The Journal of Physical Chemistry B}, vol.~102, pp.~3586--3616, apr 1998.
 
 \bibitem{Warshel1976QMMM}
 A.~Warshel and M.~Levitt, ``{Theoretical Studies of Enzymic Reactions:
   Dielectric, Electrostatic and Steric Stabilization of the Carbonium Ion in
   the Reaction of Lysozyme},'' {\em Journal of Molecular Biology}, vol.~103,
-  pp.~227--249, May 1976.
+  pp.~227--249, may 1976.
 
 \bibitem{Kaestner2009}
 J.~Kästner, J.~M. Carr, T.~W. Keal, W.~Thiel, A.~Wander, and P.~Sherwood,
   ``{DL-FIND: An Open-Source Geometry Optimizer for Atomistic Simulations},''
-  {\em The Journal of Physical Chemistry A}, vol.~113, pp.~11856--11865, Oct
+  {\em The Journal of Physical Chemistry A}, vol.~113, pp.~11856--11865, oct
   2009.
 
 \bibitem{Brorsen2014AnalyticalGradientDFT}
 K.~R. Brorsen, F.~Zahariev, H.~Nakata, D.~G. Fedorov, and M.~S. Gordon,
   ``{Analytic Gradient for Density Functional Theory Based on the Fragment
   Molecular Orbital Method},'' {\em Journal of Chemical Theory and
-  Computation}, vol.~10, pp.~5297--5307, Dec 2014.
+  Computation}, vol.~10, pp.~5297--5307, dec 2014.
 
 \bibitem{HenkelmanJonsson1999}
 G.~Henkelman and H.~J{\'o}nsson, ``{A dimer method for finding saddle points on
@@ -291,7 +291,7 @@ G.~Henkelman and H.~J{\'o}nsson, ``{A dimer method for finding saddle points on
 B.~R. Brooks, C.~L. Brooks, A.~D. Mackerell, L.~Nilsson, R.~J. Petrella,
   B.~Roux, Y.~Won, G.~Archontis, C.~Bartels, S.~Boresch, and et~al., ``{CHARMM:
   The Biomolecular Simulation Program},'' {\em Journal of Computational
-  Chemistry}, vol.~30, pp.~1545--1614, Jul 2009.
+  Chemistry}, vol.~30, pp.~1545--1614, jul 2009.
 
 \bibitem{chemshell}
 ChemShell, a Computational Chemistry Shell, see www.chemshell.org.
@@ -339,7 +339,7 @@ N.~Fletcher, ``{The freezing of water},'' {\em Science Progress (Oxford)},
 \bibitem{Fletcher1992}
 N.~H. Fletcher, ``{Reconstruction of ice crystal surfaces at low
   temperatures},'' {\em Philosophical Magazine Part B}, vol.~66, pp.~109--115,
-  Jul 1992.
+  jul 1992.
 
 \bibitem{Fraser2001}
 H.~J. Fraser, M.~P. Collings, M.~R. McCoustra, and D.~A. Williams, ``{Thermal
@@ -348,7 +348,7 @@ H.~J. Fraser, M.~P. Collings, M.~R. McCoustra, and D.~A. Williams, ``{Thermal
 
 \bibitem{HeVidali2014}
 J.~He and G.~Vidali, ``{Experiments of Water Formation on Warm Silicates},''
-  {\em The Astrophysical Journal}, vol.~788, p.~50, May 2014.
+  {\em The Astrophysical Journal}, vol.~788, p.~50, may 2014.
 
 \bibitem{He2015}
 J.~He, J.~Shi, T.~Hopkins, G.~Vidali, and M.~J. Kaufman, ``{A New Determination
@@ -360,5 +360,10 @@ J.~He, J.~Shi, T.~Hopkins, G.~Vidali, and M.~J. Kaufman, ``{A New Determination
 J.~He, D.~Jing, and G.~Vidali, ``{Atomic oxygen diffusion on and desorption
   from amorphous silicate surfaces},'' {\em Physical Chemistry Chemical
   Physics}, vol.~16, no.~8, p.~3493, 2014.
+
+\bibitem{RomanzinIoppoloCuppenEtAl2011}
+C.~Romanzin, S.~Ioppolo, H.~M. Cuppen, E.~F. van Dishoeck, and H.~Linnartz,
+  ``{Water formation by surface O3 hydrogenation},'' {\em The Journal of
+  Chemical Physics}, vol.~134, no.~8, p.~084504, 2011.
 
 \end{thebibliography}
