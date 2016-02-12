@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  12 FEB 2016 13:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  12 FEB 2016 15:49
 entering extended mode
 **./document.tex
 (document.tex
@@ -1627,8 +1627,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 952--954
 [][]\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
  []
 
-\openout3 = `TikzPics/Theo/FigTheoTIP3Geo.md5'.
-
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Theo/FigTheoTIP3Geo" "\def\tikzexternalreal
 job{document}\input{document}"' ========
@@ -1716,8 +1714,6 @@ Underfull \hbox (badness 2134) in paragraph at lines 1236--1240
 \OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and basis
  []
 
-\openout3 = `TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.md5'.
-
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3" "\def\tikze
 xternalrealjob{document}\input{document}"' ========
@@ -1754,9 +1750,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1317--1320
  []
 
 [10]
-\openout3 = `TikzPics/Benchmark/Fig.Bench.H2O+H.D3.md5'.
-
-
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H.D3" "\def\tikzext
 ernalrealjob{document}\input{document}"' ========
@@ -1783,27 +1776,25 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1382 \end{tikzpicture}
+l.1384 \end{tikzpicture}
                         
 (That was another \errmessage.)
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 1413--1420
+Underfull \hbox (badness 2582) in paragraph at lines 1415--1422
 \OT1/ptm/m/n/10 op-tim-isa-tions. Here, the at-trac-tion is con-sidered close
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 1413--1420
+Underfull \hbox (badness 1097) in paragraph at lines 1415--1422
 \OT1/ptm/m/n/10 to be-ing re-puls-ive, with in-ter-ac-tion en-ergy val-ues arou
 nd
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 1413--1420
+Underfull \hbox (badness 1231) in paragraph at lines 1415--1422
 []\OT1/ptm/m/n/10 . While the res-ult-ing de-vi-ation of
  []
-
-\openout3 = `TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.md5'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare" "
@@ -1831,7 +1822,7 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1523 \end{tikzpicture}
+l.1525 \end{tikzpicture}
                         
 (That was another \errmessage.)
 
@@ -1839,9 +1830,6 @@ l.1523 \end{tikzpicture}
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11]
-\openout3 = `TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare.md5'.
-
-
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare" "\
 def\tikzexternalrealjob{document}\input{document}"' ========
@@ -1868,17 +1856,17 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1645 \end{tikzpicture}
+l.1651 \end{tikzpicture}
                         
 (That was another \errmessage.)
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12]
-\openout3 = `TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare.md5'.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [12]
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare" "\de
 f\tikzexternalrealjob{document}\input{document}"' ========
@@ -1905,34 +1893,25 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1718 \end{tikzpicture}
+l.1724 \end{tikzpicture}
                         
 (That was another \errmessage.)
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
+[13]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-[15] <./img/FletcherAboveGlossyNoCueing.png, id=83, 1124.2pt x 1142.2675pt>
+[14] [15]
+<./img/FletcherAboveGlossyNoCueing.png, id=83, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAboveGlossyNoCueing.png Graphic file (type png)
 
 <use ./img/FletcherAboveGlossyNoCueing.png>
 Package pdftex.def Info: ./img/FletcherAboveGlossyNoCueing.png used on input li
-ne 2125.
+ne 2131.
 (pdftex.def)             Requested size: 245.8296pt x 249.76582pt.
-
-Underfull \vbox (badness 2717) has occurred while \output is active []
-
  [16]
 <TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=87, 114.92537pt x 5
 1.21533pt>
@@ -1940,14 +1919,15 @@ File: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf Graphic file (type
  pdf)
  <use TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf
- used on input line 2185.
+ used on input line 2191.
 (pdftex.def)             Requested size: 512.1496pt x 228.33336pt.
 
-[17 <./img/FletcherAboveGlossyNoCueing.png>] [18 <./TikzPics/TikzCreation/Surfa
-ceQMMM/SurfaceQMMMAside.pdf>]
-\openout3 = `TikzPics/Adsorption/Fig.Ads.QMMMConvergence.md5'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [17 <./img/FletcherAboveGlossyNoCueing.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [18 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>]
 ===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
 action=batchmode -jobname "TikzPics/Adsorption/Fig.Ads.QMMMConvergence" "\def\t
 ikzexternalrealjob{document}\input{document}"' ========
@@ -1974,42 +1954,40 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2402 \end{tikzpicture}
+l.2408 \end{tikzpicture}
                         
 (That was another \errmessage.)
 
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.83101pt too wide) in paragraph at lines 2381--2405
+Overfull \hbox (2.83101pt too wide) in paragraph at lines 2387--2411
  [][][] 
  []
 
-[19]
-Underfull \vbox (badness 1331) has occurred while \output is active []
 
- [20]
+Underfull \vbox (badness 7704) has occurred while \output is active []
+
+ [19]
+[20]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2649.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2655.
  [21]
-Underfull \hbox (badness 10000) in paragraph at lines 2923--2936
+Underfull \hbox (badness 10000) in paragraph at lines 2929--2942
 [][]\OT1/ptm/m/n/10 Recalling the strong de-vi-ations between DFT and
  []
 
 
-Underfull \hbox (badness 5970) in paragraph at lines 2923--2936
+Underfull \hbox (badness 5970) in paragraph at lines 2929--2942
 $[]$ \OT1/ptm/m/n/10 gas-phase re-ac-tion en-er-gies, we should
  []
 
 
-Underfull \hbox (badness 4779) in paragraph at lines 2948--2964
+Underfull \hbox (badness 4779) in paragraph at lines 2954--2970
 [][]\OT1/ptm/m/n/10 We high-light the func-tion-als that were closest to the
  []
 
 [22]
-Underfull \hbox (badness 1303) in paragraph at lines 3050--3056
+Underfull \hbox (badness 1303) in paragraph at lines 3056--3062
 []\OT1/ptm/m/n/10 In the pre-vi-ous cal-cu-la-tions, we did not in-vest-ig-ate 
 how
  []
@@ -2018,18 +1996,18 @@ how
 File: ./img/SiteSnapshotMany.png Graphic file (type png)
 
 <use ./img/SiteSnapshotMany.png>
-Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 3069.
+Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 3075.
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
 
 <./img/SiteSnapshotOriginal.png, id=121, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotOriginal.png Graphic file (type png)
 
 <use ./img/SiteSnapshotOriginal.png>
-Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3070
+Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3076
 .
 (pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3102--3108
+Underfull \hbox (badness 10000) in paragraph at lines 3108--3114
 [][]\OT1/ptm/m/n/10 We covered the area $\OT1/ptmcm/m/n/10 (\OML/ptmcm/m/it/10 
 r; \OT1/ptmcm/m/n/10 ) \OMS/pzccm/m/n/10 2 \OT1/ptmcm/m/n/10 [0\OML/ptmcm/m/it
 /10 ; r[]\OT1/ptmcm/m/n/10 ] \OMS/pzccm/m/n/10  \OT1/ptmcm/m/n/10 [0\OML/ptmcm
@@ -2038,7 +2016,7 @@ r; \OT1/ptmcm/m/n/10 ) \OMS/pzccm/m/n/10 2 \OT1/ptmcm/m/n/10 [0\OML/ptmcm/m/it
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3102--3108
+Underfull \hbox (badness 10000) in paragraph at lines 3108--3114
 \OT1/ptm/m/n/10 aequidistantly dis-trib-uted points ac-cord-ing to $\OML/ptmcm/
 m/it/10 r[] \OT1/ptmcm/m/n/10 =$
  []
@@ -2052,7 +2030,7 @@ on.pdf Graphic file (type pdf)
 <use ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributio
 n.pdf>
 Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
-ingEnergyDistribution.pdf used on input line 3114.
+ingEnergyDistribution.pdf used on input line 3120.
 (pdftex.def)             Requested size: 250.95612pt x 209.04976pt.
 
 
@@ -2062,7 +2040,7 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3142 ...f the surface at a distance of 2.17~\Ang
+l.3148 ...f the surface at a distance of 2.17~\Ang
                                                    to the
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2073,7 +2051,7 @@ ikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
 File: ./img/FletcherAdsorption.png Graphic file (type png)
 
 <use ./img/FletcherAdsorption.png>
-Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3172.
+Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3178.
 (pdftex.def)             Requested size: 250.95612pt x 254.97726pt.
 
 <TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=142, 347.52335pt x 281.21661pt>
@@ -2081,7 +2059,7 @@ File: TikzPics/TikzCreation/HO.H2/HOH2.pdf Graphic file (type pdf)
 
 <use TikzPics/TikzCreation/HO.H2/HOH2.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2/HOH2.pdf used on input lin
-e 3234.
+e 3240.
 (pdftex.def)             Requested size: 250.95612pt x 203.07654pt.
  [25 <./img/FletcherAdsorption.png>]
 <TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf, id=147, 224.86508pt
@@ -2091,15 +2069,15 @@ ype pdf)
 
 <use TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.
-pdf used on input line 3270.
+pdf used on input line 3276.
 (pdftex.def)             Requested size: 250.95612pt x 206.84962pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3284--3293
+Underfull \hbox (badness 10000) in paragraph at lines 3290--3299
 [][]\OT1/ptm/m/n/10 We find the ac-tiv-a-tion en-ergy for the re-ac-tion
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 3284--3293
+Underfull \hbox (badness 2653) in paragraph at lines 3290--3299
 [] \OT1/ptm/m/n/10 to be $\OT1/ptmcm/m/n/10 7\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n
 /10 16 []$ \OT1/ptm/m/n/10 and the re-ac-
  []
@@ -2221,11 +2199,11 @@ AED: lastpage setting LastPage
 Here is how much of TeX's memory you used:
  35681 strings out of 493634
  847422 string characters out of 3141310
- 1018253 words of memory out of 3000000
+ 1017652 words of memory out of 3000000
  38403 multiletter control sequences out of 15000+200000
  87107 words of font info for 183 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,20n,100p,10382b,2317s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,20n,100p,10382b,2316s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
 r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
 pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex
@@ -2241,7 +2219,7 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on document.pdf (31 pages, 2668274 bytes).
+Output written on document.pdf (31 pages, 2668483 bytes).
 PDF statistics:
  232 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

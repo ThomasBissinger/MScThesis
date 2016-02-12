@@ -1334,8 +1334,10 @@ sets of more than double-$\zeta$ order.
 It is also noteworthy that def2-QZVP does not seem to offer a clear advantage over the
 other three basis sets in Figure \ref{Fig:Bench:H2O+H:NoD3}. It tends to yield
 similar accuracy as def2-TZVPD, while usually being inferior to def2-TZVP for
-most functionals. def2-QZVP takes approximately 1.5 times as long to complete a single
-SCF iteration as def2-TZVPD. 
+most functionals. def2-QZVP takes on average 1.44 times as long to complete an
+energy and gradient calculation iteration as def2-TZVPD, which in turn takes
+on average only 1.02 times as long as an energy and gradient calculation with
+$\tzvp$.
 %From a first glance
 %at the ``better'' functionals in this case, one could therefore consider
 %the def2-TZVP and def2-TZVPD basis sets as good compromises between
@@ -1555,6 +1557,10 @@ three functionals analysed in Figure \ref{Fig:Bench:H2O+H2O:BasisCompare} are
 all capable of yielding excellent approximations to our coupled-cluster data,
 and the results at the def2-TZVPD basis set are already close to the
 methods' intrinstic error.  
+
+Concerning speedup, here $\tzvpd$ takes on average $1.16$ times as long as
+$\tzvp$ for a single energy and gradient calculation, and $\qzvp$ takes $2.18$
+times as long as $\tzvpd$.
 
 The results so far speak in favour of the def2-TZVPD basis set. Due 
 to the size of the quantum mechanical part of the QM/MM system we will later consider,
