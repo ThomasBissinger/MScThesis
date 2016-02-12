@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{DishoeckHerbstNeufeld2013}
+E.~F. van Dishoeck, E.~Herbst, and D.~A. Neufeld, ``{Interstellar Water
+  Chemistry: From Laboratory to Observations},'' {\em Chemical Reviews},
+  vol.~113, pp.~9043--9085, dec 2013.
+
 \bibitem{WilliamsHerbst2002}
 D.~A. Williams and E.~Herbst, ``It{\textquotesingle}s a dusty universe: surface
   science in space,'' {\em Surface Science}, vol.~500, pp.~823--837, mar 2002.
@@ -8,6 +13,27 @@ D.~A. Williams and E.~Herbst, ``It{\textquotesingle}s a dusty universe: surface
 R.~J. Trumpler, ``{ABSORPTION OF LIGHT IN THE GALACTIC SYSTEM},'' {\em
   Publications of the Astronomical Society of the Pacific}, vol.~42, no.~248,
   pp.~214--227, 1930.
+
+\bibitem{Zook2001}
+H.~A. Zook, ``{Spacecraft Measurements of the Cosmic Dust Flux},'' in {\em
+  Accretion of Extraterrestrial Matter Throughout Earth's History}, pp.~75--92,
+  Springer Science $\mathplus$ Business Media, 2001.
+
+\bibitem{WestphalStroudBechtelEtAl2014}
+A.~J. Westphal, R.~M. Stroud, H.~A. Bechtel, F.~E. Brenker, A.~L. Butterworth,
+  G.~J. Flynn, D.~R. Frank, Z.~Gainsforth, J.~K. Hillier, F.~Postberg, A.~S.
+  Simionovici, V.~J. Sterken, L.~R. Nittler, C.~Allen, D.~Anderson, A.~Ansari,
+  S.~Bajt, R.~K. Bastien, N.~Bassim, J.~Bridges, D.~E. Brownlee, M.~Burchell,
+  M.~Burghammer, H.~Changela, P.~Cloetens, A.~M. Davis, R.~Doll, C.~Floss,
+  E.~Grun, P.~R. Heck, P.~Hoppe, B.~Hudson, J.~Huth, A.~Kearsley, A.~J. King,
+  B.~Lai, J.~Leitner, L.~Lemelle, A.~Leonard, H.~Leroux, R.~Lettieri,
+  W.~Marchant, R.~Ogliore, W.~J. Ong, M.~C. Price, S.~A. Sandford, J.-A.~S.
+  Tresseras, S.~Schmitz, T.~Schoonjans, K.~Schreiber, G.~Silversmit, V.~A.
+  Sole, R.~Srama, F.~Stadermann, T.~Stephan, J.~Stodolna, S.~Sutton,
+  M.~Trieloff, P.~Tsou, T.~Tyliszczak, B.~Vekemans, L.~Vincze, J.~V. Korff,
+  N.~Wordsworth, D.~Zevin, and M.~E. Zolensky, ``{Evidence for interstellar
+  origin of seven dust particles collected by the Stardust spacecraft},'' {\em
+  Science}, vol.~345, pp.~786--791, aug 2014.
 
 \bibitem{Draine2003}
 B.~Draine, ``{Interstellar Dust Grains},'' {\em Annual Review of Astronomy and
@@ -49,15 +75,19 @@ A.~G. G.~M. Tielens and W.~Hagen, ``{Model Calculations of the Molecular
   Composition of Interstellar Grain Mantles},'' {\em Astronomy and
   Astrophysics}, vol.~114, pp.~245--260, 1982.
 
-\bibitem{DishoeckHerbstNeufeld2013}
-E.~F. van Dishoeck, E.~Herbst, and D.~A. Neufeld, ``{Interstellar Water
-  Chemistry: From Laboratory to Observations},'' {\em Chemical Reviews},
-  vol.~113, pp.~9043--9085, dec 2013.
-
 \bibitem{CuppenHerbst2007}
 H.~Cuppen and E.~Herbst, ``{Simulation of the formation and morphology of ice
   mantles on interstellar grains},'' {\em The Astrophysical Journal}, vol.~668,
   no.~1, p.~294, 2007.
+
+\bibitem{LangmuirHinshelwood}
+``Langmuir{\textendash}hinshelwood mechanism,'' in {\em Gold Book},
+  International Union of Pure and Applied Chemistry ({IUPAC}).
+
+\bibitem{Laidler1996}
+K.~J. Laidler, ``{A glossary of terms used in chemical kinetics, including
+  reaction dynamics ({IUPAC} Recommendations 1996)},'' {\em Pure and Applied
+  Chemistry}, vol.~68, jan 1996.
 
 \bibitem{Papoular2005}
 R.~Papoular, ``{On water ice formation in interstellar clouds},'' {\em Monthly
@@ -74,6 +104,16 @@ H.~Bergeron, N.~Rougeau, V.~Sidis, M.~Sizun, D.~Teillet-Billy, and F.~Aguillon,
 P.~Cabrera~Sanfelix, S.~Holloway, K.~Kolasinski, and G.~Darling, ``{The
   structure of water on the (0001) surface of graphite},'' {\em Surface
   Science}, vol.~532-535, pp.~166--172, jun 2003.
+
+\bibitem{PerdewWang1986}
+J.~P. Perdew and Y.~Wang, ``{Accurate and simple density functional for the
+  electronic exchange energy: Generalized gradient approximation},'' {\em
+  Physical Review B}, vol.~33, pp.~8800--8802, jun 1986.
+
+\bibitem{PerdewWang1992}
+J.~P. Perdew and Y.~Wang, ``{Accurate and simple analytic representation of the
+  electron-gas correlation energy},'' {\em Physical Review B}, vol.~45,
+  pp.~13244--13249, jun 1992.
 
 \bibitem{LinZhangLeeEtAl2005}
 C.~S. Lin, R.~Q. Zhang, S.~T. Lee, M.~Elstner, T.~Frauenheim, and L.~J. Wan,
@@ -207,6 +247,13 @@ Y.~Zhao and D.~G. Truhlar, ``The m06~{s}uite of density functionals for main
   {Forschungszentrum Karlsruhe GmbH}, 1989-2007, {TURBOMOLE GmbH}, since 2007;
   available from { http://www.turbomole.com}.
 
+\bibitem{ValievBylaskaGovindEtAl2010}
+M.~Valiev, E.~Bylaska, N.~Govind, K.~Kowalski, T.~Straatsma, H.~V. Dam,
+  D.~Wang, J.~Nieplocha, E.~Apra, T.~Windus, and W.~de~Jong, ``{{NWChem}: A
+  comprehensive and scalable open-source solution for large scale molecular
+  simulations},'' {\em Computer Physics Communications}, vol.~181,
+  pp.~1477--1489, sep 2010.
+
 \bibitem{SchaeferHornAhlrichs1992}
 A.~Sch{\"a}fer, H.~Horn, and R.~Ahlrichs, ``{Fully optimized contracted
   {Gauss}ian basis sets for atoms Li to Kr},'' {\em The Journal of Chemical
@@ -258,6 +305,12 @@ W.~L. Jorgensen, J.~Chandrasekhar, J.~D. Madura, R.~W. Impey, and M.~L. Klein,
   ``{Comparison of simple potential functions for simulating liquid water},''
   {\em The Journal of Chemical Physics}, vol.~79, no.~2, p.~926, 1983.
 
+\bibitem{CHARMM2009}
+B.~R. Brooks, C.~L. Brooks, A.~D. Mackerell, L.~Nilsson, R.~J. Petrella,
+  B.~Roux, Y.~Won, G.~Archontis, C.~Bartels, S.~Boresch, and et~al., ``{CHARMM:
+  The Biomolecular Simulation Program},'' {\em Journal of Computational
+  Chemistry}, vol.~30, pp.~1545--1614, jul 2009.
+
 \bibitem{MacKerell1998CHARMMTIP3}
 A.~D. MacKerell, D.~Bashford, M.~Bellott, R.~L. Dunbrack, J.~D. Evanseck, M.~J.
   Field, S.~Fischer, J.~Gao, H.~Guo, S.~Ha, and et~al., ``{All-Atom Empirical
@@ -276,25 +329,25 @@ J.~Kästner, J.~M. Carr, T.~W. Keal, W.~Thiel, A.~Wander, and P.~Sherwood,
   {\em The Journal of Physical Chemistry A}, vol.~113, pp.~11856--11865, oct
   2009.
 
-\bibitem{Brorsen2014AnalyticalGradientDFT}
-K.~R. Brorsen, F.~Zahariev, H.~Nakata, D.~G. Fedorov, and M.~S. Gordon,
-  ``{Analytic Gradient for Density Functional Theory Based on the Fragment
-  Molecular Orbital Method},'' {\em Journal of Chemical Theory and
-  Computation}, vol.~10, pp.~5297--5307, dec 2014.
+\bibitem{VersluisZiegler1988}
+L.~Versluis and T.~Ziegler, ``{The determination of molecular structures by
+  density functional theory. The evaluation of analytical energy gradients by
+  numerical integration},'' {\em The Journal of Chemical Physics}, vol.~88,
+  no.~1, p.~322, 1988.
 
 \bibitem{HenkelmanJonsson1999}
 G.~Henkelman and H.~J{\'o}nsson, ``{A dimer method for finding saddle points on
   high dimensional potential surfaces using only first derivatives},'' {\em The
   Journal of Chemical Physics}, vol.~111, no.~15, p.~7010, 1999.
 
-\bibitem{CHARMM2009}
-B.~R. Brooks, C.~L. Brooks, A.~D. Mackerell, L.~Nilsson, R.~J. Petrella,
-  B.~Roux, Y.~Won, G.~Archontis, C.~Bartels, S.~Boresch, and et~al., ``{CHARMM:
-  The Biomolecular Simulation Program},'' {\em Journal of Computational
-  Chemistry}, vol.~30, pp.~1545--1614, jul 2009.
-
 \bibitem{chemshell}
 ChemShell, a Computational Chemistry Shell, see www.chemshell.org.
+
+\bibitem{MetzKaestnerSokolEtAl2013}
+S.~Metz, J.~Kästner, A.~A. Sokol, T.~W. Keal, and P.~Sherwood, ``{ChemShell}-a
+  modular software package for {QM}/{MM} simulations,'' {\em Wiley
+  Interdisciplinary Reviews: Computational Molecular Science}, vol.~4,
+  pp.~101--110, jul 2013.
 
 \bibitem{MOLPRO_brief}
 H.-J. Werner, P.~J. Knowles, G.~Knizia, F.~R. Manby, M.~{Sch\"{u}tz}, {\em
@@ -360,6 +413,12 @@ J.~He, J.~Shi, T.~Hopkins, G.~Vidali, and M.~J. Kaufman, ``{A New Determination
 J.~He, D.~Jing, and G.~Vidali, ``{Atomic oxygen diffusion on and desorption
   from amorphous silicate surfaces},'' {\em Physical Chemistry Chemical
   Physics}, vol.~16, no.~8, p.~3493, 2014.
+
+\bibitem{ObaWatanabeHamaEtAl2012}
+Y.~Oba, N.~Watanabe, T.~Hama, K.~Kuwahata, H.~Hidaka, and A.~Kouchi, ``{
+  {WATER} {FORMATION} {THROUGH} A {QUANTUM} {TUNNELING} {SURFACE} {REACTION},
+  {OH} $\mathplus$ H 2 , {AT} 10~{K} },'' {\em {The Astrophysical Journal}},
+  vol.~749, p.~67, mar 2012.
 
 \bibitem{RomanzinIoppoloCuppenEtAl2011}
 C.~Romanzin, S.~Ioppolo, H.~M. Cuppen, E.~F. van Dishoeck, and H.~Linnartz,

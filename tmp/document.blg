@@ -5,7 +5,7 @@ Database file #2: MasterBib.bib
 Warning--entry type for "chemshell" isn't style-file defined
 --line 200 of file MasterBib.bib
 Warning--string name "molpro_address" is undefined
---line 717 of file MasterBib.bib
-Warning--I didn't find a database entry for "nwchem"
-Warning--I didn't find a database entry for "CHARMM"
+--line 742 of file MasterBib.bib
+Warning--empty author in LangmuirHinshelwood
+Warning--empty year in LangmuirHinshelwood
 (There were 4 warnings)
