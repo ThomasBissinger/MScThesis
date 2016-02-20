@@ -340,6 +340,11 @@ G.~Henkelman and H.~J{\'o}nsson, ``{A dimer method for finding saddle points on
   high dimensional potential surfaces using only first derivatives},'' {\em The
   Journal of Chemical Physics}, vol.~111, no.~15, p.~7010, 1999.
 
+\bibitem{TodorovSmithTrachenkoEtAl2006}
+I.~T. Todorov, W.~Smith, K.~Trachenko, and M.~T. Dove, ``{DL}{\_}{POLY}{\_}3:
+  new dimensions in molecular dynamics simulations via massive parallelism,''
+  {\em Journal of Materials Chemistry}, vol.~16, no.~20, p.~1911, 2006.
+
 \bibitem{chemshell}
 ChemShell, a Computational Chemistry Shell, see www.chemshell.org.
 
@@ -358,6 +363,12 @@ H.-J. Werner, P.~J. Knowles, G.~Knizia, F.~R. Manby, M.~{Sch\"{u}tz}, {\em
 \bibitem{HUMP96}
 W.~Humphrey, A.~Dalke, and K.~Schulten, ``{VMD} -- {V}isual {M}olecular
   {D}ynamics,'' {\em Journal of Molecular Graphics}, vol.~14, pp.~33--38, 1996.
+
+\bibitem{JUSTUS}
+
+\newblock {bwHPC and bwHPC-C5 (http://www.bwhpc-c5.de) funded by the Ministry
+  of Science, Research and the Arts Baden-Württemberg (MWK) and the Germany
+  Research Foundation (DFG).}
 
 \bibitem{KniziaAdlerWerner2009}
 G.~Knizia, T.~B. Adler, and H.-J. Werner, ``Simplified {CCSD}(t)-f12~{m}ethods:

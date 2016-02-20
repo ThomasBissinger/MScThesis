@@ -5,7 +5,11 @@ Database file #2: MasterBib.bib
 Warning--entry type for "chemshell" isn't style-file defined
 --line 200 of file MasterBib.bib
 Warning--string name "molpro_address" is undefined
---line 742 of file MasterBib.bib
+--line 746 of file MasterBib.bib
 Warning--empty author in LangmuirHinshelwood
 Warning--empty year in LangmuirHinshelwood
-(There were 4 warnings)
+Warning--empty author in JUSTUS
+Warning--empty title in JUSTUS
+Warning--empty journal in JUSTUS
+Warning--empty year in JUSTUS
+(There were 8 warnings)

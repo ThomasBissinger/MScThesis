@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  12 FEB 2016 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  20 FEB 2016 13:52
 entering extended mode
 **./document.tex
 (document.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+(top.tex ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -20,6 +20,10 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
+Package: etex 2016/01/11 v2.6 eTeX basic definition package (PEB,DPC)
+\et@xins=\count87
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
@@ -275,20 +279,38 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/01/08 3.9n Babel common definitions
-\babel@savecnt=\count87
+\babel@savecnt=\count88
 \U@D=\dimen103
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-)) (MyChem.sty
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+\l@naustrian = a dialect from \language\l@ngerman 
+\l@nswissgerman = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 88.
+))
+
+Package babel Warning: Last declared language option is `english',
+(babel)                but the last processed one was `ngerman'.
+(babel)                The main language cannot be set as both a global
+(babel)                and a package option. Use `main=english' as
+(babel)                option. Reported on input line 315.
+
+) (MyChem.sty
 Package: MyChem 2013/10/16 v2.0 My chemical style ammendments
+
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count88
+\c@NAT@ctr=\count89
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
@@ -363,7 +385,7 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count89
+\Gread@gobject=\count90
 ))
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
@@ -385,7 +407,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen112
 \caption@hangindent=\dimen113
 )
-\c@ContinuedFloat=\count90
+\c@ContinuedFloat=\count91
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip45
@@ -421,13 +443,13 @@ Package: amsbsy 1999/11/29 v1.2d
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count91
+\inf@bad=\count92
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count92
-\leftroot@=\count93
+\uproot@=\count93
+\leftroot@=\count94
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count94
-\DOTSCASE@=\count95
+\classnum@=\count95
+\DOTSCASE@=\count96
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -436,15 +458,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen116
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count96
-\c@MaxMatrixCols=\count97
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
 \dotsspace@=\muskip10
-\c@parentequation=\count98
-\dspbrk@lvl=\count99
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
 \tag@help=\toks18
-\row@=\count100
-\column@=\count101
-\maxfields@=\count102
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
 \andhelp@=\toks19
 \eqnshift@=\dimen117
 \alignsep@=\dimen118
@@ -495,24 +517,24 @@ L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
 L3 Module: l3str 2016/01/03 v6357 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
 L3 Module: l3int 2016/01/05 v6366 L3 Integers
-\c_max_int=\count103
-\l_tmpa_int=\count104
-\l_tmpb_int=\count105
-\g_tmpa_int=\count106
-\g_tmpb_int=\count107
+\c_max_int=\count104
+\l_tmpa_int=\count105
+\l_tmpb_int=\count106
+\g_tmpa_int=\count107
+\g_tmpb_int=\count108
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
-\g__prg_map_int=\count108
+\g__prg_map_int=\count109
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
 L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
 L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
 L3 Module: l3msg 2015/09/28 v6113 L3 Messages
 L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
-\l_iow_line_count_int=\count109
-\l__iow_target_count_int=\count110
-\l__iow_current_line_int=\count111
-\l__iow_current_word_int=\count112
-\l__iow_current_indentation_int=\count113
+\l_iow_line_count_int=\count110
+\l__iow_target_count_int=\count111
+\l__iow_current_line_int=\count112
+\l__iow_current_word_int=\count113
+\l__iow_current_indentation_int=\count114
 L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \c_zero_dim=\dimen123
 \c_max_dim=\dimen124
@@ -533,18 +555,18 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
 L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
-\g__keyval_level_int=\count114
-\l_keys_choice_int=\count115
+\g__keyval_level_int=\count115
+\l_keys_choice_int=\count116
 L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
-\c__fp_leading_shift_int=\count116
-\c__fp_middle_shift_int=\count117
-\c__fp_trailing_shift_int=\count118
-\c__fp_big_leading_shift_int=\count119
-\c__fp_big_middle_shift_int=\count120
-\c__fp_big_trailing_shift_int=\count121
-\c__fp_Bigg_leading_shift_int=\count122
-\c__fp_Bigg_middle_shift_int=\count123
-\c__fp_Bigg_trailing_shift_int=\count124
+\c__fp_leading_shift_int=\count117
+\c__fp_middle_shift_int=\count118
+\c__fp_trailing_shift_int=\count119
+\c__fp_big_leading_shift_int=\count120
+\c__fp_big_middle_shift_int=\count121
+\c__fp_big_trailing_shift_int=\count122
+\c__fp_Bigg_leading_shift_int=\count123
+\c__fp_Bigg_middle_shift_int=\count124
+\c__fp_Bigg_trailing_shift_int=\count125
 L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \c_empty_box=\box28
 \l_tmpa_box=\box29
@@ -594,7 +616,7 @@ L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3pdfmode.def
 File: l3pdfmode.def 2015/11/11 v6250 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count125
+\l__driver_color_stack_int=\count126
 ))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\l3keys2e\l3key
 s2e.sty
@@ -758,18 +780,18 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\xparse\xparse.
 sty
 Package: xparse 2016/01/19 v6377 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count126
-\l__xparse_m_args_int=\count127
-\l__xparse_mandatory_args_int=\count128
-\l__xparse_processor_int=\count129
-\l__xparse_v_nesting_int=\count130
+\l__xparse_current_arg_int=\count127
+\l__xparse_m_args_int=\count128
+\l__xparse_mandatory_args_int=\count129
+\l__xparse_processor_int=\count130
+\l__xparse_v_nesting_int=\count131
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\xtemplate\xtem
 plate.sty
 Package: xtemplate 2016/01/19 v6377 L3 Experimental prototype document function
 s
 \l__xtemplate_tmp_dim=\dimen154
-\l__xtemplate_tmp_int=\count131
+\l__xtemplate_tmp_int=\count132
 \l__xtemplate_tmp_muskip=\muskip17
 \l__xtemplate_tmp_skip=\skip66
 )
@@ -799,15 +821,15 @@ Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count132
-\calc@Bcount=\count133
+\calc@Acount=\count133
+\calc@Bcount=\count134
 \calc@Adimen=\dimen160
 \calc@Bdimen=\dimen161
 \calc@Askip=\skip67
 \calc@Bskip=\skip68
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count134
+\calc@Ccount=\count135
 \calc@Cskip=\skip69
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\mathtools\mhsetup.sty
@@ -817,7 +839,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count135
+\g_MT_multlinerow_int=\count136
 \l_MT_multwidth_dim=\dimen162
 \origjot=\skip70
 \l_MT_shortvdotswithinadjustabove_dim=\dimen163
@@ -842,12 +864,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen176
 \cmidrulekern=\dimen177
 \defaultaddspace=\dimen178
-\@cmidla=\count136
-\@cmidlb=\count137
+\@cmidla=\count137
+\@cmidlb=\count138
 \@aboverulesep=\dimen179
 \@belowrulesep=\dimen180
-\@thisruleclass=\count138
-\@lastruleclass=\count139
+\@thisruleclass=\count139
+\@lastruleclass=\count140
 \@thisrulewidth=\dimen181
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
@@ -856,16 +878,16 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip72
 \LTpre=\skip73
 \LTpost=\skip74
-\LTchunksize=\count140
+\LTchunksize=\count141
 \LTcapwidth=\dimen182
 \LT@head=\box45
 \LT@firsthead=\box46
 \LT@foot=\box47
 \LT@lastfoot=\box48
-\LT@cols=\count141
-\LT@rows=\count142
-\c@LT@tables=\count143
-\c@LT@chunks=\count144
+\LT@cols=\count142
+\LT@rows=\count143
+\c@LT@tables=\count144
+\c@LT@chunks=\count145
 \LT@p@ftn=\toks28
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
@@ -876,7 +898,7 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks30
 \footnotemargin=\dimen183
-\c@pp@next@reset=\count145
+\c@pp@next@reset=\count146
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -905,11 +927,16 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@old@col=\dimen188
 \TX@target=\dimen189
 \TX@delta=\dimen190
-\TX@cols=\count146
+\TX@cols=\count147
 \TX@ftn=\toks32
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen191
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\threeparttable\threepartt
+able.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box49
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.st
 y (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
@@ -924,7 +951,7 @@ ommon.tex
 ommon-lists.tex))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-l
 atex.def
-\pgfutil@abb=\box49
+\pgfutil@abb=\box50
  (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -957,14 +984,15 @@ ltered.code.tex
 \pgf@ya=\dimen197
 \pgf@xb=\dimen198
 \pgf@yb=\dimen199
+Normal \dimen register pool exhausted, switching to extended pool.
 \pgf@xc=\dimen256
 \pgf@yc=\dimen257
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count147
-\c@pgf@countb=\count148
-\c@pgf@countc=\count149
-\c@pgf@countd=\count150
+\c@pgf@counta=\count148
+\c@pgf@countb=\count149
+\c@pgf@countc=\count150
+\c@pgf@countd=\count151
 \t@pgf@toka=\toks37
 \t@pgf@tokb=\toks38
 \t@pgf@tokc=\toks39
@@ -985,8 +1013,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyss
 oftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count151
-\pgfsyssoftpath@bigbuffer@items=\count152
+\pgfsyssoftpath@smallbuffer@items=\count152
+\pgfsyssoftpath@bigbuffer@items=\count153
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysp
 rotocol.code.tex
@@ -1022,8 +1050,8 @@ de.tex)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
 code.tex
 \pgfmath@dimen=\dimen258
-\pgfmath@count=\count153
-\pgfmath@box=\box50
+\pgfmath@count=\count154
+\pgfmath@box=\box51
 \pgfmath@toks=\toks40
 \pgfmath@stack@operand=\toks41
 \pgfmath@stack@operation=\toks42
@@ -1048,7 +1076,7 @@ ns.misc.code.tex)
 ns.integerarithmetics.code.tex)))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
 ode.tex
-\c@pgfmathroundto@lastzeros=\count154
+\c@pgfmathroundto@lastzeros=\count155
 ))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
 oints.code.tex
@@ -1083,10 +1111,10 @@ File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
 copes.code.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box51
-\pgf@hbox=\box52
-\pgf@layerbox@main=\box53
-\pgf@picture@serial@count=\count155
+\pgfpic=\box52
+\pgf@hbox=\box53
+\pgf@layerbox@main=\box54
+\pgf@picture@serial@count=\count156
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreg
 raphicstate.code.tex
@@ -1121,7 +1149,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 hade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen282
-\pgf@sys@shading@range@num=\count156
+\pgf@sys@shading@range@num=\count157
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorei
 mage.code.tex
@@ -1130,7 +1158,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoree
 xternal.code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box54
+\pgfexternal@startupbox=\box55
 ))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorel
 ayers.code.tex
@@ -1147,7 +1175,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulesh
 apes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box55
+\pgfnodeparttextbox=\box56
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulepl
 ot.code.tex
@@ -1189,7 +1217,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
 yplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count157
+\pgf@plot@mark@count=\count158
 \pgfplotmarksize=\dimen287
 )
 \tikz@lastx=\dimen288
@@ -1198,23 +1226,23 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@lastysaved=\dimen291
 \tikzleveldistance=\dimen292
 \tikzsiblingdistance=\dimen293
-\tikz@figbox=\box56
-\tikz@figbox@bg=\box57
-\tikz@tempbox=\box58
-\tikz@tempbox@bg=\box59
-\tikztreelevel=\count158
-\tikznumberofchildren=\count159
-\tikznumberofcurrentchild=\count160
-\tikz@fig@count=\count161
+\tikz@figbox=\box57
+\tikz@figbox@bg=\box58
+\tikz@tempbox=\box59
+\tikz@tempbox@bg=\box60
+\tikztreelevel=\count159
+\tikznumberofchildren=\count160
+\tikznumberofcurrentchild=\count161
+\tikz@fig@count=\count162
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulema
 trix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count162
-\pgfmatrixcurrentcolumn=\count163
-\pgf@matrix@numberofcolumns=\count164
+\pgfmatrixcurrentrow=\count163
+\pgfmatrixcurrentcolumn=\count164
+\pgf@matrix@numberofcolumns=\count165
 )
-\tikz@expandcount=\count165
+\tikz@expandcount=\count166
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
 libraries\tikzlibrarytopaths.code.tex
@@ -1233,8 +1261,8 @@ ode.tex
 \t@pgfplots@tokb=\toks46
 \t@pgfplots@tokc=\toks47
 \pgfplots@tmpa=\dimen294
-\c@pgfplots@coordindex=\count166
-\c@pgfplots@scanlineindex=\count167
+\c@pgfplots@coordindex=\count167
+\c@pgfplots@scanlineindex=\count168
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\sys\pgfplotssy
 sgeneric.code.tex))
@@ -1250,7 +1278,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 \pgfplotsoldpgfsupp_pgflibraryfpu.code.tex)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\oldpgfcompatib
 \pgfplotsoldpgfsupp_pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count168
+\c@pgfmathroundto@lastzeros=\count169
 ))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\pgfplotsu
 til.code.tex
@@ -1260,13 +1288,13 @@ pgfplotsliststructure.code.tex)
 pgfplotsliststructureext.code.tex)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
 pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count169
+\c@pgfplotsarray@tmp=\count170
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
 pgfplotsmatrix.code.tex)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\numtable\pgfpl
 otstableshared.code.tex
-\c@pgfplotstable@counta=\count170
+\c@pgfplotstable@counta=\count171
 \t@pgfplotstable@a=\toks48
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
@@ -1279,7 +1307,7 @@ inary.data.code.tex))
 til.verb.code.tex)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\libs\pgflibrar
 ypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count171
+\c@pgfplotslibrarysurf@no=\count172
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\sys\pgflibrary
 pgfplots.surfshading.pgfsys-pdftex.def)))
@@ -1316,11 +1344,11 @@ corations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen297
 \pgfdecoratedinputsegmentremainingdistance=\dimen298
 \pgf@decorate@distancetomove=\dimen299
-\pgf@decorate@repeatstate=\count172
+\pgf@decorate@repeatstate=\count173
 \pgfdecorationsegmentamplitude=\dimen300
 \pgfdecorationsegmentlength=\dimen301
 )
-\tikz@lib@dec@box=\box60
+\tikz@lib@dec@box=\box61
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
 libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -1330,7 +1358,7 @@ ns\pgflibrarydecorations.pathmorphing.code.tex))
 libraries\tikzlibrarydecorations.pathreplacing.code.tex
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\decoratio
 ns\pgflibrarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count173
+\pgfplots@numplots=\count174
 \pgfplots@xmin@reg=\dimen302
 \pgfplots@xmax@reg=\dimen303
 \pgfplots@ymin@reg=\dimen304
@@ -1348,9 +1376,9 @@ File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 )))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\libs\tikzlibra
 rypgfplots.groupplots.code.tex
-\pgfplots@group@current@plot=\count174
-\pgfplots@group@current@row=\count175
-\pgfplots@group@current@column=\count176
+\pgfplots@group@current@plot=\count175
+\pgfplots@group@current@row=\count176
+\pgfplots@group@current@column=\count177
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
 libraries\tikzlibrarycalc.code.tex
@@ -1362,10 +1390,10 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count177
+\c@r@tfl@t=\count178
 \rotFPtop=\skip77
 \rotFPbot=\skip78
-\rot@float@box=\box61
+\rot@float@box=\box62
 \rot@mess@toks=\toks49
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
@@ -1429,39 +1457,305 @@ yarrows.code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 \arrowsize=\dimen308
 )))
-\c@theo=\count178
-\pgf@layerbox@background=\box62
-\pgf@layerboxsaved@background=\box63
-\pgf@layerbox@foreground=\box64
-\pgf@layerboxsaved@foreground=\box65
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks52
+\XKV@tempa@toks=\toks53
+)
+\XKV@depth=\count179
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\collectbox\collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box63
+)
+\tc@llx=\dimen309
+\tc@lly=\dimen310
+\tc@urx=\dimen311
+\tc@ury=\dimen312
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen313
+\adjbox@Height=\dimen314
+\adjbox@Depth=\dimen315
+\adjbox@Totalheight=\dimen316
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\ifoddpage\ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count180
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box64
+\sift@deathcycles=\count181
+\@vwid@loff=\dimen317
+\@vwid@roff=\dimen318
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\psfrag\psfrag.sty
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count182
+\pfg@scount=\count183
+\pfg@temp=\write4
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count184
+\Gm@cntv=\count185
+\c@Gm@tempcnt=\count186
+\Gm@bindingoffset=\dimen319
+\Gm@wd@mp=\dimen320
+\Gm@odd@mp=\dimen321
+\Gm@even@mp=\dimen322
+\Gm@layoutwidth=\dimen323
+\Gm@layoutheight=\dimen324
+\Gm@layouthoffset=\dimen325
+\Gm@layoutvoffset=\dimen326
+\Gm@dimlist=\toks54
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count187
+\float@exts=\toks55
+\float@box=\box65
+\@float@everytoks=\toks56
+\@floatcapt=\box66
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\tabu\tabu.sty
+Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
+\c@taburow=\count188
+\tabu@nbcols=\count189
+\tabu@cnt=\count190
+\tabu@Xcol=\count191
+\tabu@alloc=\count192
+\tabu@nested=\count193
+\tabu@target=\dimen327
+\tabu@spreadtarget=\dimen328
+\tabu@naturalX=\dimen329
+\tabucolX=\dimen330
+\tabu@Xsum=\dimen331
+\extrarowdepth=\dimen332
+\abovetabulinesep=\dimen333
+\belowtabulinesep=\dimen334
+\tabustrutrule=\dimen335
+\tabu@thebody=\toks57
+\tabu@footnotes=\toks58
+\tabu@box=\box67
+\tabu@arstrutbox=\box68
+\tabu@hleads=\box69
+\tabu@vleads=\box70
+\tabu@cellskip=\skip79
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-LaTeX Warning: Unused global option(s):
-    [8.5pt].
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen336
+\Hy@linkcounter=\count194
+\Hy@pagecounter=\count195
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count196
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count197
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+\Urlmuskip=\muskip20
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen337
+\Fld@menulength=\count198
+\Field@Width=\dimen338
+\Fld@charsize=\dimen339
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count199
+Normal \count register pool exhausted, switching to extended pool.
+\c@Item=\count277
+\c@Hfootnote=\count278
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count279
+\c@bookmark@seq@number=\count280
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip80
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count281
+\lst@gtempboxa=\box71
+\lst@token=\toks59
+\lst@length=\count282
+\lst@currlwidth=\dimen340
+\lst@column=\count283
+\lst@pos=\count284
+\lst@lostspace=\dimen341
+\lst@width=\dimen342
+\lst@newlines=\count285
+\lst@lineno=\count286
+\lst@maxwidth=\dimen343
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count287
+\lst@skipnumbers=\count288
+\lst@framebox=\box72
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count289
+\FV@InFile=\read3
+\FV@TabBox=\box73
+\c@FancyVerbLine=\count290
+\FV@StepNumber=\count291
+\FV@OutFile=\write5
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip81
+\L@UnitsRaiseTextstyle=\skip82
+\L@UnitsRaiseScriptstyle=\skip83
+))
+\c@theo=\count292
+\pgf@layerbox@background=\box74
+\pgf@layerboxsaved@background=\box75
+\pgf@layerbox@foreground=\box76
+\pgf@layerboxsaved@foreground=\box77
 
 (document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 161.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 161.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 177.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 161.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 177.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
@@ -1469,618 +1763,1075 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count179
-\scratchdimen=\dimen309
-\scratchbox=\box66
-\nofMPsegments=\count180
-\nofMParguments=\count181
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count182
-\MPscratchDim=\dimen310
-\MPnumerator=\count183
-\makeMPintoPDFobject=\count184
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count293
+\scratchdimen=\dimen344
+\scratchbox=\box78
+\nofMPsegments=\count294
+\nofMParguments=\count295
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen345
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
+\everyMPtoPDFconversion=\toks61
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 161.
+(lastpage)             ! on input line 177.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
+Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 161.
-Package gensymb Info: Math companion symbols declared on input line 161.
-LaTeX Info: Redefining \degree on input line 161.
-LaTeX Info: Redefining \celsius on input line 161.
+(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 177.
+Package gensymb Info: Math companion symbols declared on input line 177.
+LaTeX Info: Redefining \degree on input line 177.
+LaTeX Info: Redefining \celsius on input line 177.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 161.
-LaTeX Info: Redefining \ohm on input line 161.
-Package gensymb Info: Using \textohm for \ohm on input line 161.
-Package gensymb Info: Using \textmu for \micro on input line 161.
+erthousand on input line 177.
+LaTeX Info: Redefining \ohm on input line 177.
+Package gensymb Info: Using \textohm for \ohm on input line 177.
+Package gensymb Info: Using \textmu for \micro on input line 177.
 
 ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into 
 your preamble.
- on input line 161.
+ on input line 177.
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-84.18172pt
+* \headheight=72.26999pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=113.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box79
+Package hyperref Info: Link coloring OFF on input line 177.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count299
+)
+LaTeX Info: Redefining \ref on input line 177.
+LaTeX Info: Redefining \pageref on input line 177.
+LaTeX Info: Redefining \nameref on input line 177.
+
+(document.out) (document.out)
+\@outlinefile=\write6
+\openout6 = `document.out'.
+
+\c@lstlisting=\count300
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 17
-8.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 18
+9.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.fd"
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 17
-8.
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 18
+9.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 17
-8.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 18
+9.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 17
-8.
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 18
+9.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
-LaTeX Font Info:    Try loading font information for U+msa on input line 178.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+LaTeX Font Info:    Try loading font information for U+msa on input line 189.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 178.
+LaTeX Font Info:    Try loading font information for U+msb on input line 189.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 178.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 189.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<./img/unilogo_international.png, id=4, 708.6475pt x 150.5625pt>
+<./img/unilogo_international.png, id=138, 708.6475pt x 150.5625pt>
 File: ./img/unilogo_international.png Graphic file (type png)
 
 <use ./img/unilogo_international.png>
-Package pdftex.def Info: ./img/unilogo_international.png used on input line 187
+Package pdftex.def Info: ./img/unilogo_international.png used on input line 197
 .
 (pdftex.def)             Requested size: 199.16928pt x 42.31572pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 210.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 210.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 210.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 210.
  [1
-
+Non-PDF special ignored!
 
 {C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/unil
 ogo_international.png>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 241.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 241.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 241.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 241.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 241.
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
-
- []
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 254.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 254.
-
-Underfull \hbox (badness 1142) in paragraph at lines 256--269
-[][]\OT1/ptm/m/n/10 A prom-in-ent the-ory to mend this dis-crep-ancy is to con-
-
- []
-
-[2
-
-
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 212.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 212.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 212.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 212.
+ [2
 
 ]
-Underfull \hbox (badness 2875) in paragraph at lines 349--359
-[][]\OT1/ptm/m/n/10 Ice sur-face struc-ture was ana-lysed by Cab-rera San-fe-li
-x
- []
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 222.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 224.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 224.
 
-[3] [4] [5] [6]
-Underfull \hbox (badness 4954) in paragraph at lines 815--850
-[][]\OT1/ptm/m/n/10 We chose func-tion-als from the GGA, meta-GGA and
- []
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 815--850
-\OT1/ptm/b/n/10 Hybrid\OT1/ptm/m/n/10 : $[]$$[]$, $[]$$[]$, $[]$$[]$ and
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 815--850
-\OT1/ptm/m/n/10 strange de-fi-ciency of con-ver-gence fail-ures when un-bound
+Overfull \hbox (18.56548pt too wide) in paragraph at lines 232--234
+[] 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 952--954
-[][]\OT1/ptm/m/n/10 We will de-note dispersion-corrected func-tion-als by
+
+Overfull \hbox (18.56548pt too wide) in paragraph at lines 235--238
+[] 
  []
 
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Theo/FigTheoTIP3Geo" "\def\tikzexternalreal
-job{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 238.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 240.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 240.
+[3]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 240.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 240.
+ [4
 
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/The
-o/FigTheoTIP3Geo" "\def\tikzexternalrealjob{document}\input{document}")...disab
-led (restricted).
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 287.
+ [5]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 287.
+ [6
 
-\openout3 = `document.auxlock'.
+] (document.toc
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 35.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 35.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 35.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 35.
+ [7])
+\tf@toc=\write7
+\openout7 = `document.toc'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 294.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 294.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 294.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 294.
+ [8]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 299.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 299.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 299.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 299.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 358.
+ [9
+
+]
+<TikzPics/TikzCreation/LHAndER/LHAndER.pdf, id=247, 586.12677pt x 264.82036pt>
+File: TikzPics/TikzCreation/LHAndER/LHAndER.pdf Graphic file (type pdf)
+
+<use TikzPics/TikzCreation/LHAndER/LHAndER.pdf>
+Package pdftex.def Info: TikzPics/TikzCreation/LHAndER/LHAndER.pdf used on inpu
+t line 380.
+(pdftex.def)             Requested size: 426.79135pt x 192.82831pt.
+
+Underfull \vbox (badness 3612) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 406.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 406.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 406.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 406.
+ [10 <./TikzPics/TikzCreation/LHAndER/LHAndER.pdf>]
+Underfull \vbox (badness 2050) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 456.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 456.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 456.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 456.
+ [11]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 497.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 497.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 514.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 514.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 527.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 527.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 527.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 527.
+
+[12]
+Overfull \hbox (32.27428pt too wide) in paragraph at lines 530--537
+[]\OT1/ptm/m/n/10.95 We did not in-clu-de spa-ti-al de-pen-dence of $\OML/ptmcm
+/m/it/10.95 E[]$ \OT1/ptm/m/n/10.95 in-to the abo-ve de-fi-ni-ti-on. A map []
+ []
 
 
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Theo/FigTheoTIP3Geo" "\def\tikzexternalrealjob
-{document}\input{document}"' did NOT result in a usable output file 'TikzPics/T
-heo/FigTheoTIP3Geo' (expected one of .pdf:.jpg:.jpeg:.png:). Please verify that
- you have enabled system calls. For pdflatex, this is 'pdflatex -shell-escape'.
- Sometimes it is also named 'write 18' or something like that. Or maybe the com
-mand simply failed? Error messages can be found in 'TikzPics/Theo/FigTheoTIP3Ge
-o.log'. If you continue now, I'll try to typeset the picture.
+Underfull \vbox (badness 5288) has occurred while \output is active []
 
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.998  \end{tikzpicture}
-                        
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 576.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 576.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 576.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 576.
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[8]
-<TikzPics/TikzCreation/TheoTS/TheoTS.pdf, id=48, 236.67722pt x 160.33702pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 639.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 639.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 639.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 639.
+ [14]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 684.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 684.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 691.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 691.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 691.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 691.
+ [15]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 692.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 692.
+
+Overfull \hbox (25.1136pt too wide) in paragraph at lines 698--706
+[]\OT1/ptm/m/n/10.95 This equa-ti-on holds for all non-relativistic quan-tum me
+-cha-ni-cal par-tic-les. Wi-thin the \OT1/ptm/m/it/10.95 Born--Oppenheimer
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 746.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 746.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 746.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 746.
+[16]
+Underfull \vbox (badness 3108) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 801.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 801.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 801.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 801.
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 858.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 858.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 858.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 858.
+ [18]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 874.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 874.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 927.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 927.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 942.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 942.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 942.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 942.
+
+[19]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 987.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 987.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 987.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 987.
+ [20]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 989.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 989.
+
+Underfull \vbox (badness 1092) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1034.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1034.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1034.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1034.
+ [21]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1043.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1043.
+
+===== Image 'TikzPics/Theo/FigTheoTIP3Geo' is up-to-date. ======
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1081.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1128.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1128.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1128.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1128.
+[22 <./TikzPics/Theo/FigTheoTIP3Geo.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1136.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1136.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1152.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1152.
+
+<TikzPics/TikzCreation/TheoTS/TheoTS.pdf, id=524, 236.67722pt x 160.33702pt>
 File: TikzPics/TikzCreation/TheoTS/TheoTS.pdf Graphic file (type pdf)
 
 <use TikzPics/TikzCreation/TheoTS/TheoTS.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/TheoTS/TheoTS.pdf used on input 
-line 1118.
-(pdftex.def)             Requested size: 256.0748pt x 173.49168pt.
+line 1202.
+(pdftex.def)             Requested size: 341.43437pt x 231.32306pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1219.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1219.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1219.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1219.
+ [23]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1238.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1238.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 1118--1123
-[][][] 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1250.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1250.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1250.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1250.
+ [24 <./TikzPics/TikzCreation/TheoTS/TheoTS.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1266.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1266.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1306.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1306.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1306.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1306.
+ [25]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1363.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1363.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1363.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1363.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1363.
+
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3' is up-to-date. ======
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1418.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1418.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1418.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1418.
+ [26]
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H.D3' is up-to-date. ======
+
+Underfull \vbox (badness 1490) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1510.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1510.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1510.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1510.
+ [27 <./TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3.pdf>]
+Underfull \vbox (badness 6332) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1530.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1530.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1530.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1530.
+ [28 <./TikzPics/Benchmark/Fig.Bench.H2O+H.D3.pdf>]
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare' is up-to-date. 
+======
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1630.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1630.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1630.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1630.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1630.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1630.
+
+
+Overfull \hbox (0.89325pt too wide) in paragraph at lines 1635--1657
+\OT1/ptm/m/n/10.95 Fi-gu-re []6[]. Again, the def2-SVP ba-sis set is not con-si
+-de-red, sin-ce it yields er-rors bet-ween $\OMS/pzccm/m/n/10.95  \OT1/ptmcm/m/
+n/10.95 12 []$
  []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1657.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1657.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1657.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1657.
+[29 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.pdf>]
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare' is up-to-date. =
+=====
 
-Underfull \hbox (badness 1325) in paragraph at lines 1142--1147
-[][]\OT1/ptm/m/n/10 In this work, we ob-tain trans-ition states with the \OT1/p
-tm/m/it/10 di-mer
+Underfull \vbox (badness 2726) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1735.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1735.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1735.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1735.
+ [30 <./TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1770.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 1770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1770.
+
+===== Image 'TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare' is up-to-date. ===
+===
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1824.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1824.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1824.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1824.
+[31]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1848.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1848.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1857.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1857.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1857.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1857.
+ [32 <./TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1886.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1886.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1897.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1897.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1927.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1927.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1927.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1927.
+ [33]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2002.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2002.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2002.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2002.
+ [34]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2008.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2008.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2143.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2143.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2143.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2143.
+
+[35]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2181.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2181.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2181.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2181.
+ [36]
+Overfull \hbox (30.50821pt too wide) in paragraph at lines 2182--2192
+[][]\OT1/ptm/m/n/10.95 While the re-sults he-re do not clear-ly iden-tify func-
+tio-nals for which the agree-ment bet-ween []
  []
 
-
-Underfull \hbox (badness 2426) in paragraph at lines 1157--1164
-\OT1/ptm/m/n/10 DFT cal-cu-la-tions are per-formed with TUR-BOMOLE$[]$.
- []
-
-
-Underfull \hbox (badness 1490) in paragraph at lines 1157--1164
-\OT1/ptm/m/n/10 Force field cal-cu-la-tions are per-formed by CHARMM$[]$.
- []
-
-[9 <./TikzPics/TikzCreation/TheoTS/TheoTS.pdf>]
-Underfull \hbox (badness 7012) in paragraph at lines 1215--1230
-[][]\OT1/ptm/m/n/10 At each op-timum geo-metry, an ad-di-tional cal-cu-la-tion
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 1215--1230
-\OT1/ptm/m/n/10 was car-ried out to find a CP cor-rec-ted en-ergy. For
- []
-
-
-Underfull \hbox (badness 2401) in paragraph at lines 1215--1230
-$[]$ \OT1/ptm/m/n/10 and $[]$, this cal-cu-la-tions was also at
- []
-
-
-Underfull \hbox (badness 2790) in paragraph at lines 1241--1245
-$\OML/ptmcm/m/it/10 E[]$ \OT1/ptm/m/n/10 stands for the in-ter-ac-tion en-ergy 
-[] of the sys-
- []
-
-
-Underfull \hbox (badness 2134) in paragraph at lines 1241--1245
-\OT1/ptm/m/n/10 tem com-puted with a cer-tain DFT func-tional and basis
- []
-
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3" "\def\tikze
-xternalrealjob{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
-
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ben
-chmark/Fig.Bench.H2O+H.NoD3" "\def\tikzexternalrealjob{document}\input{document
-}")...disabled (restricted).
-
-\openout3 = `document.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3" "\def\tikzexte
-rnalrealjob{document}\input{document}"' did NOT result in a usable output file 
-'TikzPics/Benchmark/Fig.Bench.H2O+H.NoD3' (expected one of .pdf:.jpg:.jpeg:.png
-:). Please verify that you have enabled system calls. For pdflatex, this is 'pd
-flatex -shell-escape'. Sometimes it is also named 'write 18' or something like 
-that. Or maybe the command simply failed? Error messages can be found in 'TikzP
-ics/Benchmark/Fig.Bench.H2O+H.NoD3.log'. If you continue now, I'll try to types
-et the picture.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1313 \end{tikzpicture}
-                        
-(That was another \errmessage.)
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1322--1325
-[]\OT1/ptm/b/n/10 Reference en-ergy. \OT1/ptm/m/n/10 For $[]$, we found
- []
-
-[10]
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H.D3" "\def\tikzext
-ernalrealjob{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
-
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ben
-chmark/Fig.Bench.H2O+H.D3" "\def\tikzexternalrealjob{document}\input{document}"
-)...disabled (restricted).
-
-\openout3 = `document.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H.D3" "\def\tikzextern
-alrealjob{document}\input{document}"' did NOT result in a usable output file 'T
-ikzPics/Benchmark/Fig.Bench.H2O+H.D3' (expected one of .pdf:.jpg:.jpeg:.png:). 
-Please verify that you have enabled system calls. For pdflatex, this is 'pdflat
-ex -shell-escape'. Sometimes it is also named 'write 18' or something like that
-. Or maybe the command simply failed? Error messages can be found in 'TikzPics/
-Benchmark/Fig.Bench.H2O+H.D3.log'. If you continue now, I'll try to typeset the
- picture.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1389 \end{tikzpicture}
-                        
-(That was another \errmessage.)
-
-
-Underfull \hbox (badness 2582) in paragraph at lines 1420--1427
-\OT1/ptm/m/n/10 op-tim-isa-tions. Here, the at-trac-tion is con-sidered close
- []
-
-
-Underfull \hbox (badness 1097) in paragraph at lines 1420--1427
-\OT1/ptm/m/n/10 to be-ing re-puls-ive, with in-ter-ac-tion en-ergy val-ues arou
-nd
- []
-
-
-Underfull \hbox (badness 1231) in paragraph at lines 1420--1427
-[]\OT1/ptm/m/n/10 . While the res-ult-ing de-vi-ation of
- []
-
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare" "
-\def\tikzexternalrealjob{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
-
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ben
-chmark/Fig.Bench.H2O+H2O.BasisCompare" "\def\tikzexternalrealjob{document}\inpu
-t{document}")...disabled (restricted).
-
-\openout3 = `document.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare" "\de
-f\tikzexternalrealjob{document}\input{document}"' did NOT result in a usable ou
-tput file 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare' (expected one of 
-.pdf:.jpg:.jpeg:.png:). Please verify that you have enabled system calls. For p
-dflatex, this is 'pdflatex -shell-escape'. Sometimes it is also named 'write 18
-' or something like that. Or maybe the command simply failed? Error messages ca
-n be found in 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.BasisCompare.log'. If you c
-ontinue now, I'll try to typeset the picture.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1530 \end{tikzpicture}
-                        
-(That was another \errmessage.)
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11]
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare" "\
-def\tikzexternalrealjob{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
-
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ben
-chmark/Fig.Bench.H2O+H2O.TZVPCompare" "\def\tikzexternalrealjob{document}\input
-{document}")...disabled (restricted).
-
-\openout3 = `document.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare" "\def
-\tikzexternalrealjob{document}\input{document}"' did NOT result in a usable out
-put file 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare' (expected one of .p
-df:.jpg:.jpeg:.png:). Please verify that you have enabled system calls. For pdf
-latex, this is 'pdflatex -shell-escape'. Sometimes it is also named 'write 18' 
-or something like that. Or maybe the command simply failed? Error messages can 
-be found in 'TikzPics/Benchmark/Fig.Bench.H2O+H2O.TZVPCompare.log'. If you cont
-inue now, I'll try to typeset the picture.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1656 \end{tikzpicture}
-                        
-(That was another \errmessage.)
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12]
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare" "\de
-f\tikzexternalrealjob{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
-
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ben
-chmark/Fig.Bench.H2O+O.FuncCompare" "\def\tikzexternalrealjob{document}\input{d
-ocument}")...disabled (restricted).
-
-\openout3 = `document.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare" "\def\t
-ikzexternalrealjob{document}\input{document}"' did NOT result in a usable outpu
-t file 'TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare' (expected one of .pdf:.
-jpg:.jpeg:.png:). Please verify that you have enabled system calls. For pdflate
-x, this is 'pdflatex -shell-escape'. Sometimes it is also named 'write 18' or s
-omething like that. Or maybe the command simply failed? Error messages can be f
-ound in 'TikzPics/Benchmark/Fig.Bench.H2O+O.FuncCompare.log'. If you continue n
-ow, I'll try to typeset the picture.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1729 \end{tikzpicture}
-                        
-(That was another \errmessage.)
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14] [15]
-<./img/FletcherAboveGlossyNoCueing.png, id=83, 1124.2pt x 1142.2675pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2193.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2193.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2213.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2216.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2216.
+<./img/FletcherAboveGlossyNoCueing.png, id=763, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAboveGlossyNoCueing.png Graphic file (type png)
 
 <use ./img/FletcherAboveGlossyNoCueing.png>
 Package pdftex.def Info: ./img/FletcherAboveGlossyNoCueing.png used on input li
-ne 2136.
-(pdftex.def)             Requested size: 245.8296pt x 249.76582pt.
- [16]
-<TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=87, 114.92537pt x 5
-1.21533pt>
+ne 2233.
+(pdftex.def)             Requested size: 341.43437pt x 346.91829pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2250.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2250.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2250.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2250.
+ [37]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2274.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2274.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2274.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2274.
+ [38 <./img/FletcherAboveGlossyNoCueing.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2283.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2283.
+
+<TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=785, 115.77855pt x 
+51.21533pt>
 File: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf Graphic file (type
  pdf)
  <use TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf
- used on input line 2196.
-(pdftex.def)             Requested size: 512.1496pt x 228.33336pt.
+ used on input line 2292.
+(pdftex.def)             Requested size: 426.79135pt x 188.83961pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2343.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2343.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2343.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2343.
+
+[39 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2381.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2381.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2381.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2381.
+ [40]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2382.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2382.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2417.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2417.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2425.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2425.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2425.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2425.
+
+[41]
+===== Image 'TikzPics/Adsorption/Fig.Ads.QMMMConvergence' is up-to-date. ======
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2535.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2535.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2535.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2535.
+[42]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2536.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2536.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2569.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2569.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2569.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2569.
+ [43 <./TikzPics/Adsorption/Fig.Ads.QMMMConvergence.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2580.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2580.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2657.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2657.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2657.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2657.
+ [44]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2759.
+
+Underfull \vbox (badness 2050) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2798.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2798.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2798.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2798.
+ [45]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2857.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2857.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2857.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2857.
+
+[46]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2913.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2913.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17 <./img/FletcherAboveGlossyNoCueing.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3016.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3016.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3016.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3016.
+ [47]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3038.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3038.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3038.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3038.
 
- [18 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>]
-===== 'mode=convert with system call': Invoking 'pdflatex -halt-on-error -inter
-action=batchmode -jobname "TikzPics/Adsorption/Fig.Ads.QMMMConvergence" "\def\t
-ikzexternalrealjob{document}\input{document}"' ========
-\openout3 = `document.auxlock'.
+[48]
+Underfull \vbox (badness 1292) has occurred while \output is active []
 
-runsystem(pdflatex -halt-on-error -interaction=batchmode -jobname "TikzPics/Ads
-orption/Fig.Ads.QMMMConvergence" "\def\tikzexternalrealjob{document}\input{docu
-ment}")...disabled (restricted).
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3144.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3144.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3144.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3144.
+ [49]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3151.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3151.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3159.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3159.
 
-\openout3 = `document.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'pdflatex -halt-on-error -interact
-ion=batchmode -jobname "TikzPics/Adsorption/Fig.Ads.QMMMConvergence" "\def\tikz
-externalrealjob{document}\input{document}"' did NOT result in a usable output f
-ile 'TikzPics/Adsorption/Fig.Ads.QMMMConvergence' (expected one of .pdf:.jpg:.j
-peg:.png:). Please verify that you have enabled system calls. For pdflatex, thi
-s is 'pdflatex -shell-escape'. Sometimes it is also named 'write 18' or somethi
-ng like that. Or maybe the command simply failed? Error messages can be found i
-n 'TikzPics/Adsorption/Fig.Ads.QMMMConvergence.log'. If you continue now, I'll 
-try to typeset the picture.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2413 \end{tikzpicture}
-                        
-(That was another \errmessage.)
-
-Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (2.83101pt too wide) in paragraph at lines 2392--2416
- [][][] 
- []
-
-
-Underfull \vbox (badness 7704) has occurred while \output is active []
-
- [19]
-[20]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2660.
- [21]
-Underfull \hbox (badness 10000) in paragraph at lines 2934--2947
-[][]\OT1/ptm/m/n/10 Recalling the strong de-vi-ations between DFT and
- []
-
-
-Underfull \hbox (badness 5970) in paragraph at lines 2934--2947
-$[]$ \OT1/ptm/m/n/10 gas-phase re-ac-tion en-er-gies, we should
- []
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 2959--2975
-[][]\OT1/ptm/m/n/10 We high-light the func-tion-als that were closest to the
- []
-
-[22]
-Underfull \hbox (badness 1303) in paragraph at lines 3061--3067
-[]\OT1/ptm/m/n/10 In the pre-vi-ous cal-cu-la-tions, we did not in-vest-ig-ate 
-how
- []
-
-[23] <./img/SiteSnapshotMany.png, id=120, 1124.2pt x 1142.2675pt>
+<./img/SiteSnapshotMany.png, id=933, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotMany.png Graphic file (type png)
 
 <use ./img/SiteSnapshotMany.png>
-Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 3080.
-(pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
+Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 3184.
+(pdftex.def)             Requested size: 209.1301pt x 212.48396pt.
 
-<./img/SiteSnapshotOriginal.png, id=121, 1124.2pt x 1142.2675pt>
+<./img/SiteSnapshotOriginal.png, id=934, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotOriginal.png Graphic file (type png)
 
 <use ./img/SiteSnapshotOriginal.png>
-Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3081
+Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3185
 .
-(pdftex.def)             Requested size: 122.91872pt x 124.8829pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3113--3119
-[][]\OT1/ptm/m/n/10 We covered the area $\OT1/ptmcm/m/n/10 (\OML/ptmcm/m/it/10 
-r; \OT1/ptmcm/m/n/10 ) \OMS/pzccm/m/n/10 2 \OT1/ptmcm/m/n/10 [0\OML/ptmcm/m/it
-/10 ; r[]\OT1/ptmcm/m/n/10 ] \OMS/pzccm/m/n/10  \OT1/ptmcm/m/n/10 [0\OML/ptmcm
-/m/it/10 ; \OT1/ptmcm/m/n/10 2\OML/ptmcm/m/it/10 \OT1/ptmcm/m/n/10 )$ \OT1/ptm
-/m/n/10 with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3113--3119
-\OT1/ptm/m/n/10 aequidistantly dis-trib-uted points ac-cord-ing to $\OML/ptmcm/
-m/it/10 r[] \OT1/ptmcm/m/n/10 =$
- []
-
-
+(pdftex.def)             Requested size: 209.1301pt x 212.48396pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3206.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3206.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3206.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3206.
+ [50]
 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pd
-f, id=122, 237.97708pt x 198.2336pt>
+f, id=940, 237.97708pt x 198.2336pt>
 File: ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
 on.pdf Graphic file (type pdf)
 
 <use ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributio
 n.pdf>
 Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
-ingEnergyDistribution.pdf used on input line 3125.
-(pdftex.def)             Requested size: 250.95612pt x 209.04976pt.
+ingEnergyDistribution.pdf used on input line 3229.
+(pdftex.def)             Requested size: 341.43437pt x 284.42165pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3252.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3252.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3252.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3252.
+ [51 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png>]
+Underfull \vbox (badness 1168) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3274.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3274.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3274.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3274.
+ [52 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
+on.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3280.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3280.
 
-! Package amsmath Error: \mathring allowed only in math mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3153 ...f the surface at a distance of 2.17~\Ang
-                                                   to the
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[24 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png> <./TikzPics/T
-ikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pdf>]
-<./img/FletcherAdsorption.png, id=141, 1124.2pt x 1142.2675pt>
+<./img/FletcherAdsorption.png, id=966, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAdsorption.png Graphic file (type png)
 
 <use ./img/FletcherAdsorption.png>
-Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3183.
-(pdftex.def)             Requested size: 250.95612pt x 254.97726pt.
-
-<TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=142, 347.52335pt x 281.21661pt>
+Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3288.
+(pdftex.def)             Requested size: 341.43437pt x 346.91829pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3333.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3333.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3333.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3333.
+ [53 <./img/FletcherAdsorption.png>]
+<TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=976, 347.52335pt x 281.21661pt>
 File: TikzPics/TikzCreation/HO.H2/HOH2.pdf Graphic file (type pdf)
 
 <use TikzPics/TikzCreation/HO.H2/HOH2.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2/HOH2.pdf used on input lin
-e 3245.
-(pdftex.def)             Requested size: 250.95612pt x 203.07654pt.
- [25 <./img/FletcherAdsorption.png>]
-<TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf, id=147, 224.86508pt
+e 3350.
+(pdftex.def)             Requested size: 341.43437pt x 276.30698pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3382.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3382.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3382.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3382.
+ [54]
+<TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf, id=984, 224.86508pt
  x 185.34244pt>
 File: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf Graphic file (t
 ype pdf)
 
 <use TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.
-pdf used on input line 3281.
-(pdftex.def)             Requested size: 250.95612pt x 206.84962pt.
+pdf used on input line 3385.
+(pdftex.def)             Requested size: 341.43437pt x 281.4491pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3410.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3410.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3295--3304
-[][]\OT1/ptm/m/n/10 We find the ac-tiv-a-tion en-ergy for the re-ac-tion
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3420.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3420.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3420.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3420.
+ [55 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3440.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3440.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3440.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3440.
+ [56 <./TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf>] (document.b
+bl
+Underfull \vbox (badness 5274) has occurred while \output is active []
 
-Underfull \hbox (badness 2653) in paragraph at lines 3295--3304
-[] \OT1/ptm/m/n/10 to be $\OT1/ptmcm/m/n/10 7\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n
-/10 16 []$ \OT1/ptm/m/n/10 and the re-ac-
- []
-
-[26 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf> <./TikzPics/TikzCreation/HO.H2.Act
-ivation/HOH2Activation.pdf>] (document.bbl
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 8.
+ [57]
 ! Undefined control sequence.
 <recently read> \mathplus 
                           
@@ -2092,95 +2843,64 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 1137) in paragraph at lines 18--21
-[][]\OT1/ptm/m/n/10 H. A. Zook, ``Space-craft Meas-ure-ments of the Cos-
- []
-
-[27]
-Underfull \hbox (badness 1895) in paragraph at lines 84--86
-[][]\OT1/ptm/m/n/10 ``Langmuir{hinshelwood mech-an-ism,'' in \OT1/ptm/m/it/10 G
-old Book\OT1/ptm/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 84--86
-\OT1/ptm/m/n/10 In-ter-na-tional Union of Pure and Ap-plied Chem-istry
- []
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 93--95
-[][]\OT1/ptm/m/n/10 R. Pa-poular, ``On wa-ter ice form-a-tion in in-ter-stel-la
-r
- []
-
-
-Underfull \hbox (badness 3590) in paragraph at lines 97--102
-\OT1/ptm/m/n/10 Ap-proach,'' \OT1/ptm/m/it/10 The Journal of Phys-ical Chem-ist
-ry A\OT1/ptm/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 140--144
-[][]\OT1/ptm/m/n/10 D. E. Woon, ``Mod-el-ing Gas-Grain Chem-istry with
- []
-
-[28]
-Underfull \hbox (badness 1331) in paragraph at lines 234--237
-[][]\OT1/ptm/m/n/10 C. Adamo and V. Bar-one, ``To-ward re-li-able dens-ity
- []
-
-
-Underfull \hbox (badness 3525) in paragraph at lines 251--256
-[][]\OT1/ptm/m/n/10 M. Va-liev, E. Bylaska, N. Govind, K. Kow-al-ski,
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 299--302
-[][]\OT1/ptm/m/n/10 S. Grimme, S. Ehr-lich, and L. Go-erigk, ``Ef-fect of
- []
-
-[29]
-Underfull \hbox (badness 4144) in paragraph at lines 344--345
-[][]\OT1/ptm/m/n/10 ChemShell, a Com-pu-ta-tional Chem-istry Shell, see
- []
-
-
-Underfull \hbox (badness 1755) in paragraph at lines 347--351
-\OT1/ptm/m/n/10 P. Sher-wood, ``ChemShell-a mod-u-lar soft-ware pack-
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 347--351
-\OT1/ptm/m/it/10 Re-views: Com-pu-ta-tional Mo-lecu-lar Sci-ence\OT1/ptm/m/n/10
- , vol. 4,
- []
-
-
-Underfull \hbox (badness 6300) in paragraph at lines 353--357
-[][]\OT1/ptm/m/n/10 H.-J. Werner, P. J. Knowles, G. Knizia, F. R.
- []
-
-
-Underfull \hbox (badness 1584) in paragraph at lines 353--357
-\OT1/ptm/m/n/10 Manby, M. Sch[]utz, \OT1/ptm/m/it/10 et al.\OT1/ptm/m/n/10 , 20
-12.  MOLPRO, ver-
- []
-
-
-Underfull \hbox (badness 1831) in paragraph at lines 353--357
-\OT1/ptm/m/n/10 sion 2012.1, a pack-age of ab ini-tio pro-grams, see
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 359--361
-[][]\OT1/ptm/m/n/10 W. Humphrey, A. Dalke, and K. Schul-ten, ``VMD
- []
-
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
+[58]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 127.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 127.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 127.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 127.
+ [59]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 189.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 189.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 189.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 189.
+ [60]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 249.
+ [61]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 313.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 313.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 313.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 313.
+ [62]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 372.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 372.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 372.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 372.
+ [63]
 ! Undefined control sequence.
 <recently read> \mathplus 
                           
-l.420   {OH} $\mathplus
+l.431   {OH} $\mathplus
                        $ H 2 , {AT} 10~{K} },'' {\em {The Astrophysical Jour...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2188,37 +2908,67 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[30]) 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 438.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 438.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 438.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 438.
+[64]) 
 AED: lastpage setting LastPage
-[31
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3495.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3495.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3495.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3495.
+[65]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3495.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3495.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3495.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3495.
+ (document.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3495.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3495.
 
-] (document.aux) ) 
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: F08CAAD26920D932286703B6FFEAEE8F;2269.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3495.
+ ) 
 Here is how much of TeX's memory you used:
- 35681 strings out of 493634
- 847422 string characters out of 3141310
- 1016653 words of memory out of 3000000
- 38403 multiletter control sequences out of 15000+200000
- 87107 words of font info for 183 fonts, out of 3000000 for 9000
+ 42443 strings out of 493634
+ 939871 string characters out of 3141310
+ 1158034 words of memory out of 3000000
+ 44770 multiletter control sequences out of 15000+200000
+ 84494 words of font info for 183 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,20n,100p,10382b,2316s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8
-r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex
-9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
-/Users/Thomas/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on document.pdf (31 pages, 2668676 bytes).
+ 57i,17n,77p,10398b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Thomas/AppData
+/Roaming/MiKTeX/2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
+w/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfchan
+/uzcmi8a.pfb>
+Output written on document.pdf (65 pages, 2873948 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 79 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1163 PDF objects out of 1200 (max. 8388607)
+ 268 named destinations out of 1000 (max. 500000)
+ 367 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,103 @@
+\documentclass[crop,tikz]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{MyStandard}
+\usetikzlibrary{patterns,calc}
+%\usepackage{tikz-3dplot}
+
+\begin{document}
+\newcommand\PI{3.14}
+\newcommand\cycles{6.5}
+\newcommand\bottom{-.5}
+\def\shift{7.5}
+\def\shiftbelow{-5}
+\newcommand\nextarrow{\draw[->,line width=2pt] (1,.5) -- (2,.5);}
+\newcommand\imgtitle[1]{\node[anchor=west] (Name) at (-5,2.5) {\large{\textbf{#1}}};}
+\newcommand\imgcaption[1]{\node[anchor=north west,text width=5cm] (Caption) at (-5.1,-.5) {\small{#1}};}
+%\newcommand\surface[3]{\draw[domain=#1:#2,smooth,variable=\x,blue] plot ({\x}, {#3*sin((\x-#1)/(#2-#1)*360*\cycles});}
+\newcommand\surface[4]{\def\stdlen{#2-#1}
+\def\period{\stdlen/\cycles/.9}
+\draw[pattern=horizontal lines, pattern color=gray] (#1,\bottom) -- plot [samples=150, domain=#1:#2,smooth,variable=\x,blue] ({\x}, {#3*sin((\x-#1)/(#2-#1)*360*\cycles}) -- (#2,\bottom) -- cycle;
+\foreach \x in {0,1,2,3,4,5}
+\coordinate (#4 Site\x) at ({#1+.1 + (\period * (\x))},.2);}
+%\coordinate (#4 Site\x) at ($(#1,0)+({\period * (\x-1.6)},0)$);}
+\newcommand\atom[2]{\shadedraw[shading=radial,outer color=#2!90,inner color=#2!30,draw=black] (#1) circle(.3cm);}
+\newcommand\rightof[1]{($(#1)+(.3,0)$)}
+\newcommand\leftof[1]{($(#1)-(.3,0)$)}
+\newcommand\aboveof[1]{($(#1)+(0,.3)$)}
+\newcommand\belowof[1]{($(#1)-(0,.3)$)}
+\newcommand\bentedge[2]{edge[dashed,line width=1.5pt,#1,color=#2]}
+
+\begin{tikzpicture}
+\begin{scope}
+\imgtitle{Langmuir--Hinshelwood (LH) mechanism}
+\surface{-5}{.5}{.2}{Surf1}
+\coordinate (A1) at (-4.5,1.3);
+\coordinate (A2) at (0,1.3);
+\atom{A2}{blue}
+\atom{A1}{red}
+\draw \rightof{A1} \bentedge{out=0,in=90,->}{red} (Surf1 Site1);
+\draw \leftof{A2} \bentedge{out=180,in=90,->}{blue} (Surf1 Site4);
+\draw[line width=1pt] (0,-1.5) -- (10,-1.5);
+\nextarrow
+\imgcaption{(i). adsorption}
+\end{scope}
+\begin{scope}[shift={(\shift,0)}]
+\surface{-5}{.5}{.2}{Surf1}
+\coordinate (A1) at (Surf1 Site1);
+\coordinate (A2) at (Surf1 Site4);
+\atom{A2}{blue}
+\atom{A1}{red}
+\draw \aboveof{A1} \bentedge{bend left=90,bend right=-70,->}{red} ($(Surf1 Site2)-(.1,0)$);
+\draw \aboveof{A2} \bentedge{bend right=90,bend left=-70,->}{blue} ($(Surf1 Site3)+(.1,0)$);
+
+\draw($(Surf1 Site3)-(.1,0)$)  \bentedge{out=0,in=90}{blue} ($(Surf1 Site2)!.5!(Surf1 Site3)+(0,.4)$);
+\draw ($(Surf1 Site2)!.5!(Surf1 Site3)+(0,.4)$) \bentedge{out=180,in=90,->}{blue} ($(Surf1 Site2)+(.1,0)$);
+\nextarrow
+\imgcaption{(ii). diffusion}
+\end{scope}
+
+\begin{scope}[shift={(2*\shift,0)}]
+\surface{-5}{.5}{.2}{Surf1}
+\coordinate (A3) at ($(Surf1 Site2)+(1.5,1.3)$);
+\atom{A3}{green}
+\draw \leftof{A3} \bentedge{out=180,in=90,<-}{green} (Surf1 Site2);
+\imgcaption{(iii). reaction (and desorption)}
+\end{scope}
+
+\begin{scope}[shift={(0,\shiftbelow)}]
+\imgtitle{Eley--Rideal (ER) mechanism}
+\surface{-5}{.5}{.2}{Surf1}
+\coordinate (A1) at (-4.5,1.3);
+\coordinate (A2) at (0,1.3);
+%\atom{A2}{blue}
+\atom{A1}{red}
+\draw \rightof{A1} \bentedge{out=0,in=90,->}{red} (Surf1 Site1);
+%\draw \leftof{A2} \bentedge{out=180,in=90,->}{blue} ($(Surf1 Site2)+(.1,0)$);
+\nextarrow
+\imgcaption{(i). adsorption of first reactant}
+\end{scope}
+\begin{scope}[shift={(\shift,\shiftbelow)}]
+\surface{-5}{.5}{.2}{Surf1}
+\coordinate (A1) at (Surf1 Site1);
+\coordinate (A2) at (-1,1.3);
+\atom{A2}{blue}
+\atom{A1}{red}
+\draw \aboveof{A1} \bentedge{bend left=90,bend right=-70,->}{red} ($(Surf1 Site2)-(.1,0)$);
+\draw \leftof{A2} \bentedge{out=180,in=90,->}{blue} ($(Surf1 Site2)+(.1,0)$);
+\nextarrow
+%\imgcaption{\begin{tabular}{ll} (ii). &second reactant approaches \\ &from the gas phase \end{tabular}}
+\imgcaption{(ii). second reactant approaches \phantom{(ii). }from the gas phase}
+\end{scope}
+
+\begin{scope}[shift={(2*\shift,\shiftbelow)}]
+\surface{-5}{.5}{.2}{Surf1}
+\coordinate (A3) at ($(Surf1 Site2)+(1.5,1.3)$);
+\atom{A3}{green}
+\draw \leftof{A3} \bentedge{out=180,in=90,<-}{green} (Surf1 Site2);
+\imgcaption{(iii). reaction (and desorption)}
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

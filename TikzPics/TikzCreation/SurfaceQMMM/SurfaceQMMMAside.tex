@@ -41,12 +41,13 @@
 \node [inner sep=0pt] (Surf) at (\sitex,\sitey) {\includegraphics[height=1.8cm]{./TopLayerFromAbove.png}};
 %\includegraphics[width=2cm]{./TopLayerFromAbove.png}
 %\topsemisphere{gray}{1}
-\quicksemisphere{gray}{1.05}{1}
+\quicksemisphere{gray}{1.08}{1}
 
 %\draw (2,0) ellipse (1 and 1);
 
-\quicksemisphere{brown}{.61}{.6}
-\draw[line width=.2pt,color=gray] (0,0) ellipse (1.05cm and .5*1.05cm);
+\quicksemisphere{brown}{.61}{.5}
+\draw[line width=.2pt,color=gray] (0,0) ellipse (1.08cm and .5*1.08cm);
+\shade[ball color=gray!100!white,opacity=.7] (1.08cm,0) arc (0:180:1.08cm and -.5*1.08cm) arc (-180:0:1.08cm and 1.08cm);
 %\topsemisphere{gray}{1}
 \topsemisphere{blue}{.32}
 \shade[ball color=blue!100!white,opacity=.4] (-.32cm,0) arc (-180:-130:.32cm and .32cm) arc (-130:-50:.32cm and .16cm) arc (-50:0:.32cm and .32cm) arc (0:180:.32cm and .16cm);

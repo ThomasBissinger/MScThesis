@@ -46,7 +46,7 @@ font=small,labelfont=bf,labelsep=space] {caption}
 % \newcommand{\ccsdf}{\sc CCSD-F12}
 % \newcommand{\ccsdt}{\sc CCSD(T)}
 \newcommand{\ccsdtf}{\enmat{\te{CCSD(T)-F12a}}}
-\newcommand{\mrcif}{\enmat{\te{MRCI-F12}}}
+\newcommand{\mrcif}{\enmat{\te{MRCISD-F12}}}
 \newcommand{\hf}{HF}
 \newcommand{\mpt}{MP2}
 \newcommand{\mptf}{MP2-F12}
@@ -54,7 +54,8 @@ font=small,labelfont=bf,labelsep=space] {caption}
 \newcommand{\scsmpf}{SCS-MP2-F12}
 \newcommand{\ccsd}{CCSD}
 \newcommand{\ccsdf}{CCSD-F12}
-\newcommand{\ccsdt}{CCSD(T)}
+\newcommand{\ccsdt}{\enmat{\te{CCSD(T)}}}
+\newcommand{\ccsdtfs}{\enmat{\te{CC-F12}}}
 %\newcommand{\ccsdtf}{CCSD(T)-F12}
 
 \newcommand{\vtz}{\enmat{\te{VTZ-F}12}}
@@ -100,6 +101,8 @@ font=small,labelfont=bf,labelsep=space] {caption}
 \newcommand\brP[1]{\enmat{\lt\langle\Psi{#1}\rt|}}
 \newcommand\kep[1]{\enmat{\lt|\psi{#1}\rt\rangle}}
 \newcommand\brp[1]{\enmat{\lt\langle\psi{#1}\rt|}}
+
+\newcommand\ih{\enmat{\te I_\te h}}
 
 \newcommand\hto{\enmat{\te H _2 \te O}}
 \newcommand\htot{\enmat{\te H _2 \te O_2}}

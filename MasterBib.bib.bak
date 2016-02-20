@@ -549,6 +549,10 @@
   url = {http://dx.doi.org/10.1063/1.445869}
 }
 
+@Article{JUSTUS,
+  note = {{bwHPC and bwHPC-C5 (http://www.bwhpc-c5.de) funded by the Ministry of Science, Research and the Arts Baden-Württemberg (MWK) and the Germany Research Foundation (DFG).}}
+}
+
 @ARTICLE{Kaestner2009,
   author = {Kästner, Johannes and Carr, Joanne M. and Keal, Thomas W. and Thiel,
 	Walter and Wander, Adrian and Sherwood, Paul},
@@ -761,7 +765,7 @@
 @Article{ObaWatanabeHamaEtAl2012,
   author =        {Y. Oba and N. Watanabe and T. Hama and K. Kuwahata and H. Hidaka and A. Kouchi},
   title =         {{ {WATER} {FORMATION} {THROUGH} A {QUANTUM} {TUNNELING} {SURFACE} {REACTION}, {OH} $\mathplus$ H 2 , {AT} 10~{K} }},
-  journal =       {{ApJ}},
+  journal =       {{The Astrophysical Journal}},
   year =          {2012},
   volume =        {749},
   number =        {1},

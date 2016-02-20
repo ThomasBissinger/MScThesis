@@ -1,0 +1,135 @@
+% AUTHOR: David Kreplin 
+  % Für generieren eines pdf:
+%
+% latex latex_sample_with_image
+% latex latex_sample_with_image
+% latex latex_sample_with_image
+% dvips -Ppdf -ta4 latex_sample_with_image.dvi
+% ps2pdf latex_sample_with_image.ps
+
+%\documentclass[10pt,english,twoside,twocolumn]{article}
+%\documentclass[a4paper,11pt,english]{article}
+%\usepackage{a4wide}
+\documentclass[11pt,english,twoside]{article}
+
+\usepackage{etex}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{MyChem}
+\usepackage{MyStandard}
+\usepackage{courier}
+\usepackage{booktabs}
+\usepackage{graphicx}
+%%\usepackage{tabto}
+%% \usepackage{tabu}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage[symbol]{footmisc}
+\usepackage{gensymb} % enables degree sign
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\setcitestyle{square}
+\usepackage[justification=justified,singlelinecheck=false,
+ aboveskip=0em,belowskip=0em]{caption}
+ \captionsetup[table]{name=Table}
+ \captionsetup[figure]{name=Figure}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.groupplots}
+\usepackage{rotating}
+\usepackage{verbatim}
+\usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
+\tikzexternalize[prefix=tikz,shell escape=-enable-write18]
+\usepackage{tikz-3dplot}
+\usepackage{adjustbox}
+
+%% David's packages
+\usepackage{times} %,mathptm}
+%\usepackage{babel}
+%\usepackage{dina4}
+\usepackage{psfrag}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{float}
+%\usepackage{SIunits}
+%\usepackage{ziffer}
+% \geometry{
+% 	paper=a4paper, % Change to letterpaper for US letter
+% 	inner=2.5cm, % Inner margin
+% 	outer=3.8cm, % Outer margin
+% 	bindingoffset=2cm, % Binding offset
+% 	top=1.5cm, % Top margin
+% 	bottom=1.5cm, % Bottom margin
+% 	%showframe,% show how the type block is set on the page
+% }
+\geometry{a4paper,left=30mm,right=30mm, top=30mm, bottom=30 mm}
+\usepackage{mathtools}
+\usepackage{relsize}
+%\usepackage[onehalfspacing]{setspace}
+\usepackage{setspace}
+%Makros:
+\usepackage{tabu}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{nicefrac}
+\VerbatimFootnotes
+\usetikzlibrary{plotmarks}
+
+\numberwithin{equation}{section}	
+
+\pagestyle{fancy}
+%\pagestyle{headings}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\sectionmark}[1]{
+\markboth{\thesection{}. #1}{}
+}
+\renewcommand{\subsectionmark}[1]{
+\markright{\thesubsection{} #1}
+}
+
+\fancyhead[LE]{\thepage }
+%\fancyhead[RE]{\thesection.\nouppercase{\leftmark }}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{ \rightmark }
+\fancyhead[RO]{\thepage}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  columns=fullflexible,
+  keepspaces=true,
+  mathescape
+}
+%\linespread{5}
+%\renewcommand{\baselinestretch}{2.5} 
+%% Make stretch:
+% http://texwelt.de/wissen/fragen/3/wie-stelle-ich-einen-zeilenabstand-von-15-ein
+
+% \usepackage{setspace}
+\makeatletter
+\newcommand{\MSonehalfspacing}{%
+  \setstretch{1.44}%  default
+  \ifcase \@ptsize \relax % 10pt
+    \setstretch {1.448}%
+  \or % 11pt
+    \setstretch {1.399}%
+  \or % 12pt
+    \setstretch {1.433}%
+  \fi
+}
+\newcommand{\MSdoublespacing}{%
+  \setstretch {1.92}%  default
+  \ifcase \@ptsize \relax % 10pt
+    \setstretch {1.936}%
+  \or % 11pt
+    \setstretch {1.866}%
+  \or % 12pt
+    \setstretch {1.902}%
+  \fi
+}
+\makeatother
+\MSonehalfspacing
