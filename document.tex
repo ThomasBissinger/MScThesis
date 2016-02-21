@@ -245,7 +245,7 @@ version.\\[10pt]
 \section*{Abstract}
       The formation of many molecules in the interstellar medium, especially
       water with its many formation routes, is thought to be assisted by
-      surface reactions on ice mantles of interstellar dust grains. We present
+      surface reactions on ice mantles of interstellar dust grains. We introduce
       a surface adsorption model for a water $\ih$ Fletcher surface within a QM/MM description.
       For the MM region, we use the $\tip$ force field, for the QM region we
       present a hybrid basis set in combination with a selection of
@@ -255,13 +255,12 @@ version.\\[10pt]
       as well as adsorption and Eley--Rideal type reaction energies for
       molecules on the surface.
       For the latter, we give energy data by combining DFT adsorption energies
-      and coupled-cluster gas-phase reaction energies. We propose an
-      approximation to the $\zpe$ correction of the full QM region, namely the
-      special $\zpering$ correction which yields similar results to the full
-      $\zpeall$ correction at a fraction of its computational costs. An outlook
-      on binding site analysis of triplet O and a transition state search for
-      the reaction \mbox{$\ho + \htw \chemar \hto + \te H$} shows that the
-      model is fit for further application.
+      and coupled-cluster gas-phase reaction energies. We also show that it is
+      sufficient to compute the ZPE correction with only a small selection of
+      the QM molecules instead of the full QM region. This greatly reduces the
+      computational cost. An outlook on binding site analysis of triplet O and
+      a transition state search for the reaction \mbox{$\ho + \htw \chemar \hto
+      + \te H$} shows that the model is fit for further application.
 %\newpage
 \begin{otherlanguage}{ngerman}
 \section*{Zusammenfassung}
@@ -276,9 +275,9 @@ Wassermoleküle des MM-Gebiets interagieren untereinander mit dem
 $\tip$-Kraftfeld. Für das QM-Gebiet empfehlen wir eine Hybridbasis und geben
 eine Auswahl potentieller DFT Funktionale an, die zuvor in einem Benchmark für
 Interaktionsenergien getestet wurden. Mit diesen Funktionalen berechnen wir
-sowohl Bildungs- und Reaktionsenergien in der Gasphase als auch Adsorptions- und
-Eley--Rideal-\allowbreak Reaktionsenergien auf der Oberfläche. Für die
-Oberflächenreaktionen können wir die Coupled-Cluster Ergebnisse für Gasphasenreaktionsenergien mit den
+sowohl Bildungs- und Reaktionsenergien in der Gasphase als auch
+Adsorptionsenergien und Eley--Rideal-\allowbreak Reaktionsenergien auf der
+Oberfläche. Für die Oberflächenreaktionen können wir die Coupled-Cluster Ergebnisse für Gasphasenreaktionsenergien mit den
 Adsorptionsenergien auf DFT-Ebene kombinieren. Wir zeigen außerdem, dass zur
 Nullpunktsenergiekorrektur nicht alle Atome des QM-Gebiets berücksichtigt werden
 müssen, was Rechenzeiten stark reduziert. Wir schließen mit zwei kurzen Studien
