@@ -1274,7 +1274,9 @@ computation time of six days.
 %\subsection{The Fletcher Surface}
 %\label{Sec:Theo:Fletcher}
 
-\section{Benchmarking}
+\section{Results}
+
+\subsection{Benchmarking}
 \newcommand\htohto{\mbox{\enmat{\hto-\hto}}}
 \newcommand\htoo{\mbox{\enmat{\hto-\hspace{.2pt} ^3\te{O}}}}
 \newcommand\htoh{\mbox{\enmat{\hto-\te H}}}
@@ -1383,7 +1385,7 @@ energy.
 Therefore, we recommend the less accurate technique due to it being
 computationally faster while being very close to the more accurate alternative.
 
-\subsection{$\htoh$ Interaction}
+\subsubsection{$\htoh$ Interaction}
 
 %\tikzsetexternalprefix{TikzPics/Benchmark/}
 %\tikzsetnextfilename{Fig.Bench.H2O+H.NoD3}
@@ -1565,7 +1567,7 @@ predict wrong, i.e. too attractive, geometries.
 
 
 
-\subsection{$\htohto$ Interaction}
+\subsubsection{$\htohto$ Interaction}
 
 
 \textbf{Reference energy.} The reference energy for the $\htohto$ dimer is at
@@ -1763,17 +1765,8 @@ $\svp$.
 % left with only five, $\btlyp$, $\bhlyp$, $\pbez$, $\tpssh$ and $\pw\dt$. We might be able
 % to narrow this selection down by considering the third benchmark. 
 
-\subsection{$\htoo$ Interaction}
+\subsubsection{$\htoo$ Interaction}
 
-\textbf{Reference energy.} It already became clear at the beginning of this
-section that the $\htoo$ interaction is more tricky for post-HF methods because
-some geometries in the optimization process are not well described by a single
-Slater determinant. At the optimum geometry, a single-reference approach is
-fortunately possible, so our results for this benchmark have the full
-credibility of the $\ccsdtf$ method. Only the CP correction is taken from an
-$\mrcif$ calculation, but it is as small as \mbox{$0.10\ \kmo$} and therefore
-the error here is unlikely to deteriorate our results. The CP corrected
-interaction energy is \mbox{$\ecc=-6.72\ \kmo$}.
 
 
 % \tikzsetexternalprefix{TikzPics/Benchmark/}
@@ -1819,6 +1812,16 @@ Energies are plotted as differences
 to the reference energy from $\ccsdtf/\vtz$ calculations, see \eqref{Bench:RefEnergy}.}
 \label{Fig:Bench:H2O+O:FuncCompare}
 \end{figure}
+\textbf{Reference energy.} It already became clear at the beginning of this
+section that the $\htoo$ interaction is more tricky for post-HF methods because
+some geometries in the optimization process are not well described by a single
+Slater determinant. At the optimum geometry, a single-reference approach is
+fortunately possible, so our results for this benchmark have the full
+credibility of the $\ccsdtf$ method. Only the CP correction is taken from an
+$\mrcif$ calculation, but it is as small as \mbox{$0.10\ \kmo$} and therefore
+the error here is unlikely to deteriorate our results. The CP corrected
+interaction energy is \mbox{$\ecc=-6.72\ \kmo$}.
+
 
 \textbf{Basis sets.} Consider Figure \ref{Fig:Bench:H2O+O:FuncCompare}. In
 contrast to the previous two systems, the $\svpd$ basis set tends to yield the
@@ -1845,7 +1848,7 @@ does not apply to all functionals in this benchmark, many of those excluded
 in Figure \ref{Fig:Bench:H2O+O:FuncCompare} have RMSD values greater than $0.5\
 \Ang$.
 
-\subsection{Summary}
+\subsubsection{Summary}
 
 We have decided on the $\tzvp/\tzvpd$ hybrid basis. Both basis sets
 have proven to be able to yield good results, especially the $\tzvpd$ basis
@@ -1883,7 +1886,7 @@ the agreement between the different functionals that seemed to yield credible
 results by the standards of this benchmark.
   
 %% CHECK: Interaction geometries?
-\section{The Gas Phase}
+\subsection{The Gas Phase}
 \label{Sec:Gas}
 
 Before we progress to the ice surface, we can use this section
@@ -1894,7 +1897,7 @@ calculations. Therefore, the results presented in this section can
 be used to further evaluate the functionals we considered most
 reliable in the previous benchmark.
 
-\subsection{Energies of Formation}
+\subsubsection{Energies of Formation}
 \label{Sec:Gas:Energy}
 Absolute energy values for different functionals can not be compared
 properly. Instead, we need to compare energy differences to
@@ -1977,6 +1980,39 @@ that $\btlyp$ and $\tpssh$ always yield greater formation energies
 than the $\ccsdtf$ calculations. Indeed, only $\bhlyp$ yields 
 more exothermic formation energies than the reference calculations. 
 
+As we can see in Table \ref{Tab:Gas:Energies}, the predictive power
+of the DFT functionals varies strongly among the molecular species.
+Especially the case of $\singo$ and $\singot$ seems to be problematic. We had
+to use spin-unrestricted Kohn--Sham DFT (UKS) to force the desired spin
+multiplicity. But the agreement is also not very good for $\htot$, where
+spin-unrestricted Kohn--Sham DFT (RKS) could be used.
+The $\pbez$ functional is off by $92.06~\kmo$ for the case of $\singo$, followed
+by a disagreement of $86.84~\kmo$ for $\tpssh$ and disagreements
+of $69.96$ and $67.86~\kmo$ for $\pw$ and $\btlyp$, respectively.
+The best agreement is achieved by $\bhlyp$ with $30.90~\kmo$ of
+difference. However, the $\bhlyp$ functional predicts 
+$E^0$ very badly for $\singot$, with an error of $40.26~\kmo$,
+while the other functionals differ by less than $10~\kmo$, and it is also
+the only functional to differ by more than $50\%$ from the reference energy
+of $\ho$. Generally, all functionals predict too high values for $E^0$
+and show strong deviations from the reference calculation for at least one
+molecular species.
+Since the values are not too far off for $\htw$ while showing
+considerable problems with molecules composed solely of oxygen,
+this could be an indication that the energetic description of $\tripot$
+is challenging to DFT functionals in general. Then again, the rather good
+agreement to the reference data for all functionals but $\bhlyp$ in the case
+of $\tripo$ does not support this claim if we do not expect
+a cancellation of error.
+
+Further comparison shows that for most molecules, the functionals
+closest to the $\ccsdtf$ energies are $\btlyp$ and $\pw$, which
+also yield similar results. This mainly means that they provide
+energy values that are not as high as those of other functionals. 
+
+\subsubsection{Reactions}
+\label{Sec:Gas:Reaction}
+
 \newcolumntype{D}{>{\raggedleft\arraybackslash}p{1.4cm}}
 \begin{table*}[t!]
   \centering
@@ -2046,39 +2082,6 @@ more exothermic formation energies than the reference calculations.
   \label{Tab:Gas:Reactions}%
 \end{adjustbox}
 \end{table*}%
-
-As we can see in Table \ref{Tab:Gas:Energies}, the predictive power
-of the DFT functionals varies strongly among the molecular species.
-Especially the case of $\singo$ and $\singot$ seems to be problematic. We had
-to use spin-unrestricted Kohn--Sham DFT (UKS) to force the desired spin
-multiplicity. But the agreement is also not very good for $\htot$, where
-spin-unrestricted Kohn--Sham DFT (RKS) could be used.
-The $\pbez$ functional is off by $92.06~\kmo$ for the case of $\singo$, followed
-by a disagreement of $86.84~\kmo$ for $\tpssh$ and disagreements
-of $69.96$ and $67.86~\kmo$ for $\pw$ and $\btlyp$, respectively.
-The best agreement is achieved by $\bhlyp$ with $30.90~\kmo$ of
-difference. However, the $\bhlyp$ functional predicts 
-$E^0$ very badly for $\singot$, with an error of $40.26~\kmo$,
-while the other functionals differ by less than $10~\kmo$, and it is also
-the only functional to differ by more than $50\%$ from the reference energy
-of $\ho$. Generally, all functionals predict too high values for $E^0$
-and show strong deviations from the reference calculation for at least one
-molecular species.
-Since the values are not too far off for $\htw$ while showing
-considerable problems with molecules composed solely of oxygen,
-this could be an indication that the energetic description of $\tripot$
-is challenging to DFT functionals in general. Then again, the rather good
-agreement to the reference data for all functionals but $\bhlyp$ in the case
-of $\tripo$ does not support this claim if we do not expect
-a cancellation of error.
-
-Further comparison shows that for most molecules, the functionals
-closest to the $\ccsdtf$ energies are $\btlyp$ and $\pw$, which
-also yield similar results. This mainly means that they provide
-energy values that are not as high as those of other functionals. 
-
-\subsection{Reactions}
-\label{Sec:Gas:Reaction}
 
 
 We already described gas-phase reactions in Section \ref{Sec:Theo:Interaction}
@@ -2195,7 +2198,7 @@ clearly lesser quality than for interaction energies.
 %  by the interplay of reaction and surface interaction. We will come back to
 %  that in the discussion of the reaction energies in the next section.
 
-\section{Adsorption and Reactions on the Ice Surface}
+\subsection{Adsorption and Reactions on the Ice Surface}
 \label{Sec:Ads}
 %\newcommand\hoht{\enmat{\te{HO}+\te H_2}}
 
@@ -2215,10 +2218,10 @@ energies and experimental data.
 % $\hoht$ on the surface will be given alongside a corresponding IRC
 % calculation.
 
-\subsection{The Surface Model}
+\subsubsection{The Surface Model}
 \label{Sec:Ads:Model}
 
-\subsubsection{The Fletcher Surface}
+\subsubsubsection{The Fletcher Surface}
 %% CHECK: Barnes mal lesen? Brauchen wir das Fletcher-Zitat?
 Barnes established a first description of water at temperatures as low as $90\K$
 in 1929.\cite{Barnes1929} He could not locate the hydrogen atoms due
@@ -2285,7 +2288,7 @@ surface, which will propagate spherically from a reaction site. The symmetry of 
 is chosen to be adequate to that, with the designated reaction site at the
 central ring.
 
-\subsubsection{The QM/MM Region}
+\subsubsubsection{The QM/MM Region}
 \label{Sec:Ads:QM/MM}
 %% CHECK: what is prismatic surface? Thing in Fletcher?
 %\tikzsetexternalprefix{TikzPics/Adsorption/}
@@ -2384,7 +2387,7 @@ atoms.
 %Only the point charges may become a greater source of error if the atoms
 %leave the central ring and get closer to the MM region.
 
-\subsubsection{Setting Up the Model}
+\subsubsubsection{Setting Up the Model}
 
 Now we talked about how to define the surface geometry and how to decompose
 the system into QM and MM domains. To give guidance for a general approach to
@@ -2419,7 +2422,7 @@ theories can be defined independently of each other. They are then coupled to
 yield a hybrid theory, which is provided to $\dlfind$ alongside the initial
 geometry.
 
-\subsection{First Geometry Optimizations}
+\subsubsection{First Geometry Optimizations}
 \label{Sec:Ads:Optima}
 
 To verify the agreement between the theoretically assumed Fletcher surface and the
@@ -2538,7 +2541,7 @@ neither one of them is outbalanced by too strong energy gradients in the other
 one. We also see this as an indication that active MM atoms should be included
 in a geometry optimization to allow proper deformations of the QM region.
 
-\subsection{ZPE Corrections}
+\subsubsection{ZPE Corrections}
 \label{Sec:Ads:ZPE}
 
 Now we have established a model that should be able to describe $\tripo$, 
@@ -2583,7 +2586,7 @@ We can compare the two corrections in the next section.
 %% CHECK: Formation energies gegeneinander plotten? Eigentlich nicht sinnvoll,
 %   da die QM Geometrien ja nicht unabhängig von den MM Geometrien sind.
 
-\subsection{Adsorption}
+\subsubsection{Adsorption}
 \label{Sec:Ads:Adsorption}
 \newcommand\avg{\enmat{E_{\te {avg}}^{\te{ads}}}}
 %If we assume the $\zpeall$ correction 
@@ -2923,7 +2926,7 @@ functionals have lost some credibility.
 % sensible and that the scatter of possible values could be used as an error
 % bound for the actual data.
 
-\subsection{Reactions}
+\subsubsection{Reactions}
 \label{Sec:Ads:Reactions}
 
 %% CHECK: Durchschnittswert in nem Bild präsentieren? Durchschnittswert wirklich clever?
@@ -3161,7 +3164,7 @@ is $+21.95~\kmo$ less exothermic than \eqref{Surf:O+HO->HO2}. This, too,
 is the difference in adsorption energy between the strongly bound $\ho$
 and the weaker bound $\tripo$.
 
-\section{Possible Application}
+\subsection{Possible Application}
 
 The data we offered so far are mainly energy differences. Of course, the
 surface model can be used to derive other data relevant to astrochemistry,
@@ -3169,7 +3172,7 @@ such as reaction rates, diffusion rates or tunneling rates. These could be
 further used as simulation input. We will not go into detail here but give a small
 outlook meant to exemplify other investigations possible on the surface. 
 
-\subsection{Binding Sites}
+\subsubsection{Binding Sites}
 \newcommand\rmax{\enmat{r_{\te{max}}}}
 \newcommand\rmin{\enmat{r_{\te{min}}}}
 \label{Sec:Adv:Binding}
@@ -3290,7 +3293,7 @@ temperatures in the cold ISM, the hydrogen atoms must give up their order. To
 what extent this happens could be crucial to further analysis.
 
 
-\subsection{Transition State}
+\subsubsection{Transition State}
 \label{Sec:Adv:Trans}
 \newcommand\hoht{\mbox{\enmat{\ho+\htw}}}
 %% CHECK: Theory entry
@@ -3492,7 +3495,9 @@ exactly is happening in interstellar clouds and possibly a more detailed
 explanation of water formation in the interstellar medium within the next few
 decades.
 
-\section*{Acknowledgment}
+\section*{Acknowledgments}
+\markboth{Acknowledgments}{Acknowledgments}
+%\addcontentsline{toc}{section}{Acknowledgments}
 For this work, I received a lot of support from my group and many steps were
 planned together. Therefore, I decided to use ``we'' in this thesis.
 
