@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  21 FEB 2016 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  21 FEB 2016 20:48
 entering extended mode
 **./document.tex
 (document.tex
@@ -2131,10 +2131,13 @@ Package pdftex.def Info: TikzPics/TikzCreation/Bench/BenchH2O+O.FuncCompare.pdf
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1163) has occurred while \output is active []
 
  [36]
-[37] <./img/FletcherAboveGlossyNoCueing.png, id=777, 1124.2pt x 1142.2675pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+<./img/FletcherAboveGlossyNoCueing.png, id=777, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAboveGlossyNoCueing.png Graphic file (type png)
 
 <use ./img/FletcherAboveGlossyNoCueing.png>
@@ -2142,10 +2145,7 @@ Package pdftex.def Info: ./img/FletcherAboveGlossyNoCueing.png used on input li
 ne 2241.
 (pdftex.def)             Requested size: 341.43437pt x 346.91829pt.
  [38]
-Underfull \vbox (badness 1163) has occurred while \output is active []
-
- [39 <./img/FletcherAboveGlossyNoCueing.png>]
-<TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=798, 115.77855pt x 
+<TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf, id=794, 115.77855pt x 
 51.21533pt>
 File: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf Graphic file (type
  pdf)
@@ -2154,25 +2154,26 @@ Package pdftex.def Info: TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf
  used on input line 2300.
 (pdftex.def)             Requested size: 426.79135pt x 188.83961pt.
 
-[40 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2753) has occurred while \output is active []
 
- [41]
-[42]
+ [39 <./img/FletcherAboveGlossyNoCueing.png>]
+Underfull \vbox (badness 2990) has occurred while \output is active []
+
+ [40 <./TikzPics/TikzCreation/SurfaceQMMM/SurfaceQMMMAside.pdf>] [41] [42]
 ===== Image 'TikzPics/Adsorption/Fig.Ads.QMMMConvergence' is up-to-date. ======
 
-[43] [44 <./TikzPics/Adsorption/Fig.Ads.QMMMConvergence.pdf>] [45]
+[43 <./TikzPics/Adsorption/Fig.Ads.QMMMConvergence.pdf>] [44] [45]
 Underfull \vbox (badness 2050) has occurred while \output is active []
 
  [46]
-Underfull \vbox (badness 1622) has occurred while \output is active []
+Underfull \vbox (badness 3168) has occurred while \output is active []
 
  [47]
-Underfull \vbox (badness 2012) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
 [49]
-Underfull \vbox (badness 1292) has occurred while \output is active []
+Underfull \vbox (badness 2521) has occurred while \output is active []
 
  [50]
 <./img/SiteSnapshotMany.png, id=945, 1124.2pt x 1142.2675pt>
@@ -2191,7 +2192,7 @@ Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3201
 (pdftex.def)             Requested size: 209.1301pt x 212.48396pt.
  [51]
 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistribution.pd
-f, id=953, 237.97708pt x 198.2336pt>
+f, id=954, 237.97708pt x 198.2336pt>
 File: ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
 on.pdf Graphic file (type pdf)
 
@@ -2201,20 +2202,21 @@ Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
 ingEnergyDistribution.pdf used on input line 3245.
 (pdftex.def)             Requested size: 298.75264pt x 248.86516pt.
 
-Underfull \vbox (badness 1178) has occurred while \output is active []
+Underfull \vbox (badness 2042) has occurred while \output is active []
 
  [52 <./img/SiteSnapshotMany.png> <./img/SiteSnapshotOriginal.png>]
-Underfull \vbox (badness 1389) has occurred while \output is active []
-
- [53 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
-on.pdf>]
-<./img/FletcherAdsorption.png, id=978, 1124.2pt x 1142.2675pt>
+<./img/FletcherAdsorption.png, id=964, 1124.2pt x 1142.2675pt>
 File: ./img/FletcherAdsorption.png Graphic file (type png)
 
 <use ./img/FletcherAdsorption.png>
 Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3304.
 (pdftex.def)             Requested size: 298.75264pt x 303.5535pt.
- [54 <./img/FletcherAdsorption.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53 <./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributi
+on.pdf>]
+[54 <./img/FletcherAdsorption.png>]
 <TikzPics/TikzCreation/HO.H2/HOH2.pdf, id=988, 347.52335pt x 281.21661pt>
 File: TikzPics/TikzCreation/HO.H2/HOH2.pdf Graphic file (type pdf)
 
@@ -2223,10 +2225,7 @@ Package pdftex.def Info: TikzPics/TikzCreation/HO.H2/HOH2.pdf used on input lin
 e 3366.
 (pdftex.def)             Requested size: 341.43437pt x 276.30698pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [55]
-<TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf, id=997, 224.86508pt
+<TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf, id=991, 224.86508pt
  x 185.34244pt>
 File: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf Graphic file (t
 ype pdf)
@@ -2235,10 +2234,18 @@ ype pdf)
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.
 pdf used on input line 3401.
 (pdftex.def)             Requested size: 341.43437pt x 281.4491pt.
- [56 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>] [57 <./TikzPics/TikzCreation/HO.
-H2.Activation/HOH2Activation.pdf>] [58] (document.bbl [59] [60] [61] [62] [63] 
-[64])
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56 <./TikzPics/TikzCreation/HO.H2/HOH2.pdf>] [57 <./TikzPics/TikzCreation/HO.
+H2.Activation/HOH2Activation.pdf>] (document.bbl
+Underfull \vbox (badness 1521) has occurred while \output is active []
+
+ [58]
+[59] [60] [61] [62] [63] [64]) 
 AED: lastpage setting LastPage
 [65]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3521.
@@ -2254,11 +2261,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3521.
 Here is how much of TeX's memory you used:
  42526 strings out of 493634
  942755 string characters out of 3141310
- 1166540 words of memory out of 3000000
+ 1162939 words of memory out of 3000000
  44869 multiletter control sequences out of 15000+200000
  85650 words of font info for 184 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,16n,77p,10398b,736s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,17n,77p,10398b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
@@ -2276,7 +2283,7 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
 w/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfchan
 /uzcmi8a.pfb>
-Output written on document.pdf (65 pages, 2876028 bytes).
+Output written on document.pdf (65 pages, 2876318 bytes).
 PDF statistics:
  1172 PDF objects out of 1200 (max. 8388607)
  273 named destinations out of 1000 (max. 500000)

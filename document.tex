@@ -2013,77 +2013,6 @@ energy values that are not as high as those of other functionals.
 \subsubsection{Reactions}
 \label{Sec:Gas:Reaction}
 
-\newcolumntype{D}{>{\raggedleft\arraybackslash}p{1.4cm}}
-\begin{table*}[t!]
-  \centering
-  \caption{Reaction energies for DFT functionals. $E^{\zpe}$ and $E$ are
-  reaction energies with and without $\zpe$ correction, respectively. We also
-  give the value of the $\zpe$ correction $\Dl E^{\zpe}$. $\ccsdtfs$ is
-  shorthand for $\ccsdtf$. The closest energy to $\ccsdtf$ is highlighted in
-  boldface. All energies in $\kmo$.}
-  \begin{adjustbox}{width=1.0\textwidth,center}
-    \begin{tabular}{lll|lDDDDD|r}
-      & & & & & & & & & \\[-10pt]
-        & & &     & \btlyp & \bhlyp & \pbez & \tpssh & \pw  & \ccsdtfs \\[2pt]
-    \hline \hline
-      & & & & & & & & & \\[-10pt]
-    $\ho$&\defskip$+\ \te{H}$&\defskip$\chemar\hto$ & $E^{\zpe}$ & $-475.58$ &
-    $-454.56$ & $-470.70$ & $-470.94$ & $\bo{-478.89}$ & $-491.23$ \\
-      & & & $E$   & $-509.17$ & $-489.42$ & $-504.76$ & $-504.53$ & $-512.99$ &
-      $-525.29$
-      \\
-      & & & $\Dl{E}^{\zpe}$ & 33.58 & 34.87 & 34.05 & 33.59 & 34.09 & 34.06 \\[2pt]
-    \hline
-       & & & & & & & & &  \\[-10pt]
-    $\hto$&\defskip$+\singo$&\defskip$\chemar\htot$ & $E^{\zpe}$ & $-$402.09 &
-    $\bo{-355.15}$ & $-$425.77 & $-$426.60 & $-$403.33 & $-$342.42 \\
-    & &    & $E$   & $-415.75$ & $-$370.59 & $-$440.19 & $-$439.92 & $-$417.56 & $-$355.80
-    \\
-    & &    & $\Dl{E}^{\zpe}$ & 13.66 & 15.44 & 14.41 & 13.31 & 14.23 & 13.38 \\
-    \hline
-       & & & & & & & & &  \\[-10pt]
-    $\ho$&\defskip$+\ \ho$&\defskip$\chemar\htot$ & $E^{\zpe}$ & $-$184.03 &
-    $-$130.86 & $-$190.84 & $-$188.24 & $\bo{-193.96}$ & $-202.06$ \\
-      & & & $E$   & $-$209.22 & $-$158.07 & $-$216.83 & $-$213.19 & $-$219.86 & $-$227.13 \\
-      & & & $\Dl{E}^{\zpe}$ & 25.19 & 27.21 & 25.99 & 24.94 & 25.90 & 25.07 \\[2pt]
-    \hline
-       & & & & & & & & &  \\[-10pt]
-    $\hot$&\defskip$+\ \te{H}$&\defskip$\chemar\htot$ &
-    $E^{\zpe}$ & $\bo{-337.05}$ & $-$330.18 & $-$328.94 & $-$333.06 & $-$336.51
-    & $-$360.28 \\
-      & & & $E$   & $-$369.45 & $-$364.20 & $-$362.04 & $-$365.28 & $-$369.52 & $-$392.71 \\
-      & & & $\Dl{E}^{\zpe}$ & 32.40 & 34.02 & 33.11 & 32.22 & 33.01 & 32.44 \\[2pt]
-    \hline
-       & & & & & & & & &  \\[-10pt]
-    $\ho$&\defskip$+\ \tripo$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$273.14 &
-    $-$201.88 & $-$278.73 & $\bo{-272.87}$ & $-$277.38 & $-$266.88 \\
-      & & & $E$   & $-$287.98 & $-$218.17 & $-$294.10 & $-$287.56 & $-$292.69 & $-$281.88 \\
-      & & & $\Dl{E}^{\zpe}$ & 14.84 & 16.29 & 15.36 & 14.69 & 15.31 & 15.00 \\[2pt]
-    \hline
-       & & & & & & & & &  \\[-10pt]
-%     $^1\te{O}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$357.45 & $-$371.28 & $-$356.87 & $-$360.12 & $-$351.14 & $-$322.61 \\
-%       & & & $E$   & $-$384.60 & $-$399.86 & $-$384.50 & $-$387.18 & $-$378.72 & $-$350.98 \\
-%       & & & $\Dl{E}^{\zpe}$ & 27.14 & 28.58 & 27.63 & 27.06 & 27.58 & 28.36 \\[2pt]
-%     \hline
-%        & & & & & & & & &  \\[-10pt]
-    $\tripot$&\defskip$+\ \te{H}$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$195.30 &
-    $-$193.32 & $-$185.80 & $-\bo{196.85}$ & $-$190.76 & $-$201.70 \\
-      & & & $E$   & $-$222.37 & $-$221.89 & $-$213.34 & $-$223.80 & $-$218.26 & $-$229.48 \\
-      & & & $\Dl{E}^{\zpe}$ & 27.07 & 28.57 & 27.54 & 26.95 & 27.51 & 27.78 \\[2pt]
-     \hline \hline
-      & & & & & & & & &  \\[-10pt]
-      \multicolumn{3}{r|}{\multirow{4}{*}{$\ezp_{\dft} - \ezp_{\ccsdtfs}$}} &
-       MAD   & 19.36 & 41.30 & 26.58 & 23.19 & 19.58  &  \\
-      & & & MIN   & $-59.67$ & $-$12.72 & $-$83.35 & $-$84.18 & $-$60.91 & \\
-      & & & MAX   & 23.22 & 71.20 & 31.34 & 27.22 & 23.76  & \\
-      & & & MEAN  & $-1.27$ & 37.66 & $-4.01$ & $-4.28$  & $-3.83$ \\[2pt]
-     %\hline
-    \end{tabular}%
-  \label{Tab:Gas:Reactions}%
-\end{adjustbox}
-\end{table*}%
-
-
 We already described gas-phase reactions in Section \ref{Sec:Theo:Interaction}
 by \eqref{Theo:GasReactionScheme}. For simplicity, we drop the $(\te g)$ subscript.
 
@@ -2166,6 +2095,77 @@ formation energy most accurately. The opposite is the case for reaction
 data is much worse than the one of the other functionals. And again, for the
 formation energy $\bhlyp$ was not as accurate as the other functionals for
 $\ho$.
+\newcolumntype{D}{>{\raggedleft\arraybackslash}p{1.4cm}}
+\begin{table*}[t!]
+  \centering
+  \caption{Reaction energies for DFT functionals. $E^{\zpe}$ and $E$ are
+  reaction energies with and without $\zpe$ correction, respectively. We also
+  give the value of the $\zpe$ correction $\Dl E^{\zpe}$. $\ccsdtfs$ is
+  shorthand for $\ccsdtf$. The closest energy to $\ccsdtf$ is highlighted in
+  boldface. All energies in $\kmo$.}
+  \begin{adjustbox}{width=1.0\textwidth,center}
+    \begin{tabular}{lll|lDDDDD|r}
+      & & & & & & & & & \\[-10pt]
+        & & &     & \btlyp & \bhlyp & \pbez & \tpssh & \pw  & \ccsdtfs \\[2pt]
+    \hline \hline
+      & & & & & & & & & \\[-10pt]
+    $\ho$&\defskip$+\ \te{H}$&\defskip$\chemar\hto$ & $E^{\zpe}$ & $-475.58$ &
+    $-454.56$ & $-470.70$ & $-470.94$ & $\bo{-478.89}$ & $-491.23$ \\
+      & & & $E$   & $-509.17$ & $-489.42$ & $-504.76$ & $-504.53$ & $-512.99$ &
+      $-525.29$
+      \\
+      & & & $\Dl{E}^{\zpe}$ & 33.58 & 34.87 & 34.05 & 33.59 & 34.09 & 34.06 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\hto$&\defskip$+\singo$&\defskip$\chemar\htot$ & $E^{\zpe}$ & $-$402.09 &
+    $\bo{-355.15}$ & $-$425.77 & $-$426.60 & $-$403.33 & $-$342.42 \\
+    & &    & $E$   & $-415.75$ & $-$370.59 & $-$440.19 & $-$439.92 & $-$417.56 & $-$355.80
+    \\
+    & &    & $\Dl{E}^{\zpe}$ & 13.66 & 15.44 & 14.41 & 13.31 & 14.23 & 13.38 \\
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\ho$&\defskip$+\ \ho$&\defskip$\chemar\htot$ & $E^{\zpe}$ & $-$184.03 &
+    $-$130.86 & $-$190.84 & $-$188.24 & $\bo{-193.96}$ & $-202.06$ \\
+      & & & $E$   & $-$209.22 & $-$158.07 & $-$216.83 & $-$213.19 & $-$219.86 & $-$227.13 \\
+      & & & $\Dl{E}^{\zpe}$ & 25.19 & 27.21 & 25.99 & 24.94 & 25.90 & 25.07 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\hot$&\defskip$+\ \te{H}$&\defskip$\chemar\htot$ &
+    $E^{\zpe}$ & $\bo{-337.05}$ & $-$330.18 & $-$328.94 & $-$333.06 & $-$336.51
+    & $-$360.28 \\
+      & & & $E$   & $-$369.45 & $-$364.20 & $-$362.04 & $-$365.28 & $-$369.52 & $-$392.71 \\
+      & & & $\Dl{E}^{\zpe}$ & 32.40 & 34.02 & 33.11 & 32.22 & 33.01 & 32.44 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+    $\ho$&\defskip$+\ \tripo$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$273.14 &
+    $-$201.88 & $-$278.73 & $\bo{-272.87}$ & $-$277.38 & $-$266.88 \\
+      & & & $E$   & $-$287.98 & $-$218.17 & $-$294.10 & $-$287.56 & $-$292.69 & $-$281.88 \\
+      & & & $\Dl{E}^{\zpe}$ & 14.84 & 16.29 & 15.36 & 14.69 & 15.31 & 15.00 \\[2pt]
+    \hline
+       & & & & & & & & &  \\[-10pt]
+%     $^1\te{O}\tgas$&\defskip$+\ \te{H}\gas$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$357.45 & $-$371.28 & $-$356.87 & $-$360.12 & $-$351.14 & $-$322.61 \\
+%       & & & $E$   & $-$384.60 & $-$399.86 & $-$384.50 & $-$387.18 & $-$378.72 & $-$350.98 \\
+%       & & & $\Dl{E}^{\zpe}$ & 27.14 & 28.58 & 27.63 & 27.06 & 27.58 & 28.36 \\[2pt]
+%     \hline
+%        & & & & & & & & &  \\[-10pt]
+    $\tripot$&\defskip$+\ \te{H}$&\defskip$\chemar\hot$ & $E^{\zpe}$ & $-$195.30 &
+    $-$193.32 & $-$185.80 & $-\bo{196.85}$ & $-$190.76 & $-$201.70 \\
+      & & & $E$   & $-$222.37 & $-$221.89 & $-$213.34 & $-$223.80 & $-$218.26 & $-$229.48 \\
+      & & & $\Dl{E}^{\zpe}$ & 27.07 & 28.57 & 27.54 & 26.95 & 27.51 & 27.78 \\[2pt]
+     \hline \hline
+      & & & & & & & & &  \\[-10pt]
+      \multicolumn{3}{r|}{\multirow{4}{*}{$\ezp_{\dft} - \ezp_{\ccsdtfs}$}} &
+       MAD   & 19.36 & 41.30 & 26.58 & 23.19 & 19.58  &  \\
+      & & & MIN   & $-59.67$ & $-$12.72 & $-$83.35 & $-$84.18 & $-$60.91 & \\
+      & & & MAX   & 23.22 & 71.20 & 31.34 & 27.22 & 23.76  & \\
+      & & & MEAN  & $-1.27$ & 37.66 & $-4.01$ & $-4.28$  & $-3.83$ \\[2pt]
+     %\hline
+    \end{tabular}%
+  \label{Tab:Gas:Reactions}%
+\end{adjustbox}
+\end{table*}%
+
+
 %% CHECK: Dieser Abschnitt ist Unsinn. Natrülich überträgt sich die Genauigkeit
 % aus Tabelle 1 auf Tabelle 2. Subtrahiere auf beiden Seiten die entsprechenden
 % H2 und O2 Energien und du hast die Differenz zwischen formation energies.
