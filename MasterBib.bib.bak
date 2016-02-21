@@ -31,19 +31,17 @@
   url = {http://dx.doi.org/10.1002/jcc.23539}
 }
 
-@ARTICLE{Barnes1929,
-  author = {William Howard Barnes},
-  title = {{The Crystal Structure of Ice between 0 degrees C. and - 183 degrees
-	C}},
-  journal = {Proceedings of the Royal Society of London. Series A, Containing
-	Papers of a Mathematical and Physical Character},
-  year = {1929},
-  volume = {125},
-  pages = {670-693},
-  number = {799},
-  issn = {09501207},
+@Article{Barnes1929,
+  author =    {William Howard Barnes},
+  title =     {{The Crystal Structure of Ice between $0~^\circ$ C. and $-183~^\circ$ C.}},
+  journal =   {Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character},
+  year =      {1929},
+  volume =    {125},
+  number =    {799},
+  pages =     {670-693},
+  issn =      {09501207},
   publisher = {The Royal Society},
-  url = {http://www.jstor.org/stable/95286}
+  url =       {http://www.jstor.org/stable/95286}
 }
 
 @Article{Becke1988,
@@ -62,7 +60,7 @@
 
 @Article{Becke1993,
   author =    {Axel D. Becke},
-  title =     {Density-functional thermochemistry. {III}. The role of exact exchange},
+  title =     {{Density-functional thermochemistry. {III}. The role of exact exchange}},
   journal =   {The Journal of Chemical Physics},
   year =      {1993},
   volume =    {98},
@@ -117,7 +115,7 @@
 
 @Article{BergeronRougeauSidisEtAl2008,
   author =    {H. Bergeron and N. Rougeau and V. Sidis and M. Sizun and D. Teillet-Billy and F. Aguillon},
-  title =     {{{OH} Formation from O and H Atoms Physisorbed on a Graphitic Surface through the Langmuir-Hinshelwood Mechanism: A Quasi-Classical Approach}},
+  title =     {{{OH} Formation from O and H Atoms Physisorbed on a Graphitic Surface through the Langmuir--Hinshelwood Mechanism: A Quasi-Classical Approach}},
   journal =   {The Journal of Physical Chemistry A},
   year =      {2008},
   volume =    {112},
@@ -310,7 +308,7 @@
 
 @Article{GillettForrest1973,
   author =    {F. C. Gillett and W. J. Forrest},
-  title =     {{Spectra of the Becklin-Neugebauer point source and the Kleinmann-low nebula from 2.8 to 13.5~{m}icrons.}},
+  title =     {{Spectra of the Becklin--Neugebauer point source and the Kleinmann--Low nebula from 2.8 to 13.5~{m}icrons.}},
   journal =   {{The Astrophysical Journal}},
   year =      {1973},
   volume =    {179},
@@ -382,21 +380,20 @@
   url = {http://dx.doi.org/10.1002/jcc.21759}
 }
 
-@ARTICLE{GrimmeDCorrection2010,
-  author = {Grimme, Stefan and Antony, Jens and Ehrlich, Stephan and Krieg, Helge},
-  title = {{A consistent and accurate ab initio parametrization of density functional
-	dispersion correction ({DFT}-D) for the 94 elements H-Pu}},
-  journal = {The Journal of Chemical Physics},
-  year = {2010},
-  volume = {132},
-  pages = {154104},
-  number = {15},
-  doi = {10.1063/1.3382344},
-  issn = {0021-9606},
-  owner = {Thomas},
+@Article{GrimmeDCorrection2010,
+  author =    {Grimme, Stefan and Antony, Jens and Ehrlich, Stephan and Krieg, Helge},
+  title =     {{A consistent and accurate ab initio parametrization of density functional dispersion correction ({DFT}-D) for the 94 elements H{\textendash}Pu}},
+  journal =   {The Journal of Chemical Physics},
+  year =      {2010},
+  volume =    {132},
+  number =    {15},
+  pages =     {154104},
+  doi =       {10.1063/1.3382344},
+  issn =      {0021-9606},
+  owner =     {Thomas},
   publisher = {AIP Publishing},
   timestamp = {2015.12.14},
-  url = {http://dx.doi.org/10.1063/1.3382344}
+  url =       {http://dx.doi.org/10.1063/1.3382344}
 }
 
 @ARTICLE{He2015,
@@ -495,7 +492,7 @@
 
 @Article{Hiraoka1998,
   author =   {Kenzo Hiraoka and Takashi Miyagoshi and Toshikazu Takayama and Kazuyoshi Yamamoto and Yoshihide Kihara},
-  title =    {{Gas-Grain Processes for the Formation of CH4 and H2O: Reactions of H Atoms with C, O, and CO in the Solid Phase at 12 K}},
+  title =    {{Gas-Grain Processes for the Formation of CH$_4$ and H$_2$O: Reactions of H Atoms with C, O, and CO in the Solid Phase at 12 K}},
   journal =  {The Astrophysical Journal},
   year =     {1998},
   volume =   {498},
@@ -532,6 +529,20 @@
   timestamp = {2015.12.15}
 }
 
+@Article{JenniskensBlakeWilsonEtAl1995,
+  author =        {P. Jenniskens and D. F. Blake and M. A. Wilson and A. Pohorille},
+  title =         {{High-Density Amorphous Ice, the Frost on Interstellar Grains}},
+  journal =       {{The Astrophysical Journal}},
+  year =          {1995},
+  volume =        {455},
+  pages =         {389},
+  month =         {jan},
+  __markedentry = {[Thomas:]},
+  doi =           {10.1086/176585},
+  publisher =     {{IOP} Publishing},
+  url =           {http://dx.doi.org/10.1086/176585}
+}
+
 @ARTICLE{Jorgensen1983TIP3P,
   author = {Jorgensen, William L. and Chandrasekhar, Jayaraman and Madura, Jeffry
 	D. and Impey, Roger W. and Klein, Michael L.},
@@ -551,6 +562,21 @@
 
 @Article{JUSTUS,
   note = {{bwHPC and bwHPC-C5 (http://www.bwhpc-c5.de) funded by the Ministry of Science, Research and the Arts Baden-Württemberg (MWK) and the Germany Research Foundation (DFG).}}
+}
+
+@Article{Kabsch1978,
+  author =        {W. Kabsch},
+  title =         {{A discussion of the solution for the best rotation to relate two sets of vectors}},
+  journal =       {Acta Crystallographica Section A},
+  year =          {1978},
+  volume =        {34},
+  number =        {5},
+  pages =         {827--828},
+  month =         {sep},
+  __markedentry = {[Thomas:6]},
+  doi =           {10.1107/s0567739478001680},
+  publisher =     {International Union of Crystallography ({IUCr})},
+  url =           {http://dx.doi.org/10.1107/S0567739478001680}
 }
 
 @ARTICLE{Kaestner2009,
@@ -586,7 +612,7 @@
 
 @Article{KniziaAdlerWerner2009,
   author =    {Gerald Knizia and Thomas B. Adler and Hans-Joachim Werner},
-  title =     {Simplified {CCSD}(T)-F12~{m}ethods: Theory and benchmarks},
+  title =     {{Simplified {CCSD}(T)-F12~{m}ethods: Theory and benchmarks}},
   journal =   {The Journal of Chemical Physics},
   year =      {2009},
   volume =    {130},
@@ -647,7 +673,7 @@
 }
 
 @InCollection{LangmuirHinshelwood,
-  title =     {Langmuir{\textendash}Hinshelwood mechanism},
+  title =     {{Langmuir{\textendash}Hinshelwood mechanism}},
   booktitle = {Gold Book},
   publisher = {International Union of Pure and Applied Chemistry ({IUPAC})},
   doi =       {10.1351/goldbook.l03451},
@@ -656,7 +682,7 @@
 
 @Article{LeeYangParr1988,
   author =    {Chengteh Lee and Weitao Yang and Robert G. Parr},
-  title =     {Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density},
+  title =     {{Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density}},
   journal =   {Physical Review B},
   year =      {1988},
   volume =    {37},
@@ -670,7 +696,7 @@
 
 @Article{Leger1979,
   author =   {{Léger}, A. and {Klein}, J. and {de Cheveigne}, S. and {Guinet}, C. and {Defourneau}, D. and {Belin}, M.},
-  title =    {{The 3.1 micron Absorption in Molecular Clouds Is Probably Due to Amorphous H2O Ice}},
+  title =    {{The 3.1 micron Absorption in Molecular Clouds Is Probably Due to Amorphous H$_2$O Ice}},
   journal =  {Astronomy and Astrophysics},
   year =     {1979},
   volume =   {79},
@@ -693,6 +719,20 @@
   doi =       {10.1021/jp050459l},
   publisher = {American Chemical Society ({ACS})},
   url =       {http://dx.doi.org/10.1021/jp050459l}
+}
+
+@Article{LiuNocedal1989,
+  author =    {Dong C. Liu and Jorge Nocedal},
+  title =     {{On the limited memory {BFGS} method for large scale optimization}},
+  journal =   {Mathematical Programming},
+  year =      {1989},
+  volume =    {45},
+  number =    {1-3},
+  pages =     {503--528},
+  month =     {aug},
+  doi =       {10.1007/bf01589116},
+  publisher = {Springer Science $\mathplus$ Business Media},
+  url =       {http://dx.doi.org/10.1007/BF01589116}
 }
 
 @ARTICLE{MacKerell1998CHARMMTIP3,
@@ -726,7 +766,7 @@
 
 @Article{MetzKaestnerSokolEtAl2013,
   author =    {Sebastian Metz and Johannes Kästner and Alexey A. Sokol and Thomas W. Keal and Paul Sherwood},
-  title =     {{ChemShell}-a modular software package for {QM}/{MM} simulations},
+  title =     {{ChemShell}---a modular software package for {QM}/{MM} simulations},
   journal =   {Wiley Interdisciplinary Reviews: Computational Molecular Science},
   year =      {2013},
   volume =    {4},
@@ -738,13 +778,12 @@
   url =       {http://dx.doi.org/10.1002/wcms.1163}
 }
 
-@MISC{MOLPRO_brief,
-  author = {H.-J. Werner and P. J. Knowles and G. Knizia and F. R. Manby and
-	M. {Sch\"{u}tz} and others},
-  note = {MOLPRO, version 2012.1, a package of ab initio programs, see http://www.molpro.com/},
-  year = {2012},
-  address = molpro_address,
-  owner = {Thomas},
+@Misc{MOLPRO_brief,
+  author =    {H.-J. Werner and P. J. Knowles and G. Knizia and F. R. Manby and M. {Sch\"{u}tz} and others},
+  year =      {2012},
+  note =      {MOLPRO, version 2012.1, a package of ab initio programs, \newline see http://www.molpro.com/},
+  address =   molpro_address,
+  owner =     {Thomas},
   timestamp = {2015.12.15}
 }
 
@@ -763,32 +802,30 @@
 }
 
 @Article{ObaWatanabeHamaEtAl2012,
-  author =        {Y. Oba and N. Watanabe and T. Hama and K. Kuwahata and H. Hidaka and A. Kouchi},
-  title =         {{ {WATER} {FORMATION} {THROUGH} A {QUANTUM} {TUNNELING} {SURFACE} {REACTION}, {OH} $\mathplus$ H 2 , {AT} 10~{K} }},
-  journal =       {{The Astrophysical Journal}},
-  year =          {2012},
-  volume =        {749},
-  number =        {1},
-  pages =         {67},
-  month =         {mar},
-  __markedentry = {[Thomas:6]},
-  doi =           {10.1088/0004-637x/749/1/67},
-  publisher =     {{IOP} Publishing},
-  url =           {http://dx.doi.org/10.1088/0004-637X/749/1/67}
+  author =    {Y. Oba and N. Watanabe and T. Hama and K. Kuwahata and H. Hidaka and A. Kouchi},
+  title =     {{ {WATER} {FORMATION} {THROUGH} A {QUANTUM} {TUNNELING} {SURFACE} {REACTION}, {OH} $+$ H$_2$ , {AT} 10~{K} }},
+  journal =   {{The Astrophysical Journal}},
+  year =      {2012},
+  volume =    {749},
+  number =    {1},
+  pages =     {67},
+  month =     {mar},
+  doi =       {10.1088/0004-637x/749/1/67},
+  publisher = {{IOP} Publishing},
+  url =       {http://dx.doi.org/10.1088/0004-637X/749/1/67}
 }
 
 @Article{ObaWatanabeKouchiEtAl2011,
-  author =        {Yasuhiro Oba and Naoki Watanabe and Akira Kouchi and Tetsuya Hama and Valerio Pirronello},
-  title =         {{Experimental studies of surface reactions among {OH} radicals that yield H2O and {CO}2 at 40{\textendash}60~{K}}},
-  journal =       {Phys. Chem. Chem. Phys.},
-  year =          {2011},
-  volume =        {13},
-  number =        {35},
-  pages =         {15792},
-  __markedentry = {[Thomas:]},
-  doi =           {10.1039/c1cp20596j},
-  publisher =     {Royal Society of Chemistry ({RSC})},
-  url =           {http://dx.doi.org/10.1039/c1cp20596j}
+  author =    {Yasuhiro Oba and Naoki Watanabe and Akira Kouchi and Tetsuya Hama and Valerio Pirronello},
+  title =     {{Experimental studies of surface reactions among {OH} radicals that yield H2O and {CO}2 at 40{\textendash}60~{K}}},
+  journal =   {Phys. Chem. Chem. Phys.},
+  year =      {2011},
+  volume =    {13},
+  number =    {35},
+  pages =     {15792},
+  doi =       {10.1039/c1cp20596j},
+  publisher = {Royal Society of Chemistry ({RSC})},
+  url =       {http://dx.doi.org/10.1039/c1cp20596j}
 }
 
 @Article{Papoular2005,
@@ -919,7 +956,7 @@
 
 @Article{RomanzinIoppoloCuppenEtAl2011,
   author =    {C. Romanzin and S. Ioppolo and H. M. Cuppen and E. F. van Dishoeck and H. Linnartz},
-  title =     {{Water formation by surface O3 hydrogenation}},
+  title =     {{Water formation by surface O$_3$ hydrogenation}},
   journal =   {The Journal of Chemical Physics},
   year =      {2011},
   volume =    {134},
@@ -1016,6 +1053,19 @@
   year =    {1982},
   volume =  {114},
   pages =   {245--260}
+}
+
+@Article{TodorovSmithTrachenkoEtAl2006,
+  author =    {Ilian T. Todorov and William Smith and Kostya Trachenko and Martin T. Dove},
+  title =     {{DL}{\_}{POLY}{\_}3: new dimensions in molecular dynamics simulations via massive parallelism},
+  journal =   {Journal of Materials Chemistry},
+  year =      {2006},
+  volume =    {16},
+  number =    {20},
+  pages =     {1911},
+  doi =       {10.1039/b517931a},
+  publisher = {Royal Society of Chemistry ({RSC})},
+  url =       {http://dx.doi.org/10.1039/B517931A}
 }
 
 @Article{Trumpler1930,
@@ -1142,7 +1192,7 @@
 
 @Article{Woon2002,
   author =    {David~E. Woon},
-  title =     {{Modeling Gas-Grain Chemistry with Quantum Chemical Cluster Calculations. I. Heterogeneous Hydrogenation of {CO} and H 2 {CO} on Icy Grain Mantles}},
+  title =     {{Modeling Gas-Grain Chemistry with Quantum Chemical Cluster Calculations. I. Heterogeneous Hydrogenation of {CO} and H$_2${CO} on Icy Grain Mantles}},
   journal =   {{The Astrophysical Journal}},
   year =      {2002},
   volume =    {569},
@@ -1197,7 +1247,7 @@
 
 @Article{ZhaoTruhlar2007,
   author =    {Yan Zhao and Donald G. Truhlar},
-  title =     {The M06~{s}uite of density functionals for main group thermochemistry, thermochemical kinetics, noncovalent interactions, excited states, and transition elements: two new functionals and systematic testing of four M06-class functionals and 12 other functionals},
+  title =     {{The M06~{s}uite of density functionals for main group thermochemistry, thermochemical kinetics, noncovalent interactions, excited states, and transition elements: two new functionals and systematic testing of four M06-class functionals and 12 other functionals}},
   journal =   {Theoretical Chemistry Accounts},
   year =      {2007},
   volume =    {120},
@@ -1213,7 +1263,7 @@
   author =    {Herbert A. Zook},
   title =     {{Spacecraft Measurements of the Cosmic Dust Flux}},
   booktitle = {Accretion of Extraterrestrial Matter Throughout Earth's History},
-  publisher = {Springer Science $\mathplus$ Business Media},
+  publisher = {Springer Science $+$ Business Media},
   year =      {2001},
   pages =     {75--92},
   doi =       {10.1007/978-1-4419-8694-8_5},

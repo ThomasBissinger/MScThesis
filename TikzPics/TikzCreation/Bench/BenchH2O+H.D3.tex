@@ -1,0 +1,84 @@
+\documentclass[crop,tikz,varwidth]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{xtick style={draw=none}}
+%\usepackage{tikz-3dplot}
+%\usetikzlibrary{patterns,calc,decorations.pathmorphing,angles,quotes,external}
+\usetikzlibrary{angles,quotes}
+\usepackage{MyStandard}
+\usepackage{MyChem}
+%\usepackage{tikz-3dplot}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}  
+
+\newcommand\eint{\enmat{E^{\te{int}}}}
+\newcommand\eads{\enmat{E^{\te{ads}}}}
+\newcommand\ere{\enmat{E^{\te{react}}}}
+\newcommand\ezp{\enmat{E^{\zpe}}}
+\newcommand\dft{\enmat{_{\te{DFT}}}}
+\newcommand\cc{\enmat{_{\te{CC}}}}
+\newcommand\sur{\enmat{\te{s-}}}
+\newcommand\gas{\enmat{_\te{(g)}}}
+%
+%\newcommand{\tpss}{\enmat{\te{TPSS}}}
+%\newcommand{\tpssh}{\enmat{\te{TPSSh}}}
+%\newcommand{\bp}{\enmat{\te{BP86}}}
+%\newcommand{\blyp}{\enmat{\te{BLYP}}}
+%\newcommand{\bhlyp}{\enmat{\te{BHLYP}}}
+%\newcommand{\btlyp}{\enmat{\te{B3LYP}}}
+%\newcommand{\pbez}{\enmat{\te{PBE0}}}
+%\newcommand\pbe{\enmat{\te{PBE}}}
+%\newcommand{\pw}{\enmat{\te{PW6B95}}}
+%\newcommand{\pws}{\enmat{\te{PW}}} % SHORT for PW
+%\newcommand{\bns}{\enmat{\te{B97-D}}}
+%\newcommand{\mos}{\enmat{\te{M06}}}
+%\newcommand{\dt}{\enmat{\te{-D3}}}
+%
+%\newcommand{\tip}{\enmat{\te{TIP3P}}}
+%
+%
+%\newcommand{\svp}{\enmat{\te{def2-SVP}}}
+%\newcommand{\svpd}{\enmat{\te{def2-SVPD}}}
+%\newcommand{\tzvp}{\enmat{\te{def2-TZVP}}}
+%\newcommand{\tzvpp}{\enmat{\te{def2-TZVPP}}}
+%\newcommand{\tzvpd}{\enmat{\te{def2-TZVPD}}}
+%\newcommand{\tzvppd}{\enmat{\te{def2-TZVPPD}}}
+%\newcommand{\qzvp}{\enmat{\te{def2-QZVP}}}
+%\newcommand{\qzvpd}{\enmat{\te{def2-QZVPD}}}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    height=8cm,
+%    width=.48*\textwidth,
+    ybar,
+    xmin=.5,
+    xmax=9.5,
+    ybar=0pt,
+    axis x line*=bottom,
+    enlarge x limits=0.015,
+    enlarge y limits=0.15,
+    legend style={legend pos=south west,font=\small,legend columns=1},
+    ylabel={interaction energy deviation $\Delta \eint$ / kJ/mol},
+    xticklabels={\btlyp\dt,\bns\dt,\bhlyp\dt,\blyp\dt,\bp\dt,\pbe\dt,\pbez\dt,\tpssh\dt,\pw\dt},
+    xtick=data,
+    grid=minor,
+    xticklabel style={rotate=90},
+    bar width = .012*\textwidth,
+    minor xtick={1.5,...,8.5},
+    yticklabel pos=left,
+    grid style={dotted,gray},
+    ymajorgrids=true,
+    ]
+ \addplot[green!20!black,fill=green!80!white] coordinates {(1,-2.39332220146) (2,.33675146354) (3,-.76816395646) (4,-2.85861331146) (5,-5.18753683146) (6,-1.37496951646) (7,-.86554375146) (8,-.85577689146) (9,-.66041343646) };
+\addplot[blue!20!black,fill=blue!80!white] coordinates {(1,-2.17766363146) (2,.32630197354) (3,-1.22998940646) (4,-4.40490153646) (5,-6.08159834646) (6,-1.20436452646) (7,-.78775018646) (8,-.86803797646) (9,-.54581036146) };
+\addplot[red!20!black,fill=red!80!white] coordinates {(1,-2.12935443146) (2,.32170734854) (3,-.51228272646) (4,-3.21961956146) (5,-5.29358077646) (6,-.95937912146) (7,-.61265559146) (8,-.64757474146) (9,-.29990603146) };
+\addplot[yellow!20!black,fill=yellow!80!white] coordinates {(1,-1.96625837146) (2,.35990837354) (3,-.57660747646) (4,-3.79917243146) (5,-5.74679458646) (6,-1.04856735646) (7,-.66372156646) (8,-.76354307646) (9,-.37368258146) };
+
+\legend{def2-SVPD,def2-TZVP,def2-TZVPD,def2-QZVP}
+\end{axis}
+\end{tikzpicture}
+\end{document}

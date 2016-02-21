@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MyChem.sty
+%% Used for Master Thesis.
+%% 15/12/07
+%%
+%% Thomas Bissinger
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ProvidesPackage{MyChem}[2013/10/16 v2.0 My chemical style ammendments]
+
+% \documentclass[8.5pt,twoside,twocolumn]{article}
+
+\usepackage[super,sort&compress,comma]{natbib}
+%\usepackage{mhchem}
+% \usepackage{multicol}
+\usepackage{times,mathptm}
+%\usepackage{sectsty}
+\usepackage{balance}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage[format=plain,justification=raggedright,singlelinecheck=false,
+font=small,labelfont=bf,labelsep=space] {caption}
+\usepackage{fancyhdr}
+% \usepackage{fancy}
+
+\newcommand\Ha{\hat{H}}
+\newcommand{\rv}{\bo r}
+%\newcommand{\Ang}{\mathring{\te{A}}}
+\newcommand{\dgr}{^\circ}
+\newcommand{\kb}{k_B}
+
+\newcommand\chemar{\longrightarrow} % Chemistry arrow
+% \newcommand{\hf}{{\sc HF}}
+% \newcommand{\mpt}{{\sc MP2}}
+% \newcommand{\mptf}{\sc MP2-F12}
+% \newcommand{\scsmp}{\sc SCS-MP2}
+% \newcommand{\scsmpf}{\sc SCS-MP2-F12}
+% \newcommand{\ccsd}{\sc CCSD}
+% \newcommand{\ccsdf}{\sc CCSD-F12}
+% \newcommand{\ccsdt}{\sc CCSD(T)}
+\newcommand{\ccsdtf}{\enmat{\te{CCSD(T)-F12a}}}
+\newcommand{\mrcif}{\enmat{\te{MRCISD-F12}}}
+\newcommand{\hf}{HF}
+\newcommand{\mpt}{MP2}
+\newcommand{\mptf}{MP2-F12}
+\newcommand{\scsmp}{SCS-MP2}
+\newcommand{\scsmpf}{SCS-MP2-F12}
+\newcommand{\ccsd}{CCSD}
+\newcommand{\ccsdf}{CCSD-F12}
+\newcommand{\ccsdt}{\enmat{\te{CCSD(T)}}}
+\newcommand{\ccsdtfs}{\enmat{\te{CC-F12}}}
+%\newcommand{\ccsdtf}{CCSD(T)-F12}
+
+\newcommand{\vtz}{\enmat{\te{VTZ-F}12}}
+
+\newcommand{\tpss}{\enmat{\te{TPSS}}}
+\newcommand{\tpssh}{\enmat{\te{TPSSh}}}
+\newcommand{\bp}{\enmat{\te{BP86}}}
+\newcommand{\blyp}{\enmat{\te{BLYP}}}
+\newcommand{\bhlyp}{\enmat{\te{BHLYP}}}
+\newcommand{\btlyp}{\enmat{\te{B3LYP}}}
+\newcommand{\pbez}{\enmat{\te{PBE0}}}
+\newcommand\pbe{\enmat{\te{PBE}}}
+\newcommand{\pw}{\enmat{\te{PW6B95}}}
+\newcommand{\pws}{\enmat{\te{PW}}} % SHORT for PW
+\newcommand{\bns}{\enmat{\te{B97-D}}}
+\newcommand{\mos}{\enmat{\te{M06}}}
+
+\newcommand{\svp}{\enmat{\te{def2-SVP}}}
+\newcommand{\svpd}{\enmat{\te{def2-SVPD}}}
+\newcommand{\tzvp}{\enmat{\te{def2-TZVP}}}
+\newcommand{\tzvpp}{\enmat{\te{def2-TZVPP}}}
+\newcommand{\tzvpd}{\enmat{\te{def2-TZVPD}}}
+\newcommand{\tzvppd}{\enmat{\te{def2-TZVPPD}}}
+\newcommand{\qzvp}{\enmat{\te{def2-QZVP}}}
+\newcommand{\qzvpd}{\enmat{\te{def2-QZVPD}}}
+
+\newcommand{\dt}{\enmat{\te{-D3}}}
+
+\newcommand{\tip}{\enmat{\te{TIP3P}}}
+
+\newcommand\ai{\emph{ab initio}}
+
+\newcommand{\Moller}{M\o{}ller}
+
+
+\newcommand\bra[1]{\lt\langle{#1}\rt|}
+\newcommand\ket[1]{\lt|{#1}\rt\rangle}
+\newcommand\bkt[1]{\lt\langle{#1}\rt\rangle}
+\newcommand\bk[1]{\langle{#1}\rangle}
+
+%braket psi
+\newcommand\keP[1]{\enmat{\lt|\Psi{#1}\rt\rangle}}
+\newcommand\brP[1]{\enmat{\lt\langle\Psi{#1}\rt|}}
+\newcommand\kep[1]{\enmat{\lt|\psi{#1}\rt\rangle}}
+\newcommand\brp[1]{\enmat{\lt\langle\psi{#1}\rt|}}
+
+\newcommand\ih{\enmat{\te I_\te h}}
+
+\newcommand\hto{\enmat{\te H _2 \te O}}
+\newcommand\htot{\enmat{\te H _2 \te O_2}}
+\newcommand\ot{\enmat{\te O_2}}
+\newcommand\htw{\enmat{\te H_2}}
+\newcommand\hot{\enmat{\te H \te O_2}}
+\newcommand\ho{\enmat{\te O \te H}}
+\newcommand\co{\enmat{\te C \te O}}
