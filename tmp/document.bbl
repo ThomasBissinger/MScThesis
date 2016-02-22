@@ -7,7 +7,7 @@ E.~F. van Dishoeck, E.~Herbst, and D.~A. Neufeld, ``{Interstellar Water
 
 \bibitem{WilliamsHerbst2002}
 D.~A. Williams and E.~Herbst, ``It{\textquotesingle}s a dusty universe: surface
-  science in space,'' {\em Surf. Sci. Rep.}, vol.~500, no.~1-3, pp.~823--837,
+  science in space,'' {\em Surf. Sci. Rep.}, vol.~500, no.~1--3, pp.~823--837,
   2002.
 
 \bibitem{Trumpler1930}
@@ -103,7 +103,7 @@ H.~Bergeron, N.~Rougeau, V.~Sidis, M.~Sizun, D.~Teillet-Billy, and F.~Aguillon,
 \bibitem{CabreraSanfelix2003}
 P.~Cabrera~Sanfelix, S.~Holloway, K.~Kolasinski, and G.~Darling, ``{The
   structure of water on the (0001) surface of graphite},'' {\em Surf. Sci.
-  Rep.}, vol.~532-535, pp.~166--172, 2003.
+  Rep.}, vol.~532--535, pp.~166--172, 2003.
 
 \bibitem{PerdewWang1986}
 J.~P. Perdew and Y.~Wang, ``{Accurate and simple density functional for the
@@ -141,9 +141,9 @@ D.~E. Woon, ``{Modeling Gas-Grain Chemistry with Quantum Chemical Cluster
   Grain Mantles},'' {\em ApJ}, vol.~569, no.~1, pp.~541--548, 2002.
 
 \bibitem{XieDingSun2006}
-H.~bin Xie, Y.~hong Ding, and C.~chung Sun, ``Reaction mechanism of oxygen
-  atoms with cyanoacetylene in the gas phase and on water ice,'' {\em ApJ},
-  vol.~643, no.~1, pp.~573--581, 2006.
+H.-B. Xie, Y.-H. Ding, and C.-C. Sun, ``Reaction mechanism of oxygen atoms with
+  cyanoacetylene in the gas phase and on water ice,'' {\em ApJ}, vol.~643,
+  no.~1, pp.~573--581, 2006.
 
 \bibitem{MP2}
 C.~M{\o}ller and M.~S. Plesset, ``{Note on an Approximation Treatment for
@@ -153,7 +153,22 @@ C.~M{\o}ller and M.~S. Plesset, ``{Note on an Approximation Treatment for
 \bibitem{QCISD}
 J.~Gauss and D.~Cremer, ``{Analytical evaluation of energy gradients in
   quadratic configuration interaction theory},'' {\em Chem. Phys. Lett.},
-  vol.~150, no.~3-4, pp.~280--286, 1988.
+  vol.~150, no.~3--4, pp.~280--286, 1988.
+
+\bibitem{Becke1993}
+A.~D. Becke, ``{Density-functional thermochemistry. {III}. The role of exact
+  exchange},'' {\em J. Chem. Phys}, vol.~98, no.~7, p.~5648, 1993.
+
+\bibitem{StephensDevlinChabalowskiEtAl1994}
+P.~J. Stephens, F.~J. Devlin, C.~F. Chabalowski, and M.~J. Frisch, ``Ab initio
+  calculation of vibrational absorption and circular dichroism spectra using
+  density functional force fields,'' {\em J. Phys. Chem.}, vol.~98, no.~45,
+  pp.~11623--11627, 1994.
+
+\bibitem{HariharanPople1973}
+P.~C. Hariharan and J.~A. Pople, ``{The influence of polarization functions on
+  molecular orbital hydrogenation energies},'' {\em Theor. Chim. Acta},
+  vol.~28, no.~3, pp.~213--222.
 
 \bibitem{KarssemeijerPedersenJonssonEtAl2012}
 L.~J. Karssemeijer, A.~Pedersen, H.~J{\'{o}}nsson, and H.~M. Cuppen,
@@ -168,10 +183,6 @@ P.~Hohenberg and W.~Kohn, ``{Inhomogeneous Electron Gas},'' {\em Phys. Rev.},
 W.~Kohn and L.~J. Sham, ``{Self-Consistent Equations Including Exchange and
   Correlation Effects},'' {\em Phys. Rev.}, vol.~140, no.~4A, pp.~A1133--A1138,
   1965.
-
-\bibitem{Becke1993}
-A.~D. Becke, ``{Density-functional thermochemistry. {III}. The role of exact
-  exchange},'' {\em J. Chem. Phys}, vol.~98, no.~7, p.~5648, 1993.
 
 \bibitem{Becke1988}
 A.~D. Becke, ``Density-functional exchange-energy approximation with correct
@@ -210,12 +221,6 @@ Y.~Zhao and D.~G. Truhlar, ``Design of density functionals that are broadly
   interactions,'' {\em J. Phys. Chem. A}, vol.~109, no.~25, pp.~5656--5667,
   2005.
 
-\bibitem{StephensDevlinChabalowskiEtAl1994}
-P.~J. Stephens, F.~J. Devlin, C.~F. Chabalowski, and M.~J. Frisch, ``Ab initio
-  calculation of vibrational absorption and circular dichroism spectra using
-  density functional force fields,'' {\em J. Phys. Chem.}, vol.~98, no.~45,
-  pp.~11623--11627, 1994.
-
 \bibitem{Becke1993BHLYP}
 A.~D. Becke, ``{A new mixing of Hartree{\textendash}Fock and local
   density-functional theories},'' {\em J. Chem. Phys}, vol.~98, no.~2, p.~1372,
@@ -237,11 +242,11 @@ Y.~Zhao and D.~G. Truhlar, ``{The M06~{s}uite of density functionals for main
   group thermochemistry, thermochemical kinetics, noncovalent interactions,
   excited states, and transition elements: two new functionals and systematic
   testing of four M06-class functionals and 12 other functionals},'' {\em
-  Theor. Chem. Acc.}, vol.~120, no.~1-3, pp.~215--241, 2007.
+  Theor. Chem. Acc.}, vol.~120, no.~1--3, pp.~215--241, 2007.
 
 \bibitem{TURBOMOLE}
 {TURBOMOLE V6.6 2014}, a development of {University of Karlsruhe} and
-  {Forschungszentrum Karlsruhe GmbH}, 1989-2007, {TURBOMOLE GmbH}, since 2007;
+  {Forschungszentrum Karlsruhe GmbH}, 1989--2007, {TURBOMOLE GmbH}, since 2007;
   available from { http://www.turbomole.com}.
 
 \bibitem{ValievBylaskaGovindEtAl2010}
@@ -259,7 +264,7 @@ A.~Sch{\"a}fer, H.~Horn, and R.~Ahlrichs, ``{Fully optimized contracted
 \bibitem{WeigendHaeserPatzeltEtAl1998}
 F.~Weigend, M.~Häser, H.~Patzelt, and R.~Ahlrichs, ``{RI}-{MP}2: optimized
   auxiliary basis sets and demonstration of efficiency,'' {\em Chem. Phys.
-  Lett.}, vol.~294, no.~1-3, pp.~143--152, 1998.
+  Lett.}, vol.~294, no.~1--3, pp.~143--152, 1998.
 
 \bibitem{WeigendFurcheAhlrichs2003}
 F.~Weigend, F.~Furche, and R.~Ahlrichs, ``{Gaussian basis sets of quadruple
@@ -327,7 +332,7 @@ J.~Kästner, J.~M. Carr, T.~W. Keal, W.~Thiel, A.~Wander, and P.~Sherwood,
 
 \bibitem{LiuNocedal1989}
 D.~C. Liu and J.~Nocedal, ``{On the limited memory {BFGS} method for large
-  scale optimization},'' {\em Math. Prog.}, vol.~45, no.~1-3, pp.~503--528,
+  scale optimization},'' {\em Math. Prog.}, vol.~45, no.~1--3, pp.~503--528,
   1989.
 
 \bibitem{HenkelmanJonsson1999}
@@ -389,6 +394,10 @@ S.~R. Langhoff and E.~R. Davidson, ``Configuration interaction calculations on
 W.~Kabsch, ``{A discussion of the solution for the best rotation to relate two
   sets of vectors},'' {\em Acta Crystallogr. Sect. A}, vol.~34, no.~5,
   pp.~827--828, 1978.
+
+\bibitem{TreutlerAhlrichs1995}
+O.~Treutler and R.~Ahlrichs, ``{Efficient molecular numerical integration
+  schemes},'' {\em J. Chem. Phys}, vol.~102, no.~1, p.~346, 1995.
 
 \bibitem{Barnes1929}
 W.~H. Barnes, ``{The Crystal Structure of Ice between $0~^\circ$ C. and
