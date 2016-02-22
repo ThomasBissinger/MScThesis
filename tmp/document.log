@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  21 FEB 2016 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.24)  22 FEB 2016 12:19
 entering extended mode
 **./document.tex
 (document.tex
@@ -2180,14 +2180,14 @@ Underfull \vbox (badness 2521) has occurred while \output is active []
 File: ./img/SiteSnapshotMany.png Graphic file (type png)
 
 <use ./img/SiteSnapshotMany.png>
-Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 3200.
+Package pdftex.def Info: ./img/SiteSnapshotMany.png used on input line 3198.
 (pdftex.def)             Requested size: 209.1301pt x 212.48396pt.
 
 <./img/SiteSnapshotOriginal.png, id=946, 1124.2pt x 1142.2675pt>
 File: ./img/SiteSnapshotOriginal.png Graphic file (type png)
 
 <use ./img/SiteSnapshotOriginal.png>
-Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3201
+Package pdftex.def Info: ./img/SiteSnapshotOriginal.png used on input line 3199
 .
 (pdftex.def)             Requested size: 209.1301pt x 212.48396pt.
  [51]
@@ -2199,7 +2199,7 @@ on.pdf Graphic file (type pdf)
 <use ./TikzPics/TikzCreation/BindingEnergyDistribution/BindingEnergyDistributio
 n.pdf>
 Package pdftex.def Info: ./TikzPics/TikzCreation/BindingEnergyDistribution/Bind
-ingEnergyDistribution.pdf used on input line 3245.
+ingEnergyDistribution.pdf used on input line 3243.
 (pdftex.def)             Requested size: 298.75264pt x 248.86516pt.
 
 Underfull \vbox (badness 2042) has occurred while \output is active []
@@ -2209,7 +2209,7 @@ Underfull \vbox (badness 2042) has occurred while \output is active []
 File: ./img/FletcherAdsorption.png Graphic file (type png)
 
 <use ./img/FletcherAdsorption.png>
-Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3304.
+Package pdftex.def Info: ./img/FletcherAdsorption.png used on input line 3302.
 (pdftex.def)             Requested size: 298.75264pt x 303.5535pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2222,7 +2222,7 @@ File: TikzPics/TikzCreation/HO.H2/HOH2.pdf Graphic file (type pdf)
 
 <use TikzPics/TikzCreation/HO.H2/HOH2.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2/HOH2.pdf used on input lin
-e 3366.
+e 3364.
 (pdftex.def)             Requested size: 341.43437pt x 276.30698pt.
 
 <TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf, id=991, 224.86508pt
@@ -2232,7 +2232,7 @@ ype pdf)
 
 <use TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.pdf>
 Package pdftex.def Info: TikzPics/TikzCreation/HO.H2.Activation/HOH2Activation.
-pdf used on input line 3401.
+pdf used on input line 3399.
 (pdftex.def)             Requested size: 341.43437pt x 281.4491pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2248,15 +2248,15 @@ Underfull \vbox (badness 1521) has occurred while \output is active []
 [59] [60] [61] [62] [63] [64]) 
 AED: lastpage setting LastPage
 [65]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3521.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3521.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3520.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3520.
  (document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3521.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3521.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3520.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3520.
 
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 6A8A3BDF2DB385A4D93F71B92872CE51;2508.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3521.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3520.
  ) 
 Here is how much of TeX's memory you used:
  42526 strings out of 493634
@@ -2265,7 +2265,7 @@ Here is how much of TeX's memory you used:
  44869 multiletter control sequences out of 15000+200000
  85650 words of font info for 184 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,17n,77p,10398b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,17n,77p,10398b,730s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
@@ -2283,7 +2283,7 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
 w/times/utmri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfchan
 /uzcmi8a.pfb>
-Output written on document.pdf (65 pages, 2876318 bytes).
+Output written on document.pdf (65 pages, 2878035 bytes).
 PDF statistics:
  1172 PDF objects out of 1200 (max. 8388607)
  273 named destinations out of 1000 (max. 500000)
